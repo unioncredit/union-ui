@@ -9,8 +9,16 @@ export default {
 
 export const Primary = () => (
   <>
-    <Button label="Vouch for new contact" />
-    <Button disabled label="Vouch for new contact" />
+    <Button icon="vouch" variant="primary" label="Vouch for new contact" />
+    <Button icon="vouch" variant="secondary" label="Vouch for new contact" />
+    <Button icon="vouch" variant="rounded" label="Vouch for new contact" />
+    <Button icon="vouch" variant="floating" label="Vouch for new contact" />
+    <Button variant="pill" label="Vouch for new contact" />
   </>
 );
 
+export const Disabled = () => (
+  <>
+    <Button disabled label="Vouch for new contact" />
+  </>
+);

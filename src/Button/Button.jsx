@@ -2,16 +2,29 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
+import { ButtonIcon } from "./ButtonIcon";
+
 import "./button.scss";
 
-export const Button = ({ label, variant, ...props }) => {
+const variantToIconColor = (variant) => {
+  if (["primary", "floating"].includes(variant)) {
+    return "white";
+  }
+  return "black";
+};
+
+export const Button = ({ icon, label, variant, ...props }) => {
   return (
     <button
       type="button"
       className={cn("button", { [`button--${variant}`]: variant })}
       {...props}
     >
+      {icon && <ButtonIcon name={icon} color={variantToIconColor(variant)} />}
       {label}
+      {variant === "pill" && (
+        <ButtonIcon name="chevron" color={variantToIconColor(variant)} />
+      )}
     </button>
   );
 };
@@ -32,4 +45,3 @@ Button.defaultProps = {
   variant: "primary",
   onClick: undefined,
 };
-

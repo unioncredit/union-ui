@@ -1,37 +1,94 @@
 .button {
+  $iconGutter: 5px;
   $disabledOpacity: 0.4;
-
   $blue100: #3a64f0;
   $blue200: #2143d5;
   $blue300: #112a99;
   $blueBoxShadow: #a7c4ff;
+  $grey100: #f4f4f6;
+  $grey200: #e1e0e6;
 
   font-size: 11.2px;
   letter-spacing: -0.02em;
   border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 
-  &--primary {
+  svg {
+    height: 10px;
+    margin-right: $iconGutter;
+  }
+
+  &[disabled="true"],
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled="true"]:hover {
+    opacity: $disabledOpacity;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 3px $blueBoxShadow;
+    border: 1px solid $blue200;
+    outline: none;
+  }
+
+  &--primary,
+  &--floating {
     color: white;
     background-color: $blue100;
     padding: 13px 12px;
     border-radius: 10px;
-
-    &:focus {
-      box-shadow: 0px 0px 0px 3px $blueBoxShadow;
-      border: 1px solid $blue200;
-    }
 
     &:hover {
       background-color: $blue200;
     }
 
     &:active {
+      box-shadow: none;
       background-color: $blue300;
     }
+  }
 
-    &[disabled="true"],
-    &[disabled] {
-      opacity: $disabledOpacity;
+  &--secondary,
+  &--rounded,
+  &--pill {
+    color: black;
+    background-color: white;
+    padding: 13px 12px;
+    border-radius: 10px;
+    border-color: #e1e0e6;
+
+    &:hover {
+      background-color: $grey100;
+    }
+
+    &:active {
+      box-shadow: none;
+      background-color: $grey200;
+      border-color: transparent;
+    }
+  }
+
+  &--rounded {
+    padding: 9px 12px;
+    border-radius: 16px;
+  }
+
+  &--floating {
+    border-radius: 20px;
+    box-shadow: 0px 1px 1px rgba(58, 56, 66, 0.2),
+      0px 4px 8px rgba(58, 56, 66, 0.25);
+  }
+
+  &--pill {
+    padding: 4px 8px;
+    border-radius: 16px;
+
+    svg {
+      margin: 0 0 0 $iconGutter;
+      height: 6px;
     }
   }
 }
