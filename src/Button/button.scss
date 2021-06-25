@@ -41,7 +41,7 @@
     padding: 13px 12px;
     border-radius: 10px;
 
-    &:hover {
+    &:hover:enabled {
       background-color: $blue200;
     }
 
@@ -60,7 +60,7 @@
     border-radius: 10px;
     border-color: #e1e0e6;
 
-    &:hover {
+    &:hover:enabled {
       background-color: $grey100;
     }
 
