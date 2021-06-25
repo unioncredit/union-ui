@@ -1,17 +1,21 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import cn from "classnames";
+import PropTypes from "prop-types";
 
 import "./text.scss";
 
 export function Text({ children, size }) {
-	return (
-		<p className="text">{children}</p>
-	);
+  return <p className={cn("text", { [`text--${size}`]: size })}>{children}</p>;
 }
 
 Text.propTypes = {
-	children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
-    ]).isRequired
-}
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  size: PropTypes.oneOf(["primary", "large"]),
+};
+
+Text.defaultProps = {
+  size: "primary",
+};

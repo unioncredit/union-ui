@@ -1,3 +1,7 @@
+import React from 'react';
+
+import "../src/global.scss";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +11,7 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+  (Story) => <Story />,
+];
