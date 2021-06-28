@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #c4c2cc;
+  border: 2px solid $grey300;
   background: white;
   border-radius: 4px;
   position: relative;
@@ -18,11 +18,11 @@
     border: 2px solid $blue200;
 
     &:hover:not(.control--disabled) {
-      border: 2px solid #c4c2cc;
+      border: 2px solid $grey300;
       background: white;
 
       svg path {
-        fill: #c4c2cc;
+        fill: $grey300;
       }
     }
   }

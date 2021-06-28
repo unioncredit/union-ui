@@ -14,6 +14,10 @@ const colorClasses = [
   "blueBoxShadow",
   "grey100",
   "grey200",
+  "grey300",
+  "grey400",
+  "grey500",
+  "grey600",
 ];
 
 export const Default = () =>

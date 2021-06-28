@@ -29,7 +29,7 @@
   }
 
   &--active {
-    background-color: #3a64f0;
+    background-color: $blue100;
 
     & .toggle__switch {
       left: $width - $gutter - $size;
@@ -45,6 +45,6 @@
 
 .toggle-label {
   margin: 0 0 0 6px;
-  color: #726f7e;
+  color: $grey500;
   font-size: 14px;
 }
