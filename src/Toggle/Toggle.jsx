@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 import "./toggle.scss";
 
@@ -20,3 +21,12 @@ export function Toggle({ initialState, onChange }) {
     </div>
   );
 }
+
+Toggle.propTypes = {
+  initialState: PropTypes.bool,
+  onChange: PropTypes.func,
+};
+
+Toggle.defaultProps = {
+  initialState: false,
+};
