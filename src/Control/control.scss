@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .control {
   $size: 16px;
   width: $size;
@@ -12,8 +14,8 @@
 
   &--checked,
   &--indeterminate {
-    background: #3a64f0;
-    border: 2px solid #2143d5;
+    background: $blue100;
+    border: 2px solid $blue200;
 
     &:hover:not(.control--disabled) {
       border: 2px solid #c4c2cc;

@@ -34,7 +34,7 @@ Box.propTypes = {
   align: PropTypes.oneOf(["start", "end", "center", "baseline"]),
   direction: PropTypes.oneOf(["vertical", "horizontal"]),
   wrap: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Box.defaultProps = {
