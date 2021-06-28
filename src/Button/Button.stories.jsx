@@ -28,6 +28,36 @@ const variants = [
     { icon: "arrow-left", variant: "secondary", label: "Back to Overview" },
     { variant: "secondary", label: "Cancel" },
   ],
+  [
+    { icon: "manage", variant: "rounded", label: "Manage contact" },
+    { icon: "proposal", variant: "rounded", label: "Make proposal" },
+    {
+      icon: "proposal",
+      variant: "rounded",
+      label: "copy",
+      background: "blue",
+      color: "white",
+    },
+    {
+      icon: "check",
+      variant: "rounded",
+      label: "for",
+      background: "green",
+      color: "white",
+    },
+  ],
+  [
+    { icon: "chevron", iconPosition: "end", variant: "pill", label: "Manage" },
+    { variant: "pill", label: "View all" },
+    {
+      icon: "no",
+      iconPosition: "end",
+      variant: "pill",
+      label: "Voted",
+      color: "red",
+    },
+  ],
+  [{ icon: "vouch", variant: "floating", label: "Vouch for someone" }],
 ];
 
 export const Primary = () => (

@@ -20,9 +20,16 @@
     margin: 0 10px 0 0;
   }
 
+  &--icon-pos-start svg {
+    margin-right: $iconGutter;
+  }
+
+  &--icon-pos-end svg {
+    margin-left: $iconGutter;
+  }
+
   svg {
     height: 10px;
-    margin-right: $iconGutter;
   }
 
   &[disabled="true"],
@@ -78,6 +85,7 @@
   &--rounded {
     padding: 9px 12px;
     border-radius: 16px;
+    min-width: 80px;
   }
 
   &--floating {
@@ -90,10 +98,5 @@
   &--pill {
     padding: 4px 8px;
     border-radius: 16px;
-
-    svg {
-      margin: 0 0 0 $iconGutter;
-      height: 6px;
-    }
   }
 }
