@@ -13,16 +13,18 @@ const variantToIconColor = (variant) => {
   return "black";
 };
 
-export const Button = ({ icon, label, variant, ...props }) => {
+export const Button = ({ icon, iconPosition, label, variant, ...props }) => {
   return (
     <button
       type="button"
       className={cn("button", { [`button--${variant}`]: variant })}
       {...props}
     >
-      {icon && <ButtonIcon name={icon} color={variantToIconColor(variant)} />}
+      {icon && iconPosition === "start" && (
+        <ButtonIcon name={icon} color={variantToIconColor(variant)} />
+      )}
       {label}
-      {variant === "pill" && (
+      {icon && iconPosition === "end" && (
         <ButtonIcon name="chevron" color={variantToIconColor(variant)} />
       )}
     </button>
@@ -37,6 +39,8 @@ Button.propTypes = {
     "pill",
     "floating",
   ]),
+  icon: PropTypes.oneOf([]),
+  iconPosition: PropTypes.oneOf(["start", "end"]),
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };
@@ -44,4 +48,5 @@ Button.propTypes = {
 Button.defaultProps = {
   variant: "primary",
   onClick: undefined,
+  iconPosition: "start",
 };

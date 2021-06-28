@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cn from "classnames";
 
 import "./box.scss";
 import { propsToStyles } from "../spacing";
@@ -9,10 +10,10 @@ const directionMap = {
   horizontal: "row",
 };
 
-export function Box({ children, align, direction, wrap, ...props }) {
+export function Box({ children, align, className, direction, wrap, ...props }) {
   return (
     <div
-      className="box"
+      className={cn("box", className)}
       style={{
         alignItems: align,
         flexDirection: directionMap[direction],
@@ -33,6 +34,7 @@ Box.propTypes = {
   align: PropTypes.oneOf(["start", "end", "center", "baseline"]),
   direction: PropTypes.oneOf(["vertical", "horizontal"]),
   wrap: PropTypes.bool,
+  className: PropTypes.string
 };
 
 Box.defaultProps = {
