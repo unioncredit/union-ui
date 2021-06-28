@@ -27,7 +27,7 @@ export function Control({ label, type, disabled, checked, indeterminate }) {
           <Icon name={iconName} color="white" />
         )}
       </div>
-      {label && <div className="control-label">{label}</div>}
+      {label && <p className="control-label">{label}</p>}
     </div>
   );
 }

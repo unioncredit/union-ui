@@ -34,3 +34,15 @@
     }
   }
 }
+
+.toggle-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toggle-label {
+  margin: 0 0 0 6px;
+  color: #726f7e;
+  font-size: 14px;
+}

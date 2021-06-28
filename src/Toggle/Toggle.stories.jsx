@@ -9,7 +9,12 @@ export default {
 };
 
 export const Default = () => (
-  <Box mb="20px">
-    <Toggle />
-  </Box>
+  <>
+    <Box mb="20px">
+      <Toggle />
+    </Box>
+    <Box mb="20px">
+      <Toggle label="Enable contract spending" />
+    </Box>
+  </>
 );

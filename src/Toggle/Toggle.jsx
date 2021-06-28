@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import "./toggle.scss";
 
-export function Toggle({ initialState, onChange }) {
+export function Toggle({ initialState, label, onChange }) {
   const [active, setActive] = useState(initialState);
 
   const handleChange = () => {
@@ -13,16 +13,20 @@ export function Toggle({ initialState, onChange }) {
   };
 
   return (
-    <div
-      className={cn("toggle", { "toggle--active": active })}
-      onClick={handleChange}
-    >
-      <div className="toggle__switch" />
+    <div class="toggle-wrapper">
+      <div
+        className={cn("toggle", { "toggle--active": active })}
+        onClick={handleChange}
+      >
+        <div className="toggle__switch" />
+      </div>
+      {label && <p className="toggle-label">{label}</p>}
     </div>
   );
 }
 
 Toggle.propTypes = {
+  label: PropTypes.string,
   initialState: PropTypes.bool,
   onChange: PropTypes.func,
 };
