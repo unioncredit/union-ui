@@ -21,6 +21,7 @@ export const Button = ({
   variant,
   background,
   color,
+  className,
   ...props
 }) => {
   const styles = {
@@ -28,15 +29,14 @@ export const Button = ({
     ...(color ? { color: colorHex(color) } : {}),
   };
 
-  const iconColor = color || variantToIconColor(variant);
-
+  const iconColor = color ? colorHex(color) : variantToIconColor(variant);
   const buttonIcon = <ButtonIcon name={icon} color={iconColor} />;
 
   return (
     <button
       type="button"
       style={styles}
-      className={cn("button", {
+      className={cn(className, "button", {
         [`button--${variant}`]: variant,
         [`button--icon-pos-${iconPosition}`]: iconPosition,
       })}
