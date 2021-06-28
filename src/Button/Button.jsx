@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { ButtonIcon } from "./ButtonIcon";
+import { Icon as ButtonIcon } from "../Icon";
 import { colorHex } from "../colors";
 
 import "./button.scss";
@@ -57,7 +57,22 @@ Button.propTypes = {
     "pill",
     "floating",
   ]),
-  icon: PropTypes.oneOf([]),
+  icon: PropTypes.oneOf([
+    "telegram",
+    "twitter",
+    "link",
+    "manage",
+    "vouch",
+    "proposal",
+    "repayment",
+    "borrow",
+    "stats",
+    "icons",
+    "locked",
+    "check",
+    "no",
+    "chevron",
+  ]),
   iconPosition: PropTypes.oneOf(["start", "end"]),
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,

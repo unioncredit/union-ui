@@ -9,12 +9,12 @@ const titleCase = (str) =>
     .map((word) => word[0].toUpperCase() + word.slice(1))
     .join("");
 
-export function ButtonIcon({ name, color }) {
+export function Icon({ name, color }) {
   const IconComponent = icons[titleCase(name)];
   return <IconComponent color={color} />;
 }
 
-ButtonIcon.propTypes = {
+Icon.propTypes = {
   type: PropTypes.oneOf([
     "telegram",
     "twitter",
@@ -30,10 +30,12 @@ ButtonIcon.propTypes = {
     "check",
     "no",
     "chevron",
+    "control-check",
+    "control-ideterminate",
   ]),
   variant: PropTypes.oneOf(["light", "dark"]),
 };
 
-ButtonIcon.defaultProps = {
+Icon.defaultProps = {
   variant: "dark",
 };

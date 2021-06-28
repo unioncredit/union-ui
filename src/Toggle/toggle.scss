@@ -1,0 +1,36 @@
+.toggle {
+  $gutter: 2px;
+  $width: 32px;
+  $height: 20px;
+  $size: 16px;
+
+  display: block;
+  width: $width;
+  height: $height;
+  background-color: #e1e0e6;
+  border-radius: 10px;
+  position: relative;
+  transition: 100ms all;
+  overflow: hidden;
+
+  &__switch {
+    transition: 100ms all;
+    position: absolute;
+    border-radius: 100%;
+    background-color: white;
+    width: $size;
+    height: $size;
+    left: $gutter;
+    top: $gutter;
+    box-shadow: 0px 1px 1px rgba(58, 56, 66, 0.2),
+      0px 4px 8px rgba(58, 56, 66, 0.25);
+  }
+
+  &--active {
+    background-color: #3a64f0;
+
+    & .toggle__switch {
+      left: $width - $gutter - $size;
+    }
+  }
+}

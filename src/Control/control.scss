@@ -1,0 +1,63 @@
+.control {
+  $size: 16px;
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #c4c2cc;
+  background: white;
+  border-radius: 4px;
+  position: relative;
+
+  &--checked,
+  &--indeterminate {
+    background: #3a64f0;
+    border: 2px solid #2143d5;
+
+    &:hover:not(.control--disabled) {
+      border: 2px solid #c4c2cc;
+      background: white;
+
+      svg path {
+        fill: #c4c2cc;
+      }
+    }
+  }
+
+  &--disabled {
+    opacity: 0.45;
+  }
+
+  &--radio {
+    border-radius: 100%;
+
+    &:after {
+      $size: $size * 0.5;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: $size;
+      height: $size;
+      border-radius: 100%;
+      background: white;
+    }
+  }
+
+  svg {
+    width: 65%;
+  }
+}
+
+.control-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.control-label {
+  font-size: 14px;
+  margin-left: 6px;
+}
