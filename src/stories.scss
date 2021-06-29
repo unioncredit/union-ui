@@ -1,5 +1,11 @@
 @import "./variables.scss";
 
+.storybook-icon-row {
+  svg {
+    height: 15px;
+    margin-right: 10px;
+  }
+}
 // blues
 .blue100 {
   background: $blue100;

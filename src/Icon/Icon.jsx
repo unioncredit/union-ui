@@ -15,7 +15,7 @@ export function Icon({ name, color }) {
 }
 
 Icon.propTypes = {
-  type: PropTypes.oneOf([
+  name: PropTypes.oneOf([
     "telegram",
     "twitter",
     "link",
