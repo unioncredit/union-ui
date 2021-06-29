@@ -9,3 +9,6 @@ export * from "./ControlCheck.svg";
 export * from "./ControlIndeterminate.svg";
 export * from "./Repayment.svg";
 export * from "./Borrow.svg";
+export * from "./Link.svg";
+export * from "./Stats.svg";
+export * from "./Locked.svg";

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export function Chevron({ color }) {
   return (
@@ -19,3 +20,11 @@ export function Chevron({ color }) {
     </svg>
   );
 }
+
+Chevron.propTypes = {
+  color: PropTypes.string,
+};
+
+Chevron.defaultProps = {
+  color: "black",
+};

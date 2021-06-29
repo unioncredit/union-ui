@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export function Vouch({ color }) {
   return (
@@ -10,3 +11,11 @@ export function Vouch({ color }) {
     </svg>
   );
 }
+
+Vouch.propTypes = {
+  color: PropTypes.string,
+};
+
+Vouch.defaultProps = {
+  color: "black",
+};

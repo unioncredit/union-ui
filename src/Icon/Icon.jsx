@@ -34,6 +34,9 @@ Icon.propTypes = {
     "control-ideterminate",
     "repayment",
     "borrow",
+    "stats",
+    "link",
+    "locked",
   ]),
   variant: PropTypes.oneOf(["light", "dark"]),
 };

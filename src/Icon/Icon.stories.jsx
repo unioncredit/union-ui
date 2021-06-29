@@ -5,6 +5,8 @@ import { Icon } from "./Icon";
 import { Logo } from "./Logo";
 import { Metamask } from "./Metamask";
 import { WalletConnect } from "./WalletConnect";
+import { Twitter } from "./Twitter";
+import { Telegram } from "./Telegram";
 import { NavIcon } from "./NavIcon";
 
 export default {
@@ -23,6 +25,11 @@ export const All = () => (
       <WalletConnect width="40px" />
     </Box>
 
+    <Box align="center" mb="20px">
+      <Twitter width="28px" />
+      <Telegram width="28px" />
+    </Box>
+
     <Box align="center" mb="20px" className="storybook-icon-row">
       <Icon name="arrow-left" />
       <Icon name="borrow" />
@@ -31,7 +38,10 @@ export const All = () => (
       <Icon name="no" />
       <Icon name="proposal" />
       <Icon name="repayment" />
+      <Icon name="link" />
       <Icon name="vouch" />
+      <Icon name="stats" />
+      <Icon name="locked" />
     </Box>
 
     <Box align="center" mb="20px">
