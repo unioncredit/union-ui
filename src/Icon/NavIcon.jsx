@@ -14,7 +14,7 @@ export function NavIcon({ name }) {
   return <IconComponent />;
 }
 
-Icon.propTypes = {
+NavIcon.propTypes = {
   name: PropTypes.oneOf([
     "activity",
     "activity-new",
