@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "./Button";
-import { ButtonRow } from "../ButtonRow";
+import { ButtonRow } from "./ButtonRow";
 
 export default {
   component: Button,

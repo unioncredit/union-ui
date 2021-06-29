@@ -8,3 +8,4 @@ export * from "./Toggle";
 export * from "./Input";
 export * from "./Icon";
 export * from "./Control";
+export * from "./Stats";

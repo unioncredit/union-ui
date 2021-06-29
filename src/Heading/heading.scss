@@ -1,16 +1,18 @@
 .heading {
+  margin-bottom: 8px;
+
   &--primary {
-    font-size: 1.563em;
+    font-size: 21.88px;
     font-weight: 500;
   }
 
   &--large {
-    font-size: 1.953em;
+    font-size: 27.34px;
     font-weight: 500;
   }
 
   &--xlarge {
-    font-size: 2.441em;
+    font-size: 34.18px;
     font-weight: 400;
   }
 }

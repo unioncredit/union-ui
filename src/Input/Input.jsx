@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
+import { Label } from "../Label";
+
 import "./input.scss";
 
 export function Input({
@@ -26,9 +28,9 @@ export function Input({
   return (
     <div className="input-wrapper">
       {label && (
-        <label className="input-label" for={name}>
+        <Label className="input-label" for={name}>
           {label}
-        </label>
+        </Label>
       )}
       <div className="input-wrapper__inner">
         <div
@@ -51,7 +53,11 @@ export function Input({
         </div>
         {cta}
       </div>
-      {caption && <div className="input-caption">{caption}</div>}
+      {caption && (
+        <Label size="small" as="p" className="input-caption">
+          {caption}
+        </Label>
+      )}
     </div>
   );
 }

@@ -16,6 +16,14 @@
     margin: 0 10px 0 0;
   }
 
+  .button-row.box--direction-vertical & {
+    margin: 0 0 8px 0;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &--icon-pos-start svg {
     margin-right: $iconGutter;
   }
@@ -25,7 +33,7 @@
   }
 
   svg {
-    height: 10px;
+    height: 12px;
   }
 
   &[disabled="true"],

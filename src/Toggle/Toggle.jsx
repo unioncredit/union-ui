@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
+import { Text } from "../Text";
+
 import "./toggle.scss";
 
 export function Toggle({ initialState, label, onChange }) {
@@ -20,7 +22,7 @@ export function Toggle({ initialState, label, onChange }) {
       >
         <div className="toggle__switch" />
       </div>
-      {label && <p className="toggle-label">{label}</p>}
+      {label && <Text className="toggle-label">{label}</Text>}
     </div>
   );
 }

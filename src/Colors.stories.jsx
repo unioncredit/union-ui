@@ -18,6 +18,7 @@ const colorClasses = [
   "grey400",
   "grey500",
   "grey600",
+  "grey700",
 ];
 
 export const Default = () =>

@@ -32,6 +32,8 @@ Icon.propTypes = {
     "chevron",
     "control-check",
     "control-ideterminate",
+    "repayment",
+    "borrow",
   ]),
   variant: PropTypes.oneOf(["light", "dark"]),
 };

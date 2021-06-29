@@ -1,0 +1,46 @@
+@import "../variables.scss";
+
+.stats {
+  background-color: $grey100;
+  border: 1px solid $grey200;
+  border-radius: 20px;
+  padding: 12px 12px 12px 20px;
+
+  & .button-row {
+    margin-left: auto;
+  }
+}
+
+.stat {
+  $gutter: 32px;
+  position: relative;
+  display: inline-block;
+  padding-right: $gutter;
+  margin-right: $gutter;
+
+  &:not(:last-child):after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 40px;
+    background-color: $grey200;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+
+  &__label {
+    color: $grey500;
+    margin: 0 0 12px 0;
+  }
+
+  &__value {
+    color: $grey700;
+    margin: 0 0 12px 0;
+  }
+
+  &__caption {
+    margin: 12px 0 8px 0 !important;
+  }
+}

@@ -72,6 +72,8 @@ Button.propTypes = {
     "check",
     "no",
     "chevron",
+    "repayment",
+    "borrow",
   ]),
   iconPosition: PropTypes.oneOf(["start", "end"]),
   label: PropTypes.string.isRequired,

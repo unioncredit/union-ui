@@ -3,6 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Icon } from "../Icon";
+import { Text } from "../Text";
 
 import "./control.scss";
 
@@ -27,7 +28,7 @@ export function Control({ label, type, disabled, checked, indeterminate }) {
           <Icon name={iconName} color="white" />
         )}
       </div>
-      {label && <p className="control-label">{label}</p>}
+      {label && <Text className="control-label">{label}</Text>}
     </div>
   );
 }

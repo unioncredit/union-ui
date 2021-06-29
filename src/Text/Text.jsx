@@ -4,8 +4,12 @@ import PropTypes from "prop-types";
 
 import "./text.scss";
 
-export function Text({ children, size }) {
-  return <p className={cn("text", { [`text--${size}`]: size })}>{children}</p>;
+export function Text({ children, size, className }) {
+  return (
+    <p className={cn("text", className, { [`text--${size}`]: size })}>
+      {children}
+    </p>
+  );
 }
 
 Text.propTypes = {
@@ -13,6 +17,7 @@ Text.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  className: PropTypes.string,
   size: PropTypes.oneOf(["primary", "large"]),
 };
 

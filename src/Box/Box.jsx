@@ -13,7 +13,9 @@ const directionMap = {
 export function Box({ children, align, className, direction, wrap, ...props }) {
   return (
     <div
-      className={cn("box", className)}
+      className={cn("box", className, {
+        [`box--direction-${direction}`]: direction,
+      })}
       style={{
         alignItems: align,
         flexDirection: directionMap[direction],
