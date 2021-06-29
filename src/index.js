@@ -9,3 +9,5 @@ export * from "./Input";
 export * from "./Icon";
 export * from "./Control";
 export * from "./Stats";
+export * from "./Bar";
+export * from "./Badge";

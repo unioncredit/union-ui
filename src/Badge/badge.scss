@@ -1,0 +1,36 @@
+.badge {
+  font-size: 11.2px;
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 6px;
+
+  &--blue {
+    color: #112a99;
+    background: #d1e2ff;
+  }
+
+  &--purple {
+    color: #352a85;
+    background: #c6bbff;
+  }
+
+  &--green {
+    color: #00431e;
+    background: #baedd1;
+  }
+
+  &--yellow {
+    color: #5d2c00;
+    background: #fcde9c;
+  }
+
+  &--red {
+    color: #701717;
+    background: #ffd8d9;
+  }
+
+  &--grey {
+    color: #3a3842;
+    background: #e1e0e6;
+  }
+}

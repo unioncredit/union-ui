@@ -2,6 +2,7 @@ import React from "react";
 
 import { Stats } from "./Stats";
 import { Stat } from "./Stat";
+import { Bar } from "../Bar";
 import { Button, ButtonRow } from "../Button";
 
 export default {
@@ -40,6 +41,11 @@ export const StatsBar = () => (
           label="Credit Limit"
         />
       }
+    />
+    <Stat
+      label="Balance owed"
+      value="$1600"
+      caption={<Bar label="50%" percentage={50} />}
     />
     <Stat
       label="Available Credit"
