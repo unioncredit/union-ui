@@ -9,7 +9,6 @@ export function Vote() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="32" height="32" fill="white" />
       <circle cx="10" cy="11" r="3.25" stroke="#726F7E" stroke-width="1.5" />
       <circle cx="10" cy="21" r="3.25" stroke="#726F7E" stroke-width="1.5" />
       <path

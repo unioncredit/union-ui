@@ -1,0 +1,23 @@
+@import "../variables.scss";
+
+.toggle-menu {
+  border: 1px solid $grey200;
+  background: $grey100;
+  border-radius: 12px;
+  padding: 4px 2px;
+  display: inline-flex;
+
+  &__item {
+    margin: 0 2px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: 9px;
+    transition: all 100ms;
+
+    &--active {
+      border: 1px solid $grey200;
+      background: #ffffff;
+    }
+  }
+}

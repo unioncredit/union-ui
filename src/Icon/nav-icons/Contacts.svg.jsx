@@ -9,7 +9,6 @@ export function Contacts() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="32" height="32" fill="white" />
       <ellipse
         cx="16"
         cy="11"
