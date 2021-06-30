@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+.table-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+
+  &:not(:first-child) {
+    border-top: 1px solid $grey200;
+  }
+}

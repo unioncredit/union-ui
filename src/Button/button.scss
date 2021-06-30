@@ -32,6 +32,10 @@
     margin-left: $iconGutter;
   }
 
+  &--inline {
+    display: inline-flex;
+  }
+
   svg {
     height: 12px;
   }

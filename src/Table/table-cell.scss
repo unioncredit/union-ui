@@ -1,0 +1,18 @@
+.table-cell {
+  padding: 10px;
+
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-left {
+    text-align: left;
+  }
+  &--align-right {
+    text-align: right;
+  }
+
+  & p:last-of-type {
+    margin-bottom: 0;
+  }
+}

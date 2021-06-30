@@ -22,6 +22,7 @@ export const Button = ({
   background,
   color,
   className,
+  inline,
   ...props
 }) => {
   const styles = {
@@ -39,6 +40,7 @@ export const Button = ({
       className={cn(className, "button", {
         [`button--${variant}`]: variant,
         [`button--icon-pos-${iconPosition}`]: iconPosition,
+        "button--inline": inline,
       })}
       {...props}
     >

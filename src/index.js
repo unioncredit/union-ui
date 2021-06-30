@@ -11,3 +11,5 @@ export * from "./Control";
 export * from "./Stats";
 export * from "./Bar";
 export * from "./Badge";
+export * from "./Table";
+export * from "./Avatar";
