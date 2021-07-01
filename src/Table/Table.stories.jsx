@@ -9,6 +9,7 @@ import { Text } from "../Text";
 import { Label } from "../Label";
 import { Badge } from "../Badge";
 import { Bar } from "../Bar";
+import { Skeleton } from "../Skeleton";
 
 export default {
   component: Table,
@@ -49,6 +50,47 @@ export const Default = () => (
               icon="chevron"
               iconPosition="end"
             />
+          </TableCell>
+        </TableRow>
+      ))}
+    <TableRow>
+      <TableCell align="right" span={1}>
+        <Button
+          inline
+          label="View all contacts"
+          variant="pill"
+          icon="chevron"
+          iconPosition="end"
+        />
+      </TableCell>
+    </TableRow>
+  </Table>
+);
+
+export const Skeletons = () => (
+  <Table>
+    {Array(5)
+      .fill(0)
+      .map(() => (
+        <TableRow>
+          <TableCell>
+            <Avatar />
+          </TableCell>
+          <TableCell span={1}>
+            <Skeleton size="large" variant="primary" />
+            <Skeleton size="medium" variant="secondary" />
+          </TableCell>
+          <TableCell span={1}>
+            <Skeleton size="medium" variant="secondary" />
+          </TableCell>
+          <TableCell span={1} align="center">
+            <Skeleton size="small" variant="primary" />
+          </TableCell>
+          <TableCell span={1} align="center">
+            <Skeleton size="small" variant="secondary" />
+          </TableCell>
+          <TableCell span={1} align="right">
+            <Skeleton size="large" variant="primary" />
           </TableCell>
         </TableRow>
       ))}

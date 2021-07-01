@@ -13,3 +13,4 @@ export * from "./Bar";
 export * from "./Badge";
 export * from "./Table";
 export * from "./Avatar";
+export * from "./Skeleton";

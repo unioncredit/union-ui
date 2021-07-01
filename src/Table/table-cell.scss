@@ -7,12 +7,23 @@
 
   &--align-left {
     text-align: left;
+    & .skeleton {
+      margin-right: auto;
+    }
   }
   &--align-right {
     text-align: right;
+
+    & .skeleton {
+      margin-left: auto;
+    }
   }
 
   & p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  & .skeleton:last-of-type {
     margin-bottom: 0;
   }
 }
