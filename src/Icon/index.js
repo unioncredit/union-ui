@@ -5,3 +5,4 @@ export * from "./NavIcon";
 export * from "./WalletConnect";
 export * from "./Twitter";
 export * from "./Telegram";
+export * from "./StatusIcon";

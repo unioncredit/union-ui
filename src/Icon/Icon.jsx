@@ -2,12 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import * as icons from "./icons";
-
-const titleCase = (str) =>
-  str
-    .split("-")
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join("");
+import { titleCase } from "./utils";
 
 export function Icon({ name, color }) {
   const IconComponent = icons[titleCase(name)];
