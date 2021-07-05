@@ -1,0 +1,13 @@
+.nav {
+  max-width: 280px;
+
+  &__logo {
+    padding: 34px 0 40px 0;
+    display: flex;
+    justify-content: center;
+
+    svg {
+      width: 28px;
+    }
+  }
+}

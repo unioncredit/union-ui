@@ -3,11 +3,16 @@ import PropTypes from "prop-types";
 
 import * as icons from "./nav-icons";
 import { titleCase } from "./utils";
+import { colorHex } from "../colors";
 
-export function NavIcon({ name }) {
+export function NavIcon({ name, color }) {
   const IconComponent = icons[titleCase(name)];
-  return <IconComponent />;
+  return <IconComponent color={colorHex(color) || "black"} />;
 }
+
+NavIcon.defaultProps = {
+  color: "black",
+};
 
 NavIcon.propTypes = {
   name: PropTypes.oneOf([

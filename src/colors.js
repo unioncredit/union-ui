@@ -3,6 +3,8 @@ export const colors = {
   green: "#2F9F63",
   white: "#ffffff",
   red: "#C84042",
+  grey: "#726F7E",
+  black: "#000000",
 };
 
 export const colorHex = (color) => {
