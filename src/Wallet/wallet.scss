@@ -1,0 +1,46 @@
+.wallet {
+  $indicatorBorderSize: 4px;
+  $indicatorSize: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+
+  .text {
+    margin: 0 8px;
+  }
+
+  &__transaction-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: $indicatorSize;
+    height: $indicatorSize;
+    background-color: #f4f4f6;
+    position: relative;
+    top: $indicatorBorderSize / 2;
+    left: $indicatorBorderSize / 2;
+
+    &--warning {
+      background-color: #f3bb4a;
+    }
+  }
+
+  .ellipse {
+    $color: #3a64f0;
+    position: relative;
+    text-align: center;
+    width: $indicatorSize + $indicatorBorderSize;
+    height: $indicatorSize + $indicatorBorderSize;
+    border-radius: 100%;
+    background-color: transparent;
+    background: linear-gradient(145deg, $color 50%, transparent 50%),
+      linear-gradient(145deg, $color 50%, transparent 50%);
+
+    &--hidden {
+      background: transparent;
+    }
+  }
+}

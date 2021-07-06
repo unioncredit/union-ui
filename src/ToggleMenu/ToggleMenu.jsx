@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 import { Box } from "../Box";
 
 import "./toggle-menu.scss";
 
-export function ToggleMenu({ items }) {
+export function ToggleMenu({ items, variant }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleClick = (index) => () => {
@@ -13,9 +14,15 @@ export function ToggleMenu({ items }) {
   };
 
   return (
-    <Box className="toggle-menu" direction="horizontal">
+    <Box
+      direction="horizontal"
+      className={cn("toggle-menu", {
+        [`toggle-menu--${variant}`]: variant,
+      })}
+    >
       {items.map((item, i) => (
         <button
+          {...item}
           onClick={handleClick(i)}
           className={cn("toggle-menu__item", {
             "toggle-menu__item--active": i === activeIndex,
@@ -27,3 +34,8 @@ export function ToggleMenu({ items }) {
     </Box>
   );
 }
+
+ToggleMenu.propTypes = {
+  items: PropTypes.array,
+  variant: PropTypes.oneOf(["primary", "nav"]),
+};

@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 
 import { NavIcon } from "../Icon";
-import { Text } from "../Text";
+import { Label } from "../Label";
 
 import "./nav-item.scss";
 
@@ -15,7 +15,9 @@ export function NavItem({ label, icon, active, description }) {
       <div className="nav-item__content">
         <div className="nav-item__label">{label}</div>
         {active && description && (
-          <Text className="nav-item__description">{description}</Text>
+          <Label as="p" size="small" className="nav-item__description">
+            {description}
+          </Label>
         )}
       </div>
     </div>

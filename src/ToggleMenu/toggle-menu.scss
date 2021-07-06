@@ -14,10 +14,35 @@
     background: transparent;
     border-radius: 9px;
     transition: all 100ms;
+    font-size: 11.2px;
 
     &--active {
       border: 1px solid $grey200;
       background: #ffffff;
+    }
+
+    &:enabled:hover {
+      border: 1px solid $grey200;
+      background: none;
+      color: #565461;
+    }
+
+    &:enabled:active {
+      color: #565461;
+      background: #e1e0e6;
+    }
+
+    &:not(:enabled) {
+      color: #a8a6b3;
+    }
+  }
+
+  &--nav {
+    border: 0px;
+    background: none;
+
+    .toggle-menu__item {
+      font-size: 17.5px;
     }
   }
 }

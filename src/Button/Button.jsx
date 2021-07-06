@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
@@ -23,6 +23,7 @@ export const Button = ({
   color,
   className,
   inline,
+  children,
   ...props
 }) => {
   const styles = {
@@ -45,7 +46,7 @@ export const Button = ({
       {...props}
     >
       {icon && iconPosition === "start" && buttonIcon}
-      {label}
+      {label || children}
       {icon && iconPosition === "end" && buttonIcon}
     </button>
   );
