@@ -5,7 +5,7 @@ const templates = {
     left: "margin",
     right: VAL_STR,
   },
-  mb: {
+  mt: {
     left: "marginTop",
     right: VAL_STR,
   },

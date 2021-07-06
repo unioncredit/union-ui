@@ -12,3 +12,4 @@ export * from "./Borrow.svg";
 export * from "./Link.svg";
 export * from "./Stats.svg";
 export * from "./Locked.svg";
+export * from "./Info.svg";
