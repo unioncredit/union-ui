@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+.select-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+
+  .avatar {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background: #f4f4f6;
+  }
+}
+
+.dropdown-indicator {
+  margin-right: 14px;
+  width: 10px;
+  height: 7px;
+}

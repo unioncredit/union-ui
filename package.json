@@ -14,7 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "classnames": "^2.3.1"
+    "classnames": "^2.3.1",
+    "react-select": "^4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
