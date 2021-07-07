@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .modal {
   border: 1px solid rgba(0, 0, 0, 0.04);
   background: #ffffff;
@@ -23,11 +25,35 @@
 
     &__close {
       $size: 24px;
+      cursor: pointer;
       display: block;
+      position: relative;
       width: $size;
       height: $size;
       border-radius: 100%;
       border: 1px solid #e1e0e6;
+      background-color: $grey100;
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 10px;
+        border-radius: 2px;
+        background: $grey400;
+      }
+
+      &:before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &:after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
     }
   }
 }

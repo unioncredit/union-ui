@@ -25,7 +25,7 @@ const options = [
 ];
 
 export const Default = () => (
-  <Modal>
+  <Modal title="Borrow Funds" onClose={() => alert("modal close")}>
     <Select options={options} />
     <Box align="center" justify="space-between" mt="20px">
       <Text m={0}>Metamask</Text>
