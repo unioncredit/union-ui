@@ -1,9 +1,7 @@
 @import "../variables.scss";
 
 .status-icon {
-  $size: 24px;
-  width: $size;
-  height: $size;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,19 +11,59 @@
     width: 100%;
   }
 
+  &--solid {
+    $size: 24px;
+    width: $size;
+    height: $size;
+    padding: 6px;
+  }
+
+  &--wire {
+    $size: 12px;
+    width: $size;
+    height: $size;
+    padding: 6px 0;
+    margin: 0 6px;
+  }
+
   &--pending {
     animation-name: spin;
     animation-duration: 500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    padding: 0;
   }
 
-  &--success {
-    background: $green;
+  &--solid {
+    &.status-icon--success {
+      background: $green;
+    }
+
+    &.status-icon--error {
+      background: $orange;
+    }
   }
 
-  &--error {
-    background: $orange;
+  &--wire {
+    box-sizing: none;
+
+    &.status-icon--pending {
+      padding: 0 6px;
+      margin: 0;
+      width: 24px;
+    }
+
+    &.status-icon--success {
+      svg path {
+        fill: $green;
+      }
+    }
+
+    &.status-icon--error {
+      svg path {
+        fill: $orange;
+      }
+    }
   }
 
   @keyframes spin {

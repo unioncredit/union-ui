@@ -2,6 +2,8 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
+import { propsToStyles } from "../spacing";
+
 import "./heading.scss";
 
 export function Heading({ level, size, children, className, ...props }) {
@@ -9,6 +11,7 @@ export function Heading({ level, size, children, className, ...props }) {
     `h${level}`,
     {
       className: cn(className, "heading", { [`heading--${size}`]: size }),
+      style: propsToStyles(props),
       ...props,
     },
     children

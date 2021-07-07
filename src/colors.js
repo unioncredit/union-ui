@@ -5,6 +5,7 @@ export const colors = {
   red: "#C84042",
   grey: "#726F7E",
   black: "#000000",
+  orange: "#C77B00",
 };
 
 export const colorHex = (color) => {

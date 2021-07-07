@@ -2,11 +2,20 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
+import { propsToStyles } from "../spacing";
+import { colorHex } from "../colors";
+
 import "./text.scss";
 
-export function Text({ children, size, className }) {
+export function Text({ children, size, className, color, ...props }) {
   return (
-    <p className={cn("text", className, { [`text--${size}`]: size })}>
+    <p
+      className={cn("text", className, { [`text--${size}`]: size })}
+      style={{
+        ...propsToStyles(props),
+        ...(color ? { color: colorHex(color) } : {}),
+      }}
+    >
       {children}
     </p>
   );

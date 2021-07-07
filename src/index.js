@@ -14,3 +14,5 @@ export * from "./Badge";
 export * from "./Table";
 export * from "./Avatar";
 export * from "./Skeleton";
+export * from "./Modal";
+export * from "./Divider";

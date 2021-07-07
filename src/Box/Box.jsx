@@ -10,7 +10,15 @@ const directionMap = {
   horizontal: "row",
 };
 
-export function Box({ children, align, className, direction, wrap, ...props }) {
+export function Box({
+  children,
+  align,
+  justify,
+  className,
+  direction,
+  wrap,
+  ...props
+}) {
   return (
     <div
       className={cn("box", className, {
@@ -18,6 +26,7 @@ export function Box({ children, align, className, direction, wrap, ...props }) {
       })}
       style={{
         alignItems: align,
+        justifyContent: justify,
         flexDirection: directionMap[direction],
         flexWrap: wrap,
         ...propsToStyles(props),
@@ -34,6 +43,13 @@ Box.propTypes = {
     PropTypes.node,
   ]).isRequired,
   align: PropTypes.oneOf(["start", "end", "center", "baseline"]),
+  justify: PropTypes.oneOf([
+    "start",
+    "end",
+    "center",
+    "space-between",
+    "space-around",
+  ]),
   direction: PropTypes.oneOf(["vertical", "horizontal"]),
   wrap: PropTypes.bool,
   className: PropTypes.string,
