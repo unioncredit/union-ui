@@ -24,6 +24,11 @@
 
   &__content {
     flex-grow: 1;
+    color: $grey500;
+
+    .text {
+      margin-bottom: 4px;
+    }
   }
 
   &__close div {

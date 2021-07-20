@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-$gutter: 12px;
+$gutter: 8px;
 
 .input-wrapper {
   &__inner {
@@ -56,7 +56,7 @@ $gutter: 12px;
     color: $grey500;
     border-radius: 6px;
     border: 1px solid $grey200;
-    padding: 4px 8px;
+    padding: 5px 8px;
 
     .input--disabled & {
       color: $grey300;
@@ -67,11 +67,11 @@ $gutter: 12px;
   input {
     width: 100%;
     font-size: $fontSize;
-    padding: 0 $gutter;
+    padding: 0 12px;
     border: 1px solid $grey200;
     border-radius: 12px;
     outline: none;
-    height: 42px;
+    height: 40px;
     background: white;
     box-sizing: border-box;
 

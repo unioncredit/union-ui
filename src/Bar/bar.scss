@@ -19,7 +19,7 @@
     &--secondaryBar {
       background: $grey300;
       flex-grow: 1;
-      margin-left: 1px;
+      margin-left: 2px;
     }
   }
 
@@ -33,18 +33,19 @@
 
   &__marker {
     position: absolute;
-    top: 0;
+    top: 1px;
     right: 0;
     width: 2px;
     border-radius: 1px;
     background: $grey500;
-    height: 100%;
+    height: 85%;
   }
 
   &--large {
     width: 210px;
     height: 16px;
     flex-basis: 210px;
+    padding: 2px;
   }
 }
 

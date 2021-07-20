@@ -10,9 +10,10 @@ const styles = {
     ...styles,
     "&:hover": {},
     borderRadius: "12px",
-    paddingLeft: "6px",
+    paddingLeft: "8px",
     border: state.isFocused ? "1px solid #2143d5" : "1px solid #e1e0e6",
     boxShadow: state.isFocused ? "0px 0px 0px 3px #a7c4ff" : "none",
+    minHeight: "40px",
   }),
   menu: (styles) => ({
     ...styles,

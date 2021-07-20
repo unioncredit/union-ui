@@ -28,7 +28,7 @@ export function Input({
   return (
     <div className="input-wrapper">
       {label && (
-        <Label className="input-label" for={name}>
+        <Label className="input-label" for={name} size="small">
           {label}
         </Label>
       )}
