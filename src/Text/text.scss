@@ -1,5 +1,7 @@
+@import "../variables.scss";
+
 .text {
-  color: #565461;
+  color: $grey600;
   margin-bottom: 8px;
 
   &--primary {

@@ -24,11 +24,11 @@
   }
 
   &--green &__progress {
-    background: #2f9f63;
+    background: $green100;
   }
 
   &--purple &__progress {
-    background: #8b7afd;
+    background: $purple;
   }
 
   &__marker {

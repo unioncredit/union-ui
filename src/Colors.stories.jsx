@@ -19,13 +19,18 @@ const colorClasses = [
   "grey500",
   "grey600",
   "grey700",
+  "green",
+  "green100",
+  "orange",
+  "purple",
+  "yellow",
 ];
 
 export const Default = () =>
   colorClasses.map((className) => (
     <Box mb="20px">
       <div
-        className={className}
+        className={`bg-${className}`}
         style={{
           width: "20px",
           height: "20px",

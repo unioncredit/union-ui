@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .wallet {
   $indicatorBorderSize: 4px;
   $indicatorSize: 24px;
@@ -18,13 +20,13 @@
     border-radius: 100%;
     width: $indicatorSize;
     height: $indicatorSize;
-    background-color: #f4f4f6;
+    background-color: $grey100;
     position: relative;
     top: $indicatorBorderSize / 2;
     left: $indicatorBorderSize / 2;
 
     &--warning {
-      background-color: #f3bb4a;
+      background-color: $yellow;
     }
   }
 

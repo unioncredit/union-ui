@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .nav-item {
   display: flex;
   flex-direction: row;
@@ -5,7 +7,7 @@
   border: 1px solid transparent;
   padding: 16px;
   border-radius: 12px;
-  color: #726f7e;
+  color: $grey500;
 
   &__content {
     display: flex;
@@ -14,8 +16,8 @@
   }
 
   &--active {
-    background-color: #f4f4f6;
-    border: 1px solid #e1e0e6;
+    background-color: $grey100;
+    border: 1px solid $grey200;
     color: #1e1c22;
   }
 

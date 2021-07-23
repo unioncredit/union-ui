@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .badge {
   font-size: 11.2px;
   display: inline-block;
@@ -5,7 +7,7 @@
   border-radius: 6px;
 
   &--blue {
-    color: #112a99;
+    color: $blue300;
     background: #d1e2ff;
   }
 
@@ -30,7 +32,7 @@
   }
 
   &--grey {
-    color: #3a3842;
-    background: #e1e0e6;
+    color: $grey700;
+    background: $grey200;
   }
 }

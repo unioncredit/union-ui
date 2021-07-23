@@ -24,16 +24,16 @@
     &:enabled:hover {
       border: 1px solid $grey200;
       background: none;
-      color: #565461;
+      color: $grey600;
     }
 
     &:enabled:active {
-      color: #565461;
-      background: #e1e0e6;
+      color: $grey600;
+      background: $grey200;
     }
 
     &:not(:enabled) {
-      color: #a8a6b3;
+      color: $grey400;
     }
   }
 
