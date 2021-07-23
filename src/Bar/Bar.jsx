@@ -6,9 +6,21 @@ import { Label } from "../Label";
 
 import "./bar.scss";
 
-export function Bar({ percentage, label, size, secondaryBar, marker, color }) {
+export function Bar({
+  percentage,
+  label,
+  size,
+  secondaryBar,
+  marker,
+  color,
+  markerLabel,
+}) {
   return (
-    <div className="bar-wrapper">
+    <div
+      className={cn("bar-wrapper", {
+        "bar-wrapper--hasMarkerLabel": !!markerLabel,
+      })}
+    >
       <Label size="small" className="bar-label" as="p">
         {label}
       </Label>
@@ -23,7 +35,12 @@ export function Bar({ percentage, label, size, secondaryBar, marker, color }) {
           <div className="bar__progress bar__progress--secondaryBar" />
         )}
         {marker && (
-          <div className="bar__marker" style={{ left: `${marker}%` }} />
+          <>
+            <span className="bar__markerLabel" style={{ left: `${marker}%` }}>
+              {markerLabel}
+            </span>
+            <div className="bar__marker" style={{ left: `${marker}%` }} />
+          </>
         )}
       </div>
     </div>

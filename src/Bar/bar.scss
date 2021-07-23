@@ -41,6 +41,13 @@
     height: 85%;
   }
 
+  &__markerLabel {
+    position: absolute;
+    bottom: calc(100% + 4px);
+    font-size: 12px;
+    transform: translateX(-50%);
+  }
+
   &--large {
     width: 210px;
     height: 16px;
@@ -52,6 +59,10 @@
 .bar-wrapper {
   display: flex;
   align-items: center;
+
+  &--hasMarkerLabel {
+    padding-top: 20px;
+  }
 }
 
 .bar-label {

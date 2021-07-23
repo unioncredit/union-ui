@@ -23,10 +23,20 @@ export const Default = () => (
       <Bar percentage={40} label="40%" size="large" secondaryBar />
     </Box>
     <Box mb="20px">
-      <Bar percentage={20} label="20%" color="green" marker={40} size="large" />
+      <Bar percentage={70} label="70%" color="purple" size="large" />
     </Box>
     <Box mb="20px">
-      <Bar percentage={70} label="70%" color="purple" size="large" />
+      <Bar percentage={30} label="30%" color="green" marker={40} size="large" />
+    </Box>
+    <Box mb="20px">
+      <Bar
+        percentage={20}
+        label="20%"
+        color="green"
+        marker={40}
+        markerLabel="40% Quorum"
+        size="large"
+      />
     </Box>
   </>
 );
