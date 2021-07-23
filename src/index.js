@@ -17,3 +17,4 @@ export * from "./Skeleton";
 export * from "./Modal";
 export * from "./Divider";
 export * from "./Grid";
+export * from "./Steps";
