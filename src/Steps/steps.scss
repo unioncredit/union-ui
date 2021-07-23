@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .steps {
   $dotSize: 4px;
   &__item {
@@ -14,7 +16,7 @@
       height: 100%;
       width: $width;
       border-radius: 4px;
-      background-color: #c4c2cc;
+      background-color: $grey300;
     }
 
     &:first-of-type:before {
@@ -27,7 +29,7 @@
     }
 
     &__title {
-      color: #3a3842;
+      color: $grey700;
       margin: 0;
     }
 
@@ -40,14 +42,14 @@
       width: $dotSize;
       height: $dotSize;
       border-radius: 100%;
-      background-color: #726f7e;
+      background-color: $grey500;
       position: absolute;
       left: 0;
       top: 4px;
 
       .steps__item:first-of-type & {
-        background-color: #3a64f0;
-        border: 2px solid #a7c4ff;
+        background-color: $blue100;
+        border: 2px solid $blueBoxShadow;
         left: -2px;
       }
     }
