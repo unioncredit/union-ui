@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import { Text } from "../Text";
 import { Heading } from "../Heading";
-import { Button } from "../Button";
 import { Label } from "../Label";
 
 import "./stat.scss";

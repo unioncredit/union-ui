@@ -15,7 +15,7 @@ export function Modal({ children, onClose, title }) {
         <div className="modal__header__close" onClick={onClose}></div>
       </div>
       <Divider />
-      <div className="modal__content">{children}</div>
+      <Card.Body className="modal__content">{children}</Card.Body>
     </Card>
   );
 }

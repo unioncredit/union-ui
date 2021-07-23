@@ -2,7 +2,19 @@
   border: 1px solid rgba(0, 0, 0, 0.04);
   background: #ffffff;
   border-radius: 12px;
-  max-width: 360px;
   padding: 0 24px;
   box-sizing: border-box;
+}
+
+.card-header {
+  padding: 20px 0 16px;
+  border-bottom: 1px solid #e1e0e6;
+
+  .heading {
+    margin: 0;
+  }
+}
+
+.card-body {
+  padding: 20px 0;
 }
