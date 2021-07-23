@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 
 import "./label.scss";
 
-export function Label({ children, size, className, as }) {
+export function Label({ children, size, className, as, style }) {
   return React.createElement(
     as || "label",
     {
       className: cn("label", className, { [`label--${size}`]: size }),
+      style,
     },
     children
   );

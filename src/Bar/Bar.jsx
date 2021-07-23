@@ -36,9 +36,13 @@ export function Bar({
         )}
         {marker && (
           <>
-            <span className="bar__markerLabel" style={{ left: `${marker}%` }}>
+            <Label
+              as="p"
+              className="bar__markerLabel"
+              style={{ left: `${marker}%` }}
+            >
               {markerLabel}
-            </span>
+            </Label>
             <div className="bar__marker" style={{ left: `${marker}%` }} />
           </>
         )}
