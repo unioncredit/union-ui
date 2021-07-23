@@ -1,13 +1,7 @@
 @import "../variables.scss";
 
 .modal {
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  background: #ffffff;
   box-shadow: 0px 14px 30px -16px #1e1c22;
-  border-radius: 12px;
-  max-width: 360px;
-  padding: 0 24px;
-  box-sizing: border-box;
 
   &__content {
     padding: 20px 0;

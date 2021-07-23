@@ -3,19 +3,20 @@ import PropTypes from "prop-types";
 
 import { Heading } from "../Heading";
 import { Divider } from "../Divider";
+import { Card } from "../Card";
 
 import "./modal.scss";
 
 export function Modal({ children, onClose, title }) {
   return (
-    <div className="modal">
+    <Card className="modal">
       <div className="modal__header">
         <Heading>{title}</Heading>
         <div className="modal__header__close" onClick={onClose}></div>
       </div>
       <Divider />
       <div className="modal__content">{children}</div>
-    </div>
+    </Card>
   );
 }
 
