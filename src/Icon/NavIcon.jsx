@@ -7,7 +7,12 @@ import { colorHex } from "../colors";
 
 export function NavIcon({ name, color }) {
   const IconComponent = icons[titleCase(name)];
-  return <IconComponent color={colorHex(color) || "black"} />;
+  return (
+    <IconComponent
+      className={`nav-icon--${name}`}
+      color={colorHex(color) || "black"}
+    />
+  );
 }
 
 NavIcon.defaultProps = {

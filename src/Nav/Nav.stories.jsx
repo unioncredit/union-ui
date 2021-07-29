@@ -19,5 +19,6 @@ export const Default = () => (
     <NavItem label="Credit" icon="credit" />
     <NavItem label="Contacts" icon="contacts" />
     <NavItem label="Vote" icon="vote" />
+    <NavItem disabled label="Vote" icon="vote" />
   </Nav>
 );

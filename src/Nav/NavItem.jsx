@@ -6,11 +6,17 @@ import { Label } from "../Label";
 
 import "./nav-item.scss";
 
-export function NavItem({ label, icon, active, description }) {
+export function NavItem({ disabled, label, icon, active, description }) {
   return (
-    <div className={cn("nav-item", { "nav-item--active": active })}>
+    <div
+      tabIndex="0"
+      className={cn("nav-item", {
+        "nav-item--active": active,
+        "nav-item--disabled": disabled,
+      })}
+    >
       <div className="nav-item__icon">
-        <NavIcon name={icon} color={active ? "black" : "grey"} />
+        <NavIcon name={icon} />
       </div>
       <div className="nav-item__content">
         <div className="nav-item__label">{label}</div>

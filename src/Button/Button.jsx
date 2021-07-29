@@ -24,10 +24,10 @@ export const Button = ({
   className,
   inline,
   children,
+  rounded,
   ...props
 }) => {
   const styles = {
-    ...(background ? { background: colorHex(background) } : {}),
     ...(color ? { color: colorHex(color) } : {}),
   };
 
@@ -39,6 +39,7 @@ export const Button = ({
       type="button"
       style={styles}
       className={cn(className, "button", {
+        "button--rounded": rounded,
         [`button--${variant}`]: variant,
         [`button--icon-pos-${iconPosition}`]: iconPosition,
         "button--inline": inline,
@@ -53,13 +54,7 @@ export const Button = ({
 };
 
 Button.propTypes = {
-  variant: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "rounded",
-    "pill",
-    "floating",
-  ]),
+  variant: PropTypes.oneOf(["primary", "secondary", "pill", "floating"]),
   icon: PropTypes.oneOf([
     "telegram",
     "twitter",
@@ -78,6 +73,7 @@ Button.propTypes = {
     "repayment",
     "borrow",
   ]),
+  rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,

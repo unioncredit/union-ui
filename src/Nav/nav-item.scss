@@ -5,9 +5,59 @@
   flex-direction: row;
   background-color: #fff;
   border: 1px solid transparent;
-  padding: 16px;
+  padding: 14px 16px 10px;
   border-radius: 12px;
-  color: $grey500;
+  color: #565461;
+  margin: 0 0 4px 0;
+
+  &:hover {
+    background-color: #f4f4f6;
+  }
+
+  &:focus:not(:active) {
+    border: 1px solid #3a64f0;
+    box-shadow: 0px 0px 0px 3px #a7c4ff;
+    background: #f4f4f6;
+  }
+
+  &:active {
+    background-color: #f4f4f6;
+    border: 1px solid #e1e0e6;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    $color: #1e1c22;
+    color: $color;
+    svg {
+      circle {
+        stroke: $color;
+      }
+      path {
+        stroke: $color;
+      }
+    }
+    .nav-icon--vote circle:last-of-type {
+      fill: $color;
+    }
+  }
+
+  &--disabled {
+    $color: #c4c2cc;
+    color: $color;
+    svg {
+      circle {
+        stroke: $color;
+      }
+      path {
+        stroke: $color;
+      }
+    }
+    .nav-icon--vote circle:last-of-type {
+      fill: $color;
+    }
+  }
 
   &__content {
     display: flex;

@@ -11,7 +11,12 @@ export default {
 const buttons = [
   { icon: "vouch", variant: "primary", label: "Vouch for new contact" },
   { icon: "vouch", variant: "secondary", label: "Vouch for new contact" },
-  { icon: "vouch", variant: "rounded", label: "Vouch for new contact" },
+  {
+    icon: "vouch",
+    variant: "secondary",
+    rounded: true,
+    label: "Vouch for new contact",
+  },
   { icon: "vouch", variant: "floating", label: "Vouch for new contact" },
   {
     icon: "chevron",
@@ -29,21 +34,30 @@ const variants = [
     { variant: "secondary", label: "Cancel" },
   ],
   [
-    { icon: "manage", variant: "rounded", label: "Manage contact" },
-    { icon: "proposal", variant: "rounded", label: "Make proposal" },
+    {
+      icon: "manage",
+      variant: "secondary",
+      rounded: true,
+      label: "Manage contact",
+    },
     {
       icon: "proposal",
-      variant: "rounded",
+      variant: "secondary",
+      rounded: true,
+      label: "Make proposal",
+    },
+    {
+      icon: "proposal",
+      variant: "primary",
+      rounded: true,
       label: "copy",
-      background: "blue",
-      color: "white",
     },
     {
       icon: "check",
-      variant: "rounded",
+      variant: "secondary",
+      rounded: true,
       label: "for",
-      background: "green",
-      color: "white",
+      color: "green",
     },
   ],
   [

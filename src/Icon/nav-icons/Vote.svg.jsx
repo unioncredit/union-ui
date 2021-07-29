@@ -1,8 +1,9 @@
 import React from "react";
 
-export function Vote({ color }) {
+export function Vote({ color, className }) {
   return (
     <svg
+      className={className}
       width="32"
       height="32"
       viewBox="0 0 32 32"
