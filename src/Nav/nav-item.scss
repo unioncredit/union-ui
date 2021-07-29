@@ -9,6 +9,11 @@
   border-radius: 12px;
   color: #565461;
   margin: 0 0 4px 0;
+  cursor: default;
+
+  * {
+    cursor: default;
+  }
 
   &:hover {
     background-color: #f4f4f6;
