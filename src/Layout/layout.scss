@@ -1,0 +1,26 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layout-header {
+  padding: 34px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.layout-sidebar {
+  height: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  max-width: 280px;
+}
+
+.layout-main {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}

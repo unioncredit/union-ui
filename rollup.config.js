@@ -25,7 +25,9 @@ export default {
     resolve({
       extensions: [ '.js', '.jsx' ]
     }),
-    commonjs(),
+    commonjs({
+      exclude: 'src/**',
+    }),
     scss(),
     babel({
       exclude: 'node_modules/**'

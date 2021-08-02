@@ -1,8 +1,9 @@
 .nav {
-  max-width: 280px;
   box-shadow: inset -1px 0px 0px #e1e0e6;
   padding: 0 24px;
   box-sizing: border-box;
+  height: 100%;
+  width: 100%;
 
   &__logo {
     padding: 34px 0 40px 0;
