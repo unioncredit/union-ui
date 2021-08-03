@@ -1,12 +1,15 @@
 import React from "react";
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 import { Heading } from "../Heading";
 
 import "./card.scss";
 
-export function Card({ children, className }) {
-  return <div className={cn("card", className)}>{children}</div>;
+export function Card({ size, children, className }) {
+  return <div className={cn("card", className, {
+  	[`card--${size}`]: size,
+  })}>{children}</div>;
 }
 
 function CardHeader({ title }) {
@@ -23,3 +26,11 @@ function CardBody({ children }) {
 
 Card.Header = CardHeader;
 Card.Body = CardBody;
+
+CardHeader.propTypes = {
+	title: PropTypes.string.isRequired,
+}
+
+Card.propTypes = {
+	size: PropTypes.oneOf(["sm", "md", "lg"])
+}

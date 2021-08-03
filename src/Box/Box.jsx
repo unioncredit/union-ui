@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createElement } from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
@@ -16,24 +16,26 @@ export function Box({
   justify,
   className,
   direction,
-  wrap,
+  as,
+  wrap = "nowrap",
   ...props
 }) {
-  return (
-    <div
-      className={cn("box", className, {
+  return createElement(
+    as || "div",
+    {
+      ...props,
+      className: cn("box", className, {
         [`box--direction-${direction}`]: direction,
-      })}
-      style={{
+      }),
+      style: {
         alignItems: align,
         justifyContent: justify,
         flexDirection: directionMap[direction],
         flexWrap: wrap,
         ...propsToStyles(props),
-      }}
-    >
-      {children}
-    </div>
+      },
+    },
+    children
   );
 }
 

@@ -13,18 +13,17 @@ export function Sidebar({ children }) {
   return <Box className="layout-sidebar">{children}</Box>;
 }
 
-export function Header({ children }) {
-  return <header className="layout-header">{children}</header>;
+export function Header({ children, ...props }) {
+  return (
+    <Box {...props} as="header" className="layout-header">
+      {children}
+    </Box>
+  );
 }
 
-export function Main({ children, verticalAlign = false }) {
+export function Main({ children, ...props }) {
   return (
-    <Box
-      className={cn("layout-main", {
-        [`layout-main--verticalAlign`]: verticalAlign,
-      })}
-      direction="vertical"
-    >
+    <Box {...props} className="layout-main" direction="vertical">
       {children}
     </Box>
   );

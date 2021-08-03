@@ -6,6 +6,10 @@ import scss from 'rollup-plugin-scss'
 
 const packageJson = require("./package.json");
 
+const external = Object.keys(packageJson.devDependencies);
+console.log("[*] External deps")
+console.log(external);
+
 export default {
   input: "src/index.js",
   output: [
@@ -20,6 +24,7 @@ export default {
       sourcemap: true
     }
   ],
+  external,
   plugins: [
     peerDepsExternal(),
     resolve({

@@ -4,6 +4,10 @@
   border-radius: 12px;
   padding: 0 24px;
   box-sizing: border-box;
+
+  &--small {
+    width: 280px;
+  }
 }
 
 .card-header {

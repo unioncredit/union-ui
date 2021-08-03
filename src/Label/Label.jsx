@@ -2,14 +2,16 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
+import { propsToStyles } from "../spacing";
+
 import "./label.scss";
 
-export function Label({ children, size, className, as, style }) {
+export function Label({ children, size, className, as, ...props }) {
   return React.createElement(
     as || "label",
     {
       className: cn("label", className, { [`label--${size}`]: size }),
-      style,
+      style: propsToStyles(props),
     },
     children
   );

@@ -10,14 +10,14 @@ export function Vote({ color, className }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="10" cy="11" r="3.25" stroke={color} stroke-width="1.5" />
-      <circle cx="10" cy="21" r="3.25" stroke={color} stroke-width="1.5" />
+      <circle cx="10" cy="11" r="3.25" stroke={color} strokeWidth="1.5" />
+      <circle cx="10" cy="21" r="3.25" stroke={color} strokeWidth="1.5" />
       <path
         d="M17 11H25.5M17 21H25.5"
         stroke={color}
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle
         cx="10"
@@ -25,7 +25,7 @@ export function Vote({ color, className }) {
         r="1.25"
         fill={color}
         stroke={color}
-        stroke-width="0.5"
+        strokeWidth="0.5"
       />
     </svg>
   );

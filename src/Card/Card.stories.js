@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Card } from "./Card";
-import { Container, Row, Col } from "../Grid";
+import { Grid, Row, Col } from "../Grid";
 import { Box } from "../Box";
 import { Label } from "../Label";
 import { ToggleMenu } from "../ToggleMenu";
@@ -15,9 +15,9 @@ export default {
 };
 
 export const Default = () => (
-  <Container>
+  <Grid>
     <Row>
-      <Col xs={7}>
+      <Col xs={6}>
         <Card>
           <Card.Header title="Stake" />
           <Card.Body>
@@ -48,7 +48,12 @@ export const Default = () => (
         </Card>
       </Col>
     </Row>
-  </Container>
+  </Grid>
 );
 
-//    <Box align="center" justify="space-between" mt="20px">
+export const Small = () => (
+  <Card size="small">
+    <Card.Header title="Stake" />
+    <Card.Body>This is a small card</Card.Body>
+  </Card>
+);
