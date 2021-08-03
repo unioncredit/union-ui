@@ -17,6 +17,7 @@ export function Input({
   suffix,
   onMaxClick,
   onChange,
+  type,
 }) {
   const [hasValue, setHasValue] = useState(false);
 
@@ -40,6 +41,7 @@ export function Input({
           })}
         >
           <input
+            type={type}
             name={name}
             disabled={disabled}
             onChange={handleChange}
@@ -54,7 +56,7 @@ export function Input({
         {cta}
       </div>
       {caption && (
-        <Label size="small" as="p" className="input-caption">
+        <Label size="small" as="p" className="input-caption" mt="4px">
           {caption}
         </Label>
       )}
@@ -71,9 +73,11 @@ Input.propTypes = {
   cta: PropTypes.node,
   onMaxClick: PropTypes.func,
   suffix: PropTypes.string,
+  type: PropTypes.oneOf(["text", "number"]),
 };
 
 Input.defaultProps = {
   disabled: false,
   cta: null,
+  type: "text"
 };

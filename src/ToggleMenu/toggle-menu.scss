@@ -15,7 +15,10 @@
     border-radius: 9px;
     transition: all 100ms;
     font-size: 11.2px;
-    outline: none;
+
+    &:focus {
+      outline: none !important;
+    }
 
     &--active {
       border: 1px solid $grey200;

@@ -11,7 +11,7 @@ export function ToggleMenu({ items, variant, onChange }) {
 
   const handleClick = (index) => () => {
     setActiveIndex(index);
-    onChange && onChange(index, items[index]);
+    onChange && onChange(items[index], index);
   };
 
   return (
