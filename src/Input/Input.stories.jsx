@@ -30,6 +30,15 @@ export const Inputs = () => (
       />
     </Box>
 
+    <Box mb="20px">
+      <Input
+        label="Clickable Caption"
+        caption="382.91 DAI Available"
+        onCaptionClick={() => alert("clicked")}
+        placeholder="Placeholder"
+      />
+    </Box>
+
     <InputRow align="center" mb="20px">
       <Input
         label="Input label"

@@ -38,5 +38,5 @@ CardHeader.propTypes = {
 };
 
 Card.propTypes = {
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
 };
