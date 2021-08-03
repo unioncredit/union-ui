@@ -18,14 +18,7 @@ export function Credit({ color, className }) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <ellipse
-        cx="16"
-        cy="16"
-        rx="3"
-        ry="7"
-        stroke={color}
-        strokeWidth="1.5"
-      />
+      <ellipse cx="16" cy="16" rx="3" ry="7" stroke={color} strokeWidth="1.5" />
       <path d="M9 16L23 16" stroke={color} strokeWidth="1.5" />
     </svg>
   );

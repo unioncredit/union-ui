@@ -6,11 +6,12 @@ import { Box } from "../Box";
 
 import "./toggle-menu.scss";
 
-export function ToggleMenu({ items, variant }) {
+export function ToggleMenu({ items, variant, onChange }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleClick = (index) => () => {
     setActiveIndex(index);
+    onChange && onChange(index, items[index]);
   };
 
   return (

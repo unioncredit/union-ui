@@ -1,6 +1,6 @@
 {
   "name": "union-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -39,9 +39,7 @@
     "rollup-plugin-scss": "^2.6.1",
     "sass": "^1.35.1",
     "sass-loader": "10.1.1",
-    "style-loader": "2.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "style-loader": "2.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.1",

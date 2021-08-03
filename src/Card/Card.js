@@ -7,9 +7,15 @@ import { Heading } from "../Heading";
 import "./card.scss";
 
 export function Card({ size, children, className }) {
-  return <div className={cn("card", className, {
-  	[`card--${size}`]: size,
-  })}>{children}</div>;
+  return (
+    <div
+      className={cn("card", className, {
+        [`card--${size}`]: size,
+      })}
+    >
+      {children}
+    </div>
+  );
 }
 
 function CardHeader({ title }) {
@@ -28,9 +34,9 @@ Card.Header = CardHeader;
 Card.Body = CardBody;
 
 CardHeader.propTypes = {
-	title: PropTypes.string.isRequired,
-}
+  title: PropTypes.string.isRequired,
+};
 
 Card.propTypes = {
-	size: PropTypes.oneOf(["sm", "md", "lg"])
-}
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
+};
