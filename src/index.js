@@ -13,6 +13,7 @@ export * from "./Heading";
 export * from "./Icon";
 export * from "./Input";
 export * from "./Label";
+export * from "./Layout";
 export * from "./Modal";
 export * from "./Nav";
 export * from "./Notification";

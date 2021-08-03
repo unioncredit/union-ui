@@ -17,10 +17,16 @@
   flex-shrink: 0;
   flex-grow: 0;
   max-width: 280px;
+  background-color: white;
 }
 
 .layout-main {
-  width: 100%;
+  width: 90%;
+  min-height: 100%;
   max-width: 920px;
   margin: 0 auto;
+
+  &--verticalAlign {
+    justify-content: space-between;
+  }
 }

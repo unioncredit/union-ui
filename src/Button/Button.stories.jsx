@@ -72,6 +72,10 @@ const variants = [
     },
   ],
   [{ icon: "vouch", variant: "floating", label: "Vouch for someone" }],
+  [
+    { icon: "metamask", variant: "secondary", label: "Metamask" },
+    { icon: "walletconnect", variant: "secondary", label: "WalletConnect" },
+  ],
 ];
 
 export const Primary = () => (

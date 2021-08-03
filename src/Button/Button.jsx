@@ -2,8 +2,8 @@ import React, { Children } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Icon as ButtonIcon } from "../Icon";
 import { colorHex } from "../colors";
+import { Metamask, WalletConnect, Icon as ButtonIcon } from "../Icon";
 
 import "./button.scss";
 
@@ -12,6 +12,11 @@ const variantToIconColor = (variant) => {
     return "white";
   }
   return "black";
+};
+
+const brandedIcons = {
+  metamask: Metamask,
+  walletconnect: WalletConnect,
 };
 
 export const Button = ({
@@ -25,14 +30,22 @@ export const Button = ({
   inline,
   children,
   rounded,
+  fontSize = "default",
   ...props
 }) => {
   const styles = {
     ...(color ? { color: colorHex(color) } : {}),
   };
 
+  const BrandedIcons = ["metamask", "walletconnect"].includes(icon)
+    ? brandedIcons[icon]
+    : null;
   const iconColor = color ? colorHex(color) : variantToIconColor(variant);
-  const buttonIcon = <ButtonIcon name={icon} color={iconColor} />;
+  const buttonIcon = BrandedIcons ? (
+    <BrandedIcons />
+  ) : (
+    <ButtonIcon name={icon} color={iconColor} />
+  );
 
   return (
     <button
@@ -43,6 +56,7 @@ export const Button = ({
         [`button--${variant}`]: variant,
         [`button--icon-pos-${iconPosition}`]: iconPosition,
         "button--inline": inline,
+        [`button--fontSize-${fontSize}`]: fontSize,
       })}
       {...props}
     >
@@ -56,6 +70,8 @@ export const Button = ({
 Button.propTypes = {
   variant: PropTypes.oneOf(["primary", "secondary", "pill", "floating"]),
   icon: PropTypes.oneOf([
+    "metamask",
+    "walletconnect",
     "telegram",
     "twitter",
     "link",
@@ -79,6 +95,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   background: PropTypes.string,
   color: PropTypes.string,
+  fontSize: PropTypes.oneOf(["default", "large"]),
 };
 
 Button.defaultProps = {

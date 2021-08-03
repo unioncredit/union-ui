@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames";
 
 import { Box } from "../Box";
 
@@ -16,9 +17,14 @@ export function Header({ children }) {
   return <header className="layout-header">{children}</header>;
 }
 
-export function Main({ children }) {
+export function Main({ children, verticalAlign = false }) {
   return (
-    <Box className="layout-main" direction="vertical">
+    <Box
+      className={cn("layout-main", {
+        [`layout-main--verticalAlign`]: verticalAlign,
+      })}
+      direction="vertical"
+    >
       {children}
     </Box>
   );

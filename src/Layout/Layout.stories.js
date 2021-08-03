@@ -42,3 +42,21 @@ export const Default = () => (
     </Layout.Main>
   </Layout>
 );
+
+export const VerticalAlign = () => (
+  <Layout>
+    <Layout.Main verticalAlign={true}>
+      <Layout.Header>
+        <Heading>Get Started</Heading>
+        <Box>
+          <Button variant="secondary" icon="vouch">
+            0 UNION
+          </Button>
+          <Wallet />
+        </Box>
+      </Layout.Header>
+      <div>Main</div>
+      <div>Footer</div>
+    </Layout.Main>
+  </Layout>
+);
