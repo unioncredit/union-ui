@@ -52,10 +52,8 @@ export const Input = forwardRef(
               disabled={disabled}
               onChange={handleChange}
               value={value}
+              placeholder={placeholder}
             />
-            {placeholder && (
-              <div className="input__placeholder">{placeholder}</div>
-            )}
             {suffix && <div className="input__suffix">{suffix}</div>}
             {onMaxClick && (
               <button className="input__max-button" onClick={onMaxClick}>

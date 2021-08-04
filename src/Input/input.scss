@@ -25,20 +25,16 @@ $gutter: 8px;
     width: 100%;
   }
 
-  &__placeholder {
-    position: absolute;
-    left: $gutter;
+  ::-webkit-input-placeholder {
     color: $grey400;
-    pointer-events: none;
-    font-size: $fontSize;
+  }
 
-    .input--disabled & {
-      color: $grey300;
-    }
+  &--disabled ::-webkit-input-placeholder {
+    color: $grey300;
+  }
 
-    .input--has-value & {
-      display: none;
-    }
+  &:hover ::-webkit-input-placeholder {
+    color: $grey500;
   }
 
   &__suffix {
@@ -82,14 +78,6 @@ $gutter: 8px;
     &:hover:enable {
       height: 40px;
       border: 2px solid $grey300;
-    }
-
-    &:hover:enable + .input__placeholder {
-      color: $grey500;
-    }
-
-    &:focus + .input__placeholder {
-      display: none;
     }
 
     &:focus ~ .input__suffix {

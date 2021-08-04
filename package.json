@@ -1,6 +1,6 @@
 {
   "name": "union-ui",
-  "version": "1.0.7",
+  "version": "1.0.13",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -34,17 +34,17 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
     "prettier": "^2.3.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "rollup": "^2.52.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^2.6.1",
     "sass": "^1.35.1",
     "sass-loader": "10.1.1",
-    "style-loader": "2.0.0"
+    "style-loader": "2.0.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   }
 }

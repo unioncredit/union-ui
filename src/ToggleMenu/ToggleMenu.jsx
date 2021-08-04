@@ -3,6 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Box } from "../Box";
+import { ToggleMenuItem } from "./ToggleMenuItem";
 
 import "./toggle-menu.scss";
 
@@ -22,15 +23,13 @@ export function ToggleMenu({ items, variant, onChange }) {
       })}
     >
       {items.map((item, i) => (
-        <button
+        <ToggleMenuItem
           {...item}
           onClick={handleClick(i)}
-          className={cn("toggle-menu__item", {
-            "toggle-menu__item--active": i === activeIndex,
-          })}
+          active={i === activeIndex}
         >
           {item.label}
-        </button>
+        </ToggleMenuItem>
       ))}
     </Box>
   );

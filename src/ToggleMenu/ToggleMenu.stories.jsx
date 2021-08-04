@@ -14,4 +14,8 @@ const items = [
   { label: "Disabled", disabled: true },
 ];
 
+const linkItems = items.map((item) => ({ ...item, as: "a", href: "#" }));
+
 export const Default = () => <ToggleMenu items={items} />;
+
+export const AsLink = () => <ToggleMenu items={linkItems} />;
