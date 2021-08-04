@@ -52,12 +52,13 @@ export const Button = ({
       type="button"
       style={styles}
       className={cn(className, "button", {
+        "button--inline": inline,
         "button--rounded": rounded,
+        "button--noLabel": !label,
         [`button--${variant}`]: variant,
         [`button--icon-pos-${iconPosition}`]: iconPosition,
-        "button--inline": inline,
         [`button--fontSize-${fontSize}`]: fontSize,
-        "button--noLabel": !label,
+        [`button--icon-${icon}`]: icon,
       })}
       {...props}
     >

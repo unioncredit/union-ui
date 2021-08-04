@@ -27,7 +27,10 @@ const buttons = [
 ];
 
 const variants = [
-  [{ icon: "vouch", variant: "primary", label: "Vouch for new contact" }],
+  [
+    { icon: "vouch", variant: "primary", label: "Vouch for new contact" },
+    { icon: "link", variant: "primary", label: "Vouch for new contact" },
+  ],
   [
     { icon: "vouch", variant: "secondary", label: "Vouch for new contact" },
     { icon: "arrow-left", variant: "secondary", label: "Back to Overview" },
@@ -76,7 +79,10 @@ const variants = [
     { icon: "metamask", variant: "secondary", label: "Metamask" },
     { icon: "walletconnect", variant: "secondary", label: "WalletConnect" },
   ],
-  [{ icon: "twitter", variant: "secondary", rounded: true }],
+  [
+    { icon: "twitter", variant: "secondary", rounded: true },
+    { icon: "telegram", variant: "secondary", rounded: true },
+  ],
 ];
 
 export const Primary = () => (

@@ -32,9 +32,7 @@ export const Default = () => (
       <Layout.Header>
         <Heading>Get Started</Heading>
         <Box>
-          <Button variant="secondary" icon="vouch">
-            0 UNION
-          </Button>
+          <Button variant="secondary" icon="vouch" label="0 UNION" />
           <Wallet />
         </Box>
       </Layout.Header>

@@ -35,7 +35,7 @@ export function ToggleMenu({ items, variant, onChange, initialActive }) {
   );
 }
 
-ToggleMenu.defaulProps = {
+ToggleMenu.defaultProps = {
   initialActive: 0,
 };
 
