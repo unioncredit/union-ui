@@ -76,6 +76,7 @@ const variants = [
     { icon: "metamask", variant: "secondary", label: "Metamask" },
     { icon: "walletconnect", variant: "secondary", label: "WalletConnect" },
   ],
+  [{ icon: "twitter", variant: "secondary", rounded: true }],
 ];
 
 export const Primary = () => (

@@ -13,3 +13,5 @@ export * from "./Link.svg";
 export * from "./Stats.svg";
 export * from "./Locked.svg";
 export * from "./Info.svg";
+export * from "./Twitter.svg";
+export * from "./Telegram.svg";

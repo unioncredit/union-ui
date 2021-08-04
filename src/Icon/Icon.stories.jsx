@@ -5,8 +5,7 @@ import { Icon } from "./Icon";
 import { Logo } from "./Logo";
 import { Metamask } from "./Metamask";
 import { WalletConnect } from "./WalletConnect";
-import { Twitter } from "./Twitter";
-import { Telegram } from "./Telegram";
+import { Twitter, Telegram } from "./icons";
 import { NavIcon } from "./NavIcon";
 
 export default {

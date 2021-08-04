@@ -57,6 +57,7 @@ export const Button = ({
         [`button--icon-pos-${iconPosition}`]: iconPosition,
         "button--inline": inline,
         [`button--fontSize-${fontSize}`]: fontSize,
+        "button--noLabel": !label,
       })}
       {...props}
     >
