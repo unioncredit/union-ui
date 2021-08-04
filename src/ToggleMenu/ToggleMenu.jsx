@@ -7,8 +7,8 @@ import { ToggleMenuItem } from "./ToggleMenuItem";
 
 import "./toggle-menu.scss";
 
-export function ToggleMenu({ items, variant, onChange }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+export function ToggleMenu({ items, variant, onChange, initialActive }) {
+  const [activeIndex, setActiveIndex] = useState(initialActive);
 
   const handleClick = (index) => () => {
     setActiveIndex(index);
@@ -35,7 +35,12 @@ export function ToggleMenu({ items, variant, onChange }) {
   );
 }
 
+ToggleMenu.defaulProps = {
+  initialActive: 0,
+};
+
 ToggleMenu.propTypes = {
+  initialActive: PropTypes.number,
   items: PropTypes.array,
   variant: PropTypes.oneOf(["primary", "nav"]),
 };

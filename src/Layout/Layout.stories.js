@@ -22,10 +22,10 @@ export const Default = () => (
           active
           description="Get vouched for to become a member and stake your DAI to collect UNION "
         />
-        <NavItem label="Credit" icon="credit" />
-        <NavItem label="Contacts" icon="contacts" />
-        <NavItem label="Vote" icon="vote" />
-        <NavItem disabled label="Vote" icon="vote" />
+        <NavItem label="Credit" icon="credit" disabled />
+        <NavItem label="Contacts" icon="contacts" disabled />
+        <NavItem label="Vote" icon="vote" disabled />
+        <NavItem disabled label="Vote" icon="vote" disabled />
       </Nav>
     </Layout.Sidebar>
     <Layout.Main>
