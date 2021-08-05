@@ -11,7 +11,9 @@ import "./stat.scss";
 export function Stat({ label, value, cta, caption }) {
   return (
     <Box className="stat" direction="vertical">
-      <Text className="stat__label">{label}</Text>
+      <div className="stat__label">
+        {typeof label === "string" ? <Text mb="0">{label}</Text> : label}
+      </div>
       <Heading className="stat__value">{value}</Heading>
       {cta}
       {caption && (

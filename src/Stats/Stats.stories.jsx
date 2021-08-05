@@ -75,5 +75,18 @@ export const CaptionAsNode = () => (
         />
       }
     />
+    <Stat
+      label={<div style={{ color: "red" }}>Label</div>}
+      value="$3200"
+      caption={<div style={{ color: "red" }}>Caption</div>}
+      cta={
+        <Button
+          variant="pill"
+          icon="chevron"
+          iconPosition="end"
+          label="Request Extra"
+        />
+      }
+    />
   </>
 );

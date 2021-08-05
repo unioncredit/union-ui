@@ -2,6 +2,7 @@
 
 .tooltip {
   position: relative;
+  z-index: 99;
 
   svg {
     display: inline-block;
@@ -11,6 +12,10 @@
     path {
       fill: #8e8b9a;
     }
+  }
+
+  &__content {
+    font-size: 11.2px;
   }
 
   &:hover {

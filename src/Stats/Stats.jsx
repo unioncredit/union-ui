@@ -3,9 +3,9 @@ import cn from "classnames";
 
 import { Box } from "../Box";
 
-export function Stats({ className, children }) {
+export function Stats({ className, children, ...props }) {
   return (
-    <Box align="center" className={cn(className, "stats")} fluid>
+    <Box {...props} align="center" className={cn(className, "stats")} fluid>
       {children}
     </Box>
   );

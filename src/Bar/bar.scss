@@ -58,7 +58,7 @@
 }
 
 .bar-wrapper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   &--hasMarkerLabel {
@@ -66,6 +66,6 @@
   }
 }
 
-.bar-label {
+.label.bar-label {
   margin: 0 5px 0 0;
 }
