@@ -19,7 +19,7 @@ export function Stat({ label, value, cta, caption }) {
       {caption && (
         <div className="stat__caption">
           {typeof caption === "string" ? (
-            <Label size="small" as="p">
+            <Label size="small" as="p" mb={0}>
               {caption}
             </Label>
           ) : (
