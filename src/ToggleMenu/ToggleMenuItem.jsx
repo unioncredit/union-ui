@@ -2,7 +2,14 @@ import { createElement } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-export function ToggleMenuItem({ as, children, className, active, ...props }) {
+export function ToggleMenuItem({
+  disabled,
+  as,
+  children,
+  className,
+  active,
+  ...props
+}) {
   return createElement(
     as || "button",
     {
@@ -10,6 +17,7 @@ export function ToggleMenuItem({ as, children, className, active, ...props }) {
         "toggle-menu__item--active": active,
         "toggle-menu__item--disabled": disabled,
       }),
+      disabled,
       ...props,
     },
     children
