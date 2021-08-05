@@ -17,6 +17,7 @@
     font: inherit;
     font-size: 11.2px;
     color: $grey500;
+    cursor: pointer;
 
     &:focus {
       outline: none !important;
@@ -27,13 +28,13 @@
       background: #ffffff;
     }
 
-    &:enabled:hover {
+    &:not(.toggle-menu__item--disabled):hover {
       border: 1px solid $grey200;
       background: none;
       color: $grey600;
     }
 
-    &:enabled:active {
+    &:not(.toggle-menu__item--disabled):active {
       color: $grey600;
       background: $grey200;
     }

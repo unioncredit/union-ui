@@ -36,7 +36,9 @@ export const Default = () => (
           <Wallet />
         </Box>
       </Layout.Header>
-      Main
+      <div>
+        <div style={{ width: "100px", height: "1100px", background: "grey" }} />
+      </div>
     </Layout.Main>
   </Layout>
 );

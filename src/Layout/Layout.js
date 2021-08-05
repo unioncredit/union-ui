@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "classnames";
 
 import { Box } from "../Box";
 
@@ -23,8 +22,10 @@ export function Header({ children, ...props }) {
 
 export function Main({ children, ...props }) {
   return (
-    <Box {...props} className="layout-main" direction="vertical">
-      {children}
+    <Box className="layout-main-wrapper" fluid>
+      <Box {...props} className="layout-main" direction="vertical">
+        {children}
+      </Box>
     </Box>
   );
 }

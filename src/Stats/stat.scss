@@ -5,6 +5,7 @@
   border: 1px solid $grey200;
   border-radius: 20px;
   padding: 14px 14px 14px 20px;
+  box-sizing: border-box;
 
   & .button-row {
     margin-left: auto;
