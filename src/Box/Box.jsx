@@ -17,6 +17,7 @@ export function Box({
   className,
   direction,
   as,
+  fluid,
   wrap = "nowrap",
   ...props
 }) {
@@ -26,6 +27,7 @@ export function Box({
       ...props,
       className: cn("box", className, {
         [`box--direction-${direction}`]: direction,
+        "box--fluid": fluid,
       }),
       style: {
         alignItems: align,
