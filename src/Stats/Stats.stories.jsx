@@ -59,3 +59,21 @@ export const StatsBar = () => (
     </ButtonRow>
   </Stats>
 );
+
+export const CaptionAsNode = () => (
+  <>
+    <Stat
+      label="Total Stakes"
+      value="$3200"
+      caption={<div style={{ color: "red" }}>Caption</div>}
+      cta={
+        <Button
+          variant="pill"
+          icon="chevron"
+          iconPosition="end"
+          label="Request Extra"
+        />
+      }
+    />
+  </>
+);

@@ -15,9 +15,15 @@ export function Stat({ label, value, cta, caption }) {
       <Heading className="stat__value">{value}</Heading>
       {cta}
       {caption && (
-        <Label size="small" as="p" className="stat__caption">
-          {caption}
-        </Label>
+        <div className="stat__caption">
+          {typeof caption === "string" ? (
+            <Label size="small" as="p">
+              {caption}
+            </Label>
+          ) : (
+            caption
+          )}
+        </div>
       )}
     </Box>
   );
@@ -27,5 +33,5 @@ Stat.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   cta: PropTypes.node,
-  caption: PropTypes.string,
+  caption: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
 };
