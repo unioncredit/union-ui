@@ -57,3 +57,26 @@ export const Small = () => (
     <Card.Body>This is a small card</Card.Body>
   </Card>
 );
+
+export const Large = () => (
+  <Card size="fluid" noGutter>
+    <Grid bordered>
+      <Row nogutter>
+        <Col md={4}>
+          <Heading>First Column</Heading>
+        </Col>
+        <Col md={8}>
+          <Heading>First Column</Heading>
+        </Col>
+      </Row>
+      <Row nogutter>
+        <Col md={4}>
+          <Heading>First Column</Heading>
+        </Col>
+        <Col md={8}>
+          <Heading>First Column</Heading>
+        </Col>
+      </Row>
+    </Grid>
+  </Card>
+);

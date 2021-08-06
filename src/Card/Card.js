@@ -6,11 +6,12 @@ import { Heading } from "../Heading";
 
 import "./card.scss";
 
-export function Card({ size, children, className }) {
+export function Card({ size, children, className, noGutter }) {
   return (
     <div
       className={cn("card", className, {
         [`card--${size}`]: size,
+        "card--noGutter": noGutter,
       })}
     >
       {children}
