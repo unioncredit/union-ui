@@ -5,7 +5,10 @@
   background: $grey100;
   border-radius: 12px;
   padding: 4px 2px;
-  display: inline-flex;
+
+  &.box {
+    display: inline-flex;
+  }
 
   &__item {
     margin: 0 2px 0 0;

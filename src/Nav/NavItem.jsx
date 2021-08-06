@@ -8,24 +8,24 @@ import "./nav-item.scss";
 
 export function NavItem({ disabled, label, icon, active, description }) {
   return (
-    <div
+    <a
       tabIndex="0"
       className={cn("nav-item", {
         "nav-item--active": active,
         "nav-item--disabled": disabled,
       })}
     >
-      <div className="nav-item__icon">
+      <span className="nav-item__icon">
         <NavIcon name={icon} />
-      </div>
-      <div className="nav-item__content">
-        <div className="nav-item__label">{label}</div>
+      </span>
+      <span className="nav-item__content">
+        <span className="nav-item__label">{label}</span>
         {active && description && (
           <Label as="p" size="small" className="nav-item__description">
             {description}
           </Label>
         )}
-      </div>
-    </div>
+      </span>
+    </a>
   );
 }

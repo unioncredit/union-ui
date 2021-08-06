@@ -21,6 +21,14 @@ const templates = {
     left: "margin",
     right: `0 ${VAL_STR}`,
   },
+  ml: {
+    left: "marginLeft",
+    right: VAL_STR,
+  },
+  mr: {
+    left: "marginRight",
+    right: VAL_STR,
+  },
 };
 
 export function propsToStyles(props) {

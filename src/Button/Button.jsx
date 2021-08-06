@@ -3,6 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { colorHex } from "../colors";
+import { propsToStyles } from "../spacing";
 import { Metamask, WalletConnect, Icon as ButtonIcon } from "../Icon";
 
 import "./button.scss";
@@ -35,6 +36,7 @@ export const Button = ({
 }) => {
   const styles = {
     ...(color ? { color: colorHex(color) } : {}),
+    ...propsToStyles(props),
   };
 
   const BrandedIcons = ["metamask", "walletconnect"].includes(icon)
