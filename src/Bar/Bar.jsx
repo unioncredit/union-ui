@@ -17,33 +17,38 @@ export function Bar({
 }) {
   return (
     <div
-      className={cn("bar-wrapper", {
-        "bar-wrapper--hasMarkerLabel": !!markerLabel,
+      className={cn("bar", {
+        [`bar--${size}`]: size,
+        "bar--hasMarkerLabel": !!markerLabel,
       })}
     >
-      <Label size="small" className="bar-label" as="p">
-        {label}
-      </Label>
+      {label && (
+        <Label size="small" className="bar-label" as="p">
+          {label}
+        </Label>
+      )}
       <div
-        className={cn("bar", {
-          [`bar--${size}`]: size,
-          [`bar--${color}`]: color,
+        className={cn("bar__indicator", {
+          [`bar__indicator--${color}`]: color,
         })}
       >
-        <div className="bar__progress" style={{ width: `${percentage}%` }} />
+        <div
+          className="bar__indicator__progress"
+          style={{ width: `${percentage}%` }}
+        />
         {secondaryBar && (
-          <div className="bar__progress bar__progress--secondaryBar" />
+          <div className="bar__indicator__progress bar__indicator__progress--secondaryBar" />
         )}
         {marker && (
           <>
             <Label
               as="p"
-              className="bar__markerLabel"
+              className="bar__indicator__markerLabel"
               style={{ left: `${marker}%` }}
             >
               {markerLabel}
             </Label>
-            <div className="bar__marker" style={{ left: `${marker}%` }} />
+            <div className="bar__indicator__marker" style={{ left: `${marker}%` }} />
           </>
         )}
       </div>

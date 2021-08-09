@@ -13,6 +13,7 @@ export function Label({ children, size, className, as, onClick, ...props }) {
       className: cn("label", className, { [`label--${size}`]: size }),
       style: propsToStyles(props),
       onClick,
+      ...props,
     },
     children
   );
