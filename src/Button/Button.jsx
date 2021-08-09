@@ -31,6 +31,7 @@ export const Button = ({
   inline,
   children,
   rounded,
+  fluid,
   fontSize = "default",
   ...props
 }) => {
@@ -54,6 +55,7 @@ export const Button = ({
       type="button"
       style={styles}
       className={cn(className, "button", {
+        "button--fluid": fluid,
         "button--inline": inline,
         "button--rounded": rounded,
         "button--noLabel": !label,
@@ -72,6 +74,7 @@ export const Button = ({
 };
 
 Button.propTypes = {
+  fluid: PropTypes.bool,
   variant: PropTypes.oneOf(["primary", "secondary", "pill", "floating"]),
   icon: PropTypes.oneOf([
     "metamask",

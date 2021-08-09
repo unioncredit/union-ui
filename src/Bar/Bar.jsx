@@ -43,12 +43,16 @@ export function Bar({
           <>
             <Label
               as="p"
+              size="small"
               className="bar__indicator__markerLabel"
               style={{ left: `${marker}%` }}
             >
               {markerLabel}
             </Label>
-            <div className="bar__indicator__marker" style={{ left: `${marker}%` }} />
+            <div
+              className="bar__indicator__marker"
+              style={{ left: `${marker}%` }}
+            />
           </>
         )}
       </div>
