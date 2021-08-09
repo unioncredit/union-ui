@@ -15,12 +15,19 @@ export const Grid = ({ className, bordered, ...props }) => {
   );
 };
 
-export const Row = ({ className, ...props }) => (
-  <GridRow className={cn(className, "grid-row")} {...props} />
+export const Row = ({ className, noGutter, ...props }) => (
+  <GridRow
+    className={cn(className, "grid-row")}
+    nogutter={noGutter}
+    {...props}
+  />
 );
 
-export const Col = ({ className, ...props }) => (
-  <GridCol className={cn(className, "grid-col")} {...props} />
+export const Col = ({ className, noPadding, ...props }) => (
+  <GridCol
+    className={cn(className, "grid-col", { "grid-col--noPadding": noPadding })}
+    {...props}
+  />
 );
 
 Grid.propTypes = {

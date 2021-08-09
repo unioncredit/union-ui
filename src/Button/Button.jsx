@@ -95,7 +95,7 @@ Button.propTypes = {
   ]),
   rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   onClick: PropTypes.func,
   background: PropTypes.string,
   color: PropTypes.string,

@@ -24,6 +24,7 @@ export function ToggleMenu({ items, variant, onChange, initialActive }) {
     >
       {items.map((item, i) => (
         <ToggleMenuItem
+          key={item.id || i}
           {...item}
           onClick={handleClick(i)}
           active={i === activeIndex}

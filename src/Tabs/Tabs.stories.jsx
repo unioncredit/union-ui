@@ -15,3 +15,4 @@ const items = [
 ];
 
 export const Default = () => <Tabs items={items} />;
+export const Secondary = () => <Tabs items={items} variant="secondary" />;

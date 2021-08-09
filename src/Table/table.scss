@@ -7,4 +7,13 @@
   border-radius: 12px;
   padding: 4px 8px;
   flex-direction: column;
+
+  &--noBorder {
+    border: none;
+    border-radius: 0;
+  }
+
+  &--noPadding {
+    padding: 0;
+  }
 }
