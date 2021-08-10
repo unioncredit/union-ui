@@ -103,9 +103,10 @@ $gutter: 8px;
 
 .input-caption {
   margin-top: 4px;
-  color: $blue100;
 
   &--clickable {
+    color: $blue100;
+
     &:hover {
       text-decoration: underline;
       cursor: default;
