@@ -24,6 +24,12 @@
     }
   }
 
+  .button-row & {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &--icon-pos-start svg {
     margin-right: $iconGutter;
   }

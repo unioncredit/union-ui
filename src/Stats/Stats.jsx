@@ -5,7 +5,7 @@ import { Box } from "../Box";
 
 export function Stats({ className, children, ...props }) {
   return (
-    <Box {...props} align="center" className={cn(className, "stats")} fluid>
+    <Box {...props} align="center" className={cn(className, "stats")} fullWidth>
       {children}
     </Box>
   );

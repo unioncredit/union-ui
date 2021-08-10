@@ -3,16 +3,18 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Heading } from "../Heading";
+import { propsToStyles } from "../spacing";
 
 import "./card.scss";
 
-export function Card({ size, children, className, noGutter }) {
+export function Card({ size, children, className, noGutter, ...props }) {
   return (
     <div
       className={cn("card", className, {
         [`card--${size}`]: size,
         "card--noGutter": noGutter,
       })}
+      style={propsToStyles(props)}
     >
       {children}
     </div>

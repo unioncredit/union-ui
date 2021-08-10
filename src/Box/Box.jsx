@@ -18,6 +18,7 @@ export function Box({
   direction,
   as,
   fluid,
+  fullWidth,
   wrap = "nowrap",
   ...props
 }) {
@@ -28,6 +29,7 @@ export function Box({
       className: cn("box", className, {
         [`box--direction-${direction}`]: direction,
         "box--fluid": fluid,
+        "box--fullWidth": fullWidth,
       }),
       style: {
         alignItems: align,
@@ -57,6 +59,8 @@ Box.propTypes = {
   direction: PropTypes.oneOf(["vertical", "horizontal"]),
   wrap: PropTypes.bool,
   className: PropTypes.string,
+  fluid: PropTypes.bool,
+  fullWidth: PropTypes.bool,
 };
 
 Box.defaultProps = {

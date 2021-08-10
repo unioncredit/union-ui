@@ -46,6 +46,7 @@ export function Bar({
               size="small"
               className="bar__indicator__markerLabel"
               style={{ left: `${marker}%` }}
+              mb={0}
             >
               {markerLabel}
             </Label>
