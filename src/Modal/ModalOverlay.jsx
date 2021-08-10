@@ -7,6 +7,6 @@ export function ModalOverlay({ children }) {
   return <div className="modal-overlay">{children}</div>;
 }
 
-Modal.propTypes = {
+ModalOverlay.propTypes = {
   children: PropTypes.any,
 };

@@ -8,9 +8,15 @@ import { Text } from "../Text";
 
 import "./wallet.scss";
 
-export function Wallet({ avatarSrc, indicator, ellipse, indicatorWarning }) {
+export function Wallet({
+  onClick,
+  avatarSrc,
+  indicator,
+  ellipse,
+  indicatorWarning,
+}) {
   return (
-    <Button variant="secondary" className="wallet">
+    <Button variant="secondary" className="wallet" onClick={onClick}>
       <span className={cn("ellipse", { "ellipse--hidden": !ellipse })}>
         <span
           className={cn("wallet__transaction-indicator", {
