@@ -21,6 +21,7 @@ export const Input = forwardRef(
       onCaptionClick,
       onChange,
       type,
+      error,
     },
     ref
   ) => {
@@ -43,6 +44,7 @@ export const Input = forwardRef(
             className={cn("input", {
               "input--disabled": disabled,
               "input--has-value": hasValue,
+              "input--error": error,
             })}
           >
             <input
@@ -69,11 +71,12 @@ export const Input = forwardRef(
             as="p"
             className={cn("input-caption", {
               "input-caption--clickable": onCaptionClick,
+              "input-caption--error": error,
             })}
             mt="4px"
-            onClick={onCaptionClick}
+            onClick={!error ? onCaptionClick : undefined}
           >
-            {caption}
+            {error || caption}
           </Label>
         )}
       </div>

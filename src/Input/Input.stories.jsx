@@ -57,21 +57,31 @@ export const Inputs = () => (
         suffix="DAI"
       />
     </Box>
+
+    <Box mb="20px">
+      <Input
+        label="Input label"
+        error="input error"
+        caption="382.91 DAI Available"
+        placeholder="Placeholder"
+        suffix="DAI"
+      />
+    </Box>
   </>
 );
 
 export const Controls = () => (
   <>
     <Box mb="20px">
-      <Control type="checkbox" checked />
-      <Control type="checkbox" checked disabled />
-      <Control type="checkbox" indeterminate />
+      <Control type="checkbox" checked mr="8px" />
+      <Control type="checkbox" checked disabled mr="8px" />
+      <Control type="checkbox" indeterminate mr="8px" />
       <Control type="checkbox" />
     </Box>
     <Box mb="20px">
-      <Control type="radio" checked />
-      <Control type="radio" checked disabled />
-      <Control type="radio" indeterminate />
+      <Control type="radio" checked mr="8px" />
+      <Control type="radio" checked disabled mr="8px" />
+      <Control type="radio" indeterminate mr="8px" />
       <Control type="radio" />
     </Box>
     <Box mb="20px">

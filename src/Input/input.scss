@@ -15,7 +15,7 @@ $gutter: 8px;
 
 .input {
   $fontSize: 14px;
-
+  flex: 1 1 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -89,6 +89,16 @@ $gutter: 8px;
       box-shadow: 0px 0px 0px 2px $blueBoxShadow;
     }
   }
+
+  &--error {
+    input {
+      border: 2px solid #eb5d5f;
+    }
+
+    .input__suffix {
+      border-left: 1px solid #eb5d5f;
+    }
+  }
 }
 
 .input-label,
@@ -104,7 +114,12 @@ $gutter: 8px;
 .input-caption {
   margin-top: 4px;
 
-  &--clickable {
+  &--error {
+    color: #c84042;
+    font-weight: 500;
+  }
+
+  &--clickable:not(.input-caption--clickable) {
     color: $blue100;
 
     &:hover {

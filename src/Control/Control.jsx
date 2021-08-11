@@ -4,10 +4,18 @@ import PropTypes from "prop-types";
 
 import { Icon } from "../Icon";
 import { Text } from "../Text";
+import { propsToStyles } from "../spacing";
 
 import "./control.scss";
 
-export function Control({ label, type, disabled, checked, indeterminate }) {
+export function Control({
+  label,
+  type,
+  disabled,
+  checked,
+  indeterminate,
+  ...props
+}) {
   const iconName = checked
     ? "control-check"
     : indeterminate
@@ -15,7 +23,7 @@ export function Control({ label, type, disabled, checked, indeterminate }) {
     : null;
 
   return (
-    <div className="control-wrapper">
+    <div className="control-wrapper" style={propsToStyles(props)}>
       <div
         className={cn("control", {
           [`control--${type}`]: type,
@@ -28,7 +36,11 @@ export function Control({ label, type, disabled, checked, indeterminate }) {
           <Icon name={iconName} color="white" />
         )}
       </div>
-      {label && <Text className="control-label">{label}</Text>}
+      {label && (
+        <Text className="control-label" my={0} ml="6px">
+          {label}
+        </Text>
+      )}
     </div>
   );
 }
