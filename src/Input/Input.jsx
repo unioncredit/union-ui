@@ -65,7 +65,7 @@ export const Input = forwardRef(
           </div>
           {cta}
         </div>
-        {caption && (
+        {(caption || error) && (
           <Label
             size="small"
             as="p"

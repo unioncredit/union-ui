@@ -20,6 +20,10 @@
     padding: 0;
   }
 
+  &--packed {
+    padding: 0 16px;
+  }
+
   .grid--bordered {
     .grid-row:not(:last-of-type) {
       border-bottom: $border;
@@ -50,4 +54,8 @@
 
 .card-body {
   padding: 20px 0;
+
+  .card--packed & {
+    padding: 12px 0;
+  }
 }

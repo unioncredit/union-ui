@@ -7,11 +7,19 @@ import { propsToStyles } from "../spacing";
 
 import "./card.scss";
 
-export function Card({ size, children, className, noGutter, ...props }) {
+export function Card({
+  variant,
+  size,
+  children,
+  className,
+  noGutter,
+  ...props
+}) {
   return (
     <div
       className={cn("card", className, {
         [`card--${size}`]: size,
+        [`card--${variant}`]: variant,
         "card--noGutter": noGutter,
       })}
       style={propsToStyles(props)}
@@ -41,5 +49,6 @@ CardHeader.propTypes = {
 };
 
 Card.propTypes = {
+  variant: PropTypes.oneOf(["primary", "packed"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
 };

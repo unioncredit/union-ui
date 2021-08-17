@@ -6,11 +6,16 @@ import { ToggleMenu } from "../ToggleMenu";
 
 import "./tabs.scss";
 
-export function Tabs({ items, initialActive, variant }) {
+export function Tabs({ items, initialActive, variant, onChange }) {
   return (
     <div className={cn("tabs", { [`tabs--${variant}`]: variant })}>
       <div className="tab__options">
-        <ToggleMenu variant="nav" items={items} initialActive={initialActive} />
+        <ToggleMenu
+          variant="nav"
+          items={items}
+          initialActive={initialActive}
+          onChange={onChange}
+        />
       </div>
     </div>
   );

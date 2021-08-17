@@ -10,10 +10,11 @@ import "./wallet.scss";
 
 export function Wallet({
   onClick,
-  avatarSrc,
+  avatar,
   indicator,
   ellipse,
   indicatorWarning,
+  name,
 }) {
   return (
     <Button variant="secondary" className="wallet" onClick={onClick}>
@@ -26,8 +27,8 @@ export function Wallet({
           {indicator}
         </span>
       </span>
-      <Text>liamo.eth</Text>
-      <Avatar src={avatarSrc} />
+      <Text>{name}</Text>
+      {avatar || <Avatar />}
     </Button>
   );
 }
@@ -39,7 +40,9 @@ Wallet.defaultProps = {
 };
 
 Wallet.propTypes = {
+  name: PropTypes.string.isRequired,
   avatarSrc: PropTypes.string,
   indicator: PropTypes.number,
   indicatorWarning: PropTypes.bool,
+  avatar: PropTypes.node,
 };
