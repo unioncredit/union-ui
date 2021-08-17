@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./dai.scss";
 
 export function Dai() {

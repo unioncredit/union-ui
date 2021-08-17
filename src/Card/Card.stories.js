@@ -55,6 +55,7 @@ export const Small = () => (
   <Card size="small">
     <Card.Header title="Stake" />
     <Card.Body>This is a small card</Card.Body>
+    <Card.Footer>footer</Card.Footer>
   </Card>
 );
 

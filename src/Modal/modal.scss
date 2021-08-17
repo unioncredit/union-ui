@@ -49,4 +49,15 @@
       }
     }
   }
+
+  &--drawer {
+    height: 100vh;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+
+    .card-footer {
+      justify-content: flex-end;
+    }
+  }
 }

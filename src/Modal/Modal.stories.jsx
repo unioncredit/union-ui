@@ -26,38 +26,69 @@ const options = [
 
 export const Default = () => (
   <Modal title="Borrow Funds" onClose={() => alert("modal close")}>
-    <Select options={options} />
-    <Box align="center" justify="space-between" mt="20px">
-      <Text m={0}>Metamask</Text>
-      <Button variant="pill">Disconnect</Button>
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Heading m={0}>0xf007...1337</Heading>
-    </Box>
-    <Divider />
-    <Box align="center" justify="space-between" mt="20px" mb="16px">
-      <Text m={0} size="large">
-        Transactions
-      </Text>
-      <Button variant="pill">Clear</Button>
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Text m={0}>Staked $500</Text>
-      <StatusIcon variant="wire" name="pending" />
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Text m={0}>Borrowed $800</Text>
-      <StatusIcon variant="wire" name="success" />
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Text m={0} color="orange">
-        Wrote-off $240 debt
-      </Text>
-      <StatusIcon variant="wire" name="error" />
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Text m={0}>Staked $1000</Text>
-      <StatusIcon variant="wire" name="success" />
-    </Box>
+    <Modal.Body>
+      <Select options={options} />
+      <Box align="center" justify="space-between" mt="20px">
+        <Text m={0}>Metamask</Text>
+        <Button variant="pill">Disconnect</Button>
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Heading m={0}>0xf007...1337</Heading>
+      </Box>
+      <Divider />
+      <Box align="center" justify="space-between" mt="20px" mb="16px">
+        <Text m={0} size="large">
+          Transactions
+        </Text>
+        <Button variant="pill">Clear</Button>
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0}>Staked $500</Text>
+        <StatusIcon variant="wire" name="pending" />
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0}>Borrowed $800</Text>
+        <StatusIcon variant="wire" name="success" />
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0} color="orange">
+          Wrote-off $240 debt
+        </Text>
+        <StatusIcon variant="wire" name="error" />
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0}>Staked $1000</Text>
+        <StatusIcon variant="wire" name="success" />
+      </Box>
+    </Modal.Body>
+  </Modal>
+);
+
+export const Drawer = () => (
+  <Modal title="Borrow Funds" onClose={() => alert("modal close")} drawer>
+    <Modal.Body>
+      <Select options={options} />
+      <Box align="center" justify="space-between" mt="20px">
+        <Text m={0}>Metamask</Text>
+        <Button variant="pill">Disconnect</Button>
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Heading m={0}>0xf007...1337</Heading>
+      </Box>
+      <Divider />
+      <Box align="center" justify="space-between" mt="20px" mb="16px">
+        <Text m={0} size="large">
+          Transactions
+        </Text>
+        <Button variant="pill">Clear</Button>
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0}>Staked $500</Text>
+        <StatusIcon variant="wire" name="pending" />
+      </Box>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button label="Click me" />
+    </Modal.Footer>
   </Modal>
 );

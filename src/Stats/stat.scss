@@ -41,6 +41,10 @@
   &__value {
     color: $grey700;
     margin: 0 0 12px 0;
+
+    .dai path {
+      fill: $grey700 !important;
+    }
   }
 
   &__caption {

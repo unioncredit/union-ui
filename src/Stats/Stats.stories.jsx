@@ -5,6 +5,7 @@ import { Stat } from "./Stat";
 import { Bar } from "../Bar";
 import { Box } from "../Box";
 import { Button, ButtonRow } from "../Button";
+import { Dai } from "../Dai";
 
 export default {
   component: Stats,
@@ -15,7 +16,12 @@ export const All = () => (
   <>
     <Stat
       label="Total Stakes"
-      value="$3200"
+      value={
+        <>
+          <Dai />
+          3200
+        </>
+      }
       caption="$100.00 frozen"
       cta={
         <Button

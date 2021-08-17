@@ -32,6 +32,8 @@ export const Button = ({
   children,
   rounded,
   fluid,
+  loading,
+  disabled,
   fontSize = "default",
   ...props
 }) => {
@@ -64,6 +66,7 @@ export const Button = ({
         [`button--fontSize-${fontSize}`]: fontSize,
         [`button--icon-${icon}`]: icon,
       })}
+      disabled={disabled || loading}
       {...props}
     >
       {icon && iconPosition === "start" && buttonIcon}
@@ -103,10 +106,12 @@ Button.propTypes = {
   background: PropTypes.string,
   color: PropTypes.string,
   fontSize: PropTypes.oneOf(["default", "large"]),
+  loading: PropTypes.bool,
 };
 
 Button.defaultProps = {
   variant: "primary",
   onClick: undefined,
   iconPosition: "start",
+  loading: false,
 };
