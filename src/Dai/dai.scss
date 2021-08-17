@@ -1,0 +1,56 @@
+@import "../variables.scss";
+
+.dai {
+  display: inline-block;
+  height: 0.75em;
+
+  .text--primary & path {
+    fill: $grey500;
+  }
+  .text--grey100 & path {
+    fill: $grey100;
+  }
+  .text--grey200 & path {
+    fill: $grey200;
+  }
+  .text--grey300 & path {
+    fill: $grey300;
+  }
+  .text--grey400 & path {
+    fill: $grey400;
+  }
+  .text--grey500 & path {
+    fill: $grey500;
+  }
+  .text--grey600 & path {
+    fill: $grey600;
+  }
+  .text--grey700 & path {
+    fill: $grey700;
+  }
+
+  .heading--primary & path {
+    fill: $grey500;
+  }
+  .heading--grey100 & path {
+    fill: $grey100;
+  }
+  .heading--grey200 & path {
+    fill: $grey200;
+  }
+  .heading--grey300 & path {
+    fill: $grey300;
+  }
+  .heading--grey400 & path {
+    fill: $grey400;
+  }
+  .heading--grey500 & path {
+    fill: $grey500;
+  }
+  .heading--grey600 & path {
+    fill: $grey600;
+  }
+  .heading--grey700 & path {
+    fill: $grey700;
+  }
+}

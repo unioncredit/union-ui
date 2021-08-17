@@ -7,12 +7,21 @@ import { colorHex } from "../colors";
 
 import "./text.scss";
 
-export function Text({ align, children, size, className, color, ...props }) {
+export function Text({
+  align,
+  children,
+  size,
+  className,
+  color,
+  grey,
+  ...props
+}) {
   return (
     <p
       className={cn("text", className, {
         [`text--${size}`]: size,
         [`text--${align}`]: align,
+        [`text--grey${grey}`]: grey,
       })}
       style={{
         ...propsToStyles(props),

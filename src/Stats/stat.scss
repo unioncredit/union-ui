@@ -18,6 +18,8 @@
   display: inline-block;
   padding-right: $gutter;
   margin-right: $gutter;
+  flex-grow: 1;
+  box-sizing: border-box;
 
   &:not(:last-child):after {
     content: "";
@@ -43,5 +45,10 @@
 
   &__caption {
     margin: 0 !important;
+    width: 100%;
+
+    .bar {
+      width: 100%;
+    }
   }
 }

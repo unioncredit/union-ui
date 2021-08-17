@@ -29,6 +29,18 @@ const templates = {
     left: "marginRight",
     right: VAL_STR,
   },
+  minw: {
+    left: "min-width",
+    right: VAL_STR,
+  },
+  maxw: {
+    left: "max-width",
+    right: VAL_STR,
+  },
+  w: {
+    left: "width",
+    right: VAL_STR,
+  },
 };
 
 export function propsToStyles(props) {

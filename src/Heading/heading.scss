@@ -1,5 +1,8 @@
+@import "../variables.scss";
+
 .heading {
   margin-bottom: 8px;
+  color: $grey700;
 
   &--primary {
     font-size: 21.88px;
@@ -15,4 +18,6 @@
     font-size: 34.18px;
     font-weight: 400;
   }
+
+  @include greys;
 }

@@ -17,3 +17,27 @@ $green100: #2f9f63;
 $orange: #e09a0e;
 $purple: #8b7afd;
 $yellow: #f3bb4a;
+
+@mixin greys {
+  &--grey100 {
+    color: $grey100;
+  }
+  &--grey200 {
+    color: $grey200;
+  }
+  &--grey300 {
+    color: $grey300;
+  }
+  &--grey400 {
+    color: $grey400;
+  }
+  &--grey500 {
+    color: $grey500;
+  }
+  &--grey600 {
+    color: $grey600;
+  }
+  &--grey700 {
+    color: $grey700;
+  }
+}

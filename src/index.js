@@ -28,4 +28,5 @@ export * from "./Toggle";
 export * from "./ToggleMenu";
 export * from "./Tooltip";
 export * from "./Wallet";
+export * from "./Dai";
 export * from "./CircleProgress";

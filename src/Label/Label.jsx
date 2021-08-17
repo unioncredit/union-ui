@@ -6,11 +6,22 @@ import { propsToStyles } from "../spacing";
 
 import "./label.scss";
 
-export function Label({ children, size, className, as, onClick, ...props }) {
+export function Label({
+  children,
+  size,
+  className,
+  as,
+  onClick,
+  grey,
+  ...props
+}) {
   return React.createElement(
     as || "label",
     {
-      className: cn("label", className, { [`label--${size}`]: size }),
+      className: cn("label", className, {
+        [`label--${size}`]: size,
+        [`text--grey${grey}`]: grey,
+      }),
       style: propsToStyles(props),
       onClick,
       ...props,

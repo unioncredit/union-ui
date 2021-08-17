@@ -6,11 +6,14 @@ import { propsToStyles } from "../spacing";
 
 import "./heading.scss";
 
-export function Heading({ level, size, children, className, ...props }) {
+export function Heading({ level, size, children, className, grey, ...props }) {
   return React.createElement(
     `h${level}`,
     {
-      className: cn(className, "heading", { [`heading--${size}`]: size }),
+      className: cn(className, "heading", {
+        [`heading--${size}`]: size,
+        [`text--grey${grey}`]: grey,
+      }),
       style: propsToStyles(props),
       ...props,
     },

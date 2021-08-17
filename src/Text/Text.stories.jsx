@@ -19,3 +19,15 @@ export const All = () => (
     </Label>
   </>
 );
+
+export const Greys = () => (
+  <>
+    {Array(7)
+      .fill(100)
+      .map((n, i) => (
+        <Text grey={n * (i + 1)}>
+          The quick brown fox jumps over a lazy dog.
+        </Text>
+      ))}
+  </>
+);

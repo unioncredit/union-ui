@@ -128,4 +128,13 @@
       margin: 0;
     }
   }
+
+  &--fontSize-large {
+    font-size: 14px;
+
+    svg {
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
 }
