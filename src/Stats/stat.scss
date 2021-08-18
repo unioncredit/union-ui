@@ -1,5 +1,7 @@
 @import "../variables.scss";
 
+$gutter: 32px;
+
 .stats {
   background-color: $grey100;
   border: 1px solid $grey200;
@@ -10,28 +12,31 @@
   & .button-row {
     margin-left: auto;
   }
+
+  & .stat {
+    margin-right: $gutter;
+    flex-grow: 1;
+
+    &:not(:last-child):after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 40px;
+      background-color: $grey200;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+  }
 }
 
 .stat {
-  $gutter: 32px;
   position: relative;
   display: inline-block;
   padding-right: $gutter;
-  margin-right: $gutter;
-  flex-grow: 1;
+  margin-right: 0;
   box-sizing: border-box;
-
-  &:not(:last-child):after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 40px;
-    background-color: $grey200;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-  }
 
   &__label {
     color: $grey500;

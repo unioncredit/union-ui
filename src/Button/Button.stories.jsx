@@ -30,11 +30,13 @@ const variants = [
   [
     { icon: "vouch", variant: "primary", label: "Vouch for new contact" },
     { icon: "link", variant: "primary", label: "Vouch for new contact" },
+    { variant: "primary", label: "Loading", loading: true },
   ],
   [
     { icon: "vouch", variant: "secondary", label: "Vouch for new contact" },
     { icon: "arrow-left", variant: "secondary", label: "Back to Overview" },
     { variant: "secondary", label: "Cancel" },
+    { variant: "secondary", label: "Loading", loading: true },
   ],
   [
     {
@@ -74,7 +76,10 @@ const variants = [
       color: "red",
     },
   ],
-  [{ icon: "vouch", variant: "floating", label: "Vouch for someone" }],
+  [
+    { icon: "vouch", variant: "floating", label: "Vouch for someone" },
+    { variant: "floating", label: "Loading", loading: true },
+  ],
   [
     { icon: "metamask", variant: "secondary", label: "Metamask" },
     { icon: "walletconnect", variant: "secondary", label: "WalletConnect" },

@@ -50,14 +50,23 @@
     }
   }
 
+  @keyframes slide-in {
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
   &--drawer {
     height: 100vh;
     border-radius: 0;
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    transform: translateX(100%);
+    animation: slide-in 0.5s forwards;
 
     .card-footer {
-      justify-content: flex-end;
+      margin-top: auto;
     }
   }
 }

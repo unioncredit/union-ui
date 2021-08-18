@@ -14,6 +14,7 @@ export function Text({
   className,
   color,
   grey,
+  style,
   ...props
 }) {
   return (
@@ -26,6 +27,7 @@ export function Text({
       style={{
         ...propsToStyles(props),
         ...(color ? { color: colorHex(color) } : {}),
+        ...style,
       }}
     >
       {children}

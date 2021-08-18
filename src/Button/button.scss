@@ -4,6 +4,7 @@
   $iconGutter: 5px;
   $disabledOpacity: 0.4;
 
+  position: relative;
   font-size: 11.2px;
   letter-spacing: -0.02em;
   border: 1px solid transparent;
@@ -27,6 +28,38 @@
   .button-row & {
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  @keyframes loadingspin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  .button-loading-spinner {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    animation: loadingspin 2s infinite ease;
+  }
+
+  &--loading {
+    opacity: 1 !important;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      left: 10px;
+      background-color: inherit;
     }
   }
 
@@ -70,6 +103,15 @@
     background-color: $blue100;
     padding: 13px 12px;
     border-radius: 10px;
+
+    .button-loading-spinner {
+      path {
+        stroke: #d1e2ff;
+      }
+      circle {
+        stroke: #2143d5;
+      }
+    }
 
     &:hover:enabled {
       background-color: $blue200;

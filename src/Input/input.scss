@@ -119,7 +119,7 @@ $gutter: 8px;
     font-weight: 500;
   }
 
-  &--clickable:not(.input-caption--clickable) {
+  &--clickable:not(.input-caption--error) {
     color: $blue100;
 
     &:hover {
