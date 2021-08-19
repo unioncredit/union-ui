@@ -64,10 +64,18 @@ const variants = [
       label: "for",
       color: "green",
     },
+    {
+      icon: "check",
+      variant: "secondary",
+      rounded: true,
+      label: "Longer Label",
+      loading: true,
+    },
   ],
   [
     { icon: "chevron", iconPosition: "end", variant: "pill", label: "Manage" },
     { variant: "pill", label: "View all" },
+    { variant: "pill", label: "View all", loading: true },
     {
       icon: "no",
       iconPosition: "end",

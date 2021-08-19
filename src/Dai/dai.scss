@@ -4,7 +4,10 @@
   display: inline-block;
   height: 0.75em;
   margin-right: 2px;
-
+  
+  .text & path {
+    fill: $grey500;
+  }
   .text--primary & path {
     fill: $grey500;
   }
@@ -30,8 +33,11 @@
     fill: $grey700;
   }
 
+  .heading & path {
+    fill: $grey700;
+  }
   .heading--primary & path {
-    fill: $grey500;
+    fill: $grey700;
   }
   .heading--grey100 & path {
     fill: $grey100;

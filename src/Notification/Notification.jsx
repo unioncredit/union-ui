@@ -6,7 +6,7 @@ import { StatusIcon } from "../Icon";
 
 import "./notification.scss";
 
-export function Notification({ variant, children }) {
+export function Notification({ variant, children, onClose }) {
   return (
     <div
       className={cn("notification", {
@@ -17,7 +17,7 @@ export function Notification({ variant, children }) {
         <StatusIcon name={variant} />
       </div>
       <div className="notification__content">{children}</div>
-      <div className="notification__close">
+      <div className="notification__close" onClick={onClose}>
         <div />
       </div>
     </div>
