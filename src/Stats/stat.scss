@@ -29,6 +29,36 @@ $gutter: 32px;
       right: 0;
     }
   }
+
+  &--condensed {
+    display: block !important;
+
+    .stats__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .stat {
+      margin-bottom: 24px;
+      margin-right: $gutter * 0.3;
+      padding-right: $gutter * 0.3;
+      &:nth-child(even):after {
+        display: none;
+      }
+    }
+  }
+
+  &--condensedSm {
+    .stat {
+      margin-right: $gutter * 0.5;
+      padding-right: $gutter * 0.5;
+    }
+
+    .stats__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 .stat {

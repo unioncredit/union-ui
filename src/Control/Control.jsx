@@ -14,6 +14,7 @@ export function Control({
   disabled,
   checked,
   indeterminate,
+  onClick,
   ...props
 }) {
   const iconName = checked
@@ -23,7 +24,11 @@ export function Control({
     : null;
 
   return (
-    <div className="control-wrapper" style={propsToStyles(props)}>
+    <div
+      className="control-wrapper"
+      style={propsToStyles(props)}
+      onClick={onClick}
+    >
       <div
         className={cn("control", {
           [`control--${type}`]: type,

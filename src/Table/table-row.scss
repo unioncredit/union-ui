@@ -17,4 +17,9 @@
       background: $grey100;
     }
   }
+
+  .table--condensed & {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

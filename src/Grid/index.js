@@ -2,9 +2,16 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Container, Row as GridRow, Col as GridCol } from "react-grid-system";
+import {
+  Container,
+  Row as GridRow,
+  Col as GridCol,
+  setConfiguration,
+} from "react-grid-system";
 
 import "./grid.scss";
+
+export const setGridConfiguration = setConfiguration;
 
 export const Grid = ({ className, bordered, ...props }) => {
   return (

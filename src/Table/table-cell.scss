@@ -26,4 +26,16 @@
   & .skeleton:last-of-type {
     margin-bottom: 0;
   }
+
+  .table--condensed &:nth-child(even) {
+    text-align: right;
+    .button,
+    .skeleton {
+      margin-left: auto;
+    }
+  }
+
+  .table--condensed &:nth-child(odd) {
+    text-align: left;
+  }
 }

@@ -36,8 +36,12 @@ export const All = () => (
 );
 
 export const StatsBar = () => (
-  <Stats>
-    <Box>
+  <Stats
+    buttons={[
+      <Button icon="borrow" label="Borrow funds" />,
+      <Button icon="repayment" variant="secondary" label="Make a payment" />,
+    ]}
+  >
       <Stat
         label="Total Stakes"
         value="$3200"
@@ -61,11 +65,6 @@ export const StatsBar = () => (
         caption="$400.00 Unavailable"
       />
       <Stat label="Minimum Due" value="$218.93" caption="Due 3 Jan 2021" />
-    </Box>
-    <ButtonRow direction="vertical">
-      <Button icon="borrow" label="Borrow funds" />
-      <Button icon="repayment" variant="secondary" label="Make a payment" />
-    </ButtonRow>
   </Stats>
 );
 

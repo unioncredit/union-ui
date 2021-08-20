@@ -35,4 +35,8 @@
   &--verticalAlign {
     justify-content: space-between;
   }
+
+  @media screen and (max-width: 580px) {
+    width: 98%;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { createElement } from "react";
+import React, { createElement, forwardRef } from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
@@ -10,38 +10,44 @@ const directionMap = {
   horizontal: "row",
 };
 
-export function Box({
-  children,
-  align,
-  justify,
-  className,
-  direction,
-  as,
-  fluid,
-  fullWidth,
-  wrap = "nowrap",
-  ...props
-}) {
-  return createElement(
-    as || "div",
+export const Box = forwardRef(
+  (
     {
-      ...props,
-      className: cn("box", className, {
-        [`box--direction-${direction}`]: direction,
-        "box--fluid": fluid,
-        "box--fullWidth": fullWidth,
-      }),
-      style: {
-        alignItems: align,
-        justifyContent: justify,
-        flexDirection: directionMap[direction],
-        flexWrap: wrap,
-        ...propsToStyles(props),
-      },
+      children,
+      align,
+      justify,
+      className,
+      direction,
+      as,
+      fluid,
+      fullWidth,
+      wrap = "nowrap",
+      ...props
     },
-    children
-  );
-}
+    ref
+  ) => {
+    return createElement(
+      as || "div",
+      {
+        ...props,
+        className: cn("box", className, {
+          [`box--direction-${direction}`]: direction,
+          "box--fluid": fluid,
+          "box--fullWidth": fullWidth,
+        }),
+        style: {
+          alignItems: align,
+          justifyContent: justify,
+          flexDirection: directionMap[direction],
+          flexWrap: wrap,
+          ...propsToStyles(props),
+        },
+        ref,
+      },
+      children
+    );
+  }
+);
 
 Box.propTypes = {
   children: PropTypes.oneOfType([
