@@ -16,15 +16,6 @@
   &--indeterminate {
     background: $blue100;
     border: 2px solid $blue200;
-
-    &:hover:not(.control--disabled) {
-      border: 2px solid $grey300;
-      background: white;
-
-      svg path {
-        fill: $grey300;
-      }
-    }
   }
 
   &--disabled {
@@ -57,6 +48,11 @@
 .control-wrapper {
   display: flex;
   align-items: center;
+  cursor: default;
+
+  &:hover .control--checked:not(.control--disabled) {
+    opacity: 0.8;
+  }
 }
 
 .control-label {

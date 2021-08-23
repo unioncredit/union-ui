@@ -3,7 +3,6 @@ import React from "react";
 import { Stats } from "./Stats";
 import { Stat } from "./Stat";
 import { Bar } from "../Bar";
-import { Box } from "../Box";
 import { Button, ButtonRow } from "../Button";
 import { Dai } from "../Dai";
 

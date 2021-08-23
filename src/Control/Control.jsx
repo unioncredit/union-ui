@@ -59,4 +59,5 @@ Control.propTypes = {
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
   indeterminate: PropTypes.bool,
+  label: PropTypes.string,
 };
