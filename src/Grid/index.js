@@ -17,6 +17,7 @@ export const Grid = ({ className, bordered, ...props }) => {
   return (
     <Container
       {...props}
+      fluid
       className={cn(className, "grid", { "grid--bordered": bordered })}
     />
   );

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // blues
 $blue100: #3a64f0;
 $blue200: #2143d5;
@@ -39,5 +41,23 @@ $yellow: #f3bb4a;
   }
   &--grey700 {
     color: $grey700;
+  }
+}
+
+$colors: (
+  blue: #3a64f0,
+  green: #2f9f63,
+  white: #ffffff,
+  red: #c84042,
+  grey: #726f7e,
+  black: #000000,
+  orange: #c77b00,
+);
+
+@mixin colors {
+  @each $name, $hex in $colors {
+    &--#{$name} {
+      color: $hex;
+    }
   }
 }

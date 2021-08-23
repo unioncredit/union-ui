@@ -60,3 +60,21 @@ export const Default = () => (
     </Heading>
   </>
 );
+
+export const Colors = () => (
+  <>
+    {["blue", "green", "white", "red", "grey", "black", "orange"].map(
+      (color) => {
+        return (
+          <Text
+            color={color}
+            style={color === "white" && { backgroundColor: "black" }}
+          >
+            <Dai />
+            100
+          </Text>
+        );
+      }
+    )}
+  </>
+);

@@ -3,7 +3,6 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { propsToStyles } from "../spacing";
-import { colorHex } from "../colors";
 
 import "./text.scss";
 
@@ -23,10 +22,10 @@ export function Text({
         [`text--${size}`]: size,
         [`text--${align}`]: align,
         [`text--grey${grey}`]: grey,
+        [`text--${color}`]: color,
       })}
       style={{
         ...propsToStyles(props),
-        ...(color ? { color: colorHex(color) } : {}),
         ...style,
       }}
     >

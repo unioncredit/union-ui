@@ -68,14 +68,14 @@
 
 @for $i from 6 through 30 {
   .hide-lt-#{$i * 50} {
-    @media screen and (max-width: #{$i * 50}) {
-      display: none;
+    @media screen and (max-width: #{$i * 50}px) {
+      display: none !important;
     }
   }
 
   .hide-gt-#{$i * 50} {
-    @media screen and (min-width: #{$i * 50}) {
-      display: none;
+    @media screen and (min-width: #{$i * 50}px) {
+      display: none !important;
     }
   }
 }

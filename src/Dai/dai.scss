@@ -4,7 +4,7 @@
   display: inline-block;
   height: 0.75em;
   margin-right: 2px;
-  
+
   .text & path {
     fill: $grey500;
   }
@@ -31,6 +31,27 @@
   }
   .text--grey700 & path {
     fill: $grey700;
+  }
+  .text--blue & path {
+    fill: #3a64f0;
+  }
+  .text--green & path {
+    fill: #2f9f63;
+  }
+  .text--white & path {
+    fill: #ffffff;
+  }
+  .text--red & path {
+    fill: #c84042;
+  }
+  .text--grey & path {
+    fill: #726f7e;
+  }
+  .text--black & path {
+    fill: #000000;
+  }
+  .text--orange & path {
+    fill: #c77b00;
   }
 
   .heading & path {
@@ -59,5 +80,9 @@
   }
   .heading--grey700 & path {
     fill: $grey700;
+  }
+
+  .input-caption--clickable:not(.input-caption--error) & path {
+    fill: #3a64f0;
   }
 }

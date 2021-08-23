@@ -5,6 +5,7 @@ import { Input } from "./Input";
 import { Control } from "../Control";
 import { InputRow } from "./InputRow";
 import { Button } from "../Button";
+import { Dai } from "../Dai";
 
 export default {
   component: Input,
@@ -33,7 +34,11 @@ export const Inputs = () => (
     <Box mb="20px">
       <Input
         label="Clickable Caption"
-        caption="382.91 DAI Available"
+        caption={
+          <>
+            <Dai valuu={382.91} /> Available
+          </>
+        }
         onCaptionClick={() => alert("clicked")}
         placeholder="Placeholder"
       />

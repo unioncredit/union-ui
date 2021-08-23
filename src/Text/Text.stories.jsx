@@ -31,3 +31,20 @@ export const Greys = () => (
       ))}
   </>
 );
+
+export const Colors = () => (
+  <>
+    {["blue", "green", "white", "red", "grey", "black", "orange"].map(
+      (color) => {
+        return (
+          <Text
+            color={color}
+            style={color === "white" && { backgroundColor: "black" }}
+          >
+            The quick brown fox jumps over a lazy dog
+          </Text>
+        );
+      }
+    )}
+  </>
+);
