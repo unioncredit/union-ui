@@ -32,7 +32,7 @@ export function Stat({ label, value, cta, caption }) {
 }
 
 Stat.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

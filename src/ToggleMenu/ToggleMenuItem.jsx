@@ -25,7 +25,7 @@ export function ToggleMenuItem({
 }
 
 ToggleMenuItem.propTypes = {
-  as: PropTypes.node,
+  as: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   className: PropTypes.string,
   active: PropTypes.bool,
   disabled: PropTypes.bool,
