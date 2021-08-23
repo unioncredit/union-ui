@@ -22,30 +22,30 @@ export function Metamask({ width }) {
         fill="#E4761B"
         stroke="#E4761B"
         strokeWidth="0.0627746"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M14.9592 12.9818L13.2957 15.5304L16.855 16.5097L17.8782 13.0383L14.9592 12.9818Z"
         fill="#E4761B"
         stroke="#E4761B"
-        stroke-width="0.0627746"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="0.0627746"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M2.12806 13.0383L3.14501 16.5097L6.70433 15.5304L5.0408 12.9818L2.12806 13.0383Z"
         fill="#E4761B"
         stroke="#E4761B"
-        stroke-width="0.0627746"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="0.0627746"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M6.50345 8.67546L5.51161 10.1758L9.04582 10.3327L8.92027 6.53484L6.50345 8.67546Z"
         fill="#E4761B"
         stroke="#E4761B"
-        stroke-width="0.0627746"
+        strokeWidth="0.0627746"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
