@@ -7,8 +7,8 @@ import { Label } from "../Label";
 import "./network-indicator.scss";
 
 const config = {
-  1: { label: "mainnet" },
-  137: { label: "polygon" },
+  1: { label: "Mainnet" },
+  137: { label: "Polygon" },
 };
 
 export function NetworkIndicator({ chainId, ...props }) {

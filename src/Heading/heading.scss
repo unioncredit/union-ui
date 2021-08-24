@@ -3,20 +3,24 @@
 .heading {
   margin-bottom: 8px;
   color: $grey700;
+  letter-spacing: -0.02em;
 
   &--primary {
-    font-size: 21.88px;
     font-weight: 500;
+    font-size: 21.88px;
+    line-height: 26.47px;
   }
 
   &--large {
-    font-size: 27.34px;
     font-weight: 500;
+    font-size: 27.34px;
+    line-height: 33.09px;
   }
 
   &--xlarge {
-    font-size: 34.18px;
     font-weight: 400;
+    font-size: 34.18px;
+    line-height: 41.37px;
   }
 
   @include greys;
