@@ -1,0 +1,20 @@
+@import "../variables.scss";
+
+.icon-external {
+  .text & path,
+  .text--primary & path {
+    fill: $grey500;
+  }
+
+  @each $num, $color in $shadesOfGrey {
+    .text--grey#{$num} & path {
+      fill: $color;
+    }
+  }
+
+  @each $name, $color in $colors {
+    .text--#{$name} & path {
+      fill: $color;
+    }
+  }
+}

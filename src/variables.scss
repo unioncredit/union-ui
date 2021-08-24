@@ -20,38 +20,32 @@ $orange: #e09a0e;
 $purple: #8b7afd;
 $yellow: #f3bb4a;
 
+$shadesOfGrey: (
+  100: $grey100,
+  200: $grey200,
+  300: $grey300,
+  400: $grey400,
+  500: $grey500,
+  600: $grey600,
+  700: $grey700,
+);
+
 @mixin greys {
-  &--grey100 {
-    color: $grey100;
-  }
-  &--grey200 {
-    color: $grey200;
-  }
-  &--grey300 {
-    color: $grey300;
-  }
-  &--grey400 {
-    color: $grey400;
-  }
-  &--grey500 {
-    color: $grey500;
-  }
-  &--grey600 {
-    color: $grey600;
-  }
-  &--grey700 {
-    color: $grey700;
+  @each $num, $color in $shadesOfGrey {
+    &--grey#{$num} {
+      color: $color;
+    }
   }
 }
 
 $colors: (
-  blue: #3a64f0,
-  green: #2f9f63,
-  white: #ffffff,
-  red: #c84042,
-  grey: #726f7e,
-  black: #000000,
-  orange: #c77b00,
+  "blue": #3a64f0,
+  "green": #2f9f63,
+  "white": #ffffff,
+  "red": #c84042,
+  "grey": #726f7e,
+  "black": #000000,
+  "orange": #c77b00,
 );
 
 @mixin colors {

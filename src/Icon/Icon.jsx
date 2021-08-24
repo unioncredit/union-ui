@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import * as icons from "./icons";
 import { titleCase } from "./utils";
 
+import "./icon.scss";
+
 export function Icon({ name, color }) {
   const IconComponent = icons[titleCase(name)];
   return <IconComponent color={color} />;
@@ -11,6 +13,7 @@ export function Icon({ name, color }) {
 
 Icon.propTypes = {
   name: PropTypes.oneOf([
+    "external",
     "telegram",
     "twitter",
     "link",

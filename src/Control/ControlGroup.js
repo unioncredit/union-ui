@@ -4,8 +4,15 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import { Control } from "./Control";
 
-export function ControlGroup({ items, multiselect, onChange }) {
-  const [selected, setSelected] = useState(multiselect ? [] : null);
+export function ControlGroup({
+  items,
+  multiselect,
+  onChange,
+  initialSelected,
+}) {
+  const [selected, setSelected] = useState(
+    initialSelected || multiselect ? [] : null
+  );
 
   const onClick = (id) => () => {
     const newSelected = multiselect
@@ -50,4 +57,5 @@ ControlGroup.propTypes = {
       label: PropTypes.string,
     })
   ),
+  initialSelected: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };

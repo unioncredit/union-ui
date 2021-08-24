@@ -7,6 +7,7 @@ import { Metamask } from "./Metamask";
 import { WalletConnect } from "./WalletConnect";
 import { Twitter, Telegram } from "./icons";
 import { NavIcon } from "./NavIcon";
+import { Text } from "../Text";
 
 export default {
   component: Icon,
@@ -52,5 +53,28 @@ export const All = () => (
       <NavIcon name="vault" />
       <NavIcon name="vote" />
     </Box>
+  </>
+);
+
+export const External = () => (
+  <>
+    {Array(7)
+      .fill(0)
+      .map((_, i) => (
+        <Text grey={(i + 1) * 100}>
+          External link <Icon name="external" />
+        </Text>
+      ))}
+
+    {["blue", "green", "white", "red", "grey", "black", "orange"].map(
+      (color) => (
+        <Text
+          color={color}
+          style={color === "white" && { backgroundColor: "black" }}
+        >
+          External link <Icon name="external" />
+        </Text>
+      )
+    )}
   </>
 );
