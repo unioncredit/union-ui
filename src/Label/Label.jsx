@@ -13,6 +13,8 @@ export function Label({
   as,
   onClick,
   grey,
+  color,
+  style,
   ...props
 }) {
   return React.createElement(
@@ -21,8 +23,9 @@ export function Label({
       className: cn("label", className, {
         [`label--${size}`]: size,
         [`text--grey${grey}`]: grey,
+        [`text--${color}`]: color,
       }),
-      style: propsToStyles(props),
+      style: { ...style, ...propsToStyles(props) },
       onClick,
       ...props,
     },
