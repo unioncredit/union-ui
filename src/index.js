@@ -31,3 +31,4 @@ export * from "./Wallet";
 export * from "./Dai";
 export * from "./CircleProgress";
 export * from "./Burger";
+export * from "./NetworkIndicator";
