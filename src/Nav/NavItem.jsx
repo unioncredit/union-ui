@@ -24,7 +24,12 @@ export const NavItem = forwardRef(
         <span className="nav-item__content">
           <span className="nav-item__label">{label}</span>
           {active && description && (
-            <Label as="p" size="small" className="nav-item__description">
+            <Label
+              as="p"
+              size="small"
+              className="nav-item__description"
+              mt="4px"
+            >
               {description}
             </Label>
           )}

@@ -59,6 +59,14 @@ export const Small = () => (
   </Card>
 );
 
+export const Medium = () => (
+  <Card size="medium">
+    <Card.Header title="Stake" />
+    <Card.Body>This is a small card</Card.Body>
+    <Card.Footer>footer</Card.Footer>
+  </Card>
+);
+
 export const Large = () => (
   <Card size="fluid" noGutter>
     <Grid bordered>

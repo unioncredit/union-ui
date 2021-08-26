@@ -16,8 +16,11 @@ export default {
 
 export const All = () => (
   <>
-    <Box align="center" mb="20px">
-      <Logo width="40px" />
+    <Box mb="20px">
+      <Box mr="20px">
+        <Logo width="40px" />
+      </Box>
+      <Logo width="60px" withText />
     </Box>
 
     <Box align="center" mb="20px">

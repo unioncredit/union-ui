@@ -1,9 +1,12 @@
 import React from "react";
 
-export function LoadingSpinner() {
+import "./loading-spinner.scss";
+
+export function LoadingSpinner({ size }) {
   return (
     <svg
-      className="button-loading-spinner"
+      style={{ height: size + "px", width: size + "px" }}
+      className="loading-spinner"
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

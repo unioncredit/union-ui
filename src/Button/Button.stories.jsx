@@ -93,6 +93,10 @@ const variants = [
     { icon: "walletconnect", variant: "secondary", label: "WalletConnect" },
   ],
   [
+    { icon: "twitter", label: "twitter", rounded: true, color: "white" },
+    { icon: "telegram", label: "telegram", rounded: true, color: "white" },
+  ],
+  [
     { icon: "twitter", variant: "secondary", rounded: true },
     { icon: "telegram", variant: "secondary", rounded: true },
   ],

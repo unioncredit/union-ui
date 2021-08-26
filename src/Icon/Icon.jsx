@@ -36,6 +36,7 @@ Icon.propTypes = {
     "link",
     "locked",
     "info",
+    "arrow-left",
   ]),
   variant: PropTypes.oneOf(["light", "dark"]),
 };

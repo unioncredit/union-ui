@@ -68,5 +68,5 @@ CardFooter.propTypes = {
 
 Card.propTypes = {
   variant: PropTypes.oneOf(["primary", "packed"]),
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  size: PropTypes.oneOf(["small", "medium", "large", "fluid"]),
 };

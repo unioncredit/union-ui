@@ -5,6 +5,16 @@
   max-width: 400px;
   width: 100%;
 
+  &.card {
+    &--small {
+      max-width: 280px;
+    }
+
+    &--medium {
+      max-width: 362px;
+    }
+  }
+
   &__header {
     padding: 20px 0 0 0;
     display: flex;

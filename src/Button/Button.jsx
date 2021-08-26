@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { colorHex } from "../colors";
 import { propsToStyles } from "../spacing";
 import { Metamask, WalletConnect, Icon as ButtonIcon } from "../Icon";
-import { LoadingSpinner } from "./LoadingSpinner.svg";
+import { LoadingSpinner } from "../LoadingSpinner";
 
 import "./button.scss";
 
@@ -61,7 +61,7 @@ export const Button = ({
         "button--fluid": fluid,
         "button--inline": inline,
         "button--rounded": rounded,
-        "button--noLabel": !label,
+        "button--noLabel": !label && !children,
         "button--loading": loading,
         [`button--${variant}`]: variant,
         [`button--icon-pos-${iconPosition}`]: iconPosition,
@@ -74,7 +74,11 @@ export const Button = ({
       {icon && iconPosition === "start" && buttonIcon}
       {label || children}
       {icon && iconPosition === "end" && buttonIcon}
-      {loading && <LoadingSpinner />}
+      {loading && (
+        <div className="loading-spinner-wrapper">
+          <LoadingSpinner />
+        </div>
+      )}
     </button>
   );
 };

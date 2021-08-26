@@ -7,13 +7,18 @@
   border-radius: 12px;
   padding: 0 24px;
   box-sizing: border-box;
+  width: 100%;
 
   &--small {
-    width: 280px;
+    max-width: 280px;
+  }
+
+  &--medium {
+    max-width: 362px;
   }
 
   &--fluid {
-    width: 100%;
+    max-width: 100%;
   }
 
   &--noGutter {

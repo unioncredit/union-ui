@@ -28,7 +28,6 @@ const styles = {
 };
 
 function Control({ children, selectProps, ...props }) {
-  console.log(props);
   return (
     <components.Control {...props} className="select-control">
       {selectProps?.value?.imageSrc && (
@@ -76,6 +75,7 @@ export const Select = (props) => (
     styles={styles}
     isSearchable={false}
     isMulti={false}
+    className="select-ui"
     components={{
       Control,
       Option,

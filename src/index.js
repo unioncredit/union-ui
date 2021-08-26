@@ -32,3 +32,4 @@ export * from "./Dai";
 export * from "./CircleProgress";
 export * from "./Burger";
 export * from "./NetworkIndicator";
+export * from "./LoadingSpinner";

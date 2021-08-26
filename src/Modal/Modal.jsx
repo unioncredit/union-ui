@@ -8,9 +8,9 @@ import { Card } from "../Card";
 
 import "./modal.scss";
 
-export function Modal({ children, onClose, title, drawer }) {
+export function Modal({ children, onClose, title, drawer, size }) {
   return (
-    <Card className={cn("modal", { "modal--drawer": drawer })}>
+    <Card className={cn("modal", { "modal--drawer": drawer })} size={size}>
       <div className="modal__header">
         <Heading>{title}</Heading>
         <div className="modal__header__close" onClick={onClose}></div>
@@ -30,6 +30,7 @@ Modal.Footer = ({ className, ...props }) => (
 );
 
 Modal.propTypes = {
+  size: PropTypes.oneOf(["small", "medium", "large", "fluid"]),
   children: PropTypes.any,
   onClose: PropTypes.func,
   title: PropTypes.string.isRequired,

@@ -1,6 +1,6 @@
 {
   "name": "union-ui",
-  "version": "1.0.138",
+  "version": "1.0.148",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -17,7 +17,8 @@
     "classnames": "^2.3.1",
     "react-grid-system": "^7.2.0",
     "react-select": "^4.3.1",
-    "react-use": "^17.2.4"
+    "react-use": "^17.2.4",
+    "rollup-plugin-copy": "^3.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
