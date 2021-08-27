@@ -105,6 +105,7 @@ Button.propTypes = {
     "chevron",
     "repayment",
     "borrow",
+    "arrow-left",
   ]),
   rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),

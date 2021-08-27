@@ -175,4 +175,30 @@
       margin-right: 8px;
     }
   }
+
+  &--nav {
+    color: black;
+    background-color: white;
+    padding: 8px;
+    border-radius: 12px;
+    border-color: $grey200;
+
+    &:not(.button--noLabel) {
+      padding-right: 16px;
+    }
+
+    svg {
+      height: 24px !important;
+    }
+
+    &:hover:enabled {
+      background-color: $grey100;
+    }
+
+    &:active:enabled {
+      box-shadow: none;
+      background-color: $grey200;
+      border-color: transparent;
+    }
+  }
 }

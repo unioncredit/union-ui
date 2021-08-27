@@ -11,6 +11,7 @@
 
   &--small {
     max-width: 280px;
+    padding: 0 16px;
   }
 
   &--medium {
@@ -62,5 +63,9 @@
 
   .card--packed & {
     padding: 12px 0;
+  }
+
+  .card--small & {
+    padding: 16px 0;
   }
 }

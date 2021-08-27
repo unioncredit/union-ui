@@ -28,5 +28,6 @@ NavIcon.propTypes = {
     "get-started",
     "vault",
     "vote",
+    "union-token",
   ]),
 };

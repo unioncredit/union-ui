@@ -5,3 +5,4 @@ export * from "./Credit.svg";
 export * from "./GetStarted.svg";
 export * from "./Vault.svg";
 export * from "./Vote.svg";
+export * from "./UnionToken.svg";

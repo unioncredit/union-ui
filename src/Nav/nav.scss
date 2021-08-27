@@ -13,5 +13,15 @@
     svg {
       width: 28px;
     }
+
+    .nav--mobile & {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: flex;
+    flex-direction: row;
+    box-shadow: unset;
   }
 }

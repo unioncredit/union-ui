@@ -13,6 +13,12 @@
     &--medium {
       max-width: 362px;
     }
+
+    @media screen and (max-width: 420px) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      max-width: 420px !important;
+    }
   }
 
   &__header {

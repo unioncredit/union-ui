@@ -11,6 +11,11 @@
   margin: 0 0 4px 0;
   cursor: default;
 
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+
   * {
     cursor: default;
   }
@@ -73,11 +78,16 @@
   &__content {
     display: flex;
     flex-direction: column;
-    margin: 6px 0 0 8px;
+    margin: 7px 0 0 8px;
   }
 
   &--active {
     background-color: $grey100;
+    border: 1px solid $grey200;
+    color: #1e1c22;
+  }
+
+  &--bordered {
     border: 1px solid $grey200;
     color: #1e1c22;
   }
@@ -89,5 +99,13 @@
   &__description {
     margin-top: 8px;
     margin: 0 0 4px 0;
+  }
+
+  .nav--mobile & {
+    padding: 8px 10px;
+    flex-grow: 1;
+    display: flex;
+    margin: 0 8px;
+    justify-content: center;
   }
 }

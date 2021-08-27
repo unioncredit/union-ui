@@ -17,6 +17,10 @@ $gutter: 32px;
     margin-right: $gutter;
     flex-grow: 1;
 
+    .button {
+      display: inline-block;
+    }
+
     &:not(:last-child):after {
       content: "";
       display: block;
@@ -39,11 +43,13 @@ $gutter: 32px;
     }
 
     .stat {
+      text-align: center;
+      justify-content: center;
       margin-bottom: 24px;
       margin-right: $gutter * 0.3;
       padding-right: $gutter * 0.3;
-      &:nth-child(even):after {
-        display: none;
+      &:after {
+        display: none !important;
       }
     }
   }
@@ -71,11 +77,13 @@ $gutter: 32px;
   &__label {
     color: $grey500;
     margin: 0 0 12px 0;
+    width: 100%;
   }
 
   &__value {
     color: $grey700;
     margin: 0 0 12px 0;
+    width: 100%;
 
     .dai path {
       fill: $grey700 !important;
