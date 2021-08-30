@@ -33,3 +33,4 @@ export * from "./CircleProgress";
 export * from "./Burger";
 export * from "./NetworkIndicator";
 export * from "./LoadingSpinner";
+export * from "./Multiplier";

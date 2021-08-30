@@ -23,7 +23,7 @@ const styles = {
     boxShadow:
       "0px 1px 1px rgba(58, 56, 66, 0.2), 0px 4px 8px rgba(58, 56, 66, 0.25)",
   }),
-  valueContainer: (styles) => ({ ...styles, overflow: "visible" }),
+  valueContainer: (styles, state) => ({ ...styles, overflow: "visible" }),
   singleValue: (styles) => ({ ...styles, overflow: "visible" }),
 };
 

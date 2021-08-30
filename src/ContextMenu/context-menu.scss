@@ -1,0 +1,68 @@
+@import "../variables.scss";
+
+.context-menu-wrapper {
+  position: relative;
+  display: inline-block;
+
+  .button {
+    background: $grey200;
+  }
+}
+
+.context-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  width: 160px;
+  padding: 8px 0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0px 14px 30px -16px #1e1c22;
+
+  &__item {
+    display: block;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: normal;
+
+    &:hover {
+      background: $grey100;
+    }
+
+    &:active {
+      background: darken($grey100, 2);
+    }
+  }
+}
+
+.context-menu-button {
+  width: 40px;
+  height: 40px;
+  background: $grey200;
+  border: 1px solid $grey200;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: lighten($grey200, 2);
+  }
+
+  &:active {
+    background-color: $grey300;
+  }
+
+  &--open {
+    background-color: $grey300;
+  }
+
+  span {
+    border-radius: 100%;
+    width: 4px;
+    height: 4px;
+    background-color: $grey700;
+    margin: 0 1.5px;
+  }
+}

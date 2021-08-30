@@ -19,6 +19,7 @@ $gutter: 32px;
 
     .button {
       display: inline-block;
+      margin: 0 auto;
     }
 
     &:not(:last-child):after {

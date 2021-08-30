@@ -106,6 +106,16 @@
     flex-grow: 1;
     display: flex;
     margin: 0 8px;
+    font-size: 13px;
     justify-content: center;
+
+    &__label {
+      font-size: 13px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

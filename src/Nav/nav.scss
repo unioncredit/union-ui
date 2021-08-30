@@ -4,6 +4,8 @@
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  flex-direction: column;
+  display: flex;
 
   &__logo {
     padding: 34px 0 40px 0;
@@ -20,7 +22,6 @@
   }
 
   &--mobile {
-    display: flex;
     flex-direction: row;
     box-shadow: unset;
   }
