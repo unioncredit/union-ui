@@ -10,7 +10,7 @@
     "build": "rollup -c",
     "format": "prettier --write \"src/**/*.{js,scss,jsx}\"",
     "upload": "aws s3 sync ./build s3://union-ui-beta --profile jacobford",
-    "prepare": "husky install"
+    "prepare": "husky install && npm run build"
   },
   "author": "",
   "license": "ISC",
