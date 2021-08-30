@@ -1,6 +1,6 @@
 {
   "name": "union-ui",
-  "version": "1.0.161",
+  "version": "1.0.165",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -9,7 +9,8 @@
     "build-storybook": "build-storybook -o ./build",
     "build": "rollup -c",
     "format": "prettier --write \"src/**/*.{js,scss,jsx}\"",
-    "upload": "aws s3 sync ./build s3://union-ui-beta --profile jacobford"
+    "upload": "aws s3 sync ./build s3://union-ui-beta --profile jacobford",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -35,15 +36,17 @@
     "@storybook/react": "^6.3.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
+    "husky": "^7.0.0",
     "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "rollup": "^2.52.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^2.6.1",
     "sass": "^1.35.1",
     "sass-loader": "10.1.1",
-    "style-loader": "2.0.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "style-loader": "2.0.0"
   },
   "peerDependencies": {
     "react": "17.0.1",

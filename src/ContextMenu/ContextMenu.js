@@ -34,18 +34,18 @@ export function ContextMenu({ items }) {
   const toggleOpen = () => setOpen((x) => !x);
 
   return (
-    <div className="context-menu-wrapper">
+    <div className="context-menu-wrapper" ref={ref}>
       <div className="context-menu-button" onClick={toggleOpen}>
         <span />
         <span />
         <span />
       </div>
       {open && (
-        <div className="context-menu" ref={ref}>
+        <div className="context-menu">
           {items.map(({ label, ...item }) => (
-            <div className="context-menu__item" {...item}>
+            <a className="context-menu__item" {...item}>
               {label}
-            </div>
+            </a>
           ))}
         </div>
       )}
