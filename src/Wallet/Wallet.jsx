@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Avatar } from "../Avatar";
@@ -8,27 +7,16 @@ import { Text } from "../Text";
 
 import "./wallet.scss";
 
-export function Wallet({
-  onClick,
-  avatar,
-  indicator,
-  ellipse,
-  indicatorWarning,
-  name,
-}) {
+export function Wallet({ onClick, avatar, name, networkSrc }) {
   return (
     <Button variant="secondary" className="wallet" onClick={onClick}>
-      <span className={cn("ellipse", { "ellipse--hidden": !ellipse })}>
-        <span
-          className={cn("wallet__transaction-indicator", {
-            "wallet__transaction-indicator--warning": indicatorWarning,
-          })}
-        >
-          {indicator}
-        </span>
-      </span>
-      <Text>{name}</Text>
       {avatar || <Avatar />}
+      <Text>{name}</Text>
+      {networkSrc && (
+        <span className="wallet__network">
+          <Avatar src={networkSrc} />
+        </span>
+      )}
     </Button>
   );
 }
@@ -42,7 +30,5 @@ Wallet.defaultProps = {
 Wallet.propTypes = {
   name: PropTypes.string.isRequired,
   avatarSrc: PropTypes.string,
-  indicator: PropTypes.number,
-  indicatorWarning: PropTypes.bool,
   avatar: PropTypes.node,
 };

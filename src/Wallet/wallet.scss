@@ -15,6 +15,7 @@
 
   .text {
     margin: 0 8px;
+    color: $grey700;
   }
 
   &__transaction-indicator {
@@ -34,19 +35,28 @@
     }
   }
 
-  .ellipse {
+  &__network {
     $color: #3a64f0;
     position: relative;
     text-align: center;
     width: $indicatorSize + $indicatorBorderSize;
     height: $indicatorSize + $indicatorBorderSize;
     border-radius: 100%;
-    background-color: transparent;
-    background: linear-gradient(145deg, $color 50%, transparent 50%),
-      linear-gradient(145deg, $color 50%, transparent 50%);
+    margin-left: 8px;
 
     &--hidden {
       background: transparent;
+    }
+
+    &:before {
+      position: absolute;
+      top: -5px;
+      bottom: -5px;
+      left: -8px;
+      content: "";
+      display: block;
+      background-color: $grey200;
+      width: 1px;
     }
   }
 }

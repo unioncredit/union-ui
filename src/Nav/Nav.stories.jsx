@@ -12,7 +12,7 @@ export const Default = () => (
   <Nav>
     <NavItem
       label="Get Started"
-      icon="credit"
+      icon="get-started"
       active
       description="Get vouched for to become a member and stake your DAI to collect UNION "
     />

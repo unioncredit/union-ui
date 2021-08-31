@@ -40,7 +40,7 @@
   &:active:not(.nav-item--disabled) {
     $color: #1e1c22;
     color: $color;
-    svg {
+    svg:not(.nav-icon--get-started) {
       circle {
         stroke: $color;
       }
@@ -59,7 +59,7 @@
   &--disabled {
     $color: #c4c2cc;
     color: $color;
-    svg {
+    svg:not(.nav-icon--get-started) {
       circle {
         stroke: $color;
       }

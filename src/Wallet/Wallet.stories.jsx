@@ -13,17 +13,18 @@ export const Default = () => (
   <>
     <Box mb="20px">
       <Wallet
-        name="name"
+        name="liamo.eth"
         avatar={
           <Avatar src="https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg" />
         }
+        networkSrc="https://polygonscan.com/images/svg/brands/polygon.svg"
       />
     </Box>
     <Box mb="20px">
-      <Wallet indicator={2} name="name" indicatorWarning />
+      <Wallet name="liamo.eth" />
     </Box>
     <Box mb="20px">
-      <Wallet ellipse name="name" indicator={2} />
+      <Wallet name="liamo.eth" />
     </Box>
   </>
 );
