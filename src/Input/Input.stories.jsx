@@ -18,6 +18,9 @@ export const Inputs = () => (
       <Input placeholder="Placeholder" onMaxClick={() => {}} />
     </Box>
     <Box mb="20px">
+      <Input type="number" placeholder="Placeholder" />
+    </Box>
+    <Box mb="20px">
       <Input placeholder="Placeholder" onMaxClick={() => {}} disabled />
     </Box>
     <Box mb="20px">

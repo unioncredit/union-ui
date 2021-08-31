@@ -4,10 +4,12 @@ import PropTypes from "prop-types";
 
 import "./table-cell.scss";
 
-export function TableCell({ children, span, align }) {
+export function TableCell({ children, span, align, className }) {
   return (
     <div
-      className={cn("table-cell", { [`table-cell--align-${align}`]: align })}
+      className={cn("table-cell", className, {
+        [`table-cell--align-${align}`]: align,
+      })}
       style={{ flexGrow: span }}
     >
       {children}

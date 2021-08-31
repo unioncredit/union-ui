@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
 import { Heading } from "../Heading";
 import { Divider } from "../Divider";
 import { Card } from "../Card";
+import { useClickOutside } from "../util";
 
 import "./modal.scss";
 
 export function Modal({ children, onClose, title, drawer, size }) {
+  const ref = useRef(null);
+  useClickOutside(ref, onClose);
   return (
-    <Card className={cn("modal", { "modal--drawer": drawer })} size={size}>
+    <Card
+      ref={ref}
+      className={cn("modal", { "modal--drawer": drawer })}
+      size={size}
+    >
       <div className="modal__header">
         <Heading>{title}</Heading>
         <div className="modal__header__close" onClick={onClose}></div>

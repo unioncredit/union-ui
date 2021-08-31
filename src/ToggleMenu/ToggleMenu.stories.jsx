@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { ToggleMenu } from "./ToggleMenu";
 
@@ -8,10 +8,10 @@ export default {
 };
 
 const items = [
-  { label: "Deposit" },
-  { label: "Withdraw" },
-  { label: "Deposit" },
-  { label: "Disabled", disabled: true },
+  { id: "0", label: "Deposit" },
+  { id: "1", label: "Withdraw" },
+  { id: "2", label: "Deposit" },
+  { id: "3", label: "Disabled", disabled: true },
 ];
 
 const linkItems = items.map((item) => ({ ...item, as: "a", href: "#" }));
@@ -19,3 +19,22 @@ const linkItems = items.map((item) => ({ ...item, as: "a", href: "#" }));
 export const Default = () => <ToggleMenu items={items} />;
 
 export const AsLink = () => <ToggleMenu items={linkItems} />;
+export const Controlled = () => {
+  const [state, setState] = useState(items[0].id);
+
+  const toggle = () => {
+    if (state === items[0].id) {
+      setState(items[1].id);
+    } else {
+      setState(items[0].id);
+    }
+  };
+  return (
+    <>
+      <div style={{ marginBottom: "10px" }}>
+        <button onClick={toggle}>Toggle</button>
+      </div>
+      <ToggleMenu items={items.slice(0, 2)} value={state} />
+    </>
+  );
+};

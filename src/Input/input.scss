@@ -88,6 +88,18 @@ $gutter: 8px;
       border: 2px solid $blue100;
       box-shadow: 0px 0px 0px 2px $blueBoxShadow;
     }
+
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
   }
 
   &--error {

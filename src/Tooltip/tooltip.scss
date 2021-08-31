@@ -3,6 +3,7 @@
 .tooltip {
   position: relative;
   z-index: 99;
+  display: inline-block;
 
   svg {
     display: inline-block;

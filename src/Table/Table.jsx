@@ -11,6 +11,7 @@ export function Table({
   noBorder,
   children,
   disableCondensed,
+  className,
   ...props
 }) {
   const [ref, { width }] = useMeasure();
@@ -19,7 +20,7 @@ export function Table({
     <div
       ref={ref}
       style={propsToStyles(props)}
-      className={cn("table", {
+      className={cn("table", className, {
         "table--noBorder": noBorder,
         "table--noPadding": noPadding,
         "table--condensed": width < 400 && !disableCondensed,

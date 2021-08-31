@@ -18,3 +18,7 @@ export const Default = () => (
   <Tabs items={items} onChange={(x) => alert(x.label)} />
 );
 export const Secondary = () => <Tabs items={items} variant="secondary" />;
+
+export const Wrap = () => (
+  <Tabs items={[...items, ...items, ...items]} variant="secondary" />
+);
