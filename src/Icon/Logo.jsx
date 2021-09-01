@@ -1,9 +1,10 @@
 import React from "react";
 
-export function Logo({ width, withText }) {
+export function Logo({ width, withText, onClick }) {
   if (withText) {
     return (
       <svg
+        onClick={onClick}
         width={width}
         viewBox="0 0 39 40"
         fill="none"
@@ -21,6 +22,7 @@ export function Logo({ width, withText }) {
 
   return (
     <svg
+      onClick={onClick}
       width={width}
       viewBox="0 0 22 22"
       fill="none"

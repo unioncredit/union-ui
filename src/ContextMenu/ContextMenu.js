@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import { useClickOutside } from "../util";
 
 import "./context-menu.scss";
 
 export function ContextMenu({ items }) {
+  const ref = useRef(null);
   const [open, setOpen] = useState(false);
 
   useClickOutside(ref, () => {

@@ -5,8 +5,6 @@ export function External({ color }) {
   return (
     <svg
       className="icon-external"
-      width="8"
-      height="9"
       viewBox="0 0 8 9"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

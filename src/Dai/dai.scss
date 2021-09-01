@@ -5,6 +5,7 @@
   height: 0.75em;
   margin-right: 2px;
 
+  // TEXT
   .text & path {
     fill: $grey500;
   }
@@ -54,6 +55,7 @@
     fill: #c77b00;
   }
 
+  // HEADING
   .heading & path {
     fill: $grey700;
   }
@@ -80,6 +82,56 @@
   }
   .heading--grey700 & path {
     fill: $grey700;
+  }
+
+  // LABEL
+  .label & path {
+    fill: $grey500;
+  }
+  .label--primary & path {
+    fill: $grey500;
+  }
+  .label--grey100 & path {
+    fill: $grey100;
+  }
+  .label--grey200 & path {
+    fill: $grey200;
+  }
+  .label--grey300 & path {
+    fill: $grey300;
+  }
+  .label--grey400 & path {
+    fill: $grey400;
+  }
+  .label--grey500 & path {
+    fill: $grey500;
+  }
+  .label--grey600 & path {
+    fill: $grey600;
+  }
+  .label--grey700 & path {
+    fill: $grey700;
+  }
+  .label--blue & path {
+    fill: #3a64f0;
+  }
+  .label--green & path {
+    fill: #2f9f63;
+  }
+  .label--white & path {
+    fill: #ffffff;
+  }
+  .label--red & path {
+    fill: #c84042;
+  }
+  .label--grey & path {
+    fill: #726f7e;
+  }
+  .label--black & path {
+    fill: #000000;
+  }
+  .label--orange & path {
+    fill: #c77b00;
   }
 
   .input-caption--clickable:not(.input-caption--error) & path {

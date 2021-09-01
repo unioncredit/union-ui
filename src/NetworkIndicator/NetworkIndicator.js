@@ -9,6 +9,7 @@ import "./network-indicator.scss";
 const config = {
   1: { label: "Mainnet" },
   137: { label: "Polygon" },
+  42: { label: "Kovan" },
 };
 
 export function NetworkIndicator({ chainId, ...props }) {

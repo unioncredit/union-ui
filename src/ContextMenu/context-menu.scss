@@ -4,10 +4,6 @@
   position: relative;
   display: inline-block;
   z-index: 999;
-
-  .button {
-    background: $grey200;
-  }
 }
 
 .context-menu {
@@ -40,7 +36,7 @@
 .context-menu-button {
   width: 40px;
   height: 40px;
-  background: $grey200;
+  background: white;
   border: 1px solid $grey200;
   box-sizing: border-box;
   border-radius: 10px;
@@ -49,11 +45,11 @@
   justify-content: center;
 
   &:hover {
-    background-color: lighten($grey200, 2);
+    background-color: $grey100;
   }
 
   &:active {
-    background-color: $grey300;
+    background-color: $grey200;
   }
 
   &--open {

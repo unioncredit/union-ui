@@ -1,19 +1,28 @@
 @import "../variables.scss";
 
 .icon-external {
+  position: relative;
+  top: 1px;
+  width: 0.6em;
+  height: 0.7em;
+
   .text & path,
+  .label & path,
+  .label--primary & path,
   .text--primary & path {
     fill: $grey500;
   }
 
   @each $num, $color in $shadesOfGrey {
-    .text--grey#{$num} & path {
+    .text--grey#{$num} & path,
+    .label--grey#{$num} & path {
       fill: $color;
     }
   }
 
   @each $name, $color in $colors {
-    .text--#{$name} & path {
+    .text--#{$name} & path,
+    .label--#{$name} & path {
       fill: $color;
     }
   }

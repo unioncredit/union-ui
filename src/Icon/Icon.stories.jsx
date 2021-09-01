@@ -8,6 +8,7 @@ import { WalletConnect } from "./WalletConnect";
 import { Twitter, Telegram } from "./icons";
 import { NavIcon } from "./NavIcon";
 import { Text } from "../Text";
+import { Label } from "../Label";
 
 export default {
   component: Icon,
@@ -79,5 +80,34 @@ export const External = () => (
         </Text>
       )
     )}
+
+    {Array(7)
+      .fill(0)
+      .map((_, i) => (
+        <div>
+          <Label grey={(i + 1) * 100}>
+            External link <Icon name="external" />
+          </Label>
+        </div>
+      ))}
+
+    {["blue", "green", "white", "red", "grey", "black", "orange"].map(
+      (color) => (
+        <div>
+          <Label
+            color={color}
+            style={color === "white" && { backgroundColor: "black" }}
+          >
+            External link <Icon name="external" />
+          </Label>
+        </div>
+      )
+    )}
+
+    <div>
+      <Label size="small">
+        External link <Icon name="external" />
+      </Label>
+    </div>
   </>
 );

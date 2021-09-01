@@ -13,6 +13,7 @@ export const Card = forwardRef(
   ({ variant, size, children, className, noGutter, ...props }, ref) => {
     return (
       <div
+        ref={ref}
         className={cn("card", className, {
           [`card--${size}`]: size,
           [`card--${variant}`]: variant,

@@ -22,8 +22,8 @@ export function Label({
     {
       className: cn("label", className, {
         [`label--${size}`]: size,
-        [`text--grey${grey}`]: grey,
-        [`text--${color}`]: color,
+        [`label--grey${grey}`]: grey,
+        [`label--${color}`]: color,
       }),
       style: { ...style, ...propsToStyles(props) },
       onClick,

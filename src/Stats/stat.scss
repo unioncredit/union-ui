@@ -16,9 +16,10 @@ $gutter: 32px;
   & .stat {
     margin-right: $gutter;
     flex-grow: 1;
+    flex-shrink: 0;
 
     .button {
-      display: inline-block;
+      display: inline-flex;
       margin: 0 auto;
     }
 
@@ -57,8 +58,8 @@ $gutter: 32px;
 
   &--condensedSm {
     .stat {
-      margin-right: $gutter * 0.5;
-      padding-right: $gutter * 0.5;
+      margin-right: 10%;
+      padding-right: 10%;
     }
 
     .stats__content {
@@ -79,6 +80,7 @@ $gutter: 32px;
     color: $grey500;
     margin: 0 0 12px 0;
     width: 100%;
+    white-space: nowrap;
   }
 
   &__value {
