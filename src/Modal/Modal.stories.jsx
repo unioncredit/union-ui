@@ -82,10 +82,14 @@ export const Drawer = () => (
         </Text>
         <Button variant="pill">Clear</Button>
       </Box>
-      <Box align="center" justify="space-between" mt="10px">
-        <Text m={0}>Staked $500</Text>
-        <StatusIcon variant="wire" name="pending" />
-      </Box>
+      {Array(8)
+        .fill(0)
+        .map(() => (
+          <Box align="center" justify="space-between" mt="10px">
+            <Text m={0}>Staked $500</Text>
+            <StatusIcon variant="wire" name="pending" />
+          </Box>
+        ))}
     </Modal.Body>
     <Modal.Footer>
       <Button label="Click me" />

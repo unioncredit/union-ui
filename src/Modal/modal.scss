@@ -82,7 +82,21 @@
     animation: slide-in 0.5s forwards;
 
     .card-footer {
-      margin-top: auto;
+      position: absolute;
+      bottom: 0;
+      left: 24px;
+      right: 24px;
+      background-color: white;
+    }
+
+    .card-body {
+      margin-bottom: 110px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 }
