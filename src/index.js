@@ -35,3 +35,4 @@ export * from "./NetworkIndicator";
 export * from "./LoadingSpinner";
 export * from "./Multiplier";
 export * from "./ContextMenu";
+export * from "./SearchInput";

@@ -16,3 +16,4 @@ export * from "./Info.svg";
 export * from "./Twitter.svg";
 export * from "./Telegram.svg";
 export * from "./External.svg";
+export * from "./Search.svg";

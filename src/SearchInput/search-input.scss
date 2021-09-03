@@ -1,0 +1,22 @@
+.search-input-wrapper {
+  position: relative;
+
+  svg {
+    z-index: 1;
+    $size: 14px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: $size;
+    height: $size;
+  }
+
+  .input {
+    input {
+      border-radius: 8px;
+      height: 34px;
+      padding: 0 12px 0 28px;
+    }
+  }
+}

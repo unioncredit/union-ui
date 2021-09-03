@@ -12,6 +12,7 @@ export function Icon({ name, color }) {
 }
 
 Icon.propTypes = {
+  color: PropTypes.string,
   name: PropTypes.oneOf([
     "external",
     "telegram",
@@ -27,6 +28,7 @@ Icon.propTypes = {
     "locked",
     "check",
     "no",
+    "search",
     "chevron",
     "control-check",
     "control-ideterminate",
@@ -38,9 +40,4 @@ Icon.propTypes = {
     "info",
     "arrow-left",
   ]),
-  variant: PropTypes.oneOf(["light", "dark"]),
-};
-
-Icon.defaultProps = {
-  variant: "dark",
 };

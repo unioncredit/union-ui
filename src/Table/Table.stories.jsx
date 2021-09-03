@@ -53,7 +53,7 @@ export const Default = () => (
           </TableCell>
         </TableRow>
       ))}
-    <TableRow>
+    <TableRow active>
       <TableCell align="right" span={1}>
         <Button
           inline
