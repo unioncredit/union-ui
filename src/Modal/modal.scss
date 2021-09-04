@@ -6,6 +6,10 @@
   width: 100%;
 
   &.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
     &--small {
       max-width: 280px;
     }
@@ -14,10 +18,20 @@
       max-width: 362px;
     }
 
-    @media screen and (max-width: 420px) {
+    @media screen and (max-width: 520px) {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      max-width: 420px !important;
+      max-width: 100% !important;
+      max-height: 80vh;
+    }
+  }
+
+  .card-body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 
@@ -89,10 +103,8 @@
       background-color: white;
     }
 
-    .card-body {
+    & > .card-body {
       margin-bottom: 110px;
-      overflow-y: scroll;
-      overflow-x: hidden;
 
       &::-webkit-scrollbar {
         display: none;
