@@ -6,6 +6,8 @@ $gutter: 8px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 2px;
+  box-sizing: border-box;
 
   &__inner {
     display: flex;
