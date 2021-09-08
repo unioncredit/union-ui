@@ -19,7 +19,7 @@ export const All = () => (
   <>
     <Box mb="20px">
       <Box mr="20px">
-        <Logo width="40px" />
+        <Logo width="60px" />
       </Box>
       <Logo width="60px" withText />
     </Box>

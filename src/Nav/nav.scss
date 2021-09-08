@@ -12,10 +12,6 @@
     display: flex;
     justify-content: center;
 
-    svg {
-      width: 28px;
-    }
-
     .nav--mobile & {
       display: none;
     }

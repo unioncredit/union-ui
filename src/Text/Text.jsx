@@ -43,7 +43,7 @@ Text.propTypes = {
   ]).isRequired,
   className: PropTypes.string,
   size: PropTypes.oneOf(["primary", "large"]),
-  weight: PropTypes.oneOf(["regular", "medium"]),
+  weight: PropTypes.oneOf(["regular", "medium", "bold"]),
   align: PropTypes.oneOf(["center", "left", "right"]),
 };
 

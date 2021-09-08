@@ -36,7 +36,7 @@ Heading.propTypes = {
     PropTypes.node,
   ]).isRequired,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
-  weight: PropTypes.oneOf(["regular", "medium"]),
+  weight: PropTypes.oneOf(["regular", "medium", "bold"]),
   size: PropTypes.oneOf(["primary", "large", "xlarge", "xxlarge", "xxxlarge"]),
 };
 

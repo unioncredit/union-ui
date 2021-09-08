@@ -41,7 +41,7 @@ Label.propTypes = {
     PropTypes.node,
   ]).isRequired,
   className: PropTypes.string,
-  weight: PropTypes.oneOf(["regular", "medium"]),
+  weight: PropTypes.oneOf(["regular", "medium", "bold"]),
   size: PropTypes.oneOf(["primary", "small"]),
 };
 
