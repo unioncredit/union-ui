@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import "../src/global.scss";
 
@@ -10,8 +10,12 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
 
 export const decorators = [
-  (Story) => <div style={{maxWidth:"820px"}}><Story /></div>,
+  (Story) => (
+    <div style={{ maxWidth: "890px" }}>
+      <Story />
+    </div>
+  ),
 ];

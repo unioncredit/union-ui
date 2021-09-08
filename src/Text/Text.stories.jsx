@@ -12,11 +12,17 @@ export const All = () => (
   <>
     <Text>The quick brown fox jumps over a lazy dog.</Text>
     <Text size="large">The quick brown fox jumps over a lazy dog.</Text>
-    <Label>Label: The quick brown fox jumps over a lazy dog.</Label>
-    <br />
-    <Label size="small">
-      Label: The quick brown fox jumps over a lazy dog.
-    </Label>
+  </>
+);
+
+export const Weights = () => (
+  <>
+    <Text weight="regular" grey={700}>
+      The quick brown fox jumps over a lazy dog.
+    </Text>
+    <Text weight="medium" grey={700}>
+      The quick brown fox jumps over a lazy dog.
+    </Text>
   </>
 );
 

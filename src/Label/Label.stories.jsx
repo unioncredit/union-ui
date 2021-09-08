@@ -15,6 +15,18 @@ export const All = () => (
   </>
 );
 
+export const Weights = () => (
+  <>
+    <Label weight="regular" grey={700}>
+      The quick brown fox jumps over a lazy dog.
+    </Label>
+    <br />
+    <Label weight="medium" grey={700}>
+      The quick brown fox jumps over a lazy dog.
+    </Label>
+  </>
+);
+
 export const Greys = () => (
   <>
     {Array(7)

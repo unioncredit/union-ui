@@ -6,13 +6,22 @@ import { propsToStyles } from "../spacing";
 
 import "./heading.scss";
 
-export function Heading({ level, size, children, className, grey, ...props }) {
+export function Heading({
+  level,
+  size,
+  children,
+  className,
+  grey,
+  weight,
+  ...props
+}) {
   return React.createElement(
     `h${level}`,
     {
       className: cn(className, "heading", {
         [`heading--${size}`]: size,
-        [`text--grey${grey}`]: grey,
+        [`heading--grey${grey}`]: grey,
+        [`heading--weight-${weight}`]: weight,
       }),
       style: propsToStyles(props),
       ...props,
@@ -27,7 +36,8 @@ Heading.propTypes = {
     PropTypes.node,
   ]).isRequired,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
-  size: PropTypes.oneOf(["primary", "large", "xlarge"]),
+  weight: PropTypes.oneOf(["regular", "medium"]),
+  size: PropTypes.oneOf(["primary", "large", "xlarge", "xxlarge", "xxxlarge"]),
 };
 
 Heading.defaultProps = {

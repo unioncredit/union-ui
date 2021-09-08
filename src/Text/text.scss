@@ -3,16 +3,16 @@
 .text {
   color: $grey500;
   margin-bottom: 8px;
-  line-height: 20px;
+  line-height: 24px;
   letter-spacing: -0.02em;
 
   &--primary {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   &--large {
-    font-size: 17.5px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   &--center {
@@ -29,4 +29,5 @@
 
   @include greys;
   @include colors;
+  @include weights;
 }

@@ -15,6 +15,7 @@ export function Label({
   grey,
   color,
   style,
+  weight,
   ...props
 }) {
   return React.createElement(
@@ -24,6 +25,7 @@ export function Label({
         [`label--${size}`]: size,
         [`label--grey${grey}`]: grey,
         [`label--${color}`]: color,
+        [`label--weight-${weight}`]: weight,
       }),
       style: { ...style, ...propsToStyles(props) },
       onClick,
@@ -39,6 +41,7 @@ Label.propTypes = {
     PropTypes.node,
   ]).isRequired,
   className: PropTypes.string,
+  weight: PropTypes.oneOf(["regular", "medium"]),
   size: PropTypes.oneOf(["primary", "small"]),
 };
 

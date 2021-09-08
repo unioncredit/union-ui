@@ -14,6 +14,7 @@ export function Text({
   color,
   grey,
   style,
+  weight,
   ...props
 }) {
   return (
@@ -23,6 +24,7 @@ export function Text({
         [`text--${align}`]: align,
         [`text--grey${grey}`]: grey,
         [`text--${color}`]: color,
+        [`text--weight-${weight}`]: weight,
       })}
       style={{
         ...propsToStyles(props),
@@ -41,6 +43,7 @@ Text.propTypes = {
   ]).isRequired,
   className: PropTypes.string,
   size: PropTypes.oneOf(["primary", "large"]),
+  weight: PropTypes.oneOf(["regular", "medium"]),
   align: PropTypes.oneOf(["center", "left", "right"]),
 };
 

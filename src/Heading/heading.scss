@@ -7,21 +7,38 @@
 
   &--primary {
     font-weight: 500;
-    font-size: 21.88px;
-    line-height: 26.47px;
+    font-size: 20px;
+    line-height: 28px;
   }
 
+  // 2XL
   &--large {
     font-weight: 500;
-    font-size: 27.34px;
-    line-height: 33.09px;
+    font-size: 30px;
+    line-height: 36px;
   }
 
+  // 3XL
   &--xlarge {
     font-weight: 400;
-    font-size: 34.18px;
-    line-height: 41.37px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  // 4XL
+  &--xxlarge {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  // 5XL
+  &--xxxlarge {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
   }
 
   @include greys;
+  @include weights;
 }
