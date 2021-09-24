@@ -2,9 +2,8 @@ import React, { forwardRef } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Heading } from "../Heading";
-import { Divider } from "../Divider";
-import { Box } from "../Box";
+import { Label } from "../Label";
+import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
 
 import "./card.scss";
@@ -27,21 +26,17 @@ export const Card = forwardRef(
   }
 );
 
-function CardHeader({ title }) {
+function CardHeader({ title, subTitle, align }) {
   return (
-    <div className="card-header">
-      <Heading>{title}</Heading>
-    </div>
-  );
-}
-
-function CardFooter({ children }) {
-  return (
-    <div className="card-footer">
-      <Divider />
-      <Box mt="20px" direction="vertical" mb="24px">
-        {children}
-      </Box>
+    <div
+      className={cn("card-header", {
+        [`card-header--${align}`]: align,
+      })}
+    >
+      <Text as="h1" size="large" grey={700} weight="medium" m={0}>
+        {title}
+      </Text>
+      {subTitle && <Label as="h2">{subTitle}</Label>}
     </div>
   );
 }
@@ -52,17 +47,13 @@ function CardBody({ children }) {
 
 Card.Header = CardHeader;
 Card.Body = CardBody;
-Card.Footer = CardFooter;
 
 CardHeader.propTypes = {
   title: PropTypes.string.isRequired,
-};
-
-CardFooter.propTypes = {
-  title: PropTypes.node.isRequired,
+  align: PropTypes.oneOf(["center", "left", "right"]),
 };
 
 Card.propTypes = {
-  variant: PropTypes.oneOf(["primary", "packed"]),
+  variant: PropTypes.oneOf(["primary", "packed", "blue"]),
   size: PropTypes.oneOf(["small", "medium", "large", "fluid"]),
 };

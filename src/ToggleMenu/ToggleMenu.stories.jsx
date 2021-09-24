@@ -19,6 +19,7 @@ const linkItems = items.map((item) => ({ ...item, as: "a", href: "#" }));
 export const Default = () => <ToggleMenu items={items} />;
 
 export const AsLink = () => <ToggleMenu items={linkItems} />;
+
 export const Controlled = () => {
   const [state, setState] = useState(items[0].id);
 

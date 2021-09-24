@@ -10,11 +10,11 @@ import "./wallet.scss";
 export function Wallet({ onClick, avatar, name, networkSrc }) {
   return (
     <Button variant="secondary" className="wallet" onClick={onClick}>
-      {avatar || <Avatar />}
+      {avatar || <Avatar size={24} />}
       <Text>{name}</Text>
       {networkSrc && (
         <span className="wallet__network">
-          <Avatar src={networkSrc} />
+          <Avatar src={networkSrc} size={24} />
         </span>
       )}
     </Button>

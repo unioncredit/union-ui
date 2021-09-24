@@ -8,10 +8,6 @@ export function Layout({ children }) {
   return <Box className="layout">{children}</Box>;
 }
 
-export function Sidebar({ children }) {
-  return <Box className="layout-sidebar">{children}</Box>;
-}
-
 export function Header({ children, ...props }) {
   return (
     <Box {...props} as="header" className="layout-header">
@@ -30,6 +26,5 @@ export function Main({ children, ...props }) {
   );
 }
 
-Layout.Sidebar = Sidebar;
 Layout.Header = Header;
 Layout.Main = Main;

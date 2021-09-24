@@ -2,9 +2,7 @@ import React from "react";
 
 import { Layout } from "./Layout";
 import { Nav, NavItem } from "../Nav";
-import { Heading } from "../Heading";
 import { Button } from "../Button";
-import { Wallet } from "../Wallet";
 import { Box } from "../Box";
 
 export default {
@@ -14,49 +12,27 @@ export default {
 
 export const Default = () => (
   <Layout>
-    <Layout.Sidebar>
-      <Nav>
-        <NavItem
-          label="Get Started"
-          icon="credit"
-          active
-          description="Get vouched for to become a member and stake your DAI to collect UNION "
-        />
-        <NavItem label="Credit" icon="credit" disabled />
-        <NavItem label="Contacts" icon="contacts" disabled />
-        <NavItem label="Vote" icon="vote" disabled />
-        <NavItem disabled label="Vote" icon="vote" disabled />
-      </Nav>
-    </Layout.Sidebar>
     <Layout.Main>
       <Layout.Header>
-        <Heading>Get Started</Heading>
+        <Nav>
+          <NavItem
+            label="Get Started"
+            icon="credit"
+            active
+            description="Get vouched for to become a member and stake your DAI to collect UNION "
+          />
+          <NavItem label="Credit" icon="credit" disabled />
+          <NavItem label="Contacts" icon="contacts" disabled />
+          <NavItem label="Vote" icon="vote" disabled />
+          <NavItem disabled label="Vote" icon="vote" disabled />
+        </Nav>
         <Box>
           <Button variant="secondary" icon="vouch" label="0 UNION" />
-          <Wallet />
         </Box>
       </Layout.Header>
       <div>
         <div style={{ width: "100px", height: "1100px", background: "grey" }} />
       </div>
-    </Layout.Main>
-  </Layout>
-);
-
-export const VerticalAlign = () => (
-  <Layout>
-    <Layout.Main verticalAlign={true}>
-      <Layout.Header>
-        <Heading>Get Started</Heading>
-        <Box>
-          <Button variant="secondary" icon="vouch">
-            0 UNION
-          </Button>
-          <Wallet />
-        </Box>
-      </Layout.Header>
-      <div>Main</div>
-      <div>Footer</div>
     </Layout.Main>
   </Layout>
 );

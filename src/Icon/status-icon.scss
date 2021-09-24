@@ -36,11 +36,11 @@
 
   &--solid {
     &.status-icon--success {
-      background: $green;
+      background: $green600;
     }
 
     &.status-icon--error {
-      background: $orange;
+      background: $amber600;
     }
   }
 
@@ -55,13 +55,13 @@
 
     &.status-icon--success {
       svg path {
-        fill: $green;
+        fill: $green600;
       }
     }
 
     &.status-icon--error {
       svg path {
-        fill: $orange;
+        fill: $amber600;
       }
     }
   }

@@ -3,16 +3,24 @@ import cn from "classnames";
 
 import "./table-row.scss";
 
-export function TableRow({ children, onClick, className, active }) {
+export function TableRow({
+  children,
+  onClick,
+  clickable,
+  className,
+  active,
+  error,
+}) {
   return (
-    <div
+    <tr
       className={cn("table-row", className, {
-        "table-row--clickable": onClick,
+        "table-row--clickable": onClick || clickable,
         "table-row--active": active,
+        "table-row--error": error,
       })}
       onClick={onClick}
     >
       {children}
-    </div>
+    </tr>
   );
 }

@@ -14,7 +14,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <div style={{ maxWidth: "890px" }}>
+    <div style={{ maxWidth: "1190px" }}>
       <Story />
     </div>
   ),

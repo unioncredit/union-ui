@@ -40,17 +40,39 @@ export const Greys = () => (
 
 export const Colors = () => (
   <>
-    {["blue", "green", "white", "red", "grey", "black", "orange"].map(
-      (color) => {
-        return (
-          <Text
-            color={color}
-            style={color === "white" && { backgroundColor: "black" }}
-          >
-            The quick brown fox jumps over a lazy dog
-          </Text>
-        );
-      }
-    )}
+    {[
+      "blue50",
+      "blue100",
+      "blue200",
+      "blue300",
+      "blue400",
+      "blue500",
+      "blue600",
+      "blue700",
+      "green100",
+      "green200",
+      "green300",
+      "green500",
+      "green600",
+      "red50",
+      "red100",
+      "red200",
+      "red400",
+      "red500",
+      "red600",
+      "purple100",
+      "purple600",
+      "amber100",
+      "amber600",
+    ].map((color) => {
+      return (
+        <Text
+          color={color}
+          style={color === "white" && { backgroundColor: "black" }}
+        >
+          The quick brown fox jumps over a lazy dog
+        </Text>
+      );
+    })}
   </>
 );

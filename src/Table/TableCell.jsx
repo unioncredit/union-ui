@@ -6,14 +6,14 @@ import "./table-cell.scss";
 
 export function TableCell({ children, span, align, className }) {
   return (
-    <div
+    <td
       className={cn("table-cell", className, {
         [`table-cell--align-${align}`]: align,
       })}
-      style={{ flexGrow: span }}
+      colSpan={span}
     >
       {children}
-    </div>
+    </td>
   );
 }
 

@@ -5,9 +5,10 @@ export function Logo({ width, withText, onClick }) {
     <svg
       onClick={onClick}
       width={width}
-      viewBox="0 0 52 52"
+      viewBox={`0 0 52 ${withText ? "52" : "30"}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="union-logo"
     >
       <path
         fill-rule="evenodd"

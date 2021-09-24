@@ -18,6 +18,10 @@
     max-width: 362px;
   }
 
+  &--large {
+    max-width: 600px;
+  }
+
   &--fluid {
     max-width: 100%;
   }
@@ -28,6 +32,20 @@
 
   &--packed {
     padding: 0 16px;
+    .card-body {
+      padding: 16px 0;
+    }
+  }
+
+  &--blue {
+    background: $blue50;
+    border-color: $blue100;
+    color: $blue500;
+    .text,
+    .heading,
+    .label {
+      color: inherit;
+    }
   }
 
   .grid--bordered {
@@ -50,22 +68,15 @@
 }
 
 .card-header {
-  padding: 20px 0 16px;
-  border-bottom: 1px solid $grey200;
+  padding: 24px 0 0 0;
 
   .heading {
     margin: 0;
   }
+
+  @include textalign;
 }
 
 .card-body {
-  padding: 20px 0;
-
-  .card--packed & {
-    padding: 12px 0;
-  }
-
-  .card--small & {
-    padding: 16px 0;
-  }
+  padding: 24px 0;
 }

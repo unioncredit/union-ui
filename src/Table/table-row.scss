@@ -1,31 +1,20 @@
 @import "../variables.scss";
 
 .table-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   width: 100%;
   padding: 0 8px;
   box-sizing: border-box;
+  border: 2px solid transparent;
+  vertical-align: middle;
 
-  &:not(:first-child) {
-    border-top: 1px solid $grey200;
+  &:nth-child(odd) {
+    background-color: $grey50;
   }
 
   &--clickable {
-    cursor: pointer;
-    transition: all 100ms;
     &:hover {
-      background: $grey100;
+      background-color: $grey100 !important;
+      cursor: pointer;
     }
-  }
-
-  &--active {
-    background: $grey100;
-  }
-
-  .table--condensed & {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 }

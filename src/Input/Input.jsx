@@ -17,7 +17,6 @@ export const Input = forwardRef(
       value,
       cta,
       suffix,
-      onMaxClick,
       onCaptionClick,
       onChange,
       type,
@@ -33,7 +32,7 @@ export const Input = forwardRef(
     };
 
     return (
-      <div className="input-wrapper">
+      <div className={cn("input-wrapper", { "input-wrapper--error": error })}>
         {label && (
           <Label className="input-label" for={name}>
             {label}
@@ -44,7 +43,6 @@ export const Input = forwardRef(
             className={cn("input", {
               "input--disabled": disabled,
               "input--has-value": hasValue,
-              "input--error": error,
             })}
           >
             <input
@@ -57,11 +55,6 @@ export const Input = forwardRef(
               placeholder={placeholder}
             />
             {suffix && <div className="input__suffix">{suffix}</div>}
-            {onMaxClick && (
-              <button className="input__max-button" onClick={onMaxClick}>
-                Max.
-              </button>
-            )}
           </div>
           {cta}
         </div>
@@ -71,7 +64,6 @@ export const Input = forwardRef(
             as="p"
             className={cn("input-caption", {
               "input-caption--clickable": onCaptionClick,
-              "input-caption--error": error,
             })}
             mt="4px"
             onClick={!error ? onCaptionClick : undefined}
@@ -91,7 +83,6 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   cta: PropTypes.node,
-  onMaxClick: PropTypes.func,
   suffix: PropTypes.string,
   type: PropTypes.oneOf(["text", "number"]),
 };

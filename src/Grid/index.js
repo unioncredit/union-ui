@@ -50,3 +50,6 @@ Row.propTypes = {
 Col.propTypes = {
   className: PropTypes.string,
 };
+
+Grid.Row = Row;
+Grid.Col = Col;

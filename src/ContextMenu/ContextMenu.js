@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
+import cn from "classnames";
 
 import { useClickOutside } from "../util";
 
 import "./context-menu.scss";
 
-export function ContextMenu({ items }) {
+export function ContextMenu({ items, after }) {
   const ref = useRef(null);
   const [open, setOpen] = useState(false);
 
@@ -23,11 +24,12 @@ export function ContextMenu({ items }) {
       </div>
       {open && (
         <div className="context-menu">
-          {items.map(({ label, ...item }) => (
-            <a className="context-menu__item" {...item}>
+          {items.map(({ label, className, ...item }) => (
+            <a className={cn("context-menu__item", className)} {...item}>
               {label}
             </a>
           ))}
+          {after && <div className="context-menu__after">{after}</div>}
         </div>
       )}
     </div>

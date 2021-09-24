@@ -16,7 +16,7 @@ $gutter: 8px;
 }
 
 .input {
-  $fontSize: 14px;
+  $fontSize: 16px;
   flex: 1 1 0;
   position: relative;
   display: flex;
@@ -27,43 +27,25 @@ $gutter: 8px;
     width: 100%;
   }
 
-  ::-webkit-input-placeholder {
-    color: $grey400;
-  }
-
-  &--disabled ::-webkit-input-placeholder {
-    color: $grey300;
-  }
-
-  &:hover ::-webkit-input-placeholder {
-    color: $grey500;
-  }
-
   &__suffix {
     position: absolute;
     right: 0;
     padding: 0 16px 0 12px;
-    height: 40px;
-    font-size: 11.2px;
+    height: 48px;
     display: flex;
-    color: $grey600;
     align-items: center;
-    border-left: 1px solid $grey200;
+
+    .dai {
+      margin: 0;
+    }
   }
 
-  &__max-button {
-    position: absolute;
-    right: $gutter;
-    background: $grey100;
-    color: $grey500;
-    border-radius: 6px;
-    border: 1px solid $grey200;
-    padding: 5px 8px;
+  &--disabled ::-webkit-input-placeholder {
+    color: $grey200 !important;
+  }
 
-    .input--disabled & {
-      color: $grey300;
-      background: white;
-    }
+  &--disabled input {
+    border-color: $grey100 !important;
   }
 
   input {
@@ -73,9 +55,17 @@ $gutter: 8px;
     border: 1px solid $grey200;
     border-radius: 12px;
     outline: none;
-    height: 40px;
-    background: white;
+    height: 48px;
+    background: $grey50;
     box-sizing: border-box;
+
+    &::-webkit-input-placeholder {
+      color: $grey500;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
 
     &:hover:enable {
       height: 40px;
@@ -87,8 +77,8 @@ $gutter: 8px;
     }
 
     &:focus {
-      border: 2px solid $blue100;
-      box-shadow: 0px 0px 0px 2px $blueBoxShadow;
+      border: 2px solid $blue500;
+      box-shadow: 0 0 0 2px $blue200;
     }
 
     /* Chrome, Safari, Edge, Opera */
@@ -102,15 +92,14 @@ $gutter: 8px;
     &[type="number"] {
       -moz-appearance: textfield;
     }
-  }
 
-  &--error {
-    input {
-      border: 2px solid #eb5d5f;
-    }
+    .input-wrapper--error & {
+      border: 2px solid $red600;
+      background-color: $red50;
 
-    .input__suffix {
-      border-left: 1px solid #eb5d5f;
+      &:focus {
+        box-shadow: 0 0 0 2px $red200;
+      }
     }
   }
 }
@@ -128,13 +117,8 @@ $gutter: 8px;
 .input-caption {
   margin-top: 4px;
 
-  &--error {
-    color: #c84042;
-    font-weight: 500;
-  }
-
-  &--clickable:not(.input-caption--error) {
-    color: $blue100;
+  &--clickable.label {
+    color: $blue600;
 
     &:hover {
       text-decoration: underline;

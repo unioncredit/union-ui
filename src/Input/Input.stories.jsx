@@ -6,6 +6,7 @@ import { Control } from "../Control";
 import { InputRow } from "./InputRow";
 import { Button } from "../Button";
 import { Dai } from "../Dai";
+import { Icon } from "../Icon";
 
 export default {
   component: Input,
@@ -31,6 +32,13 @@ export const Inputs = () => (
         label="Input label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
+      />
+    </Box>
+    <Box mb="20px">
+      <Input
+        label="Input label"
+        placeholder="Placeholder"
+        suffix={<Icon name="search" />}
       />
     </Box>
 
@@ -62,7 +70,7 @@ export const Inputs = () => (
         label="Input label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
-        suffix="DAI"
+        suffix={<Dai />}
       />
     </Box>
 
@@ -72,7 +80,7 @@ export const Inputs = () => (
         error="input error"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
-        suffix="DAI"
+        suffix={<Dai />}
       />
     </Box>
   </>

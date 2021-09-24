@@ -1,0 +1,47 @@
+@import "../variables.scss";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__number {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin: 0 4px;
+    background: transparent;
+    color: $grey400;
+
+    &:not(.pagination__number--ellipsis) {
+      cursor: pointer;
+    }
+
+    &--active {
+      color: $grey800;
+      background: $grey100;
+      border: 1px solid $grey300;
+    }
+
+    &:hover:not(.pagination__number--active, .pagination__number--ellipsis) {
+      border: 1px solid $grey300;
+      background: $grey100;
+    }
+
+    &:active:not(.pagination__number--active, .pagination__number--ellipsis) {
+      border: 1px solid $grey400;
+      color: $grey800;
+    }
+  }
+
+  &__ellipsis {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+  }
+}

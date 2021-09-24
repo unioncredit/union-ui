@@ -2,17 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./avatar.scss";
+import { propsToStyles } from "../spacing";
 
-export function Avatar({ src, size }) {
+export function Avatar({ src, size, ...props }) {
+  const Component = src;
+
   return (
     <div
       className="avatar"
       style={{
         width: size + "px",
         height: size + "px",
+        ...propsToStyles(props),
       }}
     >
-      {src && <img src={src} />}
+      {src && Component.displayName?.includes("UnionIcon") ? (
+        <Component />
+      ) : (
+        <img src={src} />
+      )}
     </div>
   );
 }
