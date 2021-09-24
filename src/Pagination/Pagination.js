@@ -23,8 +23,9 @@ export function Pagination({ onClick, pages, activePage = 1, ...props }) {
 
   return (
     <Box className="pagination" {...props}>
-      {numbers.map((n) => (
+      {numbers.map((n, i) => (
         <button
+          key={i}
           onClick={typeof n === "number" ? () => onClick(n) : undefined}
           className={cn("pagination__number", {
             "pagination__number--active": n === activePage,

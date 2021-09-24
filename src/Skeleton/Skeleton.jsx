@@ -6,24 +6,32 @@ import { propsToStyles } from "../spacing";
 
 import "./skeleton.scss";
 
-export function Skeleton({ variant, size, ...props }) {
+export function Skeleton({ variant, width, height, grey, size, ...props }) {
   return (
     <div
       className={cn("skeleton", {
         [`skeleton--${variant}`]: variant,
-        [`skeleton--${size}`]: size,
+        [`skeleton--grey${grey}`]: grey,
       })}
-      style={propsToStyles(props)}
+      style={{
+        ...propsToStyles(props),
+        width: size || width + "px",
+        height: size || height + "px",
+      }}
     ></div>
   );
 }
 
 Skeleton.propTypes = {
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  variant: PropTypes.oneOf(["primary", "secondary"]),
+  size: PropTypes.number,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  grey: PropTypes.string,
+  variant: PropTypes.oneOf(["rectangle", "circle"]),
 };
 
 Skeleton.defaultProps = {
-  size: "medium",
-  variant: "primary",
+  width: 100,
+  height: 10,
+  variant: "rectangle",
 };

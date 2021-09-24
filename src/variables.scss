@@ -61,6 +61,14 @@ $shadesOfGrey: (
   }
 }
 
+@mixin bgGreys {
+  @each $name, $color in $shadesOfGrey {
+    &--#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
 $colors: (
   // blues
   "blue50": $blue50,

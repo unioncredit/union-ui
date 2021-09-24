@@ -29,8 +29,8 @@ export function Dai() {
           y2="17.68"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F9A606" />
-          <stop offset="1" stop-color="#FBCC5F" />
+          <stop stopColor="#F9A606" />
+          <stop offset="1" stopColor="#FBCC5F" />
         </linearGradient>
       </defs>
     </svg>

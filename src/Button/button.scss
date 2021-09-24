@@ -210,6 +210,19 @@
     }
   }
 
+  &--secondary {
+    &[disabled="true"],
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled="true"]:hover {
+      opacity: 1;
+      color: $grey300;
+      svg path {
+        fill: $grey300;
+      }
+    }
+  }
+
   &--small {
     padding: 6px 12px;
   }

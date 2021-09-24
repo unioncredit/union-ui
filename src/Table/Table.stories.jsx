@@ -59,23 +59,23 @@ export const Skeletons = () => (
       .map(() => (
         <TableRow>
           <TableCell>
-            <Avatar />
+            <Skeleton variant="circle" size={24} grey={200} />
           </TableCell>
           <TableCell span={1}>
-            <Skeleton size="large" variant="primary" />
-            <Skeleton size="medium" variant="secondary" />
+            <Skeleton width={100} height={10} grey={200} />
+            <Skeleton width={60} height={10} grey={200} mt="4px" />
           </TableCell>
           <TableCell span={1}>
-            <Skeleton size="medium" variant="secondary" />
+            <Skeleton width={100} height={10} grey={200} />
           </TableCell>
           <TableCell span={1} align="center">
-            <Skeleton size="small" variant="primary" />
+            <Skeleton width={100} height={10} grey={200} />
           </TableCell>
           <TableCell span={1} align="center">
-            <Skeleton size="small" variant="secondary" />
+            <Skeleton width={100} height={10} grey={200} />
           </TableCell>
           <TableCell span={1} align="right">
-            <Skeleton size="large" variant="primary" />
+            <Skeleton width={100} height={10} grey={200} />
           </TableCell>
         </TableRow>
       ))}
