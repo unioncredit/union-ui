@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import { Label } from "../Label";
 import { Text } from "../Text";
+import { Box } from "../Box";
 import { propsToStyles } from "../spacing";
 
 import "./card.scss";
@@ -26,17 +27,20 @@ export const Card = forwardRef(
   }
 );
 
-function CardHeader({ title, subTitle, align }) {
+function CardHeader({ title, subTitle, align, action }) {
   return (
     <div
       className={cn("card-header", {
         [`card-header--${align}`]: align,
       })}
     >
-      <Text as="h1" size="large" grey={700} weight="medium" m={0}>
-        {title}
-      </Text>
-      {subTitle && <Label as="h2">{subTitle}</Label>}
+      <div className="card-header__content">
+        <Text as="h1" size="large" grey={700} weight="medium" m={0}>
+          {title}
+        </Text>
+        {subTitle && <Label as="h2">{subTitle}</Label>}
+      </div>
+      {action && <div className="card-header__action">{action}</div>}
     </div>
   );
 }
@@ -51,6 +55,7 @@ Card.Body = CardBody;
 CardHeader.propTypes = {
   title: PropTypes.string.isRequired,
   align: PropTypes.oneOf(["center", "left", "right"]),
+  action: PropTypes.node,
 };
 
 Card.propTypes = {

@@ -47,6 +47,14 @@ export const Default = () => (
             </InputRow>
           </Card.Body>
         </Card>
+        <Card mt="24px">
+          <Card.Header
+            title="Stake"
+            subTitle="Lorem ipsum dolor iniut"
+            action={<Button variant="secondary" label="Button" />}
+          />
+          <Card.Body>body</Card.Body>
+        </Card>
       </Col>
     </Row>
   </Grid>
