@@ -2,13 +2,7 @@ import React from "react";
 
 export function Metamask({ width }) {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M17.2065 2.2285L10.9605 6.86755L12.1155 4.13057L17.2065 2.2285Z"
         fill="#E2761B"
@@ -244,3 +238,5 @@ export function Metamask({ width }) {
     </svg>
   );
 }
+
+Metamask.displayName = "UnionIconMetamask";

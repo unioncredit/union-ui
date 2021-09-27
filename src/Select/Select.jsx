@@ -11,9 +11,10 @@ const styles = {
     "&:hover": {},
     borderRadius: "12px",
     paddingLeft: "8px",
-    border: state.isFocused ? "1px solid #2143d5" : "1px solid #e1e0e6",
+    border: state.isFocused ? "1px solid #2143d5" : "1px solid #F5F5F4",
     boxShadow: state.isFocused ? "0px 0px 0px 3px #a7c4ff" : "none",
     minHeight: "40px",
+    background: "#FAFAF9",
   }),
   menu: (styles) => ({
     ...styles,
@@ -23,7 +24,7 @@ const styles = {
     boxShadow:
       "0px 1px 1px rgba(58, 56, 66, 0.2), 0px 4px 8px rgba(58, 56, 66, 0.25)",
   }),
-  valueContainer: (styles, state) => ({ ...styles, overflow: "visible" }),
+  valueContainer: (styles) => ({ ...styles, overflow: "visible" }),
   singleValue: (styles) => ({ ...styles, overflow: "visible" }),
 };
 

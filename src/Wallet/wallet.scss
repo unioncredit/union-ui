@@ -7,32 +7,17 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: white;
+  border: 1px solid $grey200;
 
   &.button {
-    padding: 5px;
-    margin: 0 0 0 8px;
+    padding: 7px;
+    margin: 0 10px;
   }
 
   .text {
     margin: 0 8px;
-    color: $grey700;
-  }
-
-  &__transaction-indicator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    width: $indicatorSize;
-    height: $indicatorSize;
-    background-color: $grey100;
-    position: relative;
-    top: $indicatorBorderSize / 2;
-    left: $indicatorBorderSize / 2;
-
-    &--warning {
-      background-color: $yellow;
-    }
+    color: $grey500;
   }
 
   &__network {
@@ -50,8 +35,8 @@
 
     &:before {
       position: absolute;
-      top: -5px;
-      bottom: -5px;
+      top: 5px;
+      bottom: 5px;
       left: -8px;
       content: "";
       display: block;

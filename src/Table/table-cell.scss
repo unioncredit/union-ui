@@ -1,6 +1,56 @@
+@import "../variables.scss";
+
 .table-cell {
-  padding: 8px;
+  padding: 8px 6px;
   box-sizing: border-box;
+  vertical-align: middle;
+
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+
+  &:last-of-type {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-right: 2px solid transparent;
+    padding-right: 12px;
+  }
+
+  &:first-of-type {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-left: 2px solid transparent;
+    padding-left: 12px;
+  }
+
+  .table-row--active & {
+    border-top: 2px solid $blue500;
+    border-bottom: 2px solid $blue500;
+    background-color: $blue50;
+    color: $blue500;
+
+    &:last-of-type {
+      border-right: 2px solid $blue500;
+    }
+
+    &:first-of-type {
+      border-left: 2px solid $blue500;
+    }
+  }
+
+  .table-row--active.table-row--error & {
+    border-top: 2px solid $red500;
+    border-bottom: 2px solid $red500;
+    background-color: $red50 !important;
+    color: $red500;
+
+    &:last-of-type {
+      border-right: 2px solid $red500;
+    }
+
+    &:first-of-type {
+      border-left: 2px solid $red500;
+    }
+  }
 
   &--align-center {
     text-align: center;
@@ -8,23 +58,26 @@
 
   &--align-left {
     text-align: left;
-    & .skeleton {
+    .skeleton {
       margin-right: auto;
     }
   }
+
   &--align-right {
     text-align: right;
-
-    & .skeleton {
+    .skeleton {
       margin-left: auto;
     }
   }
 
-  & p:last-of-type {
-    margin-bottom: 0;
+  p {
+    color: inherit;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
-  & .skeleton:last-of-type {
+  .skeleton:last-of-type {
     margin-bottom: 0;
   }
 

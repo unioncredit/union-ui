@@ -1,42 +1,18 @@
 .layout {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  width: 95%;
+  min-height: 100%;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .layout-header {
-  padding: 34px 0;
+  padding: 28px 0 40px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.layout-sidebar {
-  height: 100%;
-  flex-shrink: 0;
-  flex-grow: 0;
-  max-width: 280px;
-  flex-basis: 280px;
-  background-color: white;
-}
-
-.layout-main-wrapper {
-  height: 100vh;
-  overflow-y: scroll;
-}
-
 .layout-main {
-  width: 90%;
-  min-height: 100%;
-  max-width: 920px;
-  margin: 0 auto;
-
-  &--verticalAlign {
-    justify-content: space-between;
-  }
-
-  @media screen and (max-width: 580px) {
-    width: 98%;
-  }
+  width: 100%;
 }

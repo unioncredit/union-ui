@@ -12,13 +12,6 @@ const buttons = [
   { icon: "vouch", variant: "primary", label: "Vouch for new contact" },
   { icon: "vouch", variant: "secondary", label: "Vouch for new contact" },
   {
-    icon: "vouch",
-    variant: "secondary",
-    rounded: true,
-    label: "Vouch for new contact",
-  },
-  { icon: "vouch", variant: "floating", label: "Vouch for new contact" },
-  {
     icon: "chevron",
     iconPosition: "end",
     variant: "pill",
@@ -42,34 +35,17 @@ const variants = [
     {
       icon: "manage",
       variant: "secondary",
-      rounded: true,
       label: "Manage contact",
     },
     {
       icon: "proposal",
       variant: "secondary",
-      rounded: true,
       label: "Make proposal",
     },
     {
       icon: "proposal",
       variant: "primary",
-      rounded: true,
       label: "copy",
-    },
-    {
-      icon: "check",
-      variant: "secondary",
-      rounded: true,
-      label: "for",
-      color: "green",
-    },
-    {
-      icon: "check",
-      variant: "secondary",
-      rounded: true,
-      label: "Longer Label",
-      loading: true,
     },
   ],
   [
@@ -83,10 +59,13 @@ const variants = [
       label: "Voted",
       color: "red",
     },
-  ],
-  [
-    { icon: "vouch", variant: "floating", label: "Vouch for someone" },
-    { variant: "floating", label: "Loading", loading: true },
+    {
+      icon: "check",
+      iconPosition: "end",
+      variant: "pill",
+      label: "Voted",
+      color: "green",
+    },
   ],
   [
     { icon: "metamask", variant: "secondary", label: "Metamask" },
@@ -99,6 +78,15 @@ const variants = [
   [
     { icon: "twitter", variant: "secondary", rounded: true },
     { icon: "telegram", variant: "secondary", rounded: true },
+  ],
+  [
+    { variant: "secondary", color: "red", label: "Color Button" },
+    { variant: "secondary", color: "green", label: "Color Button" },
+    { variant: "secondary", color: "blue", label: "Color Button" },
+  ],
+  [
+    { variant: "ethereum", label: "Ethereum Button" },
+    { variant: "polygon", label: "Polygon Button" },
   ],
 ];
 

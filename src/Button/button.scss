@@ -5,14 +5,15 @@
   $disabledOpacity: 0.4;
 
   position: relative;
-  font-size: 11.2px;
+  font-size: 14px;
+  line-height: 20px;
   letter-spacing: -0.02em;
-  border: 1px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   cursor: pointer;
+  transition: all 100ms;
 
   .button-row & {
     margin: 0 10px 0 0;
@@ -61,6 +62,7 @@
 
   &--icon-pos-end svg {
     margin-left: $iconGutter;
+    margin-right: 0 !important;
   }
 
   &--inline {
@@ -73,7 +75,8 @@
   }
 
   svg:not(.loading-spinner) {
-    height: 12px;
+    height: 16px;
+    margin-right: 8px;
   }
 
   &[disabled="true"],
@@ -84,17 +87,18 @@
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 3px $blueBoxShadow;
-    border: 1px solid $blue200;
     outline: none;
   }
 
-  &--primary,
-  &--floating {
+  &--primary {
     color: white;
-    background-color: $blue100;
-    padding: 13px 12px;
+    background-color: $blue600;
+    padding: 14px 24px;
     border-radius: 10px;
+
+    svg path {
+      fill: white;
+    }
 
     .loading-spinner {
       path {
@@ -106,74 +110,80 @@
     }
 
     &:hover:enabled {
-      background-color: $blue200;
+      background-color: $blue500;
     }
 
     &:active:enabled {
-      box-shadow: none;
-      background-color: $blue300;
+      background-color: $blue700;
     }
   }
 
   &--secondary,
   &--pill {
     color: black;
-    background-color: white;
+    background-color: $grey50;
     padding: 13px 12px;
     border-radius: 10px;
-    border-color: $grey200;
 
     &:hover:enabled {
       background-color: $grey100;
     }
 
     &:active:enabled {
-      box-shadow: none;
       background-color: $grey200;
-      border-color: transparent;
+    }
+
+    &.button--red {
+      background-color: $red50;
+      color: $red600;
+      &:hover:enabled {
+        background-color: $red100;
+      }
+      &:active:enabled {
+        background-color: $red200;
+      }
+      svg path {
+        fill: $red600;
+      }
+    }
+
+    &.button--green {
+      background-color: $green50;
+      color: $green600;
+      &:hover:enabled {
+        background-color: $green100;
+      }
+      &:active:enabled {
+        background-color: $green200;
+      }
+      svg path {
+        fill: $green600;
+      }
+    }
+
+    &.button--blue {
+      background-color: $blue100;
+      color: $blue600;
+      &:hover:enabled {
+        background-color: $blue200;
+      }
+      &:active:enabled {
+        background-color: $blue300;
+      }
+      svg path {
+        fill: $blue600;
+      }
     }
   }
 
-  &--rounded {
-    padding: 9px 12px;
-    border-radius: 16px;
-  }
-
-  &--floating {
-    border-radius: 20px;
-    padding: 13px 20.5px;
-    box-shadow: 0px 1px 1px rgba(58, 56, 66, 0.2),
-      0px 4px 8px rgba(58, 56, 66, 0.25);
-  }
-
   &--pill {
-    padding: 4px 8px;
+    padding: 4px 12px;
     border-radius: 16px;
+    font-size: 12px;
 
     .loading-spinner-wrapper {
       width: 15px;
       height: 15px;
-    }
-  }
-
-  &--noLabel {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-    min-width: 0;
-
-    svg {
-      margin: 0;
-    }
-  }
-
-  &--fontSize-large {
-    font-size: 14px;
-
-    svg {
-      height: 16px;
-      margin-right: 8px;
     }
   }
 
@@ -182,7 +192,6 @@
     background-color: white;
     padding: 8px;
     border-radius: 12px;
-    border-color: $grey200;
 
     &:not(.button--noLabel) {
       padding-right: 16px;
@@ -197,9 +206,72 @@
     }
 
     &:active:enabled {
-      box-shadow: none;
       background-color: $grey200;
-      border-color: transparent;
+    }
+  }
+
+  &--secondary {
+    &[disabled="true"],
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled="true"]:hover {
+      opacity: 1;
+      color: $grey300;
+      svg path {
+        fill: $grey300;
+      }
+    }
+  }
+
+  &--small {
+    padding: 6px 12px;
+  }
+
+  &--polygon {
+    color: white;
+    background-color: $purple600;
+    padding: 14px 24px;
+    border-radius: 10px;
+
+    .loading-spinner {
+      path {
+        stroke: #d1e2ff;
+      }
+      circle {
+        stroke: #2143d5;
+      }
+    }
+
+    &:hover:enabled {
+      background-color: $purple500;
+    }
+
+    &:active:enabled {
+      background-color: $purple700;
+    }
+  }
+
+  &--ethereum {
+    color: white;
+    background-color: black;
+    padding: 14px 24px;
+    border-radius: 10px;
+
+    .loading-spinner {
+      path {
+        stroke: #d1e2ff;
+      }
+      circle {
+        stroke: #2143d5;
+      }
+    }
+
+    &:hover:enabled {
+      background-color: $grey500;
+    }
+
+    &:active:enabled {
+      background-color: $grey700;
     }
   }
 }

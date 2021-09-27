@@ -1,6 +1,7 @@
 import React from "react";
 
 import { ContextMenu } from "./ContextMenu";
+import { Button } from "../Button";
 
 export default {
   component: ContextMenu,
@@ -16,6 +17,9 @@ const items = [
 
 export const Default = () => (
   <div style={{ marginLeft: "200px" }}>
-    <ContextMenu items={items} />
+    <ContextMenu
+      items={items}
+      after={<Button size="small" label="Claim UNION" />}
+    />
   </div>
 );

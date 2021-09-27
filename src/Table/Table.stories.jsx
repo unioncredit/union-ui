@@ -20,16 +20,17 @@ export const Default = () => (
   <Table>
     {Array(5)
       .fill(0)
-      .map(() => (
-        <TableRow onClick={() => alert("clicked")}>
+      .map((_, i) => (
+        <TableRow
+          onClick={() => alert("clicked")}
+          active={i === 2 || i === 4}
+          error={i === 4}
+        >
           <TableCell>
             <Avatar src="https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg" />
           </TableCell>
           <TableCell span={4}>
             <Text>Primary Label</Text>
-            <Label as="p" size="small">
-              Secondary Label
-            </Label>
           </TableCell>
           <TableCell span={1}>
             <Label as="p" size="small">
@@ -39,31 +40,15 @@ export const Default = () => (
           <TableCell span={1} align="center">
             <Bar size="small" percentage={60} label="62% No" secondaryBar />
           </TableCell>
-          <TableCell span={1} align="center">
-            <Badge color="red" label="Defaulted" />
-          </TableCell>
           <TableCell span={1} align="right">
-            <Button
-              inline
-              label="Manage trust"
-              variant="pill"
-              icon="chevron"
-              iconPosition="end"
-            />
+            {i === 2 ? (
+              <Badge color="blue" label="Healthy" />
+            ) : (
+              <Badge color="red" label="Defaulted" />
+            )}
           </TableCell>
         </TableRow>
       ))}
-    <TableRow active>
-      <TableCell align="right" span={1}>
-        <Button
-          inline
-          label="View all contacts"
-          variant="pill"
-          icon="chevron"
-          iconPosition="end"
-        />
-      </TableCell>
-    </TableRow>
   </Table>
 );
 
@@ -74,23 +59,23 @@ export const Skeletons = () => (
       .map(() => (
         <TableRow>
           <TableCell>
-            <Avatar />
+            <Skeleton variant="circle" size={24} grey={200} />
           </TableCell>
           <TableCell span={1}>
-            <Skeleton size="large" variant="primary" />
-            <Skeleton size="medium" variant="secondary" />
+            <Skeleton width={100} height={10} grey={200} />
+            <Skeleton width={60} height={10} grey={200} mt="4px" />
           </TableCell>
           <TableCell span={1}>
-            <Skeleton size="medium" variant="secondary" />
+            <Skeleton width={100} height={10} grey={200} />
           </TableCell>
           <TableCell span={1} align="center">
-            <Skeleton size="small" variant="primary" />
+            <Skeleton width={100} height={10} grey={200} />
           </TableCell>
           <TableCell span={1} align="center">
-            <Skeleton size="small" variant="secondary" />
+            <Skeleton width={100} height={10} grey={200} />
           </TableCell>
           <TableCell span={1} align="right">
-            <Skeleton size="large" variant="primary" />
+            <Skeleton width={100} height={10} grey={200} />
           </TableCell>
         </TableRow>
       ))}

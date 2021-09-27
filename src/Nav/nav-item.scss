@@ -1,121 +1,29 @@
 @import "../variables.scss";
 
 .nav-item {
-  display: flex;
-  flex-direction: row;
-  background-color: #fff;
-  border: 1px solid transparent;
-  padding: 14px 16px 10px;
-  border-radius: 12px;
-  color: #565461;
-  margin: 0 0 4px 0;
   cursor: pointer;
-
-  svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  * {
-    cursor: default;
-  }
-
-  &:hover:not(.nav-item--disabled) {
-    background-color: #f4f4f6;
-  }
-
-  &:focus:not(:active):not(.nav-item--disabled) {
-    border: 1px solid #3a64f0;
-    box-shadow: 0px 0px 0px 3px #a7c4ff;
-    background: #f4f4f6;
-  }
-
-  &:active:not(.nav-item--disabled) {
-    background-color: #f4f4f6;
-    border: 1px solid #e1e0e6;
-  }
-
-  &:hover:not(.nav-item--disabled),
-  &:focus:not(.nav-item--disabled),
-  &:active:not(.nav-item--disabled) {
-    $color: #1e1c22;
-    color: $color;
-    svg:not(.nav-icon--get-started) {
-      circle {
-        stroke: $color;
-      }
-      path {
-        stroke: $color;
-      }
-      ellipse {
-        stroke: $color;
-      }
-    }
-    .nav-icon--vote circle:last-of-type {
-      fill: $color;
-    }
-  }
-
-  &--disabled {
-    $color: #c4c2cc;
-    color: $color;
-    svg:not(.nav-icon--get-started) {
-      circle {
-        stroke: $color;
-      }
-      path {
-        stroke: $color;
-      }
-      ellipse {
-        stroke: $color;
-      }
-    }
-    .nav-icon--vote circle:last-of-type {
-      fill: $color;
-    }
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    margin: 7px 0 0 8px;
-  }
+  padding: 8px 16px;
+  background-color: white;
+  font-size: 18px;
+  line-height: 28px;
+  border-radius: 13px;
+  margin: 0 6px;
+  color: $grey500;
 
   &--active {
     background-color: $grey100;
-    border: 1px solid $grey200;
-    color: #1e1c22;
+    color: $grey800;
   }
 
-  &--bordered {
-    border: 1px solid $grey200;
-    color: #1e1c22;
+  &:hover {
+    background-color: $grey100;
   }
 
-  &__label {
-    font-size: 17.5px;
+  &:active {
+    background-color: $grey200;
   }
 
-  &__description {
-    margin-top: 8px;
-    margin: 0 0 4px 0;
-  }
-
-  .nav--mobile & {
-    padding: 8px 10px;
-    flex-grow: 1;
-    display: flex;
-    margin: 0 8px;
-    font-size: 13px;
-    justify-content: center;
-
-    &__label {
-      font-size: 13px;
-    }
-
-    svg {
-      width: 24px;
-      height: 24px;
-    }
+  @media screen and (max-width: $breakpoint-xs) {
+    display: none;
   }
 }

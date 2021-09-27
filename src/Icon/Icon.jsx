@@ -14,6 +14,7 @@ export function Icon({ name, color }) {
 Icon.propTypes = {
   color: PropTypes.string,
   name: PropTypes.oneOf([
+    "avatar",
     "external",
     "telegram",
     "twitter",

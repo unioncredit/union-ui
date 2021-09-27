@@ -28,3 +28,5 @@ export function WalletConnect({ width }) {
     </svg>
   );
 }
+
+WalletConnect.displayName = "UnionIconWalletConnect";

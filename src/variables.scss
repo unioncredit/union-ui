@@ -1,51 +1,103 @@
 @use "sass:map";
 
 // blues
-$blue100: #3a64f0;
-$blue200: #2143d5;
-$blue300: #112a99;
-$blueBoxShadow: #a7c4ff;
+$blue50: #eff6ff;
+$blue100: #dbeafe;
+$blue200: #bfdbfe;
+$blue300: #93c5fd;
+$blue400: #60a5fa;
+$blue500: #3b82f6;
+$blue600: #2563eb;
+$blue700: #1d4ed8;
+// green
+$green50: #dcfce7;
+$green100: #dcfce7;
+$green200: #bbf7d0;
+$green300: #86efac;
+$green500: #22c55e;
+$green600: #16a34a;
+// red
+$red50: #fef2f2;
+$red100: #fee2e2;
+$red200: #fca5a5;
+$red400: #f87171;
+$red500: #ef4444;
+$red600: #dc2626;
+// purple
+$purple100: #f3e8ff;
+$purple500: lighten(#9333ea, 10);
+$purple600: #9333ea;
+$purple700: darken(#9333ea, 10);
+// amber
+$amber100: #fef3c7;
+$amber600: #d97706;
 // greys
-$grey100: #f4f4f6;
-$grey200: #e1e0e6;
-$grey300: #c4c2cc;
-$grey400: #a8a6b3;
-$grey500: #726f7e;
-$grey600: #565461;
-$grey700: #3a3842;
-// colors
-$green: #52bb82;
-$green100: #2f9f63;
-$orange: #e09a0e;
-$purple: #8b7afd;
-$yellow: #f3bb4a;
+$grey50: #fafaf9;
+$grey100: #f5f5f4;
+$grey200: #e7e5e4;
+$grey300: #d6d3d1;
+$grey400: #a8a29e;
+$grey500: #78716c;
+$grey600: #57534e;
+$grey700: #44403c;
+$grey800: #292524;
 
 $shadesOfGrey: (
-  100: $grey100,
-  200: $grey200,
-  300: $grey300,
-  400: $grey400,
-  500: $grey500,
-  600: $grey600,
-  700: $grey700,
+  "grey50": $grey50,
+  "grey100": $grey100,
+  "grey200": $grey200,
+  "grey300": $grey300,
+  "grey400": $grey400,
+  "grey500": $grey500,
+  "grey600": $grey600,
+  "grey700": $grey700,
 );
 
 @mixin greys {
-  @each $num, $color in $shadesOfGrey {
-    &--grey#{$num} {
+  @each $name, $color in $shadesOfGrey {
+    &--#{$name} {
       color: $color;
     }
   }
 }
 
+@mixin bgGreys {
+  @each $name, $color in $shadesOfGrey {
+    &--#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
 $colors: (
-  "blue": #3a64f0,
-  "green": #2f9f63,
-  "white": #ffffff,
-  "red": #c84042,
-  "grey": #726f7e,
-  "black": #000000,
-  "orange": #c77b00,
+  // blues
+  "blue50": $blue50,
+  "blue100": $blue100,
+  "blue200": $blue200,
+  "blue300": $blue300,
+  "blue400": $blue400,
+  "blue500": $blue500,
+  "blue600": $blue600,
+  "blue700": $blue700,
+  // green
+  "green100": $green100,
+  "green200": $green200,
+  "green300": $green300,
+  "green500": $green500,
+  "green600": $green600,
+  // red
+  "red50": $red50,
+  "red100": $red100,
+  "red200": $red200,
+  "red400": $red400,
+  "red500": $red500,
+  "red600": $red600,
+  // purple
+  "purple100": $purple100,
+  "purple600": $purple600,
+  // amber
+  "amber100": $amber100,
+  "amber600": $amber600
 );
 
 @mixin colors {
@@ -64,8 +116,23 @@ $colors: (
   &--weight-medium {
     font-weight: 500;
   }
-
-  &--weight-medium {
+  PBj &--weight-heavy {
     font-weight: 700;
   }
 }
+
+@mixin textalign {
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
+$breakpoint-xs: 767px;

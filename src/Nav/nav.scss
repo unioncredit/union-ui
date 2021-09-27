@@ -1,24 +1,27 @@
+@import "../variables.scss";
+
 .nav {
-  box-shadow: inset -1px 0px 0px #e1e0e6;
   padding: 0 24px;
   box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
+  align-items: center;
 
-  &__logo {
-    padding: 34px 0 40px 0;
-    display: flex;
-    justify-content: center;
-
-    .nav--mobile & {
+  @media screen and (max-width: $breakpoint-xs) {
+    .union-logo-mobile {
+      display: block;
+    }
+    .union-logo {
       display: none;
     }
   }
 
-  &--mobile {
-    flex-direction: row;
-    box-shadow: unset;
+  @media screen and (min-width: $breakpoint-xs) {
+    .union-logo-mobile {
+      display: none;
+    }
+    .union-logo {
+      display: block;
+    }
   }
 }

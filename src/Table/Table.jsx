@@ -1,6 +1,5 @@
 import React from "react";
 import cn from "classnames";
-import { useMeasure } from "react-use";
 
 import { propsToStyles } from "../spacing";
 
@@ -14,19 +13,9 @@ export function Table({
   className,
   ...props
 }) {
-  const [ref, { width }] = useMeasure();
-
   return (
-    <div
-      ref={ref}
-      style={propsToStyles(props)}
-      className={cn("table", className, {
-        "table--noBorder": noBorder,
-        "table--noPadding": noPadding,
-        "table--condensed": width < 400 && !disableCondensed,
-      })}
-    >
-      {children}
-    </div>
+    <table style={propsToStyles(props)} className={cn("table", className)}>
+      <tbody>{children}</tbody>
+    </table>
   );
 }

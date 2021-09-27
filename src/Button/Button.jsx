@@ -35,22 +35,19 @@ export const Button = ({
   fluid,
   loading,
   disabled,
-  fontSize = "default",
+  size = "default",
   ...props
 }) => {
-  const styles = {
-    ...(color ? { color: colorHex(color) } : {}),
-    ...propsToStyles(props),
-  };
+  const styles = propsToStyles(props);
 
   const BrandedIcons = ["metamask", "walletconnect"].includes(icon)
     ? brandedIcons[icon]
     : null;
-  const iconColor = color ? colorHex(color) : variantToIconColor(variant);
+
   const buttonIcon = BrandedIcons ? (
     <BrandedIcons />
   ) : (
-    <ButtonIcon name={icon} color={iconColor} />
+    <ButtonIcon name={icon} />
   );
 
   return (
@@ -65,7 +62,8 @@ export const Button = ({
         "button--loading": loading,
         [`button--${variant}`]: variant,
         [`button--icon-pos-${iconPosition}`]: iconPosition,
-        [`button--fontSize-${fontSize}`]: fontSize,
+        [`button--${size}`]: size,
+        [`button--${color}`]: color,
         [`button--icon-${icon}`]: icon,
       })}
       disabled={disabled || loading}
@@ -85,7 +83,14 @@ export const Button = ({
 
 Button.propTypes = {
   fluid: PropTypes.bool,
-  variant: PropTypes.oneOf(["primary", "secondary", "pill", "floating"]),
+  variant: PropTypes.oneOf([
+    "primary",
+    "ethereum",
+    "polygon",
+    "secondary",
+    "pill",
+    "floating",
+  ]),
   icon: PropTypes.oneOf([
     "metamask",
     "walletconnect",
@@ -106,14 +111,15 @@ Button.propTypes = {
     "repayment",
     "borrow",
     "arrow-left",
+    "external",
   ]),
   rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),
   label: PropTypes.string,
   onClick: PropTypes.func,
   background: PropTypes.string,
-  color: PropTypes.string,
-  fontSize: PropTypes.oneOf(["default", "large"]),
+  color: PropTypes.oneOf(["red", "green", "blue"]),
+  size: PropTypes.oneOf(["default", "small"]),
   loading: PropTypes.bool,
 };
 

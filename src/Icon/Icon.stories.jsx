@@ -46,6 +46,12 @@ export const All = () => (
       <Icon name="vouch" />
       <Icon name="stats" />
       <Icon name="locked" />
+      <Icon name="avatar" />
+    </Box>
+
+    <Box mb="20px">
+      <Icon name="members" />
+      <Icon name="dollar" />
     </Box>
 
     <Box align="center" mb="20px">
