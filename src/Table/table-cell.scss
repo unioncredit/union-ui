@@ -12,12 +12,14 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-right: 2px solid transparent;
+    padding-right: 12px;
   }
 
   &:first-of-type {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     border-left: 2px solid transparent;
+    padding-left: 12px;
   }
 
   .table-row--active & {
