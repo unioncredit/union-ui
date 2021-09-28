@@ -47,6 +47,7 @@ export const All = () => (
       <Icon name="stats" />
       <Icon name="locked" />
       <Icon name="avatar" />
+      <Icon name="dropdown-arrow" />
     </Box>
 
     <Box mb="20px">

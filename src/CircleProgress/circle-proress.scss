@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .circle-progress {
   position: relative;
   width: 72px;
@@ -8,10 +10,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    .circle-progress--complete & {
-      color: #2f9f63;
-    }
   }
 
   svg {
@@ -25,7 +23,7 @@
     width: 100%;
     height: 100%;
     fill: none;
-    stroke: #f4f4f6;
+    stroke: $blue100;
     stroke-width: 10;
     stroke-linecap: round;
     transform: translate(5px, 5px);
@@ -34,10 +32,10 @@
   svg circle:nth-child(2) {
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
-    stroke: #3a3842;
+    stroke: $blue600;
   }
 
   &--complete svg circle:nth-child(2) {
-    stroke: #2f9f63;
+    stroke: $blue600;
   }
 }

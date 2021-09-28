@@ -125,4 +125,7 @@ $gutter: 8px;
       cursor: default;
     }
   }
+  .input-wrapper--error & {
+    color: $red600;
+  }
 }

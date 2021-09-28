@@ -13,7 +13,7 @@ export function CircleProgress({ complete, percentage, label }) {
       })}
     >
       <div className="circle-progress__label">
-        <Heading as="p" my={0} size="large">
+        <Heading as="p" my={0} size="large" color="blue600">
           {label}
         </Heading>
       </div>

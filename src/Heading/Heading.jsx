@@ -13,6 +13,7 @@ export function Heading({
   className,
   grey,
   weight,
+  color,
   ...props
 }) {
   return React.createElement(
@@ -22,6 +23,7 @@ export function Heading({
         [`heading--${size}`]: size,
         [`heading--grey${grey}`]: grey,
         [`heading--weight-${weight}`]: weight,
+        [`heading--${color}`]: color,
       }),
       style: propsToStyles(props),
       ...props,

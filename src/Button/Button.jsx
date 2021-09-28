@@ -112,6 +112,7 @@ Button.propTypes = {
     "borrow",
     "arrow-left",
     "external",
+    "dropdown-arrow",
   ]),
   rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),

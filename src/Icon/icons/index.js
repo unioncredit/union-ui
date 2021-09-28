@@ -20,3 +20,4 @@ export * from "./Search.svg";
 export * from "./Avatar.svg";
 export * from "./Members.svg";
 export * from "./Dollar.svg";
+export * from "./DropdownIcon.svg";

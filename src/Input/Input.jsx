@@ -63,7 +63,7 @@ export const Input = forwardRef(
             size="small"
             as="p"
             className={cn("input-caption", {
-              "input-caption--clickable": onCaptionClick,
+              "input-caption--clickable": !error && onCaptionClick,
             })}
             mt="4px"
             onClick={!error ? onCaptionClick : undefined}

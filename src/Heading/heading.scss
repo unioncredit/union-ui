@@ -14,8 +14,8 @@
   // 2XL
   &--large {
     font-weight: 500;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
   // 3XL
@@ -40,5 +40,6 @@
   }
 
   @include greys;
+  @include colors;
   @include weights;
 }
