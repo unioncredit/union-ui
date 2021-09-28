@@ -26,7 +26,7 @@ Skeleton.propTypes = {
   size: PropTypes.number,
   width: PropTypes.number,
   height: PropTypes.number,
-  grey: PropTypes.string,
+  grey: PropTypes.number,
   variant: PropTypes.oneOf(["rectangle", "circle"]),
 };
 
