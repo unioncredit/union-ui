@@ -16,6 +16,8 @@ Icon.propTypes = {
   name: PropTypes.oneOf([
     "dropdown-arrow",
     "avatar",
+    "dollar",
+    "members",
     "external",
     "telegram",
     "twitter",

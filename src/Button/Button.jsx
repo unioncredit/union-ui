@@ -1,20 +1,12 @@
-import React from "react";
+import React, { createElement } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { colorHex } from "../colors";
 import { propsToStyles } from "../spacing";
 import { Metamask, WalletConnect, Icon as ButtonIcon } from "../Icon";
 import { LoadingSpinner } from "../LoadingSpinner";
 
 import "./button.scss";
-
-const variantToIconColor = (variant) => {
-  if (["primary", "floating"].includes(variant)) {
-    return "white";
-  }
-  return "black";
-};
 
 const brandedIcons = {
   metamask: Metamask,
@@ -35,6 +27,7 @@ export const Button = ({
   fluid,
   loading,
   disabled,
+  as,
   size = "default",
   ...props
 }) => {
@@ -50,11 +43,12 @@ export const Button = ({
     <ButtonIcon name={icon} />
   );
 
-  return (
-    <button
-      type="button"
-      style={styles}
-      className={cn(className, "button", {
+  return createElement(
+    as || "button",
+    {
+      type: "button",
+      style: styles,
+      className: cn(className, "button", {
         "button--fluid": fluid,
         "button--inline": inline,
         "button--rounded": rounded,
@@ -65,10 +59,12 @@ export const Button = ({
         [`button--${size}`]: size,
         [`button--${color}`]: color,
         [`button--icon-${icon}`]: icon,
-      })}
-      disabled={disabled || loading}
-      {...props}
-    >
+      }),
+      disabled: disabled || loading,
+      ...props,
+    },
+    <>
+      {" "}
       {icon && iconPosition === "start" && buttonIcon}
       {label || children}
       {icon && iconPosition === "end" && buttonIcon}
@@ -77,11 +73,12 @@ export const Button = ({
           <LoadingSpinner />
         </div>
       )}
-    </button>
+    </>
   );
 };
 
 Button.propTypes = {
+  as: PropTypes.node,
   fluid: PropTypes.bool,
   variant: PropTypes.oneOf([
     "primary",
@@ -113,6 +110,7 @@ Button.propTypes = {
     "arrow-left",
     "external",
     "dropdown-arrow",
+    "avatar",
   ]),
   rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),

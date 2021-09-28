@@ -105,3 +105,20 @@ export const Controls = () => (
     </Box>
   </>
 );
+
+export const Disabled = () => (
+  <>
+    <Box mb="20px">
+      <Input disabled placeholder="Placeholder" onMaxClick={() => {}} />
+    </Box>
+    <Box mb="20px">
+      <Input
+        disabled
+        type="number"
+        caption="Something here"
+        placeholder="Placeholder"
+        error="Something broke"
+      />
+    </Box>
+  </>
+);

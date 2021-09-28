@@ -32,7 +32,11 @@ export const Input = forwardRef(
     };
 
     return (
-      <div className={cn("input-wrapper", { "input-wrapper--error": error })}>
+      <div
+        className={cn("input-wrapper", {
+          "input-wrapper--error": !disabled && error,
+        })}
+      >
         {label && (
           <Label className="input-label" for={name}>
             {label}
@@ -68,7 +72,7 @@ export const Input = forwardRef(
             mt="4px"
             onClick={!error ? onCaptionClick : undefined}
           >
-            {error || caption}
+            {(!disabled && error) || caption}
           </Label>
         )}
       </div>

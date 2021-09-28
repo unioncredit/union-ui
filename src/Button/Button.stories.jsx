@@ -121,3 +121,13 @@ export const Variants = () => (
     ))}
   </>
 );
+
+export const Links = () => (
+  <>
+    {buttons.map((props) => (
+      <ButtonRow mb="20px">
+        <Button as="a" {...props} href="http://union.finance" target="_blank" />
+      </ButtonRow>
+    ))}
+  </>
+);
