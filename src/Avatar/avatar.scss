@@ -1,8 +1,9 @@
 @import "../variables.scss";
 
 .avatar {
-  width: 24px;
-  height: 24px;
+  $size: 24px;
+  width: $size;
+  height: $size;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -14,7 +15,9 @@
   flex-grow: 0;
 
   img {
-    width: 100%;
+    width: $size;
+    height: $size;
+    object-fit: cover;
   }
 
   svg {
