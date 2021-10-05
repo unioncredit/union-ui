@@ -12,20 +12,17 @@ export default {
 
 export const All = () => (
   <>
-    <Notification variant="pending">
-      <Text>Waiting for confirmation</Text>
+    <Notification variant="pending" title="Waiting for confirmation">
       <Label as="p" size="small">
         Confirm transaction with your connected wallet
       </Label>
     </Notification>
-    <Notification variant="success">
-      <Text>Transaction successful</Text>
+    <Notification variant="success" title="Transaction successful">
       <Label as="p" size="small">
         View transaction
       </Label>
     </Notification>
-    <Notification variant="error">
-      <Text>Transaction error</Text>
+    <Notification variant="error" title="Transaction error">
       <Label as="p" size="small">
         Internal transaction error
       </Label>
@@ -35,20 +32,17 @@ export const All = () => (
 
 export const Stack = () => (
   <NotificationStack>
-    <Notification variant="pending">
-      <Text>Waiting for confirmation</Text>
+    <Notification variant="pending" title="Waiting for confirmation">
       <Label as="p" size="small">
         Confirm transaction with your connected wallet
       </Label>
     </Notification>
-    <Notification variant="success">
-      <Text>Transaction successful</Text>
+    <Notification variant="success" title="Transaction successful">
       <Label as="p" size="small">
         View transaction
       </Label>
     </Notification>
-    <Notification variant="error">
-      <Text>Transaction error</Text>
+    <Notification variant="error" title="Transaction error">
       <Label as="p" size="small">
         Internal transaction error
       </Label>
