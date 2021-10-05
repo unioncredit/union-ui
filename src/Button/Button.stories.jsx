@@ -87,6 +87,8 @@ const variants = [
   [
     { variant: "ethereum", label: "Ethereum Button" },
     { variant: "polygon", label: "Polygon Button" },
+    { variant: "ethereum", loading: true, label: "Ethereum Button" },
+    { variant: "polygon", loading: true, label: "Polygon Button" },
   ],
 ];
 

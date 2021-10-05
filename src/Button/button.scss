@@ -103,6 +103,7 @@
 
     .loading-spinner {
       path {
+        fill: none;
         stroke: #d1e2ff;
       }
       circle {
@@ -236,10 +237,11 @@
 
     .loading-spinner {
       path {
-        stroke: #d1e2ff;
+        stroke: $purple700;
+        fill: none;
       }
       circle {
-        stroke: #2143d5;
+        stroke: $purple100;
       }
     }
 
@@ -260,10 +262,11 @@
 
     .loading-spinner {
       path {
-        stroke: #d1e2ff;
+        fill: none;
+        stroke: $grey500;
       }
       circle {
-        stroke: #2143d5;
+        stroke: $grey200;
       }
     }
 
