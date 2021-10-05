@@ -1,6 +1,8 @@
 import React from "react";
 
 import { Modal } from "./Modal";
+import { ModalOverlay } from "./ModalOverlay";
+
 import { Select } from "../Select";
 import { Box } from "../Box";
 import { Text } from "../Text";
@@ -60,4 +62,12 @@ export const Default = () => (
       <StatusIcon variant="wire" name="success" />
     </Box>
   </Modal>
+);
+
+export const ModalWithOverlay = () => (
+  <ModalOverlay onClick={() => alert("close")}>
+    <Modal title="Borrow Funds" onClose={() => alert("modal close")}>
+      <Text m={0}>Staked $1000</Text>
+    </Modal>
+  </ModalOverlay>
 );

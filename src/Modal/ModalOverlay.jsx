@@ -4,8 +4,14 @@ import PropTypes from "prop-types";
 import "./modal-overlay.scss";
 
 export function ModalOverlay({ children, onClick }) {
+  const handleClick = (event) => {
+    if (event.target.className === "modal-overlay") {
+      onClick();
+    }
+  };
+
   return (
-    <div className="modal-overlay" onClick={onClick}>
+    <div className="modal-overlay" onClick={handleClick}>
       {children}
     </div>
   );
