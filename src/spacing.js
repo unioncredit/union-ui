@@ -41,6 +41,14 @@ const templates = {
     left: "width",
     right: VAL_STR,
   },
+  maxh: {
+    left: "max-height",
+    right: VAL_STR,
+  },
+  h: {
+    left: "height",
+    right: VAL_STR,
+  },
 };
 
 export function propsToStyles(props) {
