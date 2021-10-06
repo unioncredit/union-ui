@@ -36,3 +36,4 @@ export * from "./Multiplier";
 export * from "./ContextMenu";
 export * from "./SearchInput";
 export * from "./Pagination";
+export * from "./EmptyState";

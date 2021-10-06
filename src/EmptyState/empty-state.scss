@@ -1,0 +1,9 @@
+@import "../variables.scss";
+
+.empty-state {
+  background-color: $grey50;
+  border: 1px solid $grey200;
+  padding: 28px;
+  text-align: center;
+  border-radius: 12px;
+}
