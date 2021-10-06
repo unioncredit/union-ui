@@ -12,51 +12,51 @@ export default {
 export const Default = () => (
   <>
     <Text>
-      <Dai />
       100
+      <Dai />
     </Text>
     <Text size="large">
-      <Dai />
       100
+      <Dai />
     </Text>
     <hr />
     <Text size="large" grey={200}>
-      <Dai />
       100
+      <Dai />
     </Text>
     <Text size="large" grey={300}>
-      <Dai />
       100
+      <Dai />
     </Text>
     <Text size="large" grey={400}>
-      <Dai />
       100
+      <Dai />
     </Text>
     <hr />
     <Heading size="primary">
-      <Dai />
       100
+      <Dai />
     </Heading>
     <Heading size="large">
-      <Dai />
       100
+      <Dai />
     </Heading>
     <Heading size="xlarge">
-      <Dai />
       100
+      <Dai />
     </Heading>
     <hr />
     <Heading size="xlarge" grey={200}>
-      <Dai />
       100
+      <Dai />
     </Heading>
     <Heading size="xlarge" grey={300}>
-      <Dai />
       100
+      <Dai />
     </Heading>
     <Heading size="xlarge" grey={400}>
-      <Dai />
       100
+      <Dai />
     </Heading>
   </>
 );
