@@ -63,10 +63,6 @@ $gutter: 8px;
       color: $grey500;
     }
 
-    &:focus::-webkit-input-placeholder {
-      color: transparent;
-    }
-
     &:hover:enable {
       height: 40px;
       border: 2px solid $grey300;

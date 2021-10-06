@@ -57,6 +57,7 @@ export const Input = forwardRef(
               onChange={handleChange}
               value={value}
               placeholder={placeholder}
+              autocomplete="off"
             />
             {suffix && <div className="input__suffix">{suffix}</div>}
           </div>

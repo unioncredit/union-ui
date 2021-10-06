@@ -37,7 +37,7 @@
     }
   }
 
-  .table-row--active.table-row--error & {
+  .table-row--error & {
     border-top: 2px solid $red500;
     border-bottom: 2px solid $red500;
     background-color: $red50 !important;
