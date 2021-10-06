@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: $breakpoint-xs) {
+  @media screen and (max-width: $breakpoint-s) {
     .union-logo-mobile {
       display: block;
     }
@@ -16,7 +16,7 @@
     }
   }
 
-  @media screen and (min-width: $breakpoint-xs) {
+  @media screen and (min-width: $breakpoint-s) {
     .union-logo-mobile {
       display: none;
     }
