@@ -17,6 +17,16 @@ const buttons = [
     variant: "pill",
     label: "Vouch for new contact",
   },
+  {
+    label: "Red button",
+    variant: "secondary",
+    color: "red",
+  },
+  {
+    variant: "secondary",
+    label: "Green button",
+    color: "green",
+  },
 ];
 
 const variants = [

@@ -2,7 +2,7 @@
 
 .button {
   $iconGutter: 5px;
-  $disabledOpacity: 0.4;
+  $disabledOpacity: 0.5;
 
   position: relative;
   font-size: 14px;
@@ -212,7 +212,7 @@
     }
   }
 
-  &--secondary {
+  &--secondary:not(.button--red, .button--green, .button--blue) {
     &[disabled="true"],
     &[disabled],
     &[disabled]:hover,
