@@ -24,7 +24,7 @@ export const Default = () => (
         <TableRow
           onClick={() => alert("clicked")}
           active={i === 2 || i === 4}
-          error={i === 4}
+          error={i === 4 || i === 1}
         >
           <TableCell>
             <Avatar src="https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg" />
@@ -59,11 +59,11 @@ export const Skeletons = () => (
       .map(() => (
         <TableRow>
           <TableCell>
-            <Skeleton variant="circle" size={24} grey={200} />
+            <Skeleton shimmer variant="circle" size={24} grey={200} />
           </TableCell>
           <TableCell span={1}>
-            <Skeleton width={100} height={10} grey={200} />
-            <Skeleton width={60} height={10} grey={200} mt="4px" />
+            <Skeleton shimmer width={100} height={10} grey={200} />
+            <Skeleton shimmer width={60} height={10} grey={200} mt="4px" />
           </TableCell>
           <TableCell span={1}>
             <Skeleton width={100} height={10} grey={200} />

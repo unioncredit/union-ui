@@ -6,12 +6,21 @@ import { propsToStyles } from "../spacing";
 
 import "./skeleton.scss";
 
-export function Skeleton({ variant, width, height, grey, size, ...props }) {
+export function Skeleton({
+  variant,
+  width,
+  height,
+  grey,
+  shimmer,
+  size,
+  ...props
+}) {
   return (
     <div
       className={cn("skeleton", {
         [`skeleton--${variant}`]: variant,
         [`skeleton--grey${grey}`]: grey,
+        "skeleton--shimmer": shimmer,
       })}
       style={{
         ...propsToStyles(props),
