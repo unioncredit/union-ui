@@ -43,5 +43,6 @@ Icon.propTypes = {
     "locked",
     "info",
     "arrow-left",
+    "filter",
   ]),
 };

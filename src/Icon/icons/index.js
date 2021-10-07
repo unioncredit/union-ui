@@ -21,3 +21,4 @@ export * from "./Avatar.svg";
 export * from "./Members.svg";
 export * from "./Dollar.svg";
 export * from "./DropdownIcon.svg";
+export * from "./Filter.svg";

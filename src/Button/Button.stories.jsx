@@ -37,6 +37,7 @@ const variants = [
   ],
   [
     { icon: "vouch", variant: "secondary", label: "Vouch for new contact" },
+    { icon: "filter", variant: "secondary", label: "Show filters" },
     { variant: "secondary", label: "Cancel" },
     { variant: "secondary", label: "Loading", loading: true },
   ],
