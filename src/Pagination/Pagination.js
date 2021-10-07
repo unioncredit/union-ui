@@ -3,6 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Box } from "../Box";
+import { Icon } from "../Icon";
 
 import "./pagination.scss";
 
@@ -21,8 +22,22 @@ export function Pagination({ onClick, pages, activePage = 1, ...props }) {
       ? [...nPages.slice(nStart - 2, nStart), "...", ...nPages.slice(-2)]
       : nPages;
 
+  const leftArrowDisabled = activePage - 1 <= 0;
+  const rightArrowDisabled = activePage + 1 > pages;
+
   return (
     <Box className="pagination" {...props}>
+      <button
+        onClick={() => !leftArrowDisabled && onClick(activePage - 1)}
+        className={cn(
+          "pagination__number",
+          "pagination__arrow",
+          "pagination__arrow--left",
+          { "pagination__arrow--disabled": leftArrowDisabled }
+        )}
+      >
+        <Icon name="arrow-left" />
+      </button>
       {numbers.map((n, i) => (
         <button
           key={i}
@@ -35,6 +50,17 @@ export function Pagination({ onClick, pages, activePage = 1, ...props }) {
           {n}
         </button>
       ))}
+      <button
+        onClick={() => !rightArrowDisabled && onClick(activePage + 1)}
+        className={cn(
+          "pagination__number",
+          "pagination__arrow",
+          "pagination__arrow--right",
+          { "pagination__arrow--disabled": rightArrowDisabled }
+        )}
+      >
+        <Icon name="arrow-left" />
+      </button>
     </Box>
   );
 }

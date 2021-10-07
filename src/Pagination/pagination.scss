@@ -44,4 +44,33 @@
     justify-content: center;
     margin: 0 4px;
   }
+
+  &__arrow {
+    background: $grey50;
+
+    svg {
+      width: 10px;
+
+      polygon {
+        fill: $grey600;
+      }
+    }
+
+    &--disabled {
+      cursor: default !important;
+
+      svg polygon {
+        fill: $grey200;
+      }
+
+      &:hover {
+        border: unset !important;
+        background: $grey50 !important;
+      }
+    }
+
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
 }
