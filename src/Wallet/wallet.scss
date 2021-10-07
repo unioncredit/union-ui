@@ -7,11 +7,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  border: 1px solid $grey200;
+  background-color: $grey50;
 
   &.button {
-    padding: 7px;
+    padding: 8px 10px;
     margin: 0 10px;
   }
 

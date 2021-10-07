@@ -20,7 +20,12 @@ export function ContextMenu({ items, after, position, button }) {
       {button ? (
         button(toggleOpen)
       ) : (
-        <div className="context-menu-button" onClick={toggleOpen}>
+        <div
+          onClick={toggleOpen}
+          className={cn("context-menu-button", {
+            "context-menu-button--open": open,
+          })}
+        >
           <span />
           <span />
           <span />

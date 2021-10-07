@@ -47,19 +47,20 @@
 .context-menu-button {
   width: 44px;
   height: 44px;
-  background: white;
-  border: 1px solid $grey200;
+  background: $grey50;
   box-sizing: border-box;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
-  &:hover {
+  &:hover:not(&--open) {
     background-color: $grey100;
   }
 
-  &:active {
+  &:active,
+  &:active:not(&--open) {
     background-color: $grey200;
   }
 
