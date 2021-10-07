@@ -30,11 +30,11 @@ const templates = {
     right: VAL_STR,
   },
   minw: {
-    left: "min-width",
+    left: "minWidth",
     right: VAL_STR,
   },
   maxw: {
-    left: "max-width",
+    left: "maxWidth",
     right: VAL_STR,
   },
   w: {
@@ -42,7 +42,7 @@ const templates = {
     right: VAL_STR,
   },
   maxh: {
-    left: "max-height",
+    left: "maxHeight",
     right: VAL_STR,
   },
   h: {
