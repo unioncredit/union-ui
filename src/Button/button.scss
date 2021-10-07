@@ -278,4 +278,19 @@
       background-color: $grey700;
     }
   }
+
+  &--lite {
+    background-color: transparent;
+    color: $grey500;
+
+    svg:not(.loading-spinner) {
+      height: 10px;
+      margin-right: 6px;
+    }
+
+    svg polygon,
+    svg path {
+      fill: $grey500;
+    }
+  }
 }

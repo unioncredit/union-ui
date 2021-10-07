@@ -87,6 +87,7 @@ Button.propTypes = {
     "secondary",
     "pill",
     "floating",
+    "lite",
   ]),
   icon: PropTypes.oneOf([
     "metamask",

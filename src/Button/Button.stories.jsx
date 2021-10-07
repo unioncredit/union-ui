@@ -27,7 +27,6 @@ const variants = [
   ],
   [
     { icon: "vouch", variant: "secondary", label: "Vouch for new contact" },
-    { icon: "arrow-left", variant: "secondary", label: "Back to Overview" },
     { variant: "secondary", label: "Cancel" },
     { variant: "secondary", label: "Loading", loading: true },
   ],
@@ -89,6 +88,10 @@ const variants = [
     { variant: "polygon", label: "Polygon Button" },
     { variant: "ethereum", loading: true, label: "Ethereum Button" },
     { variant: "polygon", loading: true, label: "Polygon Button" },
+  ],
+  [
+    { icon: "vouch", variant: "lite", label: "Lite Button" },
+    { icon: "arrow-left", variant: "lite", label: "Back to Overview" },
   ],
 ];
 
