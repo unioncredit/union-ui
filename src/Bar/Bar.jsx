@@ -3,6 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Label } from "../Label";
+import { propsToStyles } from "../spacing";
 
 import "./bar.scss";
 
@@ -14,6 +15,7 @@ export function Bar({
   marker,
   color,
   markerLabel,
+  ...props
 }) {
   return (
     <div
@@ -21,6 +23,7 @@ export function Bar({
         [`bar--${size}`]: size,
         "bar--hasMarkerLabel": !!markerLabel,
       })}
+      style={propsToStyles(props)}
     >
       {label && (
         <Label size="small" className="bar-label" as="p">
