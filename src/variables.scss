@@ -56,7 +56,7 @@ $shadesOfGrey: (
 @mixin greys {
   @each $name, $color in $shadesOfGrey {
     &--#{$name} {
-      color: $color;
+      color: $color !important;
     }
   }
 }
@@ -64,7 +64,7 @@ $shadesOfGrey: (
 @mixin bgGreys {
   @each $name, $color in $shadesOfGrey {
     &--#{$name} {
-      background-color: $color;
+      background-color: $color !important;
     }
   }
 }
@@ -103,7 +103,7 @@ $colors: (
 @mixin colors {
   @each $name, $hex in $colors {
     &--#{$name} {
-      color: $hex;
+      color: $hex !important;
     }
   }
 }
