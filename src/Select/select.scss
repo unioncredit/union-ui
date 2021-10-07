@@ -9,6 +9,7 @@
   flex-direction: row;
   align-items: center;
   padding: 8px;
+  border-radius: 8px;
 
   .avatar {
     margin-right: 8px;
@@ -21,6 +22,6 @@
 
 .dropdown-indicator {
   margin-right: 14px;
-  width: 10px;
-  height: 7px;
+  width: 8px;
+  height: 5px;
 }

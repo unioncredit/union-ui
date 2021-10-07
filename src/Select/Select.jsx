@@ -13,7 +13,7 @@ const styles = {
     paddingLeft: "8px",
     border: state.isFocused ? "1px solid #2143d5" : "1px solid #F5F5F4",
     boxShadow: state.isFocused ? "0px 0px 0px 3px #a7c4ff" : "none",
-    minHeight: "40px",
+    minHeight: "48px",
     background: "#FAFAF9",
   }),
   menu: (styles) => ({
@@ -21,6 +21,7 @@ const styles = {
     border: "1px solid #f4f4f6",
     overflow: "hidden",
     borderRadius: "12px",
+    padding: "8px",
     boxShadow:
       "0px 1px 1px rgba(58, 56, 66, 0.2), 0px 4px 8px rgba(58, 56, 66, 0.25)",
   }),
