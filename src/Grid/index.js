@@ -13,12 +13,12 @@ import "./grid.scss";
 
 export const setGridConfiguration = setConfiguration;
 
-export const Grid = ({ className, bordered, ...props }) => {
+export const Grid = ({ className, divider, ...props }) => {
   return (
     <Container
       {...props}
       fluid
-      className={cn(className, "grid", { "grid--bordered": bordered })}
+      className={cn(className, "grid", { "grid--withColDivider": divider })}
     />
   );
 };
@@ -40,7 +40,7 @@ export const Col = ({ className, noPadding, ...props }) => (
 
 Grid.propTypes = {
   className: PropTypes.string,
-  bordered: PropTypes.bool,
+  divider: PropTypes.bool,
 };
 
 Row.propTypes = {

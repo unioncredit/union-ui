@@ -21,3 +21,18 @@ export const Default = () => (
     </Row>
   </Grid>
 );
+
+export const WithDivider = () => (
+  <Grid divider>
+    <Row>
+      <Col>Colum</Col>
+      <Col>Colum</Col>
+    </Row>
+    <Row>
+      <Col>Colum</Col>
+      <Col>Colum</Col>
+      <Col>Colum</Col>
+      <Col>Colum</Col>
+    </Row>
+  </Grid>
+);

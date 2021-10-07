@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .grid {
   width: 100%;
 
@@ -16,5 +18,23 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
     padding-bottom: 0 !important;
+  }
+
+  &.grid.grid--withColDivider .grid-col.grid-col {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: $grey100;
+      border-radius: 2px;
+    }
+
+    &:last-of-type:after {
+      display: none;
+    }
   }
 }
