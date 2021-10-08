@@ -112,6 +112,7 @@ Button.propTypes = {
     "external",
     "dropdown-arrow",
     "avatar",
+    "filter",
   ]),
   rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),

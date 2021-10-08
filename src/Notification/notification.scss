@@ -20,6 +20,19 @@
     padding-right: 8px;
   }
 
+  &--pending &__icon img {
+    animation: loadingspin 1000ms infinite ease;
+
+    @keyframes loadingspin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
   &__content {
     flex-grow: 1;
     color: $grey500;

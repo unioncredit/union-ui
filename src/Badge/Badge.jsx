@@ -19,5 +19,5 @@ export function Badge({ color, label, ...props }) {
 
 Badge.propTypes = {
   color: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.node,
 };

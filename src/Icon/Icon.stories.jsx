@@ -44,6 +44,7 @@ export const All = () => (
       <Icon name="repayment" />
       <Icon name="link" />
       <Icon name="vouch" />
+      <Icon name="filter" />
       <Icon name="stats" />
       <Icon name="locked" />
       <Icon name="avatar" />
