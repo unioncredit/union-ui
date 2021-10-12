@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { ToggleMenu } from "./ToggleMenu";
+import { Box } from "../Box";
 
 export default {
   component: ToggleMenu,
@@ -16,7 +17,16 @@ const items = [
 
 const linkItems = items.map((item) => ({ ...item, as: "a", href: "#" }));
 
-export const Default = () => <ToggleMenu items={items} />;
+export const Default = () => (
+  <>
+    <Box direction="vertical" mb="20px">
+      <ToggleMenu items={items} />
+    </Box>
+    <Box direction="vertical" mb="20px">
+      <ToggleMenu items={items} variant="secondary" />
+    </Box>
+  </>
+);
 
 export const AsLink = () => <ToggleMenu items={linkItems} />;
 

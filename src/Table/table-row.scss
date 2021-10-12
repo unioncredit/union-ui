@@ -6,14 +6,14 @@
   border: 2px solid transparent;
   vertical-align: middle;
 
-  &:nth-child(odd) {
-    background-color: $grey50;
-  }
-
   &--clickable {
     &:hover {
       background-color: $grey100 !important;
       cursor: pointer;
     }
   }
+}
+
+table tr:nth-of-type(4n + 1) {
+  background-color: $grey50;
 }

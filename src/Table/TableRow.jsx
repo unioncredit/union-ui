@@ -12,15 +12,18 @@ export function TableRow({
   error,
 }) {
   return (
-    <tr
-      className={cn("table-row", className, {
-        "table-row--clickable": onClick || clickable,
-        "table-row--active": active,
-        "table-row--error": error,
-      })}
-      onClick={onClick}
-    >
-      {children}
-    </tr>
+    <>
+      <tr
+        className={cn("table-row", className, {
+          "table-row--clickable": onClick || clickable,
+          "table-row--active": active,
+          "table-row--error": error,
+        })}
+        onClick={onClick}
+      >
+        {children}
+      </tr>
+      <tr style={{ height: "4px" }} />
+    </>
   );
 }

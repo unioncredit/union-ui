@@ -63,5 +63,5 @@ ToggleMenu.defaultProps = {
 ToggleMenu.propTypes = {
   initialActive: PropTypes.number,
   items: PropTypes.array,
-  variant: PropTypes.oneOf(["primary", "nav"]),
+  variant: PropTypes.oneOf(["primary", "secondary"]),
 };

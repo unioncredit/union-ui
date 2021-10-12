@@ -6,6 +6,10 @@
   padding: 4px 2px;
   box-sizing: border-box;
 
+  &--secondary {
+    background: transparent;
+  }
+
   &.box {
     display: inline-flex;
     flex-wrap: wrap;
@@ -34,9 +38,14 @@
 
     &--active {
       background: #ffffff;
+
+      .toggle-menu--secondary & {
+        background: $blue600;
+        color: white;
+      }
     }
 
-    &:not(.toggle-menu__item--disabled, .toggle-menu__item--active):hover {
+    &:not(.toggle-menu__item--disabled):not(.toggle-menu__item--active):hover {
       color: $grey600;
     }
 

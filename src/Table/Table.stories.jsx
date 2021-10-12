@@ -18,7 +18,7 @@ export default {
 
 export const Default = () => (
   <Table>
-    {Array(5)
+    {Array(10)
       .fill(0)
       .map((_, i) => (
         <TableRow
