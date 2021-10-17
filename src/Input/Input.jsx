@@ -58,6 +58,8 @@ export const Input = forwardRef(
               value={value}
               placeholder={placeholder}
               autoComplete="off"
+              // allow input of decimal places
+              {...(type === "number" ? { step: "any" } : {})}
             />
             {suffix && <div className="input__suffix">{suffix}</div>}
           </div>
