@@ -6,7 +6,7 @@ import { Control } from "../Control";
 import { InputRow } from "./InputRow";
 import { Button } from "../Button";
 import { Dai } from "../Dai";
-import { Icon } from "../Icon";
+import { Search } from "../icons";
 
 export default {
   component: Input,
@@ -38,7 +38,7 @@ export const Inputs = () => (
       <Input
         label="Input label"
         placeholder="Placeholder"
-        suffix={<Icon name="search" />}
+        suffix={<Search />}
       />
     </Box>
 

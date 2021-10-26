@@ -9,7 +9,8 @@ import { Text } from "../Text";
 import { Heading } from "../Heading";
 import { Button } from "../Button";
 import { Divider } from "../Divider";
-import { StatusIcon } from "../Icon";
+
+import { Pending, Success, Failed } from "../icons";
 
 import PolygonImg from "../assets/polygon.png";
 import EthereumImg from "../assets/ethereum.png";
@@ -45,21 +46,21 @@ export const Default = () => (
     </Box>
     <Box align="center" justify="space-between" mt="10px">
       <Text m={0}>Staked $500</Text>
-      <StatusIcon variant="wire" name="pending" />
+      <Success width="16px" />
     </Box>
     <Box align="center" justify="space-between" mt="10px">
       <Text m={0}>Borrowed $800</Text>
-      <StatusIcon variant="wire" name="success" />
+      <Failed width="16px" />
     </Box>
     <Box align="center" justify="space-between" mt="10px">
       <Text m={0} color="orange">
         Wrote-off $240 debt
       </Text>
-      <StatusIcon variant="wire" name="error" />
+      <Failed width="16px" />
     </Box>
     <Box align="center" justify="space-between" mt="10px">
       <Text m={0}>Staked $1000</Text>
-      <StatusIcon variant="wire" name="success" />
+      <Pending width="16px" />
     </Box>
   </Modal>
 );

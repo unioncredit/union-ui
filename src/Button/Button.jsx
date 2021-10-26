@@ -3,18 +3,12 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { propsToStyles } from "../spacing";
-import { Metamask, WalletConnect, Icon as ButtonIcon } from "../Icon";
 import { LoadingSpinner } from "../LoadingSpinner";
 
 import "./button.scss";
 
-const brandedIcons = {
-  metamask: Metamask,
-  walletconnect: WalletConnect,
-};
-
 export const Button = ({
-  icon,
+  icon: Icon,
   iconPosition,
   label,
   variant,
@@ -33,16 +27,6 @@ export const Button = ({
 }) => {
   const styles = propsToStyles(props);
 
-  const BrandedIcons = ["metamask", "walletconnect"].includes(icon)
-    ? brandedIcons[icon]
-    : null;
-
-  const buttonIcon = BrandedIcons ? (
-    <BrandedIcons />
-  ) : (
-    <ButtonIcon name={icon} />
-  );
-
   return createElement(
     as || "button",
     {
@@ -58,16 +42,15 @@ export const Button = ({
         [`button--icon-pos-${iconPosition}`]: iconPosition,
         [`button--${size}`]: size,
         [`button--${color}`]: color,
-        [`button--icon-${icon}`]: icon,
       }),
       disabled: disabled || loading,
       ...props,
     },
     <>
       {" "}
-      {icon && iconPosition === "start" && buttonIcon}
+      {Icon && iconPosition === "start" && <Icon />}
       {label || children}
-      {icon && iconPosition === "end" && buttonIcon}
+      {Icon && iconPosition === "end" && <Icon />}
       {loading && (
         <div className="loading-spinner-wrapper">
           <LoadingSpinner />

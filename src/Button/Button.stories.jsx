@@ -3,16 +3,25 @@ import React from "react";
 import { Button } from "./Button";
 import { ButtonRow } from "./ButtonRow";
 
+import {
+  Twitter,
+  Vouch,
+  Avatar,
+  Filter,
+  WalletConnect,
+  Metamask,
+  Telegram,
+} from "../icons";
+
 export default {
   component: Button,
   title: "Components/Button",
 };
 
 const buttons = [
-  { icon: "vouch", variant: "primary", label: "Vouch for new contact" },
-  { icon: "vouch", variant: "secondary", label: "Vouch for new contact" },
+  { icon: Vouch, variant: "primary", label: "Vouch for new contact" },
+  { icon: Vouch, variant: "secondary", label: "Vouch for new contact" },
   {
-    icon: "chevron",
     iconPosition: "end",
     variant: "pill",
     label: "Vouch for new contact",
@@ -31,63 +40,33 @@ const buttons = [
 
 const variants = [
   [
-    { icon: "vouch", variant: "primary", label: "Vouch for new contact" },
-    { icon: "link", variant: "primary", label: "Vouch for new contact" },
+    { icon: Vouch, variant: "primary", label: "Vouch for new contact" },
+    { icon: Avatar, variant: "primary", label: "Vouch for new contact" },
     { variant: "primary", label: "Loading", loading: true },
   ],
   [
-    { icon: "vouch", variant: "secondary", label: "Vouch for new contact" },
-    { icon: "filter", variant: "secondary", label: "Show filters" },
-    { variant: "secondary", label: "Cancel" },
+    { icon: Vouch, variant: "secondary", label: "Vouch for new contact" },
+    { icon: Filter, variant: "secondary", label: "Show filters" },
     { variant: "secondary", label: "Loading", loading: true },
-  ],
-  [
     {
-      icon: "manage",
+      icon: Avatar,
       variant: "secondary",
       label: "Manage contact",
     },
-    {
-      icon: "proposal",
-      variant: "secondary",
-      label: "Make proposal",
-    },
-    {
-      icon: "proposal",
-      variant: "primary",
-      label: "copy",
-    },
   ],
   [
-    { icon: "chevron", iconPosition: "end", variant: "pill", label: "Manage" },
     { variant: "pill", label: "View all" },
     { variant: "pill", label: "View all", loading: true },
     {
-      icon: "no",
-      iconPosition: "end",
       variant: "pill",
       label: "Voted",
       color: "red",
     },
     {
-      icon: "check",
-      iconPosition: "end",
       variant: "pill",
       label: "Voted",
       color: "green",
     },
-  ],
-  [
-    { icon: "metamask", variant: "secondary", label: "Metamask" },
-    { icon: "walletconnect", variant: "secondary", label: "WalletConnect" },
-  ],
-  [
-    { icon: "twitter", label: "twitter", rounded: true, color: "white" },
-    { icon: "telegram", label: "telegram", rounded: true, color: "white" },
-  ],
-  [
-    { icon: "twitter", variant: "secondary", rounded: true },
-    { icon: "telegram", variant: "secondary", rounded: true },
   ],
   [
     { variant: "secondary", color: "red", label: "Color Button" },

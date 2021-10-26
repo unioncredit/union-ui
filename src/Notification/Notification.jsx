@@ -4,12 +4,12 @@ import cn from "classnames";
 
 import { Text } from "../Text";
 
-import success from "./icons/success.svg";
-import error from "./icons/error.svg";
-import info from "./icons/info.svg";
-import pending from "./icons/pending.svg";
-import external from "./icons/external.svg";
-import close from "./icons/close.svg";
+import success from "../icons/success.svg";
+import error from "../icons/failed.svg";
+import info from "../icons/info.svg";
+import pending from "../icons/pending.svg";
+import external from "../icons/external.svg";
+import close from "../icons/close.svg";
 
 import "./notification.scss";
 

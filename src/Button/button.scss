@@ -16,6 +16,9 @@
   transition: all 100ms;
   text-decoration: none;
   box-sizing: border-box;
+  white-space: nowrap;
+  padding: 12px 24px;
+  min-height: 48px;
 
   .button-row & {
     margin: 0 10px 0 0;
@@ -47,6 +50,7 @@
 
   &--loading {
     opacity: 1 !important;
+
     &:before {
       content: "";
       position: absolute;
@@ -56,15 +60,6 @@
       left: 5px;
       background-color: inherit;
     }
-  }
-
-  &--icon-pos-start svg {
-    margin-right: $iconGutter;
-  }
-
-  &--icon-pos-end svg {
-    margin-left: $iconGutter;
-    margin-right: 0 !important;
   }
 
   &--inline {
@@ -77,8 +72,9 @@
   }
 
   svg:not(.loading-spinner) {
-    height: 16px;
-    margin-right: 8px;
+    margin-right: 4px;
+    width: 24px;
+    height: 24px;
   }
 
   &[disabled="true"],
@@ -95,8 +91,8 @@
   &--primary {
     color: white;
     background-color: $blue600;
-    padding: 14px 24px;
     border-radius: 10px;
+    min-height: 48px;
 
     svg path {
       fill: white;
@@ -125,7 +121,6 @@
   &--pill {
     color: black;
     background-color: $grey50;
-    padding: 13px 12px;
     border-radius: 10px;
 
     &:hover:enabled {
@@ -180,6 +175,7 @@
   }
 
   &--pill {
+    min-height: unset;
     padding: 4px 12px;
     border-radius: 16px;
     font-size: 12px;
@@ -195,10 +191,6 @@
     background-color: white;
     padding: 8px;
     border-radius: 12px;
-
-    &:not(.button--noLabel) {
-      padding-right: 16px;
-    }
 
     svg {
       height: 24px !important;

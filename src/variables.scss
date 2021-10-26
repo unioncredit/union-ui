@@ -57,6 +57,10 @@ $shadesOfGrey: (
   @each $name, $color in $shadesOfGrey {
     &--#{$name} {
       color: $color !important;
+
+      .externalinline_svg__external-inline path {
+        fill: $color !important;
+      }
     }
   }
 }

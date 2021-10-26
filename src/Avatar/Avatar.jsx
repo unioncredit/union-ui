@@ -1,10 +1,11 @@
 import React from "react";
+import cn from "classnames";
 import PropTypes from "prop-types";
 
 import "./avatar.scss";
 import { propsToStyles } from "../spacing";
 
-export function Avatar({ src, size, ...props }) {
+export function Avatar({ src, size, variant, ...props }) {
   const Component = src;
 
   const sizeStyles = {
@@ -14,7 +15,9 @@ export function Avatar({ src, size, ...props }) {
 
   return (
     <div
-      className="avatar"
+      className={cn("avatar", {
+        [`avatar--${variant}`]: variant,
+      })}
       style={{
         ...sizeStyles,
         ...propsToStyles(props),
@@ -23,7 +26,7 @@ export function Avatar({ src, size, ...props }) {
       {src && Component.displayName?.includes("UnionIcon") ? (
         <Component />
       ) : (
-        <img src={src} style={sizeStyles} />
+        <img src={src} />
       )}
     </div>
   );
@@ -35,4 +38,5 @@ Avatar.defaultProps = {
 
 Avatar.propTypes = {
   size: PropTypes.number,
+  variant: PropTypes.string,
 };

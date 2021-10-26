@@ -22,7 +22,7 @@ export const All = () => (
         View transaction
       </Label>
     </Notification>
-    <Notification variant="error" title="Transaction error">
+    <Notification variant="error" title="Transaction error" link="#">
       <Label as="p" size="small">
         Internal transaction error
       </Label>
