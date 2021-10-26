@@ -47,9 +47,10 @@
 
   &__arrow {
     background: $grey50;
+    padding: 4px;
 
     svg {
-      width: 10px;
+      width: 24px;
 
       polygon {
         fill: $grey600;
@@ -69,7 +70,7 @@
       }
     }
 
-    &--right {
+    &--left {
       transform: rotate(180deg);
     }
   }

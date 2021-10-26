@@ -3,7 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Box } from "../Box";
-import { Icon } from "../Icon";
+import { ArrowRight } from "../icons";
 
 import "./pagination.scss";
 
@@ -36,7 +36,7 @@ export function Pagination({ onClick, pages, activePage = 1, ...props }) {
           { "pagination__arrow--disabled": leftArrowDisabled }
         )}
       >
-        <Icon name="arrow-left" />
+        <ArrowRight />
       </button>
       {numbers.map((n, i) => (
         <button
@@ -59,7 +59,7 @@ export function Pagination({ onClick, pages, activePage = 1, ...props }) {
           { "pagination__arrow--disabled": rightArrowDisabled }
         )}
       >
-        <Icon name="arrow-left" />
+        <ArrowRight />
       </button>
     </Box>
   );
