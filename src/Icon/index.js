@@ -4,7 +4,6 @@ export * from "./LogoMobile";
 export * from "./Metamask";
 export * from "./NavIcon";
 export * from "./WalletConnect";
-export * from "./StatusIcon";
 export * from "./Repayment";
 export * from "./Borrow";
 export * from "./NewVouch";
