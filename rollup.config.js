@@ -41,7 +41,7 @@ export default {
       exclude: "node_modules/**",
     }),
     copy({
-      targets: [{ src: "src/icons", dest: "lib/icons" }],
+      targets: [{ src: "src/icons", dest: "lib" }],
     }),
   ],
 };

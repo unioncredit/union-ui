@@ -38,6 +38,7 @@ export const Button = ({
         "button--rounded": rounded,
         "button--noLabel": !label && !children,
         "button--loading": loading,
+        "button--withIcon": !!Icon,
         [`button--${variant}`]: variant,
         [`button--icon-pos-${iconPosition}`]: iconPosition,
         [`button--${size}`]: size,

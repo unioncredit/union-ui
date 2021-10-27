@@ -16,3 +16,7 @@ button {
   width: 24px;
   height: 24px;
 }
+
+.flip {
+  transform: scaleX(-1);
+}

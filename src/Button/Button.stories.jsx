@@ -3,11 +3,9 @@ import React from "react";
 import { Button } from "./Button";
 import { ButtonRow } from "./ButtonRow";
 
-import Twitter from "../icons/twitter.svg";
 import Vouch from "../icons/vouch.svg";
 import Avatar from "../icons/avatar.svg";
 import Filter from "../icons/filter.svg";
-import Telegram from "../icons/telegram.svg";
 
 export default {
   component: Button,
@@ -39,6 +37,11 @@ const variants = [
     { icon: Vouch, variant: "primary", label: "Vouch for new contact" },
     { icon: Avatar, variant: "primary", label: "Vouch for new contact" },
     { variant: "primary", label: "Loading", loading: true },
+    {
+      icon: Vouch,
+      iconPosition: "end",
+      label: "Vouch for new contact",
+    },
   ],
   [
     { icon: Vouch, variant: "secondary", label: "Vouch for new contact" },

@@ -20,6 +20,15 @@
   padding: 12px 24px;
   min-height: 48px;
 
+  &--withIcon {
+    padding-left: 18px;
+
+    &.button--icon-pos-end {
+      padding-left: 24px;
+      padding-right: 18px;
+    }
+  }
+
   .button-row & {
     margin: 0 10px 0 0;
   }
@@ -275,11 +284,8 @@
   &--lite {
     background-color: transparent;
     color: $grey500;
-
-    svg:not(.loading-spinner) {
-      height: 10px;
-      margin-right: 6px;
-    }
+    padding-left: 0;
+    padding-right: 0;
 
     svg polygon,
     svg path {
