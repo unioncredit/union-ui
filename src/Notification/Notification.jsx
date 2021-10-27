@@ -8,13 +8,13 @@ import success from "../icons/success.svg";
 import error from "../icons/failed.svg";
 import info from "../icons/info.svg";
 import pending from "../icons/pending.svg";
-import external from "../icons/external.svg";
-import close from "../icons/close.svg";
+import External from "../icons/external.svg";
+import Close from "../icons/close.svg";
 
 import "./notification.scss";
 
 export function Notification({ variant, title, children, onClose, link }) {
-  const icon = {
+  const Icon = {
     error,
     success,
     pending,
@@ -28,7 +28,7 @@ export function Notification({ variant, title, children, onClose, link }) {
       })}
     >
       <div className="notification__icon">
-        <img src={icon} />
+        <Icon />
       </div>
       <div className="notification__content">
         <Text grey={700} mb="6px">
@@ -37,10 +37,10 @@ export function Notification({ variant, title, children, onClose, link }) {
         {children}
       </div>
       <div className="notification__actions">
-        <img src={close} onClick={onClose} />
+        <Close onClick={onClose} />
         {link && (
           <a href={link} target="_blank">
-            <img src={external} />
+            <External />
           </a>
         )}
       </div>
