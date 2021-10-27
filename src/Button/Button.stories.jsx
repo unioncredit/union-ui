@@ -3,15 +3,11 @@ import React from "react";
 import { Button } from "./Button";
 import { ButtonRow } from "./ButtonRow";
 
-import {
-  Twitter,
-  Vouch,
-  Avatar,
-  Filter,
-  WalletConnect,
-  Metamask,
-  Telegram,
-} from "../icons";
+import Twitter from "../icons/twitter.svg";
+import Vouch from "../icons/vouch.svg";
+import Avatar from "../icons/avatar.svg";
+import Filter from "../icons/filter.svg";
+import Telegram from "../icons/telegram.svg";
 
 export default {
   component: Button,

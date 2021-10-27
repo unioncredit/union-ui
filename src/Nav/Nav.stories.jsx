@@ -25,10 +25,6 @@ export const Default = () => (
 
 export const Mobile = () => (
   <Nav mobile>
-    <NavItem icon="credit" active />
-    <NavItem icon="credit" />
-    <NavItem icon="contacts" />
-    <NavItem icon="vote" />
     <NavItem icon="union-token" label="124.5" bordered />
   </Nav>
 );

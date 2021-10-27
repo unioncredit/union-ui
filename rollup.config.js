@@ -3,7 +3,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import scss from "rollup-plugin-scss";
-import svg from "rollup-plugin-svg";
+import copy from "rollup-plugin-copy";
 import svgr from "@svgr/rollup";
 
 const packageJson = require("./package.json");
@@ -28,6 +28,7 @@ export default {
   ],
   external,
   plugins: [
+    svgr(),
     peerDepsExternal(),
     resolve({
       extensions: [".js", ".jsx"],
@@ -36,10 +37,11 @@ export default {
       exclude: "src/**",
     }),
     scss(),
-    //svg({ base64: true }),
-    svgr(),
     babel({
       exclude: "node_modules/**",
+    }),
+    copy({
+      targets: [{ src: "src/icons", dest: "lib/icons" }],
     }),
   ],
 };

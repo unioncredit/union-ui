@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Icon } from "../Icon";
+import TooltipIcon from "../icons/tooltip.svg";
 
 import "./tooltip.scss";
 
@@ -19,7 +19,7 @@ export function Tooltip({ position, content }) {
           <span />
         </span>
       </span>
-      <Icon name="info" />
+      <TooltipIcon />
     </span>
   );
 }

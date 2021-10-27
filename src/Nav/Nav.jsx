@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 
-import { Logo, LogoMobile } from "../Icon";
+import { Logo, LogoMobile } from "../Logo";
 
 import "./nav.scss";
 

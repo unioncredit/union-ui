@@ -2,7 +2,9 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Icon } from "../Icon";
+import Intermediate from "../icons/intermediate.svg";
+import Check from "../icons/check.svg";
+
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
 
@@ -17,11 +19,7 @@ export function Control({
   onClick,
   ...props
 }) {
-  const iconName = checked
-    ? "control-check"
-    : indeterminate
-    ? "control-indeterminate"
-    : null;
+  const Icon = checked ? Check : indeterminate ? Intermediate : null;
 
   return (
     <div
@@ -37,9 +35,7 @@ export function Control({
           "control--indeterminate": indeterminate,
         })}
       >
-        {(checked || indeterminate) && type === "checkbox" && (
-          <Icon name={iconName} color="white" />
-        )}
+        {(checked || indeterminate) && type === "checkbox" && <Icon />}
       </div>
       {label && (
         <Text className="control-label" my={0} ml="6px">
