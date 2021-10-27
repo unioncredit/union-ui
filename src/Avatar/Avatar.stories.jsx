@@ -13,7 +13,7 @@ export default {
 export const Default = () => (
   <>
     <Avatar mb="12px" />
-    <Avatar size={48} mb="12px" variant="icon" src={Metamask} />
-    <Avatar size={48} mb="12px" variant="icon" src={WalletConnect} />
+    <Avatar size={48} mb="12px" variant="icon" icon={Metamask} />
+    <Avatar size={48} mb="12px" variant="icon" icon={WalletConnect} />
   </>
 );

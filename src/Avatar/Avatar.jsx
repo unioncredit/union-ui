@@ -2,12 +2,11 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import "./avatar.scss";
 import { propsToStyles } from "../spacing";
 
-export function Avatar({ src, size, variant, ...props }) {
-  const Component = src;
+import "./avatar.scss";
 
+export function Avatar({ src, icon: Icon, size, variant, ...props }) {
   const sizeStyles = {
     width: size + "px",
     height: size + "px",
@@ -23,11 +22,8 @@ export function Avatar({ src, size, variant, ...props }) {
         ...propsToStyles(props),
       }}
     >
-      {src && Component.displayName?.includes("UnionIcon") ? (
-        <Component />
-      ) : (
-        <img src={src} />
-      )}
+      {src && <img src={src} />}
+      {Icon && <Icon />}
     </div>
   );
 }
