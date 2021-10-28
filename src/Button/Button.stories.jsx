@@ -22,11 +22,9 @@ const buttons = [
   },
   {
     label: "Red button",
-    variant: "secondary",
     color: "red",
   },
   {
-    variant: "secondary",
     label: "Green button",
     color: "green",
   },
@@ -98,7 +96,7 @@ export const Disabled = () => (
   <>
     {buttons.map((props) => (
       <ButtonRow mb="20px">
-        <Button {...props} disabled />
+        <Button {...props} disabled="true" />
       </ButtonRow>
     ))}
   </>

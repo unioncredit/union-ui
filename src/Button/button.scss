@@ -139,47 +139,47 @@
     &:active:enabled {
       background-color: $grey200;
     }
+  }
 
-    &.button--red {
-      background-color: $red50;
-      color: $red600;
-      &:hover:enabled {
-        background-color: $red100;
-      }
-      &:active:enabled {
-        background-color: $red200;
-      }
-      svg path {
-        fill: $red600;
-      }
+  &--red {
+    background-color: $red50;
+    color: $red600;
+    &:hover:enabled {
+      background-color: $red100;
     }
-
-    &.button--green {
-      background-color: $green50;
-      color: $green600;
-      &:hover:enabled {
-        background-color: $green100;
-      }
-      &:active:enabled {
-        background-color: $green200;
-      }
-      svg path {
-        fill: $green600;
-      }
+    &:active:enabled {
+      background-color: $red200;
     }
+    svg path {
+      fill: $red600;
+    }
+  }
 
-    &.button--blue {
-      background-color: $blue100;
-      color: $blue600;
-      &:hover:enabled {
-        background-color: $blue200;
-      }
-      &:active:enabled {
-        background-color: $blue300;
-      }
-      svg path {
-        fill: $blue600;
-      }
+  &--green {
+    background-color: $green50;
+    color: $green600;
+    &:hover:enabled {
+      background-color: $green100;
+    }
+    &:active:enabled {
+      background-color: $green200;
+    }
+    svg path {
+      fill: $green600;
+    }
+  }
+
+  &--blue {
+    background-color: $blue100;
+    color: $blue600;
+    &:hover:enabled {
+      background-color: $blue200;
+    }
+    &:active:enabled {
+      background-color: $blue300;
+    }
+    svg path {
+      fill: $blue600;
     }
   }
 
@@ -214,7 +214,7 @@
     }
   }
 
-  &--secondary:not(.button--red, .button--green, .button--blue) {
+  &--secondary {
     &[disabled="true"],
     &[disabled],
     &[disabled]:hover,
