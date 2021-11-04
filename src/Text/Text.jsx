@@ -24,6 +24,7 @@ export const Text = forwardRef(
     ref
   ) => {
     const textProps = {
+      ...props,
       ref,
       className: cn("text", className, {
         [`text--${size}`]: size,
