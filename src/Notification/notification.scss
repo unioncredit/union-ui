@@ -22,7 +22,7 @@
     height: 24px;
   }
 
-  &--pending &__icon img {
+  &--pending &__icon svg {
     animation: loadingspin 1000ms infinite ease;
 
     @keyframes loadingspin {
