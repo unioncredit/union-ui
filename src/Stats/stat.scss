@@ -6,10 +6,14 @@
   box-sizing: border-box;
 
   &__label {
-    color: $grey500;
+    color: $grey400;
     width: 100%;
     white-space: nowrap;
     text-transform: uppercase;
+
+    .label {
+      color: inherit;
+    }
   }
 
   &__value {
