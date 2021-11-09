@@ -28,6 +28,8 @@ import { ReactComponent as DropdownArrow } from "./dropdownArrow.svg";
 import { ReactComponent as ExternalInline } from "./externalinline.svg";
 import { ReactComponent as Telegram } from "./telegram.svg";
 import { ReactComponent as ArrowRight } from "./arrowRight.svg";
+import { ReactComponent as NewVouchRecieved } from "./newVouchRecieved.svg";
+import { ReactComponent as Manage } from "./manage.svg";
 
 export default {
   title: "components/icons",
@@ -35,6 +37,7 @@ export default {
 
 const icons = [
   Vouch,
+  Manage,
   Avatar,
   ENS,
   Info,
@@ -49,6 +52,7 @@ const icons = [
   Telegram,
   Filter,
   NewVouch,
+  NewVouchRecieved,
   NewMember,
   Repayment,
   Metamask,
