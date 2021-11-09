@@ -6,7 +6,7 @@ import { propsToStyles } from "../spacing";
 
 import "./avatar.scss";
 
-export function Avatar({ src, icon: Icon, size, variant, ...props }) {
+export function Avatar({ src, icon: Icon, size, variant, onError, ...props }) {
   const sizeStyles = {
     width: size + "px",
     height: size + "px",
@@ -22,7 +22,7 @@ export function Avatar({ src, icon: Icon, size, variant, ...props }) {
         ...propsToStyles(props),
       }}
     >
-      {src && <img src={src} />}
+      {src && <img src={src} onError={onError} />}
       {Icon && <Icon />}
     </div>
   );

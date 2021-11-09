@@ -38,7 +38,11 @@ function CardHeader({ title, subTitle, align, action }) {
         <Text as="h1" size="large" grey={700} weight="medium" m={0}>
           {title}
         </Text>
-        {subTitle && <Label as="h2">{subTitle}</Label>}
+        {subTitle && (
+          <Label as="h2" mb="0px">
+            {subTitle}
+          </Label>
+        )}
       </div>
       {action && <div className="card-header__action">{action}</div>}
     </div>
