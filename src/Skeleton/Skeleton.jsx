@@ -23,9 +23,9 @@ export function Skeleton({
         "skeleton--shimmer": shimmer,
       })}
       style={{
-        ...propsToStyles(props),
         width: size || width + "px",
         height: size || height + "px",
+        ...propsToStyles(props),
       }}
     ></div>
   );
