@@ -6,7 +6,6 @@ import { Control } from "../Control";
 import { InputRow } from "./InputRow";
 import { Button } from "../Button";
 import { Dai } from "../Dai";
-import Search from "../icons/search.svg";
 
 export default {
   component: Input,
@@ -32,13 +31,6 @@ export const Inputs = () => (
         label="Input label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
-      />
-    </Box>
-    <Box mb="20px">
-      <Input
-        label="Input label"
-        placeholder="Placeholder"
-        suffix={<Search />}
       />
     </Box>
 

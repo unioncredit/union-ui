@@ -41,7 +41,11 @@ $gutter: 8px;
     }
 
     .dai {
+      $size: 16px;
       margin: 0;
+      width: $size;
+      height: $size;
+      top: 0;
     }
   }
 
