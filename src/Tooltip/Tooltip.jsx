@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 
 import "./tooltip.scss";
 
-export function Tooltip({ position, children, content }) {
+export function Tooltip({ position, children, content, alwaysShow }) {
   return (
     <span
       className={cn("tooltip", {
         [`tooltip--${position}`]: position,
+        "tooltip--alwaysShow": alwaysShow,
       })}
     >
       <span className="tooltip__content">
@@ -25,6 +26,7 @@ export function Tooltip({ position, children, content }) {
 Tooltip.propTypes = {
   position: PropTypes.oneOf(["top", "right", "bottom", "left"]),
   content: PropTypes.string,
+  alwaysShow: PropTypes.bool,
 };
 
 Tooltip.defaultProps = {

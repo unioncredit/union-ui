@@ -51,7 +51,7 @@ export const Default = () => (
     <Box mt="100px">
       <Label as="p">
         The quick brown fox jumps over the lazy dog (left){" "}
-        <Tooltip position="bottom" content={content}>
+        <Tooltip position="bottom" content={content} alwaysShow>
           <Button label="Open" />
         </Tooltip>
       </Label>
