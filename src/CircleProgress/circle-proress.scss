@@ -35,7 +35,15 @@
     stroke: $blue600;
   }
 
-  &--complete svg circle:nth-child(2) {
-    stroke: $blue600;
+  &--complete {
+    $completeColor: $green500;
+
+    .circle-progress__label h1 {
+      color: $completeColor !important;
+    }
+
+    svg circle:nth-child(2) {
+      stroke: $completeColor;
+    }
   }
 }
