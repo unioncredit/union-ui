@@ -12,20 +12,16 @@
   }
 
   @media screen and (max-width: $breakpoint-s) {
-    .union-logo-mobile {
-      display: block;
-    }
     .union-logo {
-      display: none;
+      width: 36px;
+      height: 36px;
     }
   }
 
   @media screen and (min-width: $breakpoint-s) {
-    .union-logo-mobile {
-      display: none;
-    }
     .union-logo {
-      display: block;
+      width: unset;
+      height: unset;
     }
   }
 }

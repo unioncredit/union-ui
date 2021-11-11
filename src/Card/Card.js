@@ -66,5 +66,5 @@ Card.propTypes = {
   variant: PropTypes.oneOf(["primary", "packed", "blue"]),
   size: PropTypes.oneOf(["small", "medium", "large", "fluid"]),
   className: PropTypes.string,
-  noGutter: PropTypesp.bool,
+  noGutter: PropTypes.bool,
 };

@@ -30,6 +30,7 @@ import { ReactComponent as Telegram } from "./telegram.svg";
 import { ReactComponent as ArrowRight } from "./arrowRight.svg";
 import { ReactComponent as NewVouchRecieved } from "./newVouchRecieved.svg";
 import { ReactComponent as Manage } from "./manage.svg";
+import { ReactComponent as Union } from "./union.svg";
 
 export default {
   title: "components/icons",
@@ -61,6 +62,7 @@ const icons = [
   Dollar,
   DropdownArrow,
   ArrowRight,
+  Union,
 ];
 
 export const all = () => (
