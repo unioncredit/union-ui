@@ -36,3 +36,4 @@ export * from "./Pagination";
 export * from "./EmptyState";
 export * from "./Logo";
 export * from "./ProgressList";
+export * from "./MiniProgressList";
