@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 import { Label } from "../Label";
 import { Text } from "../Text";
-import { Box } from "../Box";
 import { propsToStyles } from "../spacing";
 
 import "./card.scss";
@@ -58,6 +57,7 @@ Card.Body = CardBody;
 
 CardHeader.propTypes = {
   title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
   align: PropTypes.oneOf(["center", "left", "right"]),
   action: PropTypes.node,
 };
@@ -65,4 +65,6 @@ CardHeader.propTypes = {
 Card.propTypes = {
   variant: PropTypes.oneOf(["primary", "packed", "blue"]),
   size: PropTypes.oneOf(["small", "medium", "large", "fluid"]),
+  className: PropTypes.string,
+  noGutter: PropTypesp.bool,
 };
