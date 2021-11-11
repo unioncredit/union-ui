@@ -2,11 +2,9 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import TooltipIcon from "../icons/tooltip.svg";
-
 import "./tooltip.scss";
 
-export function Tooltip({ position, content }) {
+export function Tooltip({ position, children, content }) {
   return (
     <span
       className={cn("tooltip", {
@@ -19,7 +17,7 @@ export function Tooltip({ position, content }) {
           <span />
         </span>
       </span>
-      <TooltipIcon />
+      {children}
     </span>
   );
 }

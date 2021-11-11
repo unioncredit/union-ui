@@ -2,8 +2,8 @@ import React from "react";
 
 import { Avatar } from "./Avatar";
 
-import Metamask from "../icons/metamask.svg";
-import WalletConnect from "../icons/walletconnect.svg";
+import { ReactComponent as Metamask } from "../icons/metamask.svg";
+import { ReactComponent as WalletConnect } from "../icons/walletconnect.svg";
 
 export default {
   component: Avatar,
