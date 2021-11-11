@@ -35,3 +35,4 @@ export * from "./ContextMenu";
 export * from "./Pagination";
 export * from "./EmptyState";
 export * from "./Logo";
+export * from "./ProgressList";

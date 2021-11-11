@@ -1,0 +1,57 @@
+@import "../variables.scss";
+
+.progressListItem {
+  $size: 44px;
+  $bp: 600px;
+
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -$size - 24px;
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+
+    @media screen and (max-width: $bp) {
+      display: none;
+    }
+
+    .progressListItem--complete & {
+      background-color: $green500;
+      box-shadow: none;
+      color: white;
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: $size + 8px;
+    left: -$size/2 - 24px;
+    bottom: 8px;
+    width: 2px;
+    background: $grey300;
+    border-radius: 2px;
+
+    @media screen and (max-width: $bp) {
+      display: none;
+    }
+  }
+
+  &--complete:before {
+    background: $green500;
+  }
+
+  &:last-of-type:before {
+    display: none;
+  }
+}
