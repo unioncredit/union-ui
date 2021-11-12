@@ -1,0 +1,44 @@
+@import "../variables.scss";
+
+.alert {
+  padding: 4px 4px 4px 4px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  background-color: $grey100;
+
+  @mixin variant($color200, $color300, $color400, $color500, $color800) {
+    background-color: $color200;
+
+    .text {
+      color: $color800;
+    }
+
+    .button.button--secondary {
+      background: $color300;
+      color: $color800;
+
+      &:hover {
+        background: $color400;
+      }
+
+      &:active {
+        background: $color500;
+      }
+    }
+  }
+
+  &--warning {
+    @include variant($amber200, $amber300, $amber400, $amber500, $amber800);
+  }
+
+  &--info {
+    @include variant($blue200, $blue300, $blue400, $blue500, $blue800);
+  }
+
+  &--success {
+    @include variant($green200, $green300, $green400, $green500, $green800);
+  }
+}
