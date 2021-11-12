@@ -31,6 +31,7 @@ import { ReactComponent as ArrowRight } from "./arrowRight.svg";
 import { ReactComponent as NewVouchRecieved } from "./newVouchRecieved.svg";
 import { ReactComponent as Manage } from "./manage.svg";
 import { ReactComponent as Union } from "./union.svg";
+import { ReactComponent as Calendar } from "./calendar.svg";
 
 export default {
   title: "components/icons",
@@ -39,6 +40,7 @@ export default {
 const icons = [
   Vouch,
   Manage,
+  Calendar,
   Avatar,
   ENS,
   Info,
