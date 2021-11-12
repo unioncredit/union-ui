@@ -8,6 +8,7 @@
   justify-content: space-between;
   min-height: 48px;
   background-color: $grey100;
+  width: 100%;
 
   @mixin variant($color200, $color300, $color400, $color500, $color800) {
     background-color: $color200;
