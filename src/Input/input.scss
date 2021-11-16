@@ -68,6 +68,10 @@ $gutter: 8px;
     background: $grey50;
     box-sizing: border-box;
 
+    .card.card--blue & {
+      background: white;
+    }
+
     &::-webkit-input-placeholder {
       color: $grey500;
     }
