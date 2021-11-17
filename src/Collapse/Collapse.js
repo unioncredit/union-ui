@@ -1,9 +1,17 @@
 import React from "react";
+import cn from "classnames";
 import AnimateHeight from "react-animate-height";
 
-export function Collapse({ id, active, children }) {
+import "./collapse.scss";
+
+export function Collapse({ id, active, children, className }) {
   return (
-    <AnimateHeight id={id} duration={300} height={active ? "auto" : 0}>
+    <AnimateHeight
+      id={id}
+      duration={300}
+      height={active ? "auto" : 0}
+      className={cn("collapse", className)}
+    >
       {children}
     </AnimateHeight>
   );
