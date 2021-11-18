@@ -32,6 +32,7 @@ import { ReactComponent as NewVouchRecieved } from "./newVouchRecieved.svg";
 import { ReactComponent as Manage } from "./manage.svg";
 import { ReactComponent as Union } from "./union.svg";
 import { ReactComponent as Calendar } from "./calendar.svg";
+import { ReactComponent as Cancel } from "./cancelVouch.svg";
 
 export default {
   title: "components/icons",
@@ -57,6 +58,7 @@ const icons = [
   NewVouch,
   NewVouchRecieved,
   NewMember,
+  Cancel,
   Repayment,
   Metamask,
   WalletConnect,
