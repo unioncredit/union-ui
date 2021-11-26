@@ -39,3 +39,4 @@ export * from "./ProgressList";
 export * from "./MiniProgressList";
 export * from "./Alert";
 export * from "./Collapse";
+export * from "./TabNav";
