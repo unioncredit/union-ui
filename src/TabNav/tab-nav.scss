@@ -1,0 +1,34 @@
+@import "../variables.scss";
+
+.tab-nav {
+  display: flex;
+  flex-wrap: nowrap;
+
+  &__item {
+    position: relative;
+    padding: 12px 22px;
+    color: $grey400;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $grey100;
+      left: 0;
+      bottom: 0;
+    }
+
+    &--active {
+      color: $grey800;
+
+      &:after {
+        background-color: $blue500;
+        height: 2px;
+      }
+    }
+  }
+}
