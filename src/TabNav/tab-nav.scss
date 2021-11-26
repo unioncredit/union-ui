@@ -10,6 +10,7 @@
     color: $grey400;
     cursor: pointer;
     text-decoration: none;
+    white-space: nowrap;
 
     &:after {
       position: absolute;
