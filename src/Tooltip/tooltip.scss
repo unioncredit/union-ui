@@ -7,26 +7,10 @@
   white-space: normal;
   vertical-align: top;
 
-  svg {
-    display: inline-block;
-    vertical-align: middle;
-    width: 17px;
-
-    path {
-      fill: #8e8b9a;
-    }
-  }
-
   &__content {
     line-height: normal;
     font-size: 11.2px;
     text-transform: none;
-  }
-
-  &:hover {
-    svg path {
-      fill: $grey700;
-    }
   }
 
   &--top {
