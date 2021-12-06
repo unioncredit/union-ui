@@ -21,6 +21,9 @@
   }
 
   &--large {
+    &--bordered {
+      border: 2px solid $blue500;
+    }
     max-width: 600px;
   }
 
@@ -34,6 +37,7 @@
 
   &--packed {
     padding: 0 16px;
+    border-radius: 16px;
     .card-body {
       padding: 16px 0;
     }
@@ -47,6 +51,11 @@
     .heading,
     .label {
       color: inherit;
+    }
+
+    &.card--bordered {
+      border-color: $blue500;
+      box-shadow: 0 0 0 1px $blue500;
     }
   }
 

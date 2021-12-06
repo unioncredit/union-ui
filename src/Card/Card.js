@@ -9,7 +9,19 @@ import { propsToStyles } from "../spacing";
 import "./card.scss";
 
 export const Card = forwardRef(
-  ({ variant, size, packed, children, className, noGutter, ...props }, ref) => {
+  (
+    {
+      variant,
+      size,
+      packed,
+      children,
+      className,
+      noGutter,
+      bordered,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <div
         ref={ref}
@@ -18,6 +30,7 @@ export const Card = forwardRef(
           [`card--${variant}`]: variant,
           ["card--packed"]: packed,
           "card--noGutter": noGutter,
+          "card--bordered": bordered,
         })}
         style={propsToStyles(props)}
       >

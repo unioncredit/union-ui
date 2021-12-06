@@ -98,25 +98,48 @@ export const Large = () => (
 );
 
 export const Blue = () => (
-  <Card variant="blue" size="large">
-    <Card.Body>
-      <Heading align="center">Get Extra Credit</Heading>
-      <Text align="center">This is a small card</Text>
-      <Button label="Get QR Code" fluid />
-      <ButtonRow fluid mt="8px">
-        <Button
-          variant="secondary"
-          color="blue"
-          label="Share on Twitter"
-          fluid
-        />
-        <Button
-          variant="secondary"
-          color="blue"
-          label="Share on Telegram"
-          fluid
-        />
-      </ButtonRow>
-    </Card.Body>
-  </Card>
+  <>
+    <Card variant="blue" size="large">
+      <Card.Body>
+        <Heading align="center">Get Extra Credit</Heading>
+        <Text align="center">This is a small card</Text>
+        <Button label="Get QR Code" fluid />
+        <ButtonRow fluid mt="8px">
+          <Button
+            variant="secondary"
+            color="blue"
+            label="Share on Twitter"
+            fluid
+          />
+          <Button
+            variant="secondary"
+            color="blue"
+            label="Share on Telegram"
+            fluid
+          />
+        </ButtonRow>
+      </Card.Body>
+    </Card>
+    <Card variant="blue" size="large" mt="44px" bordered>
+      <Card.Body>
+        <Heading align="center">Get Extra Credit</Heading>
+        <Text align="center">This is a small card</Text>
+        <Button label="Get QR Code" fluid />
+        <ButtonRow fluid mt="8px">
+          <Button
+            variant="secondary"
+            color="blue"
+            label="Share on Twitter"
+            fluid
+          />
+          <Button
+            variant="secondary"
+            color="blue"
+            label="Share on Telegram"
+            fluid
+          />
+        </ButtonRow>
+      </Card.Body>
+    </Card>
+  </>
 );
