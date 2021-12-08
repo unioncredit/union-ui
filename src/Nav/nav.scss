@@ -7,6 +7,10 @@
   display: flex;
   align-items: center;
 
+  &__logo {
+    margin-right: 36px;
+  }
+
   @media screen and (max-width: $breakpoint-s) {
     .union-logo {
       width: 36px;

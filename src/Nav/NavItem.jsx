@@ -1,12 +1,16 @@
 import React, { forwardRef } from "react";
 import cn from "classnames";
 
+import { Text } from "../Text";
+
 import "./nav-item.scss";
 
 export const NavItem = forwardRef(
   ({ onClick, disabled, label, active }, ref) => {
     return (
-      <a
+      <Text
+        mx="4px"
+        as="a"
         ref={ref}
         tabIndex="0"
         className={cn("nav-item", {
@@ -16,7 +20,7 @@ export const NavItem = forwardRef(
         onClick={onClick}
       >
         {label}
-      </a>
+      </Text>
     );
   }
 );

@@ -34,12 +34,14 @@ import { ReactComponent as Union } from "./union.svg";
 import { ReactComponent as Calendar } from "./calendar.svg";
 import { ReactComponent as Cancel } from "./cancelVouch.svg";
 import { ReactComponent as Switch } from "./switch.svg";
+import { ReactComponent as Logo } from "./logo.svg";
 
 export default {
   title: "components/icons",
 };
 
 const icons = [
+  Logo,
   Vouch,
   Manage,
   Calendar,
