@@ -5,10 +5,21 @@ import cn from "classnames";
 import { Box } from "../Box";
 import { Heading } from "../Heading";
 import { Label } from "../Label";
+import { Tooltip } from "../Tooltip";
+import Info from "../icons/tooltip.svg";
 
 import "./stat.scss";
 
-export function Stat({ label, value, after, size, align, ...props }) {
+export function Stat({
+  label,
+  value,
+  after,
+  size,
+  align,
+  tooltip,
+  tooltipProps,
+  ...props
+}) {
   return (
     <Box
       className={cn("stat", {
@@ -20,9 +31,16 @@ export function Stat({ label, value, after, size, align, ...props }) {
     >
       <div className="stat__label">
         {typeof label === "string" ? (
-          <Label as="p" m={0} weight="medium" size="small">
-            {label}
-          </Label>
+          <>
+            <Label as="p" m={0} weight="medium" size="small">
+              {label}
+              {tooltip && (
+                <Tooltip content={tooltip} {...tooltipProps}>
+                  <Info width="14px" />
+                </Tooltip>
+              )}
+            </Label>
+          </>
         ) : (
           label
         )}

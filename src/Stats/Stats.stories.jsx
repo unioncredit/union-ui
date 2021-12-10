@@ -14,7 +14,9 @@ export const All = () => (
   <>
     <Box>
       <Stat
+        mt="120px"
         label="Total Stakes"
+        tooltip="This is what a tooltip looks like"
         value={
           <>
             3200
