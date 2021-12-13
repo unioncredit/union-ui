@@ -53,7 +53,7 @@ Box.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
-  ]).isRequired,
+  ]),
   align: PropTypes.oneOf(["start", "end", "center", "baseline"]),
   justify: PropTypes.oneOf([
     "start",

@@ -1,4 +1,4 @@
-import React, { createElement } from "react";
+import React, { createElement, forwardRef } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
@@ -7,59 +7,65 @@ import { LoadingSpinner } from "../LoadingSpinner";
 
 import "./button.scss";
 
-export const Button = ({
-  icon: Icon,
-  iconPosition,
-  label,
-  variant,
-  background,
-  color,
-  className,
-  inline,
-  children,
-  rounded,
-  fluid,
-  loading,
-  disabled,
-  as,
-  size = "default",
-  ...props
-}) => {
-  const styles = propsToStyles(props);
-
-  return createElement(
-    as || "button",
+export const Button = forwardRef(
+  (
     {
-      type: "button",
-      style: styles,
-      className: cn(className, "button", {
-        "button--fluid": fluid,
-        "button--inline": inline,
-        "button--rounded": rounded,
-        "button--noLabel": !label && !children,
-        "button--loading": loading,
-        "button--withIcon": !!Icon,
-        [`button--${variant}`]: variant,
-        [`button--icon-pos-${iconPosition}`]: iconPosition,
-        [`button--${size}`]: size,
-        [`button--${color}`]: color,
-      }),
-      disabled: disabled || loading,
-      ...props,
+      icon: Icon,
+      iconPosition,
+      label,
+      variant,
+      background,
+      color,
+      className,
+      inline,
+      children,
+      rounded,
+      fluid,
+      loading,
+      disabled,
+      as,
+      size = "default",
+      ...props
     },
-    <>
-      {" "}
-      {Icon && iconPosition === "start" && <Icon />}
-      {label || children}
-      {Icon && iconPosition === "end" && <Icon />}
-      {loading && (
-        <div className="loading-spinner-wrapper">
-          <LoadingSpinner />
-        </div>
-      )}
-    </>
-  );
-};
+    ref
+  ) => {
+    const styles = propsToStyles(props);
+
+    return createElement(
+      as || "button",
+      {
+        ref,
+        type: "button",
+        style: styles,
+        className: cn(className, "button", {
+          "button--fluid": fluid,
+          "button--inline": inline,
+          "button--rounded": rounded,
+          "button--noLabel": !label && !children,
+          "button--loading": loading,
+          "button--withIcon": !!Icon,
+          [`button--${variant}`]: variant,
+          [`button--icon-pos-${iconPosition}`]: iconPosition,
+          [`button--${size}`]: size,
+          [`button--${color}`]: color,
+        }),
+        disabled: disabled || loading,
+        ...props,
+      },
+      <>
+        {" "}
+        {Icon && iconPosition === "start" && <Icon />}
+        {label || children}
+        {Icon && iconPosition === "end" && <Icon />}
+        {loading && (
+          <div className="loading-spinner-wrapper">
+            <LoadingSpinner />
+          </div>
+        )}
+      </>
+    );
+  }
+);
 
 Button.propTypes = {
   as: PropTypes.node,
@@ -76,7 +82,7 @@ Button.propTypes = {
   icon: PropTypes.any,
   rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),
-  label: PropTypes.string,
+  label: PropTypes.node,
   onClick: PropTypes.func,
   background: PropTypes.string,
   color: PropTypes.oneOf(["red", "green", "blue"]),

@@ -13,13 +13,15 @@ export function Steps({ items }) {
 
   return (
     <div className="steps">
-      {items.map((item) => (
-        <div className="steps__item">
+      {items.map((item, i) => (
+        <div className="steps__item" key={i}>
           <div className="steps__item__dot" />
           <Text className="steps__item__title">{item.title}</Text>
-          <Label as="p" className="steps__item__subTitle">
-            {item.subTitle}
-          </Label>
+          {item.subTitle && (
+            <Label as="p" className="steps__item__subTitle">
+              {item.subTitle}
+            </Label>
+          )}
         </div>
       ))}
     </div>

@@ -73,7 +73,7 @@ Card.Body = CardBody;
 
 CardHeader.propTypes = {
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired,
+  subTitle: PropTypes.string,
   align: PropTypes.oneOf(["center", "left", "right"]),
   action: PropTypes.node,
 };

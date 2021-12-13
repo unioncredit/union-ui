@@ -38,7 +38,7 @@ export const Input = forwardRef(
         })}
       >
         {label && (
-          <Label className="input-label" for={name}>
+          <Label className="input-label" htmlFor={name}>
             {label}
           </Label>
         )}
@@ -90,7 +90,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   cta: PropTypes.node,
-  suffix: PropTypes.string,
+  suffix: PropTypes.any,
   type: PropTypes.oneOf(["text", "number"]),
 };
 
