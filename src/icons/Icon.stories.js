@@ -35,6 +35,7 @@ import { ReactComponent as Calendar } from "./calendar.svg";
 import { ReactComponent as Cancel } from "./cancelVouch.svg";
 import { ReactComponent as Switch } from "./switch.svg";
 import { ReactComponent as Logo } from "./logo.svg";
+import { ReactComponent as Chevron } from "./chevron.svg";
 
 export default {
   title: "components/icons",
@@ -71,6 +72,7 @@ const icons = [
   ArrowRight,
   Union,
   Switch,
+  Chevron,
 ];
 
 export const all = () => (
