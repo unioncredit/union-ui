@@ -77,8 +77,14 @@ const variants = [
     { variant: "polygon", loading: true, label: "Polygon Button" },
   ],
   [
-    { icon: "vouch", variant: "lite", label: "Lite Button" },
-    { icon: "arrow-left", variant: "lite", label: "Back to Overview" },
+    { variant: "lite", label: "Lite Button" },
+    { variant: "lite", label: "Back to Overview" },
+    {
+      icon: Filter,
+      variant: "lite",
+      label: "Back to Overview",
+      loading: true,
+    },
   ],
 ];
 

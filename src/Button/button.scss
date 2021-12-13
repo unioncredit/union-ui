@@ -288,6 +288,15 @@
     padding-left: 0;
     padding-right: 0;
 
+    &.button--loading {
+      color: transparent;
+
+      svg:not(.loading-spinner) * {
+        fill: transparent;
+        stroke: transparent;
+      }
+    }
+
     svg polygon,
     svg path {
       fill: $grey500;
