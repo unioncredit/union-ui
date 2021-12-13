@@ -73,7 +73,7 @@ Button.propTypes = {
     "floating",
     "lite",
   ]),
-  icon: PropTypes.node,
+  icon: PropTypes.any,
   rounded: PropTypes.bool,
   iconPosition: PropTypes.oneOf(["start", "end"]),
   label: PropTypes.string,

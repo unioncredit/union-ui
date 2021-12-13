@@ -18,6 +18,7 @@ export const Card = forwardRef(
       className,
       noGutter,
       bordered,
+      onClick,
       ...props
     },
     ref
@@ -33,6 +34,7 @@ export const Card = forwardRef(
           "card--bordered": bordered,
         })}
         style={propsToStyles(props)}
+        onClick={onClick}
       >
         {children}
       </div>
@@ -81,5 +83,6 @@ Card.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large", "fluid"]),
   className: PropTypes.string,
   noGutter: PropTypes.bool,
+  onClick: PropTypes.func,
   packed: PropTypes.bool,
 };

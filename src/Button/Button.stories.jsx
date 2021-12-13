@@ -6,6 +6,7 @@ import { ButtonRow } from "./ButtonRow";
 import { ReactComponent as Vouch } from "../icons/vouch.svg";
 import { ReactComponent as Avatar } from "../icons/avatar.svg";
 import { ReactComponent as Filter } from "../icons/filter.svg";
+import { ReactComponent as Chevron } from "../icons/chevron.svg";
 
 export default {
   component: Button,
@@ -80,7 +81,7 @@ const variants = [
     { variant: "lite", label: "Lite Button" },
     { variant: "lite", label: "Back to Overview" },
     {
-      icon: Filter,
+      icon: Chevron,
       variant: "lite",
       label: "Back to Overview",
       loading: true,
