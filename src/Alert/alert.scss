@@ -1,20 +1,33 @@
 @import "../variables.scss";
 
 .alert {
-  padding: 4px 12px 4px 12px;
+  padding: 4px 4px 4px 12px;
   border-radius: 13px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-height: 48px;
   background-color: $grey100;
   width: 100%;
   box-sizing: border-box;
 
+  &__icon svg {
+    width: 24px;
+    margin-right: 8px;
+  }
+
+  &__action {
+    margin-left: auto;
+  }
+
   &--small {
     padding: 16px 14px;
+
     .text {
       font-size: 12px !important;
+    }
+
+    .alert__icon svg {
+      width: 16px;
     }
   }
 
@@ -23,6 +36,10 @@
 
     .text {
       color: $color800;
+    }
+
+    .alert__icon svg path {
+      fill: $color800;
     }
 
     .button.button--secondary {
