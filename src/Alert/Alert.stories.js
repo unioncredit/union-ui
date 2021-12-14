@@ -4,6 +4,7 @@ import { Alert } from "./Alert";
 import { Box } from "../Box";
 
 import { ReactComponent as WireInfo } from "../icons/wireInfo.svg";
+import { ReactComponent as WireCheck } from "../icons/wireCheck.svg";
 
 export default {
   component: Alert,
@@ -47,12 +48,18 @@ export const Small = () => (
       />
     </Box>
     <Box m="10px">
-      <Alert size="small" variant="info" label="Overdue payment of 1.82 DAI" />
+      <Alert
+        size="small"
+        icon={<WireInfo />}
+        variant="info"
+        label="Overdue payment of 1.82 DAI"
+      />
     </Box>
     <Box m="10px">
       <Alert
         size="small"
         variant="success"
+        icon={<WireCheck />}
         label="Overdue payment of 1.82 DAI"
       />
     </Box>

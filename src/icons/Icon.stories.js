@@ -37,6 +37,7 @@ import { ReactComponent as Switch } from "./switch.svg";
 import { ReactComponent as Logo } from "./logo.svg";
 import { ReactComponent as Chevron } from "./chevron.svg";
 import { ReactComponent as WireInfo } from "./wireInfo.svg";
+import { ReactComponent as WireCheck } from "./wireCheck.svg";
 
 export default {
   title: "components/icons",
@@ -75,6 +76,7 @@ const icons = [
   Switch,
   Chevron,
   WireInfo,
+  WireCheck,
 ];
 
 export const all = () => (
