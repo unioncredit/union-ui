@@ -38,6 +38,7 @@ import { ReactComponent as Logo } from "./logo.svg";
 import { ReactComponent as Chevron } from "./chevron.svg";
 import { ReactComponent as WireInfo } from "./wireInfo.svg";
 import { ReactComponent as WireCheck } from "./wireCheck.svg";
+import { ReactComponent as Link } from "./link.svg";
 
 export default {
   title: "components/icons",
@@ -77,6 +78,7 @@ const icons = [
   Chevron,
   WireInfo,
   WireCheck,
+  Link,
 ];
 
 export const all = () => (
