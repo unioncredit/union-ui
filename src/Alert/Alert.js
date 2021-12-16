@@ -8,12 +8,21 @@ import { propsToStyles } from "../spacing";
 
 import "./alert.scss";
 
-export function Alert({ label, action, size, variant, icon, ...props }) {
+export function Alert({
+  packed,
+  label,
+  action,
+  size,
+  variant,
+  icon,
+  ...props
+}) {
   return (
     <div
       className={cn("alert", {
         [`alert--${variant}`]: variant,
         [`alert--${size}`]: size,
+        "alert--packed": packed,
       })}
       style={propsToStyles(props)}
     >
@@ -32,6 +41,7 @@ Alert.propTypes = {
   size: PropTypes.oneOf(["default", "small"]),
   variant: PropTypes.oneOf(["warning", "info", "success"]),
   icon: PropTypes.node,
+  packed: PropTypes.bool,
 };
 
 Alert.defaultProps = {

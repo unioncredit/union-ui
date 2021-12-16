@@ -63,5 +63,33 @@ export const Small = () => (
         label="Overdue payment of 1.82 DAI"
       />
     </Box>
+
+    <Box m="10px">
+      <Alert
+        packed
+        size="small"
+        variant="warning"
+        label="Overdue payment of 1.82 DAI"
+        icon={<WireInfo />}
+      />
+    </Box>
+    <Box m="10px">
+      <Alert
+        packed
+        size="small"
+        icon={<WireInfo />}
+        variant="info"
+        label="Overdue payment of 1.82 DAI"
+      />
+    </Box>
+    <Box m="10px">
+      <Alert
+        packed
+        size="small"
+        variant="success"
+        icon={<WireCheck />}
+        label="Overdue payment of 1.82 DAI"
+      />
+    </Box>
   </>
 );

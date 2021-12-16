@@ -30,6 +30,10 @@
     }
   }
 
+  &--packed {
+    padding: 12px;
+  }
+
   @mixin variant($color200, $color300, $color400, $color500, $color800) {
     background-color: $color200;
 
@@ -57,13 +61,22 @@
 
   &--warning {
     @include variant($amber200, $amber300, $amber400, $amber500, $amber800);
+    &.alert--small {
+      background: $amber100;
+    }
   }
 
   &--info {
     @include variant($blue200, $blue300, $blue400, $blue500, $blue800);
+    &.alert--small {
+      background: $blue50;
+    }
   }
 
   &--success {
     @include variant($green200, $green300, $green400, $green500, $green800);
+    &.alert--small {
+      background: $green50;
+    }
   }
 }
