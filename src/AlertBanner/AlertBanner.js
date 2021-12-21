@@ -14,7 +14,7 @@ export function AlertBanner({ label, onClose }) {
         </Label>
       </div>
       {onClose && (
-        <div className="alertBanner__close">
+        <div className="alertBanner__close" onClick={onClose}>
           <Cross width="24px" />
         </div>
       )}
