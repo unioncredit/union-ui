@@ -40,3 +40,4 @@ export * from "./MiniProgressList";
 export * from "./Alert";
 export * from "./Collapse";
 export * from "./TabNav";
+export * from "./AlertBanner";
