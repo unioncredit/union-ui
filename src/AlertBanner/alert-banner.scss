@@ -1,0 +1,31 @@
+@import "../variables.scss";
+
+.alertBanner {
+  position: relative;
+  width: 100%;
+  background-color: $orange600;
+  color: white;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+
+  .label {
+    color: white;
+
+    @media screen and (max-width: $breakpoint-xs) {
+      padding-right: 24px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 4px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+
+    svg path {
+      fill: $orange800;
+    }
+  }
+}
