@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Label } from "../Label";
-import { ReactComponent as Cross } from "../icons/cross.svg";
+import Cross from "../icons/cross.svg";
 
 import "./alert-banner.scss";
 
