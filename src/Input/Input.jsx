@@ -21,6 +21,7 @@ export const Input = forwardRef(
       onChange,
       type,
       error,
+      defaultValue,
     },
     ref
   ) => {
@@ -58,6 +59,7 @@ export const Input = forwardRef(
               value={value}
               placeholder={placeholder}
               autoComplete="off"
+              defaultValue={defaultValue}
               // allow input of decimal places
               {...(type === "number" ? { step: "any" } : {})}
             />
