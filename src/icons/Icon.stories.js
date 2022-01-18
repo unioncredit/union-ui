@@ -40,6 +40,7 @@ import { ReactComponent as WireInfo } from "./wireInfo.svg";
 import { ReactComponent as WireCheck } from "./wireCheck.svg";
 import { ReactComponent as Link } from "./link.svg";
 import { ReactComponent as Cross } from "./cross.svg";
+import { ReactComponent as Discord } from "./discord.svg";
 
 export default {
   title: "components/icons",
@@ -61,6 +62,7 @@ const icons = [
   External,
   Search,
   Twitter,
+  Discord,
   Telegram,
   Filter,
   NewVouch,
