@@ -3,6 +3,10 @@
 .steps {
   $dotSize: 4px;
 
+  a {
+    text-decoration: none;
+  }
+
   &__item {
     position: relative;
     margin-bottom: 8px;
