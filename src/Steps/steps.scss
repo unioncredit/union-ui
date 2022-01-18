@@ -48,25 +48,25 @@
       left: 0;
       top: 8px;
 
-      .steps__item:first-of-type &--blue {
+      .steps__item:last-of-type &--blue {
         background-color: $blue600;
         border: 2px solid $blue200;
         left: -2px;
       }
 
-      .steps__item:first-of-type &--green {
+      .steps__item:last-of-type &--green {
         background-color: $green600;
         border: 2px solid $green200;
         left: -2px;
       }
 
-      .steps__item:first-of-type &--red {
+      .steps__item:last-of-type &--red {
         background-color: $red600;
         border: 2px solid $red100;
         left: -2px;
       }
 
-      .steps__item:first-of-type &--purple {
+      .steps__item:last-of-type &--purple {
         background-color: $purple600;
         border: 2px solid $purple100;
         left: -2px;
