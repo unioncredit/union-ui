@@ -15,7 +15,11 @@ export function Steps({ items }) {
     <div className="steps">
       {items.map((item, i) => (
         <div className="steps__item" key={i}>
-          <div className="steps__item__dot" />
+          <div
+            className={`steps__item__dot steps__item__dot--${
+              item.color || "blue"
+            }`}
+          />
           <Text className="steps__item__title">{item.title}</Text>
           {item.subTitle && (
             <Label as="p" className="steps__item__subTitle">

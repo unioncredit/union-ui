@@ -2,6 +2,7 @@
 
 .steps {
   $dotSize: 4px;
+
   &__item {
     position: relative;
     margin-bottom: 8px;
@@ -45,11 +46,29 @@
       background-color: $grey500;
       position: absolute;
       left: 0;
-      top: 4px;
+      top: 8px;
 
-      .steps__item:first-of-type & {
+      .steps__item:first-of-type &--blue {
         background-color: $blue600;
         border: 2px solid $blue200;
+        left: -2px;
+      }
+
+      .steps__item:first-of-type &--green {
+        background-color: $green600;
+        border: 2px solid $green200;
+        left: -2px;
+      }
+
+      .steps__item:first-of-type &--red {
+        background-color: $red600;
+        border: 2px solid $red100;
+        left: -2px;
+      }
+
+      .steps__item:first-of-type &--purple {
+        background-color: $purple600;
+        border: 2px solid $purple100;
         left: -2px;
       }
     }
