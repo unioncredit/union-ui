@@ -23,10 +23,14 @@
 
     .text {
       font-size: 12px !important;
+      line-height: normal;
     }
 
-    .alert__icon svg {
-      width: 24px;
+    .alert__icon {
+      margin-right: 4px;
+      svg {
+        width: 24px;
+      }
     }
   }
 
