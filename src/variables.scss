@@ -88,6 +88,7 @@ $shadesOfGrey: (
 }
 
 $colors: (
+  "white": white,
   // blues
   "blue50": $blue50,
   "blue100": $blue100,
@@ -115,7 +116,7 @@ $colors: (
   "purple600": $purple600,
   // amber
   "amber100": $amber100,
-  "amber600": $amber600
+  "amber600": $amber600,
 );
 
 @mixin colors {
