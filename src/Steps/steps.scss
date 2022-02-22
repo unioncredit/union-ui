@@ -33,12 +33,12 @@
       display: none;
     }
 
-    &__title {
+    .text#{&}__title {
       color: $grey700;
       margin: 0;
     }
 
-    &__subTitle {
+    .text#{&}__subTitle {
       color: #8e8b9a;
       margin: 0;
     }
