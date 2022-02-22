@@ -9,6 +9,10 @@
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
 
+  @media screen and (max-width: $breakpoint-xs) {
+    white-space: normal;
+  }
+
   &:last-of-type {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
