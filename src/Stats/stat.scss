@@ -11,6 +11,10 @@
     white-space: nowrap;
     text-transform: uppercase;
 
+    @media screen and (max-width: $breakpoint-xs) {
+      white-space: normal;
+    }
+
     .label {
       color: inherit;
     }
