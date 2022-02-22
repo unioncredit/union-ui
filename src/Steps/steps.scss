@@ -5,6 +5,17 @@
 
   a {
     text-decoration: none;
+    display: flex;
+
+    svg {
+      display: none;
+      width: 24px;
+      margin-left: 4px;
+    }
+
+    &:hover svg {
+      display: block;
+    }
   }
 
   &__item {

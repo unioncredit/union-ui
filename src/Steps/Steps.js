@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 
 import { Text } from "../Text";
 import { Label } from "../Label";
+import External from "../icons/external.svg";
 
 import "./steps.scss";
 
 const withHref = (element, href) => (
   <a href={href} target="_blank" rel="norefferrer">
-    {element}
+    {element} <External />
   </a>
 );
 
