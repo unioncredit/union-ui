@@ -1,6 +1,6 @@
 {
   "name": "union-ui",
-  "version": "0.2.64",
+  "version": "0.2.65",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
