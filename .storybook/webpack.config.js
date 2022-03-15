@@ -1,15 +1,24 @@
 module.exports = ({ config }) => {
-  const assetRule = config.module.rules.find(({ test }) => test.test(".svg"));
+  config.module.rules = config.module.rules.map((rule) => {
+    if (
+      String(rule.test) ===
+      String(
+        /\.(svg|ico|jpg|jpeg|png|apng|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/
+      )
+    ) {
+      return {
+        ...rule,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
+      };
+    }
 
-  const assetLoader = {
-    loader: assetRule.loader,
-    options: assetRule.options || assetRule.query,
-  };
+    return rule;
+  });
 
-  // Merge our rule with existing assetLoader rules
-  config.module.rules.unshift({
+  // use svgr for svg files
+  config.module.rules.push({
     test: /\.svg$/,
-    use: ["@svgr/webpack", assetLoader],
+    use: ["@svgr/webpack"],
   });
 
   return config;
