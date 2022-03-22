@@ -13,13 +13,15 @@ export function Modal({ children, onClose, title, size }) {
       {title && <Card.Header title={title} align="center" />}
       <Card.Body>
         {children}
-        <Button
-          mt="10px"
-          variant="secondary"
-          onClick={onClose}
-          label="Close"
-          fluid
-        />
+        {onClose && (
+          <Button
+            mt="10px"
+            variant="secondary"
+            onClick={onClose}
+            label="Close"
+            fluid
+          />
+        )}
       </Card.Body>
     </Card>
   );
