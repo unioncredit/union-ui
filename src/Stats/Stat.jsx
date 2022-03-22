@@ -18,11 +18,12 @@ export function Stat({
   align,
   tooltip,
   tooltipProps,
+  className,
   ...props
 }) {
   return (
     <Box
-      className={cn("stat", {
+      className={cn("stat", className, {
         [`stat--${size}`]: size,
         [`stat--${align}`]: align,
       })}
