@@ -6,10 +6,10 @@ import { propsToStyles } from "../spacing";
 
 import "./badge.scss";
 
-export function Badge({ color, label, ...props }) {
+export function Badge({ color, label, className, ...props }) {
   return (
     <div
-      className={cn("badge", { [`badge--${color}`]: color })}
+      className={cn("badge", className, { [`badge--${color}`]: color })}
       style={propsToStyles(props)}
     >
       {label}
