@@ -8,26 +8,41 @@ import "./skeleton.scss";
 
 export function Skeleton({
   variant,
-  width,
-  height,
+  width: inputWidth,
+  height: inputHeight,
   grey,
   shimmer,
   size,
+  color,
   ...props
 }) {
+  const width = size || inputWidth;
+  const height = size || inputHeight;
+
   return (
     <div
       className={cn("skeleton", {
         [`skeleton--${variant}`]: variant,
         [`skeleton--grey${grey}`]: grey,
+        [`skeleton--${color}`]: color,
         "skeleton--shimmer": shimmer,
       })}
       style={{
-        width: size || width + "px",
-        height: size || height + "px",
+        width: width + "px",
+        height: height + "px",
         ...propsToStyles(props),
       }}
-    ></div>
+    >
+      {color && (
+        <div
+          className="inner"
+          style={{
+            width: width * 0.5 + "px",
+            height: height * 0.5 + "px",
+          }}
+        ></div>
+      )}
+    </div>
   );
 }
 
