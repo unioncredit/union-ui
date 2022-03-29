@@ -1,5 +1,5 @@
 {
-  "name": "union-ui",
+  "name": "@unioncredit/ui",
   "version": "0.2.78",
   "description": "",
   "main": "lib/index.js",
@@ -9,7 +9,6 @@
     "build-storybook": "build-storybook -o ./build",
     "build": "rollup -c",
     "format": "prettier --write \"src/**/*.{js,scss,jsx}\"",
-    "upload": "aws s3 sync ./build s3://union-ui-beta --profile jacobford",
     "prepare": "npm run build"
   },
   "author": "",
