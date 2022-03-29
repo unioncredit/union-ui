@@ -38,7 +38,12 @@ export function Steps({ items }) {
             />
             {title}
             {item.subTitle && (
-              <Label as="p" className="steps__item__subTitle">
+              <Label
+                as="p"
+                className="steps__item__subTitle"
+                size="small"
+                grey={400}
+              >
                 {item.subTitle}
               </Label>
             )}
