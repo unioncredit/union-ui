@@ -3,11 +3,12 @@
 
   .badge:last-child {
     padding-left: 8px !important;
+    margin-left: 0 !important;
   }
 
   .badge {
-    padding-left: 16px !important ;
-    margin-left: -10px;
+    padding-left: 24px !important ;
+    margin-left: -20px;
     border: 2px solid white;
     box-sizing: border-box;
   }
