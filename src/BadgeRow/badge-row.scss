@@ -1,0 +1,14 @@
+.badgeRow {
+  flex-direction: row-reverse !important;
+
+  .badge:last-child {
+    padding-left: 8px !important;
+  }
+
+  .badge {
+    padding-left: 16px !important ;
+    margin-left: -10px;
+    border: 2px solid white;
+    box-sizing: border-box;
+  }
+}
