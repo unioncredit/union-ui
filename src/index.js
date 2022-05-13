@@ -42,3 +42,4 @@ export * from "./Collapse";
 export * from "./TabNav";
 export * from "./AlertBanner";
 export * from "./BadgeRow";
+export * from "./UsageChart";

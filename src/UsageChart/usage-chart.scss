@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.usageChart {
+  border-radius: 6px;
+  background: $grey50;
+  border: 1px solid $grey200;
+  padding: 1px;
+  display: flex;
+  width: 100%;
+
+  &__section {
+    border-radius: 4px;
+    margin: 1px;
+
+    &:nth-child(1) {
+      background: $violet400;
+    }
+    &:nth-child(2) {
+      background: $blue400;
+    }
+    &:nth-child(3) {
+      background: $amber400;
+    }
+    &:nth-child(4) {
+      background: $red400;
+    }
+  }
+}
