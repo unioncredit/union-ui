@@ -9,6 +9,12 @@ export default {
   title: "Components/MiniProgressList",
 };
 
+const items = [
+  { number: 1, complete: true },
+  { number: 2, anchor: "second" },
+  { number: 3, anchor: "third" },
+];
+
 export const Default = () => <MiniProgressList items={items} />;
 
 export const Scrolling = () => {

@@ -3,10 +3,10 @@ import React from "react";
 import { Button } from "./Button";
 import { ButtonRow } from "./ButtonRow";
 
-import { ReactComponent as Vouch } from "../icons/vouch.svg";
-import { ReactComponent as Avatar } from "../icons/avatar.svg";
-import { ReactComponent as Filter } from "../icons/filter.svg";
-import { ReactComponent as Chevron } from "../icons/chevron.svg";
+import Vouch from "../icons/vouch.svg";
+import Avatar from "../icons/avatar.svg";
+import Filter from "../icons/filter.svg";
+import Chevron from "../icons/chevron.svg";
 
 export default {
   component: Button,

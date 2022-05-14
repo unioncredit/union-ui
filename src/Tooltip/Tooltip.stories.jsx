@@ -4,7 +4,7 @@ import { Tooltip } from "./Tooltip";
 import { Label } from "../Label";
 import { Box } from "../Box";
 import { Button } from "../Button";
-import { ReactComponent as Icon } from "../icons/tooltip.svg";
+import Icon from "../icons/tooltip.svg";
 
 export default {
   component: Tooltip,
@@ -20,7 +20,7 @@ export const Default = () => (
       <Label as="p">
         The quick brown fox jumps over the lazy dog (top){" "}
         <Tooltip content={content}>
-          <Icon />
+          <Icon width="16px" />
         </Tooltip>
       </Label>
     </Box>
@@ -28,7 +28,7 @@ export const Default = () => (
       <Label as="p">
         The quick brown fox jumps over the lazy dog (right){" "}
         <Tooltip position="right" content={content}>
-          <Icon />
+          <Icon width="16px" />
         </Tooltip>
       </Label>
     </Box>
@@ -36,7 +36,7 @@ export const Default = () => (
       <Label as="p">
         The quick brown fox jumps over the lazy dog (bottom){" "}
         <Tooltip position="bottom" content={content}>
-          <Icon />
+          <Icon width="16px" />
         </Tooltip>
       </Label>
     </Box>
@@ -44,7 +44,7 @@ export const Default = () => (
       <Label as="p">
         The quick brown fox jumps over the lazy dog (left){" "}
         <Tooltip position="left" content={content}>
-          <Icon />
+          <Icon width="16px" />
         </Tooltip>
       </Label>
     </Box>
