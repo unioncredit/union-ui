@@ -9,6 +9,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    padding: 0;
 
     &--small {
       max-width: 280px;
@@ -35,6 +36,7 @@
     overflow-x: hidden;
     padding-left: 3px;
     padding-right: 3px;
+    padding: 24px; 
 
     &::-webkit-scrollbar {
       display: none;
@@ -51,5 +53,18 @@
     .heading {
       margin: 0;
     }
+  }
+
+  .closeWrapper > svg > path {
+    fill: $grey100;
+  }
+
+  .closeWrapper > svg > path:nth-of-type(2) {
+    fill: $grey500;
+  }
+
+  .modalHeaderWrapper {
+    border-bottom: 1px solid $grey100;
+    padding: 0 24px 24px 24px;
   }
 }
