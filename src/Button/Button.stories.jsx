@@ -87,6 +87,13 @@ const variants = [
       loading: true,
     },
   ],
+  [
+    {
+      packed: true,
+      variant: "primary",
+      label: "Packed button",
+    },
+  ],
 ];
 
 export const Primary = () => (

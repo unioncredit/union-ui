@@ -302,4 +302,10 @@
       fill: $grey500;
     }
   }
+
+  &--packed {
+    padding: 6px 16px;
+    min-height: 0;
+    font-size: 12px;
+  }
 }

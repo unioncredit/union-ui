@@ -23,6 +23,7 @@ export const Button = forwardRef(
       fluid,
       loading,
       disabled,
+      packed,
       as,
       size = "default",
       ...props
@@ -44,6 +45,7 @@ export const Button = forwardRef(
           "button--noLabel": !label && !children,
           "button--loading": loading,
           "button--withIcon": !!Icon,
+          "button--packed": packed,
           [`button--${variant}`]: variant,
           [`button--icon-pos-${iconPosition}`]: iconPosition,
           [`button--${size}`]: size,
