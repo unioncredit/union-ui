@@ -10,7 +10,9 @@
   background-color: $grey50;
 
   &.button {
-    padding: 8px 10px;
+    height: 32px;
+    min-height: 0;
+    padding: 8px 8px 8px 4px;
   }
 
   .text {

@@ -45,12 +45,13 @@
 }
 
 .context-menu-button {
-  width: 44px;
-  height: 44px;
+  width: 20px;
+  height: 32px;
   background: $grey50;
   box-sizing: border-box;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -70,9 +71,9 @@
 
   span {
     border-radius: 100%;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     background-color: $grey700;
-    margin: 0 1.5px;
+    margin: 1.5px 0;
   }
 }
