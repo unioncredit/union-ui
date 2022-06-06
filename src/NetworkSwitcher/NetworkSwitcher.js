@@ -13,8 +13,8 @@ export function NetworkButton({ onClick, imageSrc, children, label, type }) {
     <Button
       variant="lite"
       onClick={onClick}
-      className={cn("navNetworkSelect", {
-        [`navNetworkSelect--${type}`]: type,
+      className={cn("networkSwitcher", {
+        [`networkSwitcher--${type}`]: type,
       })}
       label={
         <>
@@ -29,8 +29,9 @@ export function NetworkButton({ onClick, imageSrc, children, label, type }) {
 export function NetworkSwitcher({ onChange, options, defaultOption }) {
   const [selected, setSelected] = useState(defaultOption || options[0]);
 
-  const handleClick = (option) => () => {
+  const handleClick = (option) => (toggleOpen) => {
     setSelected(option);
+    toggleOpen();
     onChange && onChange(option);
   };
 
@@ -40,7 +41,11 @@ export function NetworkSwitcher({ onChange, options, defaultOption }) {
         ...option,
         onClick: handleClick(option),
       }))}
-      button={(open) => <NetworkButton onClick={open} {...selected} />}
+      button={(open) => (
+        <div className="networkSwitcher__buttonContainer">
+          <NetworkButton onClick={open} {...selected} />
+        </div>
+      )}
     />
   );
 }

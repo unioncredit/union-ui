@@ -1,14 +1,21 @@
 @import "../variables.scss";
 
-.button.navNetworkSelect {
+.networkSwitcher__buttonContainer {
+  width: 130px;
+}
+
+.button.networkSwitcher {
   height: 35.5px;
   min-height: 0;
   padding: 0 8px 0 4px;
-  margin: 0 4px 4px 4px;
-  width: calc(100% - 8px);
   box-sizing: border-box;
   justify-content: flex-start;
   border: 1px solid transparent;
+
+  .context-menu & {
+    margin: 0 4px 4px 4px;
+    width: calc(100% - 8px);
+  }
 
   &--arbitrum {
     background-color: $blue50;

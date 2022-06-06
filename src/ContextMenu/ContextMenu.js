@@ -37,9 +37,12 @@ export function ContextMenu({ items, after, position, button }) {
             [`context-menu--${position}`]: position,
           })}
         >
-          {items.map(({ label, className, as, ...item }) => {
+          {items.map(({ label, className, as, onClick, ...item }) => {
             const props = {
               className: cn("context-menu__item", className),
+              onClick: () => {
+                onClick && onClick(toggleOpen);
+              },
               ...item,
             };
 

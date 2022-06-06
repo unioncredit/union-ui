@@ -9,7 +9,7 @@ export function Nav({ children, mobile, onLogoClick, logoComponent: Logo }) {
   return (
     <nav className={cn("nav", { "nav--mobile": mobile })}>
       <div className="nav__logo">
-        <Logo width="24px" onClick={onLogoClick} />
+        <Logo width="32" onClick={onLogoClick} />
       </div>
       {children}
     </nav>
