@@ -47,7 +47,6 @@
 .context-menu-button {
   width: 20px;
   height: 32px;
-  background: $grey50;
   box-sizing: border-box;
   border-radius: 10px;
   display: flex;
@@ -55,25 +54,26 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border: 1px solid transparent;
 
-  &:hover:not(&--open) {
-    background-color: $grey100;
+  &:hover:not(&--open) span {
+    background: $grey700;
   }
 
-  &:active,
-  &:active:not(&--open) {
-    background-color: $grey200;
+  &:active span,
+  &:active:not(&--open) span {
+    background-color: $grey700;
   }
 
-  &--open {
-    background-color: $grey300;
+  &--open span {
+    background-color: $grey700;
   }
 
   span {
     border-radius: 100%;
     width: 3px;
     height: 3px;
-    background-color: $grey700;
+    background-color: $grey400;
     margin: 1.5px 0;
   }
 }
