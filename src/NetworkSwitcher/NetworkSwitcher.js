@@ -4,35 +4,10 @@ import { Avatar } from "../Avatar";
 import { Button } from "../Button";
 import { ContextMenu } from "../ContextMenu";
 
-import AbitrumAvatar from "../assets/arbitrum-avatar.png";
-import EthereumAvatar from "../assets/ethereum-avatar.png";
-import KovanAvatar from "../assets/kovan-avatar.png";
-
 import "./network-switcher.scss";
 import { useState } from "react";
 
-const options = [
-  {
-    label: "Ethereum",
-    type: "ethereum",
-    imageSrc: EthereumAvatar,
-    as: NetworkButton,
-  },
-  {
-    label: "Arbitrum",
-    type: "arbitrum",
-    imageSrc: AbitrumAvatar,
-    as: NetworkButton,
-  },
-  {
-    label: "Kovan",
-    type: "kovan",
-    imageSrc: KovanAvatar,
-    as: NetworkButton,
-  },
-];
-
-function NetworkButton({ onClick, imageSrc, children, label, type }) {
+export function NetworkButton({ onClick, imageSrc, children, label, type }) {
   return (
     <Button
       variant="lite"
@@ -50,8 +25,8 @@ function NetworkButton({ onClick, imageSrc, children, label, type }) {
   );
 }
 
-export function NetworkSwitcher({ onChange }) {
-  const [selected, setSelected] = useState(options[0]);
+export function NetworkSwitcher({ onChange, options, defaultOption }) {
+  const [selected, setSelected] = useState(defaultOption || options[0]);
 
   const handleClick = (option) => () => {
     setSelected(option);
@@ -68,4 +43,3 @@ export function NetworkSwitcher({ onChange }) {
     />
   );
 }
-
