@@ -4,6 +4,12 @@
   box-shadow: 0px 14px 30px -16px #1e1c22;
   max-width: 446px;
   width: 100%;
+  overflow: hidden;
+
+  &__footer {
+    background: $grey50;
+    padding: 24px;
+  }
 
   &.card {
     display: flex;

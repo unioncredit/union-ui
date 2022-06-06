@@ -8,7 +8,7 @@ import Close from "../icons/close.svg";
 
 import "./modal.scss";
 
-export function Modal({ children, onClose, title, size }) {
+export function Modal({ children, onClose, title, size, footer }) {
   return (
     <Card className={cn("modal")} size={size}>
       <Box
@@ -24,6 +24,7 @@ export function Modal({ children, onClose, title, size }) {
         )}
       </Box>
       <Card.Body>{children}</Card.Body>
+      {footer && <div className="modal__footer">{footer}</div>}
     </Card>
   );
 }
@@ -33,4 +34,5 @@ Modal.propTypes = {
   children: PropTypes.any,
   onClose: PropTypes.func,
   title: PropTypes.string,
+  footer: PropTypes.any,
 };
