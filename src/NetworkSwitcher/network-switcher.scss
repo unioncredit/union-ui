@@ -12,6 +12,7 @@
 
   &--arbitrum {
     background-color: $blue50;
+    color: $blue500;
 
     &:hover {
       background-color: $blue100;
@@ -21,6 +22,7 @@
 
   &--ethereum {
     background-color: $grey50;
+    color: $grey500;
 
     &:hover {
       background-color: $grey100;
@@ -30,6 +32,7 @@
 
   &--kovan {
     background-color: #f8fafc;
+    color: #64748b;
 
     &:hover {
       background-color: #f1f5f9;
