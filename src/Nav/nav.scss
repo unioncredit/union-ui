@@ -1,27 +1,9 @@
 @import "../variables.scss";
 
 .nav {
-  padding: 0 24px 0 0;
+  padding: 0;
   box-sizing: border-box;
   flex-direction: row;
   display: flex;
   align-items: center;
-
-  &__logo {
-    margin-right: 8px;
-  }
-
-  @media screen and (max-width: $breakpoint-s) {
-    .union-logo {
-      width: 36px;
-      height: 36px;
-    }
-  }
-
-  @media screen and (min-width: $breakpoint-s) {
-    .union-logo {
-      width: unset;
-      height: unset;
-    }
-  }
 }
