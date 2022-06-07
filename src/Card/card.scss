@@ -38,7 +38,7 @@
   &--packed {
     padding: 0 16px;
     border-radius: 16px;
-    .card-body {
+    &.card .card-body {
       padding: 16px 0;
     }
   }

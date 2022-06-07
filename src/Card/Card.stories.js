@@ -143,3 +143,18 @@ export const Blue = () => (
     </Card>
   </>
 );
+
+export const packed = () => {
+  return (
+    <Card packed variant="blue" size="small" mt="44px" bordered>
+      <Card.Body>
+        <Heading m={0} align="center">
+          Get Extra Credit
+        </Heading>
+        <Text m={0} align="center">
+          This is a small card
+        </Text>
+      </Card.Body>
+    </Card>
+  );
+};
