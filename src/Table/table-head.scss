@@ -1,22 +1,17 @@
 @import "../variables.scss";
 
-.table-cell {
-  padding: 10px 8px;
+.table-head {
+  padding: 8px 8px;
+  font-weight: 500;
   box-sizing: border-box;
+  text-align: left;
   vertical-align: middle;
   white-space: nowrap;
   text-overflow: clip;
   border-bottom: 1px solid $grey200;
-  
-  &--fixed-size {
-    width: 1px;
-  }
-
-  .table-row--active & {
-    // border-top: 2px solid $blue500;
-    // border-bottom: 2px solid $blue500;
-    background-color: $blue100;
-  }
+  font-size: 12px;
+  color: $grey500;
+  background: $grey50;
 
   &--align-center {
     text-align: center;
@@ -34,17 +29,6 @@
     .skeleton {
       margin-left: auto;
     }
-  }
-
-  p {
-    color: inherit;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  .skeleton:last-of-type {
-    margin-bottom: 0;
   }
 
   &:first-of-type {

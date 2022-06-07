@@ -49,6 +49,34 @@ const templates = {
     left: "height",
     right: VAL_STR,
   },
+  p: {
+    left: "padding",
+    right: VAL_STR,
+  },
+  pt: {
+    left: "paddingTop",
+    right: VAL_STR,
+  },
+  pb: {
+    left: "paddingBottom",
+    right: VAL_STR,
+  },
+  py: {
+    left: "padding",
+    right: `${VAL_STR} 0`,
+  },
+  px: {
+    left: "padding",
+    right: `0 ${VAL_STR}`,
+  },
+  pl: {
+    left: "paddingLeft",
+    right: VAL_STR,
+  },
+  pr: {
+    left: "paddingRight",
+    right: VAL_STR,
+  },
 };
 
 export function propsToStyles(props) {

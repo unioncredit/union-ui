@@ -16,7 +16,6 @@ export const Card = forwardRef(
       packed,
       children,
       className,
-      noGutter,
       bordered,
       onClick,
       ...props
@@ -30,7 +29,6 @@ export const Card = forwardRef(
           [`card--${size}`]: size,
           [`card--${variant}`]: variant,
           ["card--packed"]: packed,
-          "card--noGutter": noGutter,
           "card--bordered": bordered,
         })}
         style={propsToStyles(props)}
@@ -82,7 +80,6 @@ Card.propTypes = {
   variant: PropTypes.oneOf(["primary", "blue"]),
   size: PropTypes.oneOf(["small", "medium", "large", "fluid"]),
   className: PropTypes.string,
-  noGutter: PropTypes.bool,
   onClick: PropTypes.func,
   packed: PropTypes.bool,
 };

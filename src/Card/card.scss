@@ -5,7 +5,7 @@
   border: $border;
   background: #ffffff;
   border-radius: 20px;
-  padding: 0 24px;
+  padding: 0;
   box-sizing: border-box;
   width: 100%;
   max-width: 446px;
@@ -14,7 +14,12 @@
 
   &--small {
     max-width: 280px;
-    padding: 0 16px;
+    &.card .card-body {
+      padding: 16px;
+    }
+    &.card .card-header {
+      padding: 16px 16px 0 16px;
+    }
   }
 
   &--medium {
@@ -32,15 +37,14 @@
     max-width: 100%;
   }
 
-  &--noGutter {
-    padding: 0;
-  }
-
   &--packed {
-    padding: 0 16px;
     border-radius: 16px;
     &.card .card-body {
-      padding: 16px 0;
+      padding: 16px;
+    }
+
+    &.card .card-header {
+      padding: 16px 16px 0 16px;
     }
   }
 
@@ -80,7 +84,7 @@
 }
 
 .card-header {
-  padding: 24px 0 0 0;
+  padding: 24px 24px 0 24px;
   display: flex;
 
   &__content {
@@ -95,5 +99,5 @@
 }
 
 .card-body {
-  padding: 24px 0;
+  padding: 24px;
 }

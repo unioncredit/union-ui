@@ -3,13 +3,15 @@ import React from "react";
 import { Table } from "./Table";
 import { TableRow } from "./TableRow";
 import { TableCell } from "./TableCell";
-import { Button } from "../Button";
+import { TableHead } from "./TableHead";
 import { Avatar } from "../Avatar";
 import { Text } from "../Text";
 import { Label } from "../Label";
 import { Badge } from "../Badge";
 import { Bar } from "../Bar";
 import { Skeleton } from "../Skeleton";
+import { Card } from "../Card";
+import { Box } from "../Box";
 
 export default {
   component: Table,
@@ -18,6 +20,13 @@ export default {
 
 export const Default = () => (
   <Table>
+    <TableRow>
+      <TableHead></TableHead>
+      <TableHead>Primary</TableHead>
+      <TableHead>Foo</TableHead>
+      <TableHead>Bar</TableHead>
+      <TableHead>Badge</TableHead>
+    </TableRow>
     {Array(10)
       .fill(0)
       .map((_, i) => (
@@ -26,21 +35,21 @@ export const Default = () => (
           active={i === 2 || i === 4}
           error={i === 4 || i === 1}
         >
-          <TableCell>
+          <TableCell fixedSize>
             <Avatar src="https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg" />
           </TableCell>
-          <TableCell span={4}>
+          <TableCell>
             <Text>Primary Label</Text>
           </TableCell>
-          <TableCell span={1}>
+          <TableCell>
             <Label as="p" size="small">
               Small single label
             </Label>
           </TableCell>
-          <TableCell span={1} align="center">
+          <TableCell align="center">
             <Bar size="small" percentage={60} label="62% No" secondaryBar />
           </TableCell>
-          <TableCell span={1} align="right">
+          <TableCell align="right">
             {i === 2 ? (
               <Badge color="blue" label="Healthy" />
             ) : (
@@ -51,6 +60,45 @@ export const Default = () => (
       ))}
   </Table>
 );
+
+export const TableCard = () => {
+  return (
+    <Card>
+      <Card.Body>Test</Card.Body>
+      <Table>
+        <TableRow>
+          <TableHead></TableHead>
+          <TableHead>Primary</TableHead>
+          <TableHead align="right">Badge</TableHead>
+        </TableRow>
+        {Array(10)
+          .fill(0)
+          .map((_, i) => (
+            <TableRow
+              onClick={() => alert("clicked")}
+              active={i === 2 || i === 4}
+              error={i === 4 || i === 1}
+            >
+              <TableCell fixedSize>
+                <Avatar src="https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg" />
+              </TableCell>
+              <TableCell>
+                <Text>Primary Label</Text>
+              </TableCell>
+              <TableCell align="right">
+                {i === 2 ? (
+                  <Badge color="blue" label="Healthy" />
+                ) : (
+                  <Badge color="red" label="Defaulted" />
+                )}
+              </TableCell>
+            </TableRow>
+          ))}
+      </Table>
+      <Card.Body>Test</Card.Body>
+    </Card>
+  );
+};
 
 export const Skeletons = () => (
   <Table>

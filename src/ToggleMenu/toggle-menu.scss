@@ -20,6 +20,10 @@
     width: 100%;
   }
 
+  &--packed {
+    border-radius: 22px;
+  }
+
   &__item {
     margin: 0 2px;
     padding: 8px 21px;
@@ -32,10 +36,12 @@
     color: $grey500;
     cursor: pointer;
     text-align: center;
-    
+    border: 1px solid transparent;
+
     .toggle-menu--packed & {
       font-size: 14px !important;
       padding: 2px 21px;
+      border-radius: 18px;
     }
 
     .toggle-menu--fluid & {
@@ -44,6 +50,7 @@
 
     &--active {
       background: #ffffff;
+      border: 1px solid $grey200;
 
       .toggle-menu--secondary & {
         background: $blue600;

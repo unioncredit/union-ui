@@ -3,7 +3,6 @@
 .table-row {
   width: 100%;
   box-sizing: border-box;
-  border: 2px solid transparent;
   vertical-align: middle;
 
   &--clickable {
@@ -12,8 +11,4 @@
       cursor: pointer;
     }
   }
-}
-
-table tr:nth-of-type(4n + 1) {
-  background-color: $grey50;
 }
