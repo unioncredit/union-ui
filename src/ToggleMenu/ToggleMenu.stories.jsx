@@ -25,6 +25,9 @@ export const Default = () => (
     <Box direction="vertical" mb="20px">
       <ToggleMenu items={items} variant="secondary" />
     </Box>
+    <Box direction="vertical" mb="20px">
+      <ToggleMenu packed items={items} />
+    </Box>
   </>
 );
 

@@ -32,6 +32,11 @@
     color: $grey500;
     cursor: pointer;
     text-align: center;
+    
+    .toggle-menu--packed & {
+      font-size: 14px !important;
+      padding: 2px 21px;
+    }
 
     .toggle-menu--fluid & {
       flex-grow: 1;

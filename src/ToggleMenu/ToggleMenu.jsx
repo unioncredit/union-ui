@@ -15,6 +15,7 @@ export function ToggleMenu({
   initialActive,
   className,
   fluid,
+  packed,
 }) {
   const [activeIndex, setActiveIndex] = useState(initialActive);
 
@@ -39,6 +40,7 @@ export function ToggleMenu({
       direction="horizontal"
       className={cn("toggle-menu", className, {
         [`toggle-menu--${variant}`]: variant,
+        "toggle-menu--packed": packed,
         "toggle-menu--fluid": fluid,
       })}
     >
