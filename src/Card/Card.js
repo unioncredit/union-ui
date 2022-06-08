@@ -18,6 +18,7 @@ export const Card = forwardRef(
       className,
       bordered,
       onClick,
+      overflow,
       ...props
     },
     ref
@@ -30,6 +31,7 @@ export const Card = forwardRef(
           [`card--${variant}`]: variant,
           ["card--packed"]: packed,
           "card--bordered": bordered,
+          "card--overflow": overflow,
         })}
         style={propsToStyles(props)}
         onClick={onClick}

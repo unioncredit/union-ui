@@ -11,6 +11,11 @@
   max-width: 446px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
+
+  &--overflow {
+    overflow: unset;
+  }
 
   &--small {
     max-width: 280px;
