@@ -4,21 +4,43 @@ import cn from "classnames";
 
 import { Card } from "../Card";
 import { Box } from "../Box";
+import { Button } from "../Button";
+import { Text } from "../Text";
+
 import Close from "../icons/close.svg";
+import LArrow from "../icons/arrowRight.svg";
 
 import "./modal.scss";
 
-export function Modal({ children, onClose, title, size, footer }) {
+export function Modal({ children, onClose, title, size, footer, onBack }) {
   return (
     <Card className={cn("modal")} size={size}>
-      <Box
-        align="center"
-        justify="space-between"
-        className="modalHeaderWrapper"
-      >
-        {title && <Card.Header title={title} align="left" />}
+      <Box align="center" justify="space-between" className="modalHeader">
+        {onBack && (
+          <Button
+            className="backButton"
+            variant="pill"
+            icon={LArrow}
+            label="Previous"
+            onClick={onBack}
+          />
+        )}
+        {title && (
+          <div className="modal__title">
+            <Text
+              as="h1"
+              size="large"
+              align={onBack ? "center" : "left"}
+              grey={700}
+              weight="medium"
+              m={0}
+            >
+              {title}
+            </Text>
+          </div>
+        )}
         {onClose && (
-          <Box mt="18px" className="closeWrapper">
+          <Box className="closeWrapper">
             <Close width="24px" height="24px" onClick={onClose} />
           </Box>
         )}
@@ -33,6 +55,7 @@ Modal.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large", "fluid"]),
   children: PropTypes.any,
   onClose: PropTypes.func,
+  onBack: PropTypes.func,
   title: PropTypes.string,
   footer: PropTypes.any,
 };

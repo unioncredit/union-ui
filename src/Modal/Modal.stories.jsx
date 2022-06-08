@@ -74,3 +74,13 @@ export const ModalWithOverlay = () => (
     </Modal>
   </ModalOverlay>
 );
+
+export const ModalWithBack = () => (
+  <Modal
+    title="Borrow Funds"
+    onClose={() => alert("modal close")}
+    onBack={() => alert("modal back")}
+  >
+    <Text m={0}>Staked $1000</Text>
+  </Modal>
+);

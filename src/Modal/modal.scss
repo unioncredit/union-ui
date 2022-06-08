@@ -5,10 +5,20 @@
   max-width: 446px;
   width: 100%;
   overflow: hidden;
+  position: relative;
 
   &__footer {
     background: $grey50;
     padding: 24px;
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 24px 0 24px;
   }
 
   &.card {
@@ -42,7 +52,7 @@
     overflow-x: hidden;
     padding-left: 3px;
     padding-right: 3px;
-    padding: 24px; 
+    padding: 24px;
 
     &::-webkit-scrollbar {
       display: none;
@@ -61,16 +71,35 @@
     }
   }
 
-  .closeWrapper > svg > path {
-    fill: $grey100;
+  .closeWrapper {
+    margin-left: auto;
+
+    & > svg > path {
+      fill: $grey100;
+    }
+
+    & > svg > path:nth-of-type(2) {
+      fill: $grey500;
+    }
   }
 
-  .closeWrapper > svg > path:nth-of-type(2) {
-    fill: $grey500;
-  }
-
-  .modalHeaderWrapper {
+  .modalHeader {
     border-bottom: 1px solid $grey100;
-    padding: 0 24px 24px 24px;
+    padding: 24px;
+  }
+
+  .closeWrapper,
+  .backButton {
+    position: relative;
+    z-index: 1;
+  }
+
+  .backButton {
+    padding: 4px 8px 4px 2px;
+
+    svg {
+      transform: rotate(180deg);
+      margin: 0;
+    }
   }
 }
