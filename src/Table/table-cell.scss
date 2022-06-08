@@ -7,15 +7,17 @@
   white-space: nowrap;
   text-overflow: clip;
   border-bottom: 1px solid $grey200;
-  
+
   &--fixed-size {
     width: 1px;
   }
 
   .table-row--active & {
-    // border-top: 2px solid $blue500;
-    // border-bottom: 2px solid $blue500;
     background-color: $blue100;
+  }
+
+  .table-row:last-of-type & {
+    border-bottom: 1px solid transparent;
   }
 
   &--align-center {

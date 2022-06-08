@@ -3,6 +3,8 @@
 .pagination {
   display: flex;
   justify-content: center;
+  border-top: 1px solid $grey200;
+  padding: 16px 0;
 
   &__number {
     width: 24px;
