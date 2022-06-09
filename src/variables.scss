@@ -74,6 +74,7 @@ $shadesOfGrey: (
     &--#{$name} {
       color: $color !important;
 
+      .external-inline path,
       .externalinline_svg__external-inline path {
         fill: $color !important;
       }
@@ -125,6 +126,11 @@ $colors: (
   @each $name, $hex in $colors {
     &--#{$name} {
       color: $hex !important;
+
+      .external-inline path,
+      .externalinline_svg__external-inline path {
+        fill: $hex !important;
+      }
     }
   }
 }

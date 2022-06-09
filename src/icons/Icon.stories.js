@@ -110,7 +110,7 @@ export const IconExternal = () => (
         </Text>
       ))}
 
-    {["blue", "green", "white", "red", "grey", "black", "orange"].map(
+    {["blue500", "green500", "white", "red500", "grey500", "black", "orange500"].map(
       (color) => (
         <Text
           color={color}
@@ -131,7 +131,7 @@ export const IconExternal = () => (
         </div>
       ))}
 
-    {["blue", "green", "white", "red", "grey", "black", "orange"].map(
+    {["blue500", "green500", "white", "red500", "grey500", "black", "orange500"].map(
       (color) => (
         <div>
           <Label
