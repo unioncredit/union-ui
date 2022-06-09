@@ -6,11 +6,11 @@ import { Text } from "../Text";
 import "./nav-item.scss";
 
 export const NavItem = forwardRef(
-  ({ onClick, disabled, label, active }, ref) => {
+  ({ onClick, disabled, label, active, as }, ref) => {
     return (
       <Text
         mx="4px"
-        as="a"
+        as={as || "a"}
         ref={ref}
         tabIndex="0"
         className={cn("nav-item", {
