@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import cn from "classnames";
 
 import { Avatar } from "../Avatar";
@@ -6,7 +6,6 @@ import { Button } from "../Button";
 import { ContextMenu } from "../ContextMenu";
 
 import "./network-switcher.scss";
-import { useState } from "react";
 
 export function NetworkButton({ onClick, imageSrc, children, label, type }) {
   return (
@@ -26,14 +25,26 @@ export function NetworkButton({ onClick, imageSrc, children, label, type }) {
   );
 }
 
-export function NetworkSwitcher({ onChange, options, defaultOption }) {
-  const [selected, setSelected] = useState(defaultOption || options[0]);
+export function NetworkSwitcher({
+  onChange,
+  options,
+  selected: selectedOption,
+}) {
+  const prevSelectedOption = useRef(selectedOption);
+  const [selected, setSelected] = useState(selectedOption || options[0]);
 
   const handleClick = (option) => (toggleOpen) => {
     setSelected(option);
     toggleOpen();
     onChange && onChange(option);
   };
+
+  useEffect(() => {
+    if (selectedOption.id != prevSelectedOption.current.id) {
+      prevSelectedOption.current = selectedOption;
+      setSelected(selectedOption);
+    }
+  }, [selectedOption]);
 
   return (
     <ContextMenu
