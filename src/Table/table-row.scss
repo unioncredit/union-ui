@@ -4,11 +4,25 @@
   width: 100%;
   box-sizing: border-box;
   vertical-align: middle;
+  position: relative;
 
   &--clickable {
     &:hover {
       background-color: $grey100 !important;
       cursor: pointer;
     }
+  }
+
+  &--active:after {
+    $size: 4px;
+    content: "";
+    display: block;
+    width: $size;
+    height: $size;
+    background: $blue500;
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 4px);
+    border-radius: 100%;
   }
 }

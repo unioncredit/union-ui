@@ -13,7 +13,8 @@
   }
 
   .table-row--active & {
-    background-color: $blue100;
+    background-color: $blue50;
+    border-color: $blue200;
   }
 
   .table-row:last-of-type & {
