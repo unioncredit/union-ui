@@ -73,9 +73,18 @@
 
   .closeWrapper {
     margin-left: auto;
+    cursor: pointer;
 
     & > svg > path {
       fill: $grey100;
+    }
+
+    &:hover > svg > path:nth-of-type(1) {
+      stroke: $grey200;
+    }
+
+    &:active > svg > path:nth-of-type(1) {
+      fill: $grey200;
     }
 
     & > svg > path:nth-of-type(2) {
