@@ -21,8 +21,4 @@
   &:active {
     border-color: $grey200;
   }
-
-  @media screen and (max-width: $breakpoint-xs) {
-    display: none;
-  }
 }
