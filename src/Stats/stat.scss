@@ -29,16 +29,31 @@
   &--large &__value {
     font-size: 30px;
     line-height: 36px;
+
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 
   &--medium &__value {
     font-size: 24px;
     line-height: 32px;
+
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: 22px;
+      line-height: 24px;
+    }
   }
 
   &--small &__value {
     font-size: 18px;
     line-height: 28px;
+
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 
   &__after {
