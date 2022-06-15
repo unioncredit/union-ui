@@ -9,16 +9,15 @@
   border: 1px solid transparent;
   color: $grey500;
 
-  &--active {
-    border-color: $grey100;
-    color: $grey800;
-  }
-
+  &--active,
+  &:active,
   &:hover {
-    border-color: $grey100;
+    border-color: $grey200;
+    color: $grey800;
+    background: $grey50;
   }
 
   &:active {
-    border-color: $grey200;
+    border-color: $grey300;
   }
 }

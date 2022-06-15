@@ -21,18 +21,21 @@ const options = [
   {
     label: "Ethereum",
     type: "ethereum",
+    id: "ethereum",
     imageSrc: EthereumAvatar,
     as: NetworkButton,
   },
   {
     label: "Arbitrum",
     type: "arbitrum",
+    id: "arbitrum",
     imageSrc: AbitrumAvatar,
     as: NetworkButton,
   },
   {
     label: "Kovan",
     type: "kovan",
+    id: "kovan",
     imageSrc: KovanAvatar,
     as: NetworkButton,
   },
@@ -42,7 +45,7 @@ export const Default = () => (
   <div style={{ width: "920px" }}>
     <Nav>
       <Box fluid justify="space-between" align="center">
-        <NetworkSwitcher options={options} />
+        <NetworkSwitcher selected={options[0]} options={options} />
         <Box>
           <NavItem
             label="Get Started"
