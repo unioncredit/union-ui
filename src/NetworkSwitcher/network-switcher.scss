@@ -3,8 +3,20 @@
 .networkSwitcher__buttonContainer {
   width: 130px;
 
-  @media screen and (max-width: $breakpoint-xs) {
+  @media screen and (max-width: $breakpoint-xxs) {
     width: auto;
+
+    span {
+      display: none;
+    }
+
+    .button.networkSwitcher {
+      padding: 0 4px;
+
+      .avatar {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -54,10 +66,6 @@
   .avatar {
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-right: 4px;
-
-    @media screen and (max-width: $breakpoint-xs) {
-      margin-right: 0;
-    }
   }
 
   &:last-child {
