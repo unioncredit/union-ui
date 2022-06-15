@@ -20,6 +20,10 @@
   padding: 12px 24px;
   min-height: 48px;
 
+  &--noLabel {
+    padding: 12px;
+  }
+
   &--withIcon {
     padding-left: 18px;
 
