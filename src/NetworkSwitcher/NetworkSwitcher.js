@@ -18,7 +18,7 @@ export function NetworkButton({ onClick, imageSrc, children, label, type }) {
       })}
       label={
         <>
-          <Avatar src={imageSrc} mr="4px" />
+          <Avatar src={imageSrc} />
           {children || label}
         </>
       }
