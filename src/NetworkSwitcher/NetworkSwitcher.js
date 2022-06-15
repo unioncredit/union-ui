@@ -4,10 +4,18 @@ import cn from "classnames";
 import { Avatar } from "../Avatar";
 import { Button } from "../Button";
 import { ContextMenu } from "../ContextMenu";
+import WireCheck from "../icons/wireCheck.svg";
 
 import "./network-switcher.scss";
 
-export function NetworkButton({ onClick, imageSrc, children, label, type }) {
+export function NetworkButton({
+  selected,
+  onClick,
+  imageSrc,
+  children,
+  label,
+  type,
+}) {
   return (
     <Button
       variant="lite"
@@ -19,6 +27,7 @@ export function NetworkButton({ onClick, imageSrc, children, label, type }) {
         <>
           <Avatar src={imageSrc} />
           <span>{children || label}</span>
+          {selected && <WireCheck />}
         </>
       }
     />
@@ -51,6 +60,7 @@ export function NetworkSwitcher({
       items={options.map((option) => ({
         ...option,
         onClick: handleClick(option),
+        selected: option.id === selected.id,
       }))}
       button={(open) => (
         <div className="networkSwitcher__buttonContainer">

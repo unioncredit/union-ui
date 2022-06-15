@@ -38,7 +38,7 @@ const options = [
 
 export const Default = () => (
   <>
-    <NetworkSwitcher options={options} />
+    <NetworkSwitcher selected={options[0]} options={options} />
   </>
 );
 

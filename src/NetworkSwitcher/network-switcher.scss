@@ -28,6 +28,11 @@
   justify-content: flex-start;
   border: 1px solid transparent;
 
+  .wireCheck,
+  .wireCheck_svg__wireCheck {
+    margin-left: auto;
+  }
+
   .context-menu & {
     margin: 0 4px 4px 4px;
     width: calc(100% - 8px);
@@ -41,6 +46,11 @@
       background-color: $blue100;
       border: 1px solid $blue200;
     }
+
+    .wireCheck path,
+    .wireCheck_svg__wireCheck path {
+      fill: $blue500;
+    }
   }
 
   &--ethereum {
@@ -51,6 +61,11 @@
       background-color: $grey100;
       border: 1px solid $grey200;
     }
+
+    .wireCheck path,
+    .wireCheck_svg__wireCheck path {
+      fill: $grey500;
+    }
   }
 
   &--kovan {
@@ -60,6 +75,11 @@
     &:hover {
       background-color: #f1f5f9;
       border: 1px solid #e2e8f0;
+    }
+
+    .wireCheck path,
+    .wireCheck_svg__wireCheck path {
+      fill: #64748b;
     }
   }
 
