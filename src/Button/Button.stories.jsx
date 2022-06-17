@@ -70,6 +70,21 @@ const variants = [
     { variant: "secondary", color: "red", label: "Color Button" },
     { variant: "secondary", color: "green", label: "Color Button" },
     { variant: "secondary", color: "blue", label: "Color Button" },
+    {
+      label: "Red button",
+      color: "red",
+      disabled: true,
+    },
+    {
+      label: "Green button",
+      color: "green",
+      disabled: true,
+    },
+    {
+      label: "Blue button",
+      color: "blue",
+      disabled: true,
+    },
   ],
   [
     { variant: "ethereum", label: "Ethereum Button" },

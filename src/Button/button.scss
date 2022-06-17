@@ -157,11 +157,11 @@
     svg path {
       fill: $red600;
     }
-    &[disabled="true"],
-    &[disabled],
-    &[disabled]:hover,
-    &[disabled="true"]:hover {
-      color: $red500;
+    &.button--red[disabled="true"],
+    &.button--red[disabled],
+    &.button--red[disabled]:hover,
+    &.button--red[disabled="true"]:hover {
+      color: $red400;
     }
   }
 
@@ -177,6 +177,12 @@
     svg path {
       fill: $green600;
     }
+    &.button--green[disabled="true"],
+    &.button--green[disabled],
+    &.button--green[disabled]:hover,
+    &.button--green[disabled="true"]:hover {
+      color: $green400;
+    }
   }
 
   &--blue {
@@ -190,6 +196,12 @@
     }
     svg path {
       fill: $blue600;
+    }
+    &.button--blue[disabled="true"],
+    &.button--blue[disabled],
+    &.button--blue[disabled]:hover,
+    &.button--blue[disabled="true"]:hover {
+      color: $blue400;
     }
   }
 
