@@ -84,3 +84,19 @@ export const ModalWithBack = () => (
     <Text m={0}>Staked $1000</Text>
   </Modal>
 );
+
+export const ModalWithFooter = () => (
+  <Modal
+    title="Borrow Funds"
+    onClose={() => alert("modal close")}
+    onBack={() => alert("modal back")}
+    footer={
+      <Box align="center" justify="space-between">
+        <Text m={0}>Metamask</Text>
+        <Button variant="pill">Disconnect</Button>
+      </Box>
+    }
+  >
+    <Text m={0}>Staked $1000</Text>
+  </Modal>
+);

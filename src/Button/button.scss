@@ -157,6 +157,12 @@
     svg path {
       fill: $red600;
     }
+    &[disabled="true"],
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled="true"]:hover {
+      color: $red500;
+    }
   }
 
   &--green {

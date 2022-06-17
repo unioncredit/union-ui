@@ -10,6 +10,18 @@
   &__footer {
     background: $grey50;
     padding: 24px;
+
+    .button--pill {
+      background-color: $grey100;
+
+      &:hover:enabled {
+        background-color: $grey200;
+      }
+
+      &:active:enabled {
+        background-color: $grey300;
+      }
+    }
   }
 
   &__title {
