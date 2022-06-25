@@ -52,6 +52,20 @@ export const All = () => (
         after="$100.00 frozen"
       />
     </Box>
+    <Box mt="40px">
+      <Stat
+        size="extra-small"
+        align="center"
+        label="Total Stakes"
+        value={
+          <>
+            3200
+            <Dai />
+          </>
+        }
+        after="$100.00 frozen"
+      />
+    </Box>
   </>
 );
 
