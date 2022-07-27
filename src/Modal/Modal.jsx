@@ -15,36 +15,38 @@ import "./modal.scss";
 export function Modal({ children, onClose, title, size, footer, onBack }) {
   return (
     <Card className={cn("modal")} size={size}>
-      <Box align="center" justify="space-between" className="modalHeader">
-        {onBack && (
-          <Button
-            className="backButton"
-            variant="pill"
-            icon={LArrow}
-            label="Previous"
-            onClick={onBack}
-          />
-        )}
-        {title && (
-          <div className="modal__title">
-            <Text
-              as="h1"
-              size="large"
-              align={onBack ? "center" : "left"}
-              grey={700}
-              weight="medium"
-              m={0}
-            >
-              {title}
-            </Text>
-          </div>
-        )}
-        {onClose && (
-          <Box className="closeWrapper">
-            <Close width="24px" height="24px" onClick={onClose} />
-          </Box>
-        )}
-      </Box>
+      {(onBack || title || onClose) && (
+        <Box align="center" justify="space-between" className="modalHeader">
+          {onBack && (
+            <Button
+              className="backButton"
+              variant="pill"
+              icon={LArrow}
+              label="Previous"
+              onClick={onBack}
+            />
+          )}
+          {title && (
+            <div className="modal__title">
+              <Text
+                as="h1"
+                size="large"
+                align={onBack ? "center" : "left"}
+                grey={700}
+                weight="medium"
+                m={0}
+              >
+                {title}
+              </Text>
+            </div>
+          )}
+          {onClose && (
+            <Box className="closeWrapper">
+              <Close width="24px" height="24px" onClick={onClose} />
+            </Box>
+          )}
+        </Box>
+      )}
       <Card.Body>{children}</Card.Body>
       {footer && <div className="modal__footer">{footer}</div>}
     </Card>
