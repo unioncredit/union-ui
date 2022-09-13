@@ -3,20 +3,24 @@
 
 // SCSS for the claim tokens card component
 .claim-tokens-card {
-  padding: 16px;
-  border-radius: 12px;
+  padding: 8px;
+  border-radius: 16px;
+  font-family: "Inter";
+  font-style: normal;
 
   &__buttons {
     margin-top: 8px;
     font-weight: 500;
     font-size: 16px;
     width: 100%;
+    padding: 0;
+    height: 48px;
+    min-height: auto;
   }
 
   &__step-conatiner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   &__step-numbers {
@@ -27,9 +31,13 @@
   &__step-content {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     color: $blue600;
-    font-size: 16px;
+    width: 24px;
+    height: 24px;
     font-weight: 500;
+    font-size: 12px;
+    flex: 1;
   }
 
   // Making changes to toggle button here instead of doing it on actual component just to not edit anything you guys did :)
@@ -68,6 +76,7 @@
     width: 30px;
     height: 30px;
     background: $blue200;
+    font-size: 12px;
 
     &::before {
       content: "";
