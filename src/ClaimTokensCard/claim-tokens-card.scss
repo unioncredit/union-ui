@@ -1,0 +1,104 @@
+// Importing variables
+@import "../variables.scss";
+
+// SCSS for the claim tokens card component
+.claim-tokens-card {
+  padding: 16px;
+  background: $blue100;
+  border-radius: 12px;
+  max-width: 500px;
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    outline-width: 0;
+    background: $blue600;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+
+  &__step-conatiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__step-numbers {
+    display: flex;
+    align-items: center;
+  }
+
+  &__step-content {
+    display: flex;
+    align-items: center;
+    color: $blue600;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  // Making changes to toggle button here instead of doing it on actual component just to not edit anything you guys did :)
+  .toggle-wrapper {
+    cursor: pointer;
+    margin-left: 8px;
+
+    .toggle {
+      height: 23px;
+      width: 40px;
+      background: $blue200;
+      border-radius: 24px;
+      &--active {
+        background: $blue600;
+        .toggle__switch {
+          left: 18px;
+        }
+      }
+
+      .toggle__switch {
+        height: 19px;
+        width: 19px;
+      }
+    }
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $blue800;
+    font-weight: 500;
+    margin-right: 12px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: $blue200;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: $blue200;
+      height: 3px;
+      width: 12px;
+      left: -12px;
+    }
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &--active {
+      background: $blue600;
+      color: #fff;
+    }
+  }
+}
