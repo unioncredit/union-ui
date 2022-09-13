@@ -4,25 +4,13 @@
 // SCSS for the claim tokens card component
 .claim-tokens-card {
   padding: 16px;
-  background: $blue100;
   border-radius: 12px;
-  max-width: 500px;
 
   &__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    padding: 16px;
-    border-radius: 8px;
-    border: none;
-    outline-width: 0;
-    background: $blue600;
+    margin-top: 8px;
     font-weight: 500;
     font-size: 16px;
     width: 100%;
-    margin-top: 16px;
-    cursor: pointer;
   }
 
   &__step-conatiner {

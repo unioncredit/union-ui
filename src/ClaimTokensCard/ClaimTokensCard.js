@@ -1,9 +1,12 @@
 import React from "react";
 import "./claim-tokens-card.scss";
 import cn from "classnames";
-import { Loading } from "../Loading";
 import Success from "../icons/success.svg";
 import { Toggle } from "../Toggle";
+import { Card } from "../Card";
+import { Button } from "../Button";
+import { LoadingSpinner } from "../LoadingSpinner";
+import { CheckSuccessCloud, CheckSuccess } from "../CheckSuccess";
 
 // Claim Tokens Card Component
 export function ClaimTokensCard({
@@ -26,7 +29,7 @@ export function ClaimTokensCard({
       `Approve UNION`
     ) : (
       <>
-        <Success style={{ width: 20, marginRight: 8 }} /> {`Pay Membership Fee`}
+        <CheckSuccessCloud /> {`Pay Membership Fee`}
       </>
     );
 
@@ -44,7 +47,7 @@ export function ClaimTokensCard({
 
   // Return and render elements of the component...
   return (
-    <div className={"claim-tokens-card"}>
+    <Card variant={"blue"} className={"claim-tokens-card"}>
       <div className={cn("claim-tokens-card__step-conatiner")}>
         <div className={"claim-tokens-card__step-numbers"}>
           {numbers.map((number) => (
@@ -55,9 +58,13 @@ export function ClaimTokensCard({
               })}
             >
               {stepNumber === number && isLoading ? (
-                <Loading style={{ margin: 15 }} />
+                <LoadingSpinner
+                  circleStroke={"#fff"}
+                  pathStroke={"#60A5FA"}
+                  size={22}
+                />
               ) : stepNumber > number ? (
-                `✔`
+                <CheckSuccess />
               ) : (
                 number
               )}
@@ -67,8 +74,9 @@ export function ClaimTokensCard({
 
         <div className={"claim-tokens-card__step-content"}>{renderContent}</div>
       </div>
-      <button
+      <Button
         className={"claim-tokens-card__buttons"}
+        variant="primary"
         onClick={() => {
           // We can use async await here if needed
           if (stepNumber === 1) {
@@ -81,7 +89,7 @@ export function ClaimTokensCard({
         }}
       >
         {renderText}
-      </button>
-    </div>
+      </Button>
+    </Card>
   );
 }
