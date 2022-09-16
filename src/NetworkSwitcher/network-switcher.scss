@@ -68,6 +68,21 @@
     }
   }
 
+  &--goerli {
+    background-color: #F8FAFC;
+    color: #64748B;
+
+    &:hover {
+      background-color: #F1F5F9;
+      border: 1px solid #E2E8F0;
+    }
+
+    .wireCheck path,
+    .wireCheck_svg__wireCheck path {
+      fill: #64748B;
+    }
+  }
+
   &--kovan {
     background-color: #f8fafc;
     color: #64748b;
