@@ -12,9 +12,17 @@ import LArrow from "../icons/arrowRight.svg";
 
 import "./modal.scss";
 
-export function Modal({ children, onClose, title, size, footer, onBack }) {
+export function Modal({
+  className,
+  children,
+  onClose,
+  title,
+  size,
+  footer,
+  onBack,
+}) {
   return (
-    <Card className={cn("modal")} size={size}>
+    <Card className={cn("modal", className)} size={size}>
       {(onBack || title || onClose) && (
         <Box align="center" justify="space-between" className="modalHeader">
           {onBack && (
@@ -60,4 +68,5 @@ Modal.propTypes = {
   onBack: PropTypes.func,
   title: PropTypes.string,
   footer: PropTypes.any,
+  className: PropTypes.string,
 };
