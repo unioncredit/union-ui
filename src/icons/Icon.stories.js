@@ -42,6 +42,7 @@ import Link from "./link.svg";
 import Cross from "./cross.svg";
 import Discord from "./discord.svg";
 import TableSorting from "./tableSorting.svg";
+import Tooltip from "./tooltip.svg";
 
 export default {
   title: "components/icons",
@@ -80,6 +81,7 @@ const icons = [
   Union,
   Switch,
   Chevron,
+  Tooltip,
   WireInfo,
   WireCheck,
   Link,

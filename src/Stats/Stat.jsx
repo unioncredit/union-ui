@@ -6,7 +6,7 @@ import { Box } from "../Box";
 import { Heading } from "../Heading";
 import { Label } from "../Label";
 import { Tooltip } from "../Tooltip";
-import Info from "../icons/tooltip.svg";
+import Info from "../icons/wireInfo.svg";
 
 import "./stat.scss";
 
@@ -37,7 +37,7 @@ export function Stat({
               {label}
               {tooltip && (
                 <Tooltip content={tooltip} {...tooltipProps}>
-                  <Info width="14px" />
+                  <Info width="16px" />
                 </Tooltip>
               )}
             </Label>
