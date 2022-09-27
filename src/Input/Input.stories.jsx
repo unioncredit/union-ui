@@ -7,6 +7,8 @@ import { InputRow } from "./InputRow";
 import { Button } from "../Button";
 import { Dai } from "../Dai";
 
+import Search from "../icons/search.svg";
+
 export default {
   component: Input,
   title: "Components/Input",
@@ -31,6 +33,13 @@ export const Inputs = () => (
         label="Input label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
+      />
+    </Box>
+    <Box mb="20px">
+      <Input
+        placeholder="Placeholder"
+        onMaxClick={() => {}}
+        suffix={<Search />}
       />
     </Box>
 
