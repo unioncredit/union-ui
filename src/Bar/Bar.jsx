@@ -15,11 +15,12 @@ export function Bar({
   marker,
   color,
   markerLabel,
+  className,
   ...props
 }) {
   return (
     <div
-      className={cn("bar", {
+      className={cn("bar", className, {
         [`bar--${size}`]: size,
         "bar--hasMarkerLabel": !!markerLabel,
       })}
