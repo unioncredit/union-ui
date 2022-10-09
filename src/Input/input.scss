@@ -51,6 +51,26 @@ $gutter: 8px;
     }
   }
 
+  &__prefix {
+    position: absolute;
+    left: 0;
+    padding: 0 4px 0 8px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--has-prefix {
+    input {
+      padding-left: 36px !important;
+    }
+  }
+
   &--disabled ::-webkit-input-placeholder {
     color: $grey200 !important;
   }

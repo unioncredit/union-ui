@@ -39,7 +39,7 @@ export const Inputs = () => (
       <Input
         placeholder="Placeholder"
         onMaxClick={() => {}}
-        suffix={<Search />}
+        prefix={<Search />}
       />
     </Box>
 

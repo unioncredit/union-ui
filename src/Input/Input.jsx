@@ -17,6 +17,7 @@ export const Input = forwardRef(
       value,
       cta,
       suffix,
+      prefix,
       onCaptionClick,
       onChange,
       type,
@@ -48,6 +49,7 @@ export const Input = forwardRef(
             className={cn("input", {
               "input--disabled": disabled,
               "input--has-value": hasValue,
+              "input--has-prefix": prefix,
             })}
           >
             <input
@@ -63,6 +65,7 @@ export const Input = forwardRef(
               // allow input of decimal places
               {...(type === "number" ? { step: "any" } : {})}
             />
+            {prefix && <div className="input__prefix">{prefix}</div>}
             {suffix && <div className="input__suffix">{suffix}</div>}
           </div>
           {cta}
