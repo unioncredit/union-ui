@@ -21,10 +21,10 @@
   min-height: 48px;
 
   &--noLabel {
-    padding: 12px;
+    padding: 12px !important;
   }
 
-  &--withIcon {
+  &--withIcon:not(.button--noLabel) {
     padding-left: 18px;
 
     &.button--icon-pos-end {
