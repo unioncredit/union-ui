@@ -28,7 +28,7 @@ export const Default = () => {
   const [state, setState] = useState(false);
 
   return (
-    <>
+    <Box w="320px" direction="vertical" align="stretch">
       <button onClick={() => setState((x) => !x)}>toggle</button>
       <Box mb="12px" mt="20px">
         <MultiStepButton
@@ -61,7 +61,6 @@ export const Default = () => {
           label="Membership Fee: 1.00 UNION"
         />
       </Box>
-    </>
+    </Box>
   );
 };
-

@@ -4,10 +4,20 @@
   background-color: $blue100;
   width: 100%;
   border-radius: 16px;
-  padding: 8px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: padding 200ms;
+  box-sizing: border-box;
+
+  .label {
+    padding-right: 4px;
+  }
+
+  &--showSteps {
+    padding: 8px;
+  }
 
   &__action {
     width: 100%;
