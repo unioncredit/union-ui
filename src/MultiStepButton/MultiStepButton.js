@@ -8,10 +8,10 @@ import { Label } from "../Label";
 import "./multi-step-button.scss";
 import { Collapse } from "../Collapse";
 
-export function MultiStepButton({ items, action, label, showSteps }) {
+export function MultiStepButton({ id, items, action, label, showSteps }) {
   return (
     <div className="multiStepButton">
-      <Collapse active={showSteps}>
+      <Collapse id={id || "multiStepButton"} active={showSteps}>
         <div className="multiStepButton__header">
           <div className="multiStepButton__progressList">
             {items.map(({ number, status }) => (
@@ -37,6 +37,7 @@ export function MultiStepButton({ items, action, label, showSteps }) {
 }
 
 MultiStepButton.propTypes = {
+  id: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       status: PropTypes.oneOf(["selected", "pending", "complete"]),
@@ -46,4 +47,3 @@ MultiStepButton.propTypes = {
   action: PropTypes.node,
   label: PropTypes.node,
 };
-
