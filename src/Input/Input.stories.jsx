@@ -51,7 +51,7 @@ export const Inputs = () => (
             <Dai valuu={382.91} /> Available
           </>
         }
-        onCaptionClick={() => alert("clicked")}
+        onCaptionButtonClick={() => alert("clicked")}
         placeholder="Placeholder"
       />
     </Box>

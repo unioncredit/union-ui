@@ -1,8 +1,9 @@
 import React, { forwardRef, useState } from "react";
-import PropTypes from "prop-types";
 import cn from "classnames";
 
 import { Label } from "../Label";
+import { Button } from "../Button";
+import { Box } from "../Box";
 
 import "./input.scss";
 
@@ -15,14 +16,14 @@ export const Input = forwardRef(
       placeholder,
       disabled,
       value,
-      cta,
       suffix,
       prefix,
-      onCaptionClick,
       onChange,
       type,
       error,
       defaultValue,
+      onCaptionButtonClick,
+      captionButtonLabel = "Max",
     },
     ref
   ) => {
@@ -68,39 +69,30 @@ export const Input = forwardRef(
             {prefix && <div className="input__prefix">{prefix}</div>}
             {suffix && <div className="input__suffix">{suffix}</div>}
           </div>
-          {cta}
         </div>
-        {(caption || error) && (
-          <Label
-            size="small"
-            as="p"
-            className={cn("input-caption", {
-              "input-caption--clickable": !error && onCaptionClick,
-            })}
-            mt="4px"
-            onClick={!error ? onCaptionClick : undefined}
-          >
-            {(!disabled && error) || caption}
-          </Label>
-        )}
+        <Box align="center" mt="8px">
+          {(caption || error) && (
+            <Label size="small" as="p" m={0} className="input-caption">
+              {(!disabled && error) || caption}
+            </Label>
+          )}
+          {captionButtonLabel && onCaptionButtonClick && (
+            <Button
+              label={captionButtonLabel}
+              color="blue"
+              variant="pill"
+              ml="4px"
+              onClick={onCaptionButtonClick}
+              className="input__maxButton"
+            />
+          )}
+        </Box>
       </div>
     );
   }
 );
 
-Input.propTypes = {
-  onChange: PropTypes.func,
-  name: PropTypes.string,
-  label: PropTypes.string,
-  placeholder: PropTypes.string,
-  disabled: PropTypes.bool,
-  cta: PropTypes.node,
-  suffix: PropTypes.any,
-  type: PropTypes.oneOf(["text", "number"]),
-};
-
 Input.defaultProps = {
   disabled: false,
-  cta: null,
   type: "text",
 };

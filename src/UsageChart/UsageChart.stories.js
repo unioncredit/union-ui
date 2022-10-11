@@ -16,7 +16,7 @@ export const Default = () => (
       <UsageChart data={data} />
     </Box>
     <Box mt="10px" w="120px">
-      <UsageChart data={data} height={12}/>
+      <UsageChart data={data} height={12} />
     </Box>
   </>
 );

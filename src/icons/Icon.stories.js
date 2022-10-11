@@ -112,16 +112,22 @@ export const IconExternal = () => (
         </Text>
       ))}
 
-    {["blue500", "green500", "white", "red500", "grey500", "black", "orange500"].map(
-      (color) => (
-        <Text
-          color={color}
-          style={color === "white" && { backgroundColor: "black" }}
-        >
-          External link <ExternalInline />
-        </Text>
-      )
-    )}
+    {[
+      "blue500",
+      "green500",
+      "white",
+      "red500",
+      "grey500",
+      "black",
+      "orange500",
+    ].map((color) => (
+      <Text
+        color={color}
+        style={color === "white" && { backgroundColor: "black" }}
+      >
+        External link <ExternalInline />
+      </Text>
+    ))}
 
     {Array(7)
       .fill(0)
@@ -133,18 +139,24 @@ export const IconExternal = () => (
         </div>
       ))}
 
-    {["blue500", "green500", "white", "red500", "grey500", "black", "orange500"].map(
-      (color) => (
-        <div>
-          <Label
-            color={color}
-            style={color === "white" && { backgroundColor: "black" }}
-          >
-            External link <ExternalInline />
-          </Label>
-        </div>
-      )
-    )}
+    {[
+      "blue500",
+      "green500",
+      "white",
+      "red500",
+      "grey500",
+      "black",
+      "orange500",
+    ].map((color) => (
+      <div>
+        <Label
+          color={color}
+          style={color === "white" && { backgroundColor: "black" }}
+        >
+          External link <ExternalInline />
+        </Label>
+      </div>
+    ))}
 
     <div>
       <Label size="small">

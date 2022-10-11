@@ -42,12 +42,13 @@ export const Card = forwardRef(
   }
 );
 
-function CardHeader({ title, subTitle, align, action }) {
+function CardHeader({ title, subTitle, align, action, ...props }) {
   return (
     <div
       className={cn("card-header", {
         [`card-header--${align}`]: align,
       })}
+      style={propsToStyles(props)}
     >
       <div className="card-header__content">
         <Text as="h1" size="large" grey={700} weight="medium" m={0}>
@@ -64,8 +65,12 @@ function CardHeader({ title, subTitle, align, action }) {
   );
 }
 
-function CardBody({ children }) {
-  return <div className="card-body">{children}</div>;
+function CardBody({ children, ...props }) {
+  return (
+    <div className="card-body" style={propsToStyles(props)}>
+      {children}
+    </div>
+  );
 }
 
 Card.Header = CardHeader;

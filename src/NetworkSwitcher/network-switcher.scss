@@ -69,17 +69,17 @@
   }
 
   &--goerli {
-    background-color: #F8FAFC;
-    color: #64748B;
+    background-color: #f8fafc;
+    color: #64748b;
 
     &:hover {
-      background-color: #F1F5F9;
-      border: 1px solid #E2E8F0;
+      background-color: #f1f5f9;
+      border: 1px solid #e2e8f0;
     }
 
     .wireCheck path,
     .wireCheck_svg__wireCheck path {
-      fill: #64748B;
+      fill: #64748b;
     }
   }
 
