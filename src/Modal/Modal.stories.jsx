@@ -30,47 +30,53 @@ const options = [
 ];
 
 export const Default = () => (
-  <Modal title="Borrow Funds" onClose={() => alert("modal close")}>
-    <Select options={options} />
-    <Box align="center" justify="space-between" mt="20px">
-      <Text m={0}>Metamask</Text>
-      <Button variant="pill">Disconnect</Button>
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Heading m={0}>0xf007...1337</Heading>
-    </Box>
-    <Divider />
-    <Box align="center" justify="space-between" mt="20px" mb="16px">
-      <Text m={0} size="large">
-        Transactions
-      </Text>
-      <Button variant="pill">Clear</Button>
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Text m={0}>Staked $500</Text>
-      <Success width="16px" />
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Text m={0}>Borrowed $800</Text>
-      <Failed width="16px" />
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Text m={0} color="orange">
-        Wrote-off $240 debt
-      </Text>
-      <Failed width="16px" />
-    </Box>
-    <Box align="center" justify="space-between" mt="10px">
-      <Text m={0}>Staked $1000</Text>
-      <Pending width="16px" />
-    </Box>
+  <Modal>
+    <Modal.Header title="Borrow Funds" onClose={() => alert("modal close")} />
+    <Modal.Body>
+      <Select options={options} />
+      <Box align="center" justify="space-between" mt="20px">
+        <Text m={0}>Metamask</Text>
+        <Button variant="pill">Disconnect</Button>
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Heading m={0}>0xf007...1337</Heading>
+      </Box>
+      <Divider />
+      <Box align="center" justify="space-between" mt="20px" mb="16px">
+        <Text m={0} size="large">
+          Transactions
+        </Text>
+        <Button variant="pill">Clear</Button>
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0}>Staked $500</Text>
+        <Success width="16px" />
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0}>Borrowed $800</Text>
+        <Failed width="16px" />
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0} color="orange">
+          Wrote-off $240 debt
+        </Text>
+        <Failed width="16px" />
+      </Box>
+      <Box align="center" justify="space-between" mt="10px">
+        <Text m={0}>Staked $1000</Text>
+        <Pending width="16px" />
+      </Box>
+    </Modal.Body>
   </Modal>
 );
 
 export const ModalWithOverlay = () => (
   <ModalOverlay onClick={() => alert("close")}>
-    <Modal title="Borrow Funds" onClose={() => alert("modal close")}>
-      <Text m={0}>Staked $1000</Text>
+    <Modal>
+      <Modal.Header title="Borrow Funds" onClose={() => alert("modal close")} />
+      <Modal.Body>
+        <Text m={0}>Staked $1000</Text>
+      </Modal.Body>
     </Modal>
   </ModalOverlay>
 );
@@ -78,33 +84,22 @@ export const ModalWithOverlay = () => (
 export const ModalNoHeader = () => (
   <ModalOverlay onClick={() => alert("close")}>
     <Modal>
-      <Text m={0}>Staked $1000</Text>
+      <Modal.Body>
+        <Text m={0}>Staked $1000</Text>
+      </Modal.Body>
     </Modal>
   </ModalOverlay>
 );
 
 export const ModalWithBack = () => (
-  <Modal
-    title="Borrow Funds"
-    onClose={() => alert("modal close")}
-    onBack={() => alert("modal back")}
-  >
-    <Text m={0}>Staked $1000</Text>
-  </Modal>
-);
-
-export const ModalWithFooter = () => (
-  <Modal
-    title="Borrow Funds"
-    onClose={() => alert("modal close")}
-    onBack={() => alert("modal back")}
-    footer={
-      <Box align="center" justify="space-between">
-        <Text m={0}>Metamask</Text>
-        <Button variant="pill">Disconnect</Button>
-      </Box>
-    }
-  >
-    <Text m={0}>Staked $1000</Text>
+  <Modal>
+    <Modal.Header 
+      title="Borrow Funds"
+      onClose={() => alert("modal close")}
+      onBack={() => alert("modal back")}
+    />
+    <Modal.Body>
+      <Text m={0}>Staked $1000</Text>
+    </Modal.Body>
   </Modal>
 );
