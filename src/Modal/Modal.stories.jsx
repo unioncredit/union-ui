@@ -31,7 +31,11 @@ const options = [
 
 export const Default = () => (
   <Modal>
-    <Modal.Header title="Borrow Funds" onClose={() => alert("modal close")} />
+    <Modal.Header
+      title="Borrow Funds"
+      subTitle="Expand the web of trust with a vouch"
+      onClose={() => alert("modal close")}
+    />
     <Modal.Body>
       <Select options={options} />
       <Box align="center" justify="space-between" mt="20px">
@@ -93,7 +97,7 @@ export const ModalNoHeader = () => (
 
 export const ModalWithBack = () => (
   <Modal>
-    <Modal.Header 
+    <Modal.Header
       title="Borrow Funds"
       onClose={() => alert("modal close")}
       onBack={() => alert("modal back")}

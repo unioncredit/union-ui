@@ -5,13 +5,14 @@ import { Card } from "../Card";
 import { Box } from "../Box";
 import { Button } from "../Button";
 import { Text } from "../Text";
+import { Label } from "../Label";
 
 import Close from "../icons/close.svg";
 import LArrow from "../icons/arrowRight.svg";
 
 import "./modal.scss";
 
-function ModalHeader({ className, onClose, title, onBack }) {
+function ModalHeader({ className, onClose, title, subTitle, onBack }) {
   return (
     <div className={className}>
       <Box align="center" justify="space-between" className="modalHeader">
@@ -36,6 +37,11 @@ function ModalHeader({ className, onClose, title, onBack }) {
             >
               {title}
             </Text>
+            {subTitle && (
+              <Label m={0} grey={600}>
+                {subTitle}
+              </Label>
+            )}
           </div>
         )}
         {onClose && (
