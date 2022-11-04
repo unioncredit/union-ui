@@ -7,7 +7,12 @@ export function ProgressBar({ percentage, completeText, completeIcon: Icon }) {
   const isComplete = percentage >= 100;
 
   return (
-    <div className={cn("progressBar", { "progressBar--complete": isComplete })}>
+    <div
+      className={cn("progressBar", {
+        "progressBar--complete": isComplete,
+        "progressBar--noProgress": percentage <= 0,
+      })}
+    >
       <div className="progressBar__inner">
         <div
           className="progressBar__progress"

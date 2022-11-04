@@ -55,4 +55,12 @@
       background: $green400;
     }
   }
+
+  &--noProgress {
+    background: $grey200;
+
+    .progressBar__inner {
+      background: $grey50;
+    }
+  }
 }

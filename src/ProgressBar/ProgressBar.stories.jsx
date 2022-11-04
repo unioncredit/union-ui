@@ -13,6 +13,9 @@ export default {
 export const Default = () => (
   <>
     <Box mb="20px">
+      <ProgressBar percentage={0} />
+    </Box>
+    <Box mb="20px">
       <ProgressBar percentage={60} />
     </Box>
     <Box mb="20px">
