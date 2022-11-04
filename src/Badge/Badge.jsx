@@ -6,10 +6,14 @@ import { propsToStyles } from "../spacing";
 
 import "./badge.scss";
 
-export function Badge({ color, label, className, ...props }) {
+export function Badge({ onClick, color, label, className, ...props }) {
   return (
     <div
-      className={cn("badge", className, { [`badge--${color}`]: color })}
+      className={cn("badge", className, {
+        [`badge--${color}`]: color,
+        ["badge--clickable"]: !!onClick,
+      })}
+      onClick={onClick}
       style={propsToStyles(props)}
     >
       {label}

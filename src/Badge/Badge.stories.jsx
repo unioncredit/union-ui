@@ -14,7 +14,7 @@ export const Default = () => (
   <>
     {colors.map((color) => (
       <Box mb="20px">
-        <Badge label={color} color={color} />
+        <Badge label={color} color={color} onClick={() => alert(color)} />
       </Box>
     ))}
   </>

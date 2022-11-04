@@ -8,6 +8,10 @@
   border-radius: 24px;
   white-space: nowrap;
 
+  &--clickable {
+    cursor: pointer;
+  }
+
   &--blue {
     color: $blue600;
     background: $blue100;
