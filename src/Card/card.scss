@@ -92,6 +92,10 @@
   padding: 24px 24px 0 24px;
   display: flex;
 
+  @media screen and (max-width: $breakpoint-xxs) {
+    padding: 16px 16px 0 16px;
+  }
+
   &__content {
     flex: 1 1 0;
   }
@@ -105,4 +109,8 @@
 
 .card-body {
   padding: 24px;
+
+  @media screen and (max-width: $breakpoint-xxs) {
+    padding: 16px;
+  }
 }
