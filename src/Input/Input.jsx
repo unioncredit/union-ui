@@ -34,6 +34,12 @@ export const Input = forwardRef(
       onChange && onChange(event);
     };
 
+    const handleKeyDown = (event) => {
+      if (event.target.type === "number" && event.key === "e") {
+        event.preventDefault();
+      }
+    }
+
     return (
       <div
         className={cn("input-wrapper", {
@@ -59,6 +65,7 @@ export const Input = forwardRef(
               name={name}
               disabled={disabled}
               onChange={handleChange}
+              onKeyDown={handleKeyDown}
               value={value}
               placeholder={placeholder}
               autoComplete="off"
