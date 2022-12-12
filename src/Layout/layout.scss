@@ -1,8 +1,14 @@
+@import "../variables.scss";
+
 .layout {
   width: 95%;
   min-height: 100%;
   max-width: 920px;
   margin: 0 auto;
+
+  @media screen and (max-width: $breakpoint-xxs) {
+    width: 100%;
+  }
 }
 
 .layout-header {
