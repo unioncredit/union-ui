@@ -45,7 +45,7 @@ export function NetworkSwitcher({
   const handleClick = (option) => (toggleOpen) => {
     setSelected(option);
     toggleOpen();
-    onChange && onChange(option);
+    onChange && onChange(option, setSelected);
   };
 
   useEffect(() => {
