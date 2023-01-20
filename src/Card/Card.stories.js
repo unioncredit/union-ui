@@ -3,7 +3,6 @@ import React from "react";
 import { Card } from "./Card";
 import { Grid, Row, Col } from "../Grid";
 import { Box } from "../Box";
-import { Label } from "../Label";
 import { ToggleMenu } from "../ToggleMenu";
 import { Heading } from "../Heading";
 import { Text } from "../Text";
@@ -24,13 +23,13 @@ export const Default = () => (
           <Card.Body>
             <Box align="center" justify="space-between">
               <div>
-                <Label as="p" size="small">
+                <Text size="small">
                   Currently Staked
-                </Label>
+                </Text>
                 <Heading>3200 DAI</Heading>
-                <Label as="p" size="small">
+                <Text size="small">
                   18.2 UNION per day
-                </Label>
+                </Text>
               </div>
               <ToggleMenu
                 items={[{ label: "Deposit" }, { label: "Withdraw" }]}

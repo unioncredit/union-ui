@@ -10,9 +10,9 @@ import { Heading } from "../Heading";
 import { Button } from "../Button";
 import { Divider } from "../Divider";
 
-import Pending from "../icons/pending.svg";
-import Success from "../icons/success.svg";
-import Failed from "../icons/failed.svg";
+import Pending from "../Icons/icons/pending.svg";
+import Success from "../Icons/icons/success.svg";
+import Failed from "../Icons/icons/failed.svg";
 
 import PolygonImg from "../assets/polygon.png";
 import EthereumImg from "../assets/ethereum.png";

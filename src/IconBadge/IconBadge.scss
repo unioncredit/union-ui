@@ -1,0 +1,41 @@
+.icon-badge {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  svg {
+    width: 50% !important;
+    height: 50% !important;
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  &--size {
+    &-small {
+      width: 16px;
+      height: 16px;
+    }
+    &-regular {
+      width: 20px;
+      height: 20px;
+    }
+    &-large {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--variant {
+    &-filled {
+
+    }
+    &-outlined {
+      background-color: transparent !important;
+      border: 2px solid;
+    }
+  }
+}

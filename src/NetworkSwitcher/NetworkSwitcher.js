@@ -4,7 +4,7 @@ import cn from "classnames";
 import { Avatar } from "../Avatar";
 import { Button } from "../Button";
 import { ContextMenu } from "../ContextMenu";
-import WireCheck from "../icons/wireCheck.svg";
+import WireCheck from "../Icons/icons/wireCheck.svg";
 
 import "./network-switcher.scss";
 
@@ -49,7 +49,7 @@ export function NetworkSwitcher({
   };
 
   useEffect(() => {
-    if (selectedOption.id != prevSelectedOption.current.id) {
+    if (selectedOption.id !== prevSelectedOption.current.id) {
       prevSelectedOption.current = selectedOption;
       setSelected(selectedOption);
     }

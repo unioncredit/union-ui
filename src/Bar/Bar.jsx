@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Label } from "../Label";
+import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
 
 import "./bar.scss";
@@ -27,9 +27,9 @@ export function Bar({
       style={propsToStyles(props)}
     >
       {label && (
-        <Label size="small" className="bar-label" as="p">
+        <Text size="small" className="bar-label">
           {label}
-        </Label>
+        </Text>
       )}
       <div
         className={cn("bar__indicator", {
@@ -45,15 +45,14 @@ export function Bar({
         )}
         {marker && (
           <>
-            <Label
-              as="p"
+            <Text
               size="small"
               className="bar__indicator__markerLabel"
               style={{ left: `${marker}%` }}
               mb={0}
             >
               {markerLabel}
-            </Label>
+            </Text>
             <div
               className="bar__indicator__marker"
               style={{ left: `${marker}%` }}

@@ -2,11 +2,11 @@ import React, { forwardRef } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Label } from "../Label";
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
 
 import "./card.scss";
+import { Heading } from "../Heading";
 
 export const Card = forwardRef(
   (
@@ -55,9 +55,9 @@ function CardHeader({ title, subTitle, align, action, ...props }) {
           {title}
         </Text>
         {subTitle && (
-          <Label as="h2" mb="0px">
+          <Heading level={2} mb="0px">
             {subTitle}
-          </Label>
+          </Heading>
         )}
       </div>
       {action && <div className="card-header__action">{action}</div>}

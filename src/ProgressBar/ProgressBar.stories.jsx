@@ -3,7 +3,7 @@ import React from "react";
 import { ProgressBar } from "./ProgressBar";
 import { Box } from "../Box";
 
-import WireInfo from "../icons/wireInfo.svg";
+import WireInfo from "../Icons/icons/wireInfo.svg";
 
 export default {
   component: ProgressBar,

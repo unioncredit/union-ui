@@ -3,7 +3,6 @@ import React from "react";
 import { Notification } from "./Notification";
 import { NotificationStack } from "./NotificationStack";
 import { Text } from "../Text";
-import { Label } from "../Label";
 
 export default {
   component: Notification,
@@ -13,19 +12,19 @@ export default {
 export const All = () => (
   <>
     <Notification variant="pending" title="Waiting for confirmation">
-      <Label as="p" size="small">
+      <Text size="small">
         Confirm transaction with your connected wallet
-      </Label>
+      </Text>
     </Notification>
     <Notification variant="success" title="Transaction successful">
-      <Label as="p" size="small">
+      <Text size="small">
         View transaction
-      </Label>
+      </Text>
     </Notification>
     <Notification variant="error" title="Transaction error" link="#">
-      <Label as="p" size="small">
+      <Text size="small">
         Internal transaction error
-      </Label>
+      </Text>
     </Notification>
   </>
 );
@@ -33,19 +32,19 @@ export const All = () => (
 export const Stack = () => (
   <NotificationStack>
     <Notification variant="pending" title="Waiting for confirmation">
-      <Label as="p" size="small">
+      <Text size="small">
         Confirm transaction with your connected wallet
-      </Label>
+      </Text>
     </Notification>
     <Notification variant="success" title="Transaction successful">
-      <Label as="p" size="small">
+      <Text size="small">
         View transaction
-      </Label>
+      </Text>
     </Notification>
     <Notification variant="error" title="Transaction error">
-      <Label as="p" size="small">
+      <Text size="small">
         Internal transaction error
-      </Label>
+      </Text>
     </Notification>
   </NotificationStack>
 );

@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 
 import { Box } from "../Box";
+import { Text } from "../Text";
 import { Heading } from "../Heading";
-import { Label } from "../Label";
 import { Tooltip } from "../Tooltip";
-import Info from "../icons/wireInfo.svg";
+import Info from "../Icons/icons/wireInfo.svg";
 
 import "./stat.scss";
 
@@ -33,14 +33,14 @@ export function Stat({
       <div className="stat__label">
         {typeof label === "string" ? (
           <>
-            <Label as="p" m={0} weight="medium" size="small">
+            <Text m={0} weight="medium" size="small">
               {label}
               {tooltip && (
                 <Tooltip content={tooltip} {...tooltipProps}>
                   <Info width="16px" />
                 </Tooltip>
               )}
-            </Label>
+            </Text>
           </>
         ) : (
           label
@@ -52,9 +52,9 @@ export function Stat({
       {after && (
         <div className="stat__after">
           {typeof after === "string" ? (
-            <Label as="p" weight="medium" size="small" m={0}>
+            <Text weight="medium" size="small" m={0}>
               {after}
-            </Label>
+            </Text>
           ) : (
             after
           )}

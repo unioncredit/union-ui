@@ -1,9 +1,9 @@
 import React from "react";
 import cn from "classnames";
 
-import { Label } from "../Label";
 import { Button } from "../Button";
 import { Collapse } from "../Collapse";
+import { Text } from "../Text";
 
 import "./multi-step-button.scss";
 
@@ -28,9 +28,9 @@ export function MultiStepButton({ id, items, action, label, showSteps }) {
             ))}
           </div>
           {label && (
-            <Label m={0} size="small" color="blue500">
+            <Text as="label" m={0} size="small" color="blue500">
               {label}
-            </Label>
+            </Text>
           )}
         </div>
       </Collapse>

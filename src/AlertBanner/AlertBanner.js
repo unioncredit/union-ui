@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Label } from "../Label";
-import Cross from "../icons/cross.svg";
+import Cross from "../Icons/icons/cross.svg";
+import { Text } from "../Text";
 
 import "./alert-banner.scss";
 
@@ -9,9 +9,9 @@ export function AlertBanner({ label, onClose }) {
   return (
     <div className="alertBanner">
       <div className="alertBanner__inner">
-        <Label as="p" m={0}>
+        <Text m={0} color="black">
           {label}
-        </Label>
+        </Text>
       </div>
       {onClose && (
         <div className="alertBanner__close" onClick={onClose}>

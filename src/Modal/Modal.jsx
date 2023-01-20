@@ -5,10 +5,9 @@ import { Card } from "../Card";
 import { Box } from "../Box";
 import { Button } from "../Button";
 import { Text } from "../Text";
-import { Label } from "../Label";
 
-import Close from "../icons/close.svg";
-import LArrow from "../icons/arrowRight.svg";
+import Close from "../Icons/icons/close.svg";
+import LArrow from "../Icons/icons/arrowRight.svg";
 
 import "./modal.scss";
 
@@ -38,9 +37,9 @@ function ModalHeader({ className, onClose, title, subTitle, onBack }) {
               {title}
             </Text>
             {subTitle && (
-              <Label m={0} grey={600}>
+              <Text as="label" m={0} grey={600}>
                 {subTitle}
-              </Label>
+              </Text>
             )}
           </div>
         )}

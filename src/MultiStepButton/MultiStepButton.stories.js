@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { MultiStepButton } from "./MultiStepButton";
 import { Box } from "../Box";
 
-import CloudCheck from "../icons/cloudCheck.svg";
+import CloudCheck from "../Icons/icons/cloudCheck.svg";
 
 export default {
   component: MultiStepButton,

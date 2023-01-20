@@ -3,7 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Box } from "../Box";
-import ArrowRight from "../icons/arrowRight.svg";
+import ArrowRight from "../Icons/icons/arrowRight.svg";
 
 import "./pagination.scss";
 

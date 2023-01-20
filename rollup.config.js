@@ -40,8 +40,10 @@ export default {
     babel({
       exclude: "node_modules/**",
     }),
+    // we still copy the Icons in v2 for backwards compatability, but this
+    // should be removed once the existing icons have been migrated
     copy({
-      targets: [{ src: "src/icons", dest: "lib" }],
+      targets: [{ src: "src/Icons/icons", dest: "lib" }],
     }),
   ],
 };

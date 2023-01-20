@@ -1,3 +1,4 @@
+import "./Button.scss";
 import React, { createElement, forwardRef } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
@@ -5,27 +6,23 @@ import PropTypes from "prop-types";
 import { propsToStyles } from "../spacing";
 import { LoadingSpinner } from "../LoadingSpinner";
 
-import "./button.scss";
-
 export const Button = forwardRef(
   (
     {
+      as,
+      color,
+      variant,
+      label,
+      size,
       icon: Icon,
       iconPosition,
-      label,
-      variant,
-      background,
-      color,
-      className,
-      inline,
-      children,
-      rounded,
-      fluid,
       loading,
       disabled,
-      packed,
-      as,
-      size = "default",
+      inline,
+      rounded,
+      fluid,
+      children,
+      className,
       ...props
     },
     ref
@@ -45,11 +42,10 @@ export const Button = forwardRef(
           "button--noLabel": !label && !children,
           "button--loading": loading,
           "button--withIcon": !!Icon,
-          "button--packed": packed,
-          [`button--${variant}`]: variant,
+          [`button--variant-${variant}`]: variant,
           [`button--icon-pos-${iconPosition}`]: iconPosition,
-          [`button--${size}`]: size,
-          [`button--${color}`]: color,
+          [`button--size-${size}`]: size,
+          [`button--color-${color}`]: color,
         }),
         disabled: disabled || loading,
         ...props,
@@ -71,29 +67,27 @@ export const Button = forwardRef(
 
 Button.propTypes = {
   as: PropTypes.node,
-  fluid: PropTypes.bool,
-  variant: PropTypes.oneOf([
-    "primary",
-    "ethereum",
-    "polygon",
-    "secondary",
-    "pill",
-    "floating",
-    "lite",
-  ]),
-  icon: PropTypes.any,
-  rounded: PropTypes.bool,
-  iconPosition: PropTypes.oneOf(["start", "end"]),
+  color: PropTypes.oneOf(["primary", "secondary", "red"]),
+  variant: PropTypes.oneOf(["light", "regular", "dark"]),
   label: PropTypes.node,
-  onClick: PropTypes.func,
-  background: PropTypes.string,
-  color: PropTypes.oneOf(["red", "green", "blue"]),
-  size: PropTypes.oneOf(["default", "small"]),
+  size: PropTypes.oneOf(["pill", "small", "regular", "large"]),
+  icon: PropTypes.any,
+  iconPosition: PropTypes.oneOf(["start", "end"]),
   loading: PropTypes.bool,
+  disabled: PropTypes.bool,
+  inline: PropTypes.bool,
+  rounded: PropTypes.bool,
+  fluid: PropTypes.bool,
+  className: PropTypes.string,
+  children: PropTypes.any,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
-  variant: "primary",
+  color: "primary",
+  variant: "regular",
+  size: "regular",
+  rounded: true,
   onClick: undefined,
   iconPosition: "start",
   loading: false,

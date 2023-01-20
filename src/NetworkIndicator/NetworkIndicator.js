@@ -1,8 +1,8 @@
 import React from "react";
 import cn from "classnames";
 
+import { Text } from "../Text";
 import { Box } from "../Box";
-import { Label } from "../Label";
 
 import "./network-indicator.scss";
 
@@ -25,9 +25,9 @@ export function NetworkIndicator({ chainId, ...props }) {
           [`network-indicator__indicator--${chainId}`]: !isNaN(chainId),
         })}
       />{" "}
-      <Label size="small" m={0}>
+      <Text as="label" size="small" m={0}>
         {config[chainId]?.label || "unknown"}
-      </Label>
+      </Text>
     </Box>
   );
 }

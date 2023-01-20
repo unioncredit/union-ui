@@ -1,10 +1,10 @@
 import React from "react";
 
 import { Tooltip } from "./Tooltip";
-import { Label } from "../Label";
+import { Text } from "../Text";
 import { Box } from "../Box";
 import { Button } from "../Button";
-import Icon from "../icons/tooltip.svg";
+import Icon from "../Icons/icons/tooltip.svg";
 
 export default {
   component: Tooltip,
@@ -17,44 +17,44 @@ const content =
 export const Default = () => (
   <>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (top){" "}
         <Tooltip content={content}>
           <Icon width="16px" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (right){" "}
         <Tooltip position="right" content={content}>
           <Icon width="16px" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (bottom){" "}
         <Tooltip position="bottom" content={content}>
           <Icon width="16px" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
         <Tooltip position="left" content={content}>
           <Icon width="16px" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
         <Tooltip position="bottom" content={content} alwaysShow>
           <Button label="Open" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
   </>
 );

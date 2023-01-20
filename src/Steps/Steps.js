@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Text } from "../Text";
-import { Label } from "../Label";
-import External from "../icons/external.svg";
+import External from "../Icons/icons/external.svg";
 
 import "./steps.scss";
 
@@ -38,14 +37,13 @@ export function Steps({ items }) {
             />
             {title}
             {item.subTitle && (
-              <Label
-                as="p"
+              <Text
                 className="steps__item__subTitle"
                 size="small"
                 grey={400}
               >
                 {item.subTitle}
-              </Label>
+              </Text>
             )}
           </div>
         );

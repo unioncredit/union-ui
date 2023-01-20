@@ -2,8 +2,8 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import Intermediate from "../icons/intermediate.svg";
-import Check from "../icons/check.svg";
+import Intermediate from "../Icons/icons/intermediate.svg";
+import Check from "../Icons/icons/check.svg";
 
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";

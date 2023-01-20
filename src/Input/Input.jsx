@@ -1,11 +1,10 @@
+import "./input.scss";
 import React, { forwardRef, useState } from "react";
 import cn from "classnames";
 
-import { Label } from "../Label";
-import { Button } from "../Button";
 import { Box } from "../Box";
-
-import "./input.scss";
+import { Text } from "../Text";
+import { Button } from "../Button";
 
 export const Input = forwardRef(
   (
@@ -41,9 +40,9 @@ export const Input = forwardRef(
         })}
       >
         {label && (
-          <Label className="input-label" htmlFor={name}>
+          <Text as="label" className="input-label" htmlFor={name}>
             {label}
-          </Label>
+          </Text>
         )}
         <div className="input-wrapper__inner">
           <div
@@ -72,9 +71,9 @@ export const Input = forwardRef(
         </div>
         <Box align="center" mt="8px">
           {(caption || error) && (
-            <Label size="small" as="p" m={0} className="input-caption">
+            <Text size="small" m={0} className="input-caption">
               {(!disabled && error) || caption}
-            </Label>
+            </Text>
           )}
           {captionButtonLabel && onCaptionButtonClick && (
             <Button

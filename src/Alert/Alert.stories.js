@@ -3,8 +3,8 @@ import React from "react";
 import { Alert } from "./Alert";
 import { Box } from "../Box";
 
-import WireInfo from "../icons/wireInfo.svg";
-import WireCheck from "../icons/wireCheck.svg";
+import WireInfo from "../Icons/icons/wireInfo.svg";
+import WireCheck from "../Icons/icons/wireCheck.svg";
 
 export default {
   component: Alert,

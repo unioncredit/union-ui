@@ -7,7 +7,7 @@ import { InputRow } from "./InputRow";
 import { Button } from "../Button";
 import { Dai } from "../Dai";
 
-import Search from "../icons/search.svg";
+import Search from "../Icons/icons/search.svg";
 
 export default {
   component: Input,

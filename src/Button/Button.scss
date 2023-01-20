@@ -1,0 +1,251 @@
+@import "../variables.scss";
+
+$iconGutter: 0.4em;
+$disabledOpacity: 0.5;
+$hoverOpacity: 0.8;
+
+.button {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  transition: all 100ms;
+  text-decoration: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 12px 24px;
+
+  &--rounded {
+    border-radius: 10px;
+  }
+
+  &--noLabel {
+    padding: 12px !important;
+
+    svg {
+      margin: 0 !important;
+    }
+  }
+
+  &--withIcon:not(.button--noLabel) {
+    padding-left: 18px;
+
+    &.button--icon-pos-start svg:not(.loading-spinner) {
+      margin-right: $iconGutter;
+    }
+    &.button--icon-pos-end {
+      padding-left: 24px;
+      padding-right: 18px;
+
+      svg:not(.loading-spinner) {
+        margin-left: $iconGutter;
+      }
+    }
+  }
+
+  .loading-spinner-wrapper {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  &--loading {
+    opacity: 1 !important;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      bottom: 5px;
+      left: 5px;
+      background-color: inherit;
+    }
+  }
+
+  &--inline {
+    display: inline-flex;
+  }
+
+  &--fluid {
+    width: 100%;
+    flex: 1 1 0;
+  }
+
+  &[disabled="true"],
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled="true"]:hover {
+    opacity: $disabledOpacity;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+.button--color {
+  &-primary {
+    color: white;
+    background-color: $blue600;
+
+    svg path {
+      fill: white;
+    }
+
+    &.button--variant {
+      &-light {
+        background-color: $blue500;
+      }
+      &-dark {
+        background-color: $blue700;
+      }
+    }
+
+    .loading-spinner {
+      path {
+        fill: none;
+        stroke: #d1e2ff;
+      }
+      circle {
+        stroke: #2143d5;
+      }
+    }
+
+    &:hover:enabled {
+      opacity: $hoverOpacity;
+    }
+    &:active:enabled {
+      background-color: $blue800;
+    }
+  }
+
+  &-secondary,
+  &-pill {
+    color: $grey700;
+    background-color: $grey200;
+
+    &.button--variant {
+      &-light {
+        background-color: white;
+        border: 1px solid $grey200;
+      }
+      &-dark {
+        background-color: $grey300;
+      }
+    }
+
+    &:hover:enabled {
+      opacity: $hoverOpacity;
+    }
+    &:active:enabled {
+      background-color: $grey300;
+    }
+  }
+
+  &-secondary {
+    &[disabled="true"],
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled="true"]:hover {
+      opacity: 1;
+      color: $grey300;
+      svg path {
+        fill: $grey300;
+      }
+
+      &.button--loading {
+        background: white;
+        border: 1px solid $grey200;
+      }
+    }
+  }
+
+  &-red {
+    color: $red600;
+    background-color: $red200;
+
+    svg path {
+      fill: $red600;
+    }
+
+    &.button--variant {
+      &-light {
+        background-color: $red100;
+      }
+      &-dark {
+        background-color: $red300;
+      }
+    }
+
+    .loading-spinner {
+      path {
+        fill: none;
+        stroke: $red600;
+      }
+      circle {
+        stroke: $red300;
+      }
+    }
+
+    &:hover:enabled {
+      opacity: $hoverOpacity;
+    }
+    &:active:enabled {
+      background-color: $red400;
+    }
+  }
+}
+
+.button--size {
+  &-small,
+  &-regular {
+    svg:not(.loading-spinner) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &-pill {
+    min-height: 28px;
+    padding: 0 12px !important;
+    font-size: 12px;
+
+    &.button--rounded {
+      border-radius: 16px;
+    }
+
+    svg:not(.loading-spinner) {
+      width: 14px;
+      height: 14px;
+    }
+
+    .loading-spinner-wrapper {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &-small {
+    min-height: 40px;
+  }
+  &-regular {
+    min-height: 48px;
+  }
+  &-large {
+    min-height: 64px;
+    font-size: 18px;
+
+    svg:not(.loading-spinner) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

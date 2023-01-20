@@ -50,12 +50,13 @@ Text.propTypes = {
     PropTypes.node,
   ]).isRequired,
   className: PropTypes.string,
-  size: PropTypes.oneOf(["primary", "large"]),
-  weight: PropTypes.oneOf(["regular", "medium", "bold"]),
+  size: PropTypes.oneOf(["small", "regular", "large"]),
+  weight: PropTypes.oneOf(["light", "regular", "medium", "bold", "black"]),
   align: PropTypes.oneOf(["center", "left", "right"]),
   as: PropTypes.node,
 };
 
 Text.defaultProps = {
-  size: "primary",
+  size: "regular",
+  weight: "regular",
 };

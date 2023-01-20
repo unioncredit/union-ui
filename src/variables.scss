@@ -25,7 +25,8 @@ $green900: #14532d;
 // red
 $red50: #fef2f2;
 $red100: #fee2e2;
-$red200: #fca5a5;
+$red200: #FECACA;
+$red300: #FCA5A5;
 $red400: #f87171;
 $red500: #ef4444;
 $red600: #dc2626;
@@ -94,6 +95,7 @@ $shadesOfGrey: (
 
 $colors: (
   "white": white,
+  "black": black,
   // blues
   "blue50": $blue50,
   "blue100": $blue100,
@@ -144,15 +146,22 @@ $colors: (
 }
 
 @mixin weights {
-  &--weight-regular {
-    font-weight: 400;
-  }
-
-  &--weight-medium {
-    font-weight: 500;
-  }
-  &--weight-heavy {
-    font-weight: 700;
+  &--weight {
+    &-light {
+      font-weight: 300;
+    }
+    &-regular {
+      font-weight: 400;
+    }
+    &-medium {
+      font-weight: 500;
+    }
+    &-bold {
+      font-weight: 600;
+    }
+    &-black {
+      font-weight: 700;
+    }
   }
 }
 
