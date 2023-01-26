@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
 
-import "./bar.scss";
+import "./Bar.scss";
 
 export function Bar({
   percentage,

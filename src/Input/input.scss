@@ -23,7 +23,8 @@ $gutter: 8px;
   align-items: center;
 
   &__maxButton.button {
-    padding: 0 8px;
+    padding: 0 8px !important;
+    min-height: 20px !important;
   }
 
   .input-row & {
@@ -58,15 +59,10 @@ $gutter: 8px;
   &__prefix {
     position: absolute;
     left: 0;
-    padding: 0 4px 0 8px;
+    padding: 0 4px 0 12px;
     height: 48px;
     display: flex;
     align-items: center;
-
-    svg {
-      width: 24px;
-      height: 24px;
-    }
   }
 
   &--has-prefix {
@@ -102,7 +98,7 @@ $gutter: 8px;
       color: $grey500;
     }
 
-    &:hover:enable {
+    &:hover {
       height: 40px;
       border: 2px solid $grey300;
     }

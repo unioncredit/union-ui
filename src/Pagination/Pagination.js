@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import ArrowRight from "../Icons/icons/arrowRight.svg";
 
-import "./pagination.scss";
+import "./Pagination.scss";
 
 export function Pagination({ onClick, pages, activePage = 1, ...props }) {
   if (pages <= 1) {

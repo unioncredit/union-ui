@@ -37,7 +37,7 @@ export function Stat({
               {label}
               {tooltip && (
                 <Tooltip content={tooltip} {...tooltipProps}>
-                  <Info width="16px" />
+                  <Info width="13px" />
                 </Tooltip>
               )}
             </Text>

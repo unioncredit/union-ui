@@ -1,0 +1,65 @@
+@import "../variables.scss";
+
+.text {
+  margin-bottom: 8px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+
+  &--size {
+    &-small {
+      font-size: 12px;
+      line-height: 16px;
+
+      @media screen and (max-width: $breakpoint-xs) {
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+
+    &-regular {
+      font-size: 14px;
+      line-height: 20px;
+
+      @media screen and (max-width: $breakpoint-xs) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    &-medium {
+      font-size: 16px;
+      line-height: 24px;
+
+      @media screen and (max-width: $breakpoint-xs) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    &-large {
+      font-size: 18px;
+      line-height: 28px;
+
+      @media screen and (max-width: $breakpoint-xs) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  @include greys;
+  @include colors;
+  @include weights;
+}

@@ -5,6 +5,7 @@ export * from "./Badge";
 export * from "./Bar";
 export * from "./Box";
 export * from "./Button";
+export * from "./ButtonRow";
 export * from "./Card";
 export * from "./Control";
 export * from "./Divider";

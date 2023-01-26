@@ -14,6 +14,7 @@ const sizes = [
   "large",
   "regular",
   "small",
+  "thin",
   "pill",
 ];
 

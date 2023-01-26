@@ -214,6 +214,18 @@ $hoverOpacity: 0.8;
     }
   }
 
+  &-thin {
+    min-height: 32px;
+    font-size: 14px;
+    padding: 0 12px !important;
+
+    .loading-spinner-wrapper,
+    svg:not(.loading-spinner) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   &-pill {
     min-height: 28px;
     padding: 0 12px !important;

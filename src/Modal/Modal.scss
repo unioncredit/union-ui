@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .modal {
-  box-shadow: 0px 14px 30px -16px #1e1c22;
+  box-shadow: 0 14px 30px -16px #1e1c22;
   max-width: 420px;
   width: 100%;
   overflow: hidden;
@@ -81,17 +81,18 @@
   .closeWrapper {
     margin-left: auto;
     cursor: pointer;
+    background: $grey100;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 
     & > svg > path {
       fill: $grey100;
     }
 
-    &:hover > svg > path:nth-of-type(1) {
-      stroke: $grey200;
-    }
-
-    &:active > svg > path:nth-of-type(1) {
-      fill: $grey200;
+    &:hover,
+    &:active {
+      border: 1px solid $grey200;
     }
 
     & > svg > path:nth-of-type(2) {

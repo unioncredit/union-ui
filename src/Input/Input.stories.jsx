@@ -48,7 +48,7 @@ export const Inputs = () => (
         label="Clickable Caption"
         caption={
           <>
-            <Dai valuu={382.91} /> Available
+            <Dai value={382.91} /> Available
           </>
         }
         onCaptionButtonClick={() => alert("clicked")}

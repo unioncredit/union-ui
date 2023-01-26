@@ -6,10 +6,8 @@ import { Box } from "../Box";
 import { Button } from "../Button";
 import { Text } from "../Text";
 
-import Close from "../Icons/icons/close.svg";
-import LArrow from "../Icons/icons/arrowRight.svg";
-
-import "./modal.scss";
+import "./Modal.scss";
+import { ArrowLeftIcon, CloseIcon } from "../Icons";
 
 function ModalHeader({ className, onClose, title, subTitle, onBack }) {
   return (
@@ -19,7 +17,7 @@ function ModalHeader({ className, onClose, title, subTitle, onBack }) {
           <Button
             className="backButton"
             variant="pill"
-            icon={LArrow}
+            icon={ArrowLeftIcon}
             label="Previous"
             onClick={onBack}
           />
@@ -44,8 +42,8 @@ function ModalHeader({ className, onClose, title, subTitle, onBack }) {
           </div>
         )}
         {onClose && (
-          <Box className="closeWrapper">
-            <Close width="24px" height="24px" onClick={onClose} />
+          <Box className="closeWrapper" onClick={onClose} align="center" justify="center">
+            <CloseIcon width="10px" height="10px" />
           </Box>
         )}
       </Box>

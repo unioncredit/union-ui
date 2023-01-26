@@ -4,8 +4,8 @@
   width: 288px;
   display: flex;
   border: 1px solid $grey100;
-  box-shadow: 0px 1px 1px rgba(58, 56, 66, 0.2),
-    0px 4px 8px rgba(58, 56, 66, 0.25);
+  box-shadow: 0 1px 1px rgba(58, 56, 66, 0.2),
+    0 4px 8px rgba(58, 56, 66, 0.25);
   border-radius: 12px;
   padding: 12px;
   margin-bottom: 12px;
@@ -18,8 +18,9 @@
   &__icon {
     flex-grow: 0;
     padding-right: 8px;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
+    margin-top: 0.2em;
   }
 
   &--pending &__icon svg {
@@ -49,9 +50,13 @@
     flex-direction: column;
     padding-left: 13px;
 
+    & > *:not(:last-child) {
+      margin-bottom: 0.5em;
+    }
+
     svg {
-      width: 24px;
-      height: 24px;
+      width: 14px;
+      height: 14px;
       cursor: pointer;
     }
   }

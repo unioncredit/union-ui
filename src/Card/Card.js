@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
 
-import "./card.scss";
-import { Heading } from "../Heading";
+import "./Card.scss";
 
 export const Card = forwardRef(
   (
@@ -55,9 +54,9 @@ function CardHeader({ title, subTitle, align, action, ...props }) {
           {title}
         </Text>
         {subTitle && (
-          <Heading level={2} mb="0px">
+          <Text as="h2" mb="0px" color="grey500">
             {subTitle}
-          </Heading>
+          </Text>
         )}
       </div>
       {action && <div className="card-header__action">{action}</div>}

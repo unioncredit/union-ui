@@ -78,9 +78,10 @@ export const Input = forwardRef(
           {captionButtonLabel && onCaptionButtonClick && (
             <Button
               label={captionButtonLabel}
-              color="blue"
-              variant="pill"
-              ml="4px"
+              color="primary"
+              size="pill"
+              variant="light"
+              ml="6px"
               onClick={onCaptionButtonClick}
               className="input__maxButton"
             />

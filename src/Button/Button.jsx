@@ -15,6 +15,7 @@ export const Button = forwardRef(
       label,
       size,
       icon: Icon,
+      iconProps,
       iconPosition,
       loading,
       disabled,
@@ -52,9 +53,9 @@ export const Button = forwardRef(
       },
       <>
         {" "}
-        {Icon && iconPosition === "start" && <Icon />}
+        {Icon && iconPosition === "start" && <Icon {...iconProps} />}
         {label || children}
-        {Icon && iconPosition === "end" && <Icon />}
+        {Icon && iconPosition === "end" && <Icon {...iconProps} />}
         {loading && (
           <div className="loading-spinner-wrapper">
             <LoadingSpinner />
@@ -70,8 +71,9 @@ Button.propTypes = {
   color: PropTypes.oneOf(["primary", "secondary", "red"]),
   variant: PropTypes.oneOf(["light", "regular", "dark"]),
   label: PropTypes.node,
-  size: PropTypes.oneOf(["pill", "small", "regular", "large"]),
+  size: PropTypes.oneOf(["pill", "thin", "small", "regular", "large"]),
   icon: PropTypes.any,
+  iconProps: PropTypes.object,
   iconPosition: PropTypes.oneOf(["start", "end"]),
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
