@@ -9,7 +9,7 @@ import { Avatar } from "../Avatar";
 
 import AbitrumAvatar from "../assets/arbitrum-avatar.png";
 import EthereumAvatar from "../assets/ethereum-avatar.png";
-import KovanAvatar from "../assets/kovan-avatar.png";
+import KovanAvatar from "../assets/goerli-avatar.png";
 import { ContextMenu } from "../ContextMenu";
 
 export default {

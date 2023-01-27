@@ -3,9 +3,9 @@ import cn from "classnames";
 
 import { useClickOutside } from "../util";
 
-import "./context-menu.scss";
+import "./ContextMenu.scss";
 
-export function ContextMenu({ items, after, position, button }) {
+export function ContextMenu({ items, after, position, button, className }) {
   const ref = useRef(null);
   const [open, setOpen] = useState(false);
 
@@ -16,7 +16,7 @@ export function ContextMenu({ items, after, position, button }) {
   const toggleOpen = () => setOpen((x) => !x);
 
   return (
-    <div className="context-menu-wrapper" ref={ref}>
+    <div className={cn("context-menu-wrapper", className)} ref={ref}>
       {button ? (
         button(toggleOpen)
       ) : (
@@ -37,8 +37,9 @@ export function ContextMenu({ items, after, position, button }) {
             [`context-menu--${position}`]: position,
           })}
         >
-          {items.map(({ label, className, as, onClick, ...item }) => {
+          {items.map(({ icon: Icon, label, className, as, onClick, ...item }) => {
             const props = {
+              fluid: true,
               className: cn("context-menu__item", className),
               onClick: () => {
                 onClick && onClick(toggleOpen);
@@ -46,7 +47,12 @@ export function ContextMenu({ items, after, position, button }) {
               ...item,
             };
 
-            return createElement(as || "a", props, label);
+            return createElement(as || "a", props, (
+              <>
+                {Icon && <Icon className="context-menu__icon" width="20px" height="20px" />}
+                {label}
+              </>
+            ));
           })}
           {after && <div className="context-menu__after">{after}</div>}
         </div>

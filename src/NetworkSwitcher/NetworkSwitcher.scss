@@ -1,0 +1,106 @@
+@import "../variables.scss";
+
+.networkSwitcher__menu .context-menu {
+  .button.networkSwitcher {
+    color: $grey700;
+    background: white;
+
+    &.selected {
+      color: $blue500;
+      background: $blue50;
+
+      &:hover {
+        border: 1px solid $blue500;
+      }
+    }
+
+    &:hover {
+      background: $grey100;
+      border: 1px solid $grey300;
+    }
+  }
+}
+
+.networkSwitcher__buttonContainer {
+  width: 130px;
+
+  @media screen and (max-width: $breakpoint-xxs) {
+    width: auto;
+
+    span {
+      display: none;
+    }
+
+    .button.networkSwitcher {
+      padding: 0 4px;
+
+      .avatar {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.button.networkSwitcher {
+  height: 40px;
+  min-height: 0;
+  padding: 8px 12px 8px 8px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  border: 1px solid transparent;
+  background-color: $grey100;
+  color: $grey500;
+  border-radius: 8px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: $grey200;
+    border: 1px solid $grey300;
+  }
+
+  .wireCheck,
+  .wireCheck_svg__wireCheck {
+    margin-left: auto;
+
+    path {
+      fill: $blue500;
+    }
+  }
+
+  .context-menu & {
+    margin: 0 4px 4px 4px;
+    width: calc(100% - 8px);
+  }
+
+  &--arbitrum {
+    background-color: $blue100;
+    color: $blue500;
+
+    &:hover {
+      background-color: $blue200;
+      border: 1px solid $blue300;
+    }
+  }
+
+  &--optimism {
+    background-color: $red100;
+    color: $red500;
+
+    &:hover {
+      background-color: $red200;
+      border: 1px solid $red300;
+    }
+  }
+
+  .avatar {
+    margin-right: 4px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

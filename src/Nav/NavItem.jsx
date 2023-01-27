@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import { Text } from "../Text";
 
-import "./nav-item.scss";
+import "./NavItem.scss";
 
 export const NavItem = forwardRef(
   ({ onClick, disabled, label, active, as }, ref) => {
@@ -13,6 +13,7 @@ export const NavItem = forwardRef(
         as={as || "a"}
         ref={ref}
         tabIndex="0"
+        weight="medium"
         className={cn("nav-item", {
           "nav-item--active": active,
           "nav-item--disabled": disabled,

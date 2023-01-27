@@ -6,7 +6,7 @@ import { Button } from "../Button";
 import { ContextMenu } from "../ContextMenu";
 import WireCheck from "../Icons/icons/wireCheck.svg";
 
-import "./network-switcher.scss";
+import "./NetworkSwitcher.scss";
 
 export function NetworkButton({
   selected,
@@ -18,10 +18,10 @@ export function NetworkButton({
 }) {
   return (
     <Button
-      variant="lite"
       onClick={onClick}
       className={cn("networkSwitcher", {
         [`networkSwitcher--${type}`]: type,
+        "selected": selected,
       })}
       label={
         <>
@@ -57,6 +57,7 @@ export function NetworkSwitcher({
 
   return (
     <ContextMenu
+      className="networkSwitcher__menu"
       items={options.map((option) => ({
         ...option,
         onClick: handleClick(option),

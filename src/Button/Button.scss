@@ -2,7 +2,6 @@
 
 $iconGutter: 0.4em;
 $disabledOpacity: 0.5;
-$hoverOpacity: 0.8;
 
 .button {
   position: relative;
@@ -104,9 +103,17 @@ $hoverOpacity: 0.8;
     &.button--variant {
       &-light {
         background-color: $blue500;
+
+        &:hover:enabled {
+          background-color: $blue400;
+        }
       }
       &-dark {
         background-color: $blue700;
+
+        &:hover:enabled {
+          background-color: $blue600;
+        }
       }
     }
 
@@ -121,7 +128,7 @@ $hoverOpacity: 0.8;
     }
 
     &:hover:enabled {
-      opacity: $hoverOpacity;
+      background-color: $blue500;
     }
     &:active:enabled {
       background-color: $blue800;
@@ -140,11 +147,15 @@ $hoverOpacity: 0.8;
       }
       &-dark {
         background-color: $grey300;
+
+        &:hover:enabled {
+          background-color: $grey200;
+        }
       }
     }
 
     &:hover:enabled {
-      opacity: $hoverOpacity;
+      background-color: $grey100;
     }
     &:active:enabled {
       background-color: $grey300;
@@ -156,7 +167,6 @@ $hoverOpacity: 0.8;
     &[disabled],
     &[disabled]:hover,
     &[disabled="true"]:hover {
-      opacity: 1;
       color: $grey300;
       svg path {
         fill: $grey300;
@@ -180,9 +190,17 @@ $hoverOpacity: 0.8;
     &.button--variant {
       &-light {
         background-color: $red100;
+
+        &:hover:enabled {
+          background-color: $red50;
+        }
       }
       &-dark {
         background-color: $red300;
+
+        &:hover:enabled {
+          background-color: $red200;
+        }
       }
     }
 
@@ -197,7 +215,7 @@ $hoverOpacity: 0.8;
     }
 
     &:hover:enabled {
-      opacity: $hoverOpacity;
+      background-color: $red100;
     }
     &:active:enabled {
       background-color: $red400;

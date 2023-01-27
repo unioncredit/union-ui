@@ -5,13 +5,13 @@ import { Avatar } from "../Avatar";
 import { Button } from "../Button";
 import { Text } from "../Text";
 
-import "./wallet.scss";
+import "./Wallet.scss";
 
 export function Wallet({ onClick, avatar, name, networkSrc }) {
   return (
-    <Button variant="secondary" className="wallet" onClick={onClick}>
+    <Button color="secondary" variant="light" className="wallet" onClick={onClick}>
       {avatar || <Avatar size={24} />}
-      <Text>{name}</Text>
+      <Text grey={600} weight="medium">{name}</Text>
       {networkSrc && (
         <span className="wallet__network">
           <Avatar src={networkSrc} size={24} />

@@ -10,15 +10,13 @@
   background-color: $grey50;
 
   &.button {
-    height: 32px;
+    height: 40px;
     min-height: 0;
     padding: 8px 8px 8px 4px;
   }
 
   .text {
     margin: 0 0 0 8px;
-    color: $grey500;
-    font-size: 14px !important;
 
     @media screen and (max-width: 600px) {
       display: none;
