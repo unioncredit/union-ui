@@ -4,35 +4,57 @@ import PropTypes from "prop-types";
 
 import { Text } from "../Text";
 
-import "./toggle.scss";
+import "./Toggle.scss";
 
-export function Toggle({ initialState, label, onChange }) {
+export function Toggle({ initialState, label, labelPosition, onChange, color, disabled, size }) {
   const [active, setActive] = useState(initialState);
 
   const handleChange = () => {
-    setActive((x) => !x);
-    onChange && onChange(active);
+    if (!disabled) {
+      setActive((x) => !x);
+      onChange && onChange(!active);
+    }
   };
 
+  const ToggleLabel = () => (
+    <Text className={cn("toggle-label", {
+      [`toggle-label--pos-${labelPosition}`]: true,
+      [`toggle-label--color-${color}`]: true,
+      [`toggle-label--size-${size}`]: true,
+    })}
+    >
+      {label}
+    </Text>
+  );
+
   return (
-    <div class="toggle-wrapper">
+    <div className={cn("toggle-wrapper", { "toggle-wrapper--disabled": disabled })}>
+      {label && labelPosition === "start" && <ToggleLabel />}
       <div
         className={cn("toggle", { "toggle--active": active })}
         onClick={handleChange}
       >
         <div className="toggle__switch" />
       </div>
-      {label && <Text className="toggle-label">{label}</Text>}
+      {label && labelPosition === "end" && <ToggleLabel />}
     </div>
   );
 }
 
 Toggle.propTypes = {
   label: PropTypes.string,
+  labelPosition: PropTypes.oneOf(["start", "end"]),
   initialState: PropTypes.bool,
   onChange: PropTypes.func,
+  color: PropTypes.oneOf(["primary", "secondary"]),
+  disabled: PropTypes.bool,
+  size: PropTypes.oneOf(["small", "regular", "large"]),
 };
 
 Toggle.defaultProps = {
+  labelPosition: "end",
   initialState: false,
+  color: "secondary",
+  disabled: false,
+  size: "regular",
 };

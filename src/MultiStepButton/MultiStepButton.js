@@ -5,9 +5,9 @@ import { Label } from "../Label";
 import { Button } from "../Button";
 import { Collapse } from "../Collapse";
 
-import "./multi-step-button.scss";
+import "./MultiStepButton.scss";
 
-export function MultiStepButton({ id, items, action, label, showSteps }) {
+export function MultiStepButton({ id, items, action, label, showSteps, toggle: Toggle }) {
   return (
     <div
       className={cn("multiStepButton", {
@@ -32,6 +32,7 @@ export function MultiStepButton({ id, items, action, label, showSteps }) {
               {label}
             </Label>
           )}
+          {Toggle && <Toggle />}
         </div>
       </Collapse>
       {action && <Button className="multiStepButton__action" {...action} />}
