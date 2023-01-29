@@ -4,6 +4,7 @@ import { MultiStepButton } from "./MultiStepButton";
 import { Box } from "../Box";
 
 import CloudCheck from "../Icons/icons/cloudCheck.svg";
+import { Toggle } from "../Toggle";
 
 export default {
   component: MultiStepButton,
@@ -25,7 +26,18 @@ const items3 = [
 ];
 
 export const Default = () => {
-  const [state, setState] = useState(false);
+  const [state, setState] = useState(true);
+
+  const GaslessToggle = () => {
+    return (
+      <Toggle
+        color="primary"
+        label="Gasless approval"
+        labelPosition="start"
+        onChange={(active) => console.log("Toggled: ", active)}
+      />
+    );
+  };
 
   return (
     <Box w="320px" direction="vertical" align="stretch">
@@ -47,7 +59,7 @@ export const Default = () => {
           }}
           showSteps={state}
           initialState={true}
-          label="Gasless Approval"
+          toggle={GaslessToggle}
         />
       </Box>
       <Box mb="12px">

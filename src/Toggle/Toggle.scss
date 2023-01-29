@@ -14,6 +14,7 @@
   position: relative;
   transition: 100ms all;
   overflow: hidden;
+  cursor: pointer;
 
   &__switch {
     transition: 100ms all;
@@ -29,7 +30,7 @@
   }
 
   &--active {
-    background-color: $blue100;
+    background-color: $blue600;
 
     & .toggle__switch {
       left: $width - $gutter - $size;
@@ -41,9 +42,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  &--disabled {
+    opacity: 0.5;
+  }
 }
 
 .toggle-label {
-  margin: 0 0 0 6px;
-  color: $grey500;
+  font-weight: 500;
+
+  &--pos {
+    &-start { margin: 0 6px 0 0; }
+    &-end { margin: 0 0 0 6px; }
+  }
+  &--color {
+    &-primary { color: $blue600; }
+    &-secondary { color: $grey500; }
+  }
 }
