@@ -1,0 +1,72 @@
+import "./ButtonReveal.scss";
+
+import { useState } from "react";
+import cn from "classnames";
+import PropTypes from "prop-types";
+
+import { Button } from "../Button";
+import { Box } from "../Box";
+import { Text } from "../Text";
+
+export default function ButtonReveal({
+  title,
+  closeLabel,
+  buttonProps,
+  children,
+  className,
+  ...props
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Box className={cn("HiddenInput", className)} {...props}>
+      {open ? (
+        <Box className="HiddenInput__content" direction="vertical">
+          <Box
+            fluid
+            as="header"
+            align="center"
+            justify="space-between"
+            className="HiddenInput__header"
+          >
+            <Text size="medium" className="HiddenInput__title">
+              {title}
+            </Text>
+
+            <Button
+              size="pill"
+              color="secondary"
+              variant="light"
+              label={closeLabel}
+              className="HiddenInput__cancel"
+              onClick={() => setOpen(false)}
+            />
+          </Box>
+
+          {children}
+        </Box>
+      ) : (
+        <Button
+          className="HiddenInput__button"
+          {...buttonProps}
+          onClick={() => setOpen(true)}
+        />
+      )}
+    </Box>
+  )
+}
+
+ButtonReveal.propTypes = {
+  title: PropTypes.string,
+  closeLabel: PropTypes.string,
+  buttonProps: PropTypes.object,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  className: PropTypes.string,
+};
+
+ButtonReveal.defaultProps = {
+  closeLabel: "Cancel",
+};
