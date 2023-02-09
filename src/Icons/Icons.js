@@ -52,6 +52,7 @@ export { default as NewVouchReceivedIcon } from "./icons/newVouchRecieved.svg";
 export { default as OptimismIcon } from "./icons/optimism.svg";
 export { default as PendingIcon } from "./icons/pending.svg";
 export { default as PeopleIcon } from "./icons/people.svg";
+export { default as PlusIcon } from "./icons/plus.svg";
 export { default as RemoveIcon } from "./icons/remove.svg";
 export { default as RepaymentIcon } from "./icons/repayment.svg";
 export { default as SearchIcon } from "./icons/search.svg";
