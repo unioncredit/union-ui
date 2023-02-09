@@ -1,0 +1,12 @@
+@import "../variables";
+
+.DataLineItems__item {
+  width: 100%;
+
+  &--error {
+    p, path {
+      fill: $red500;
+      color: $red500 !important;
+    }
+  }
+}
