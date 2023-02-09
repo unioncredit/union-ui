@@ -19,17 +19,17 @@ export default function ButtonReveal({
   const [open, setOpen] = useState(false);
 
   return (
-    <Box className={cn("HiddenInput", className)} {...props}>
+    <Box className={cn("ButtonReveal", className)} {...props}>
       {open ? (
-        <Box className="HiddenInput__content" direction="vertical">
+        <Box className="ButtonReveal__content" direction="vertical">
           <Box
             fluid
             as="header"
             align="center"
             justify="space-between"
-            className="HiddenInput__header"
+            className="ButtonReveal__header"
           >
-            <Text size="medium" className="HiddenInput__title">
+            <Text size="medium" className="ButtonReveal__title">
               {title}
             </Text>
 
@@ -38,7 +38,7 @@ export default function ButtonReveal({
               color="secondary"
               variant="light"
               label={closeLabel}
-              className="HiddenInput__cancel"
+              className="ButtonReveal__cancel"
               onClick={() => setOpen(false)}
             />
           </Box>
@@ -47,7 +47,7 @@ export default function ButtonReveal({
         </Box>
       ) : (
         <Button
-          className="HiddenInput__button"
+          className="ButtonReveal__button"
           {...buttonProps}
           onClick={() => setOpen(true)}
         />

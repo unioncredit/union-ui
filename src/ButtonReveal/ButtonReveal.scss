@@ -1,6 +1,6 @@
 @import "../variables";
 
-.HiddenInput {
+.ButtonReveal {
 
   &__header {
     padding-bottom: 4px;
@@ -8,6 +8,7 @@
 
   &__title {
     margin: 0;
+    align-self: flex-start;
   }
 
   &__content {
