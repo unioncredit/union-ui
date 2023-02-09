@@ -20,6 +20,7 @@ export const Input = forwardRef(
       onChange,
       type,
       error,
+      className,
       defaultValue,
       onCaptionButtonClick,
       captionButtonLabel = "Max",
@@ -35,7 +36,7 @@ export const Input = forwardRef(
 
     return (
       <div
-        className={cn("input-wrapper", {
+        className={cn("input-wrapper", className, {
           "input-wrapper--error": !disabled && error,
         })}
       >
