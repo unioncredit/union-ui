@@ -1,0 +1,57 @@
+@import "../variables";
+
+.ExpandingInfo.open {
+  .ExpandingInfo__content {
+    display: block;
+  }
+  .ExpandingInfo__arrow {
+    transform: rotate(-180deg);
+  }
+}
+
+.ExpandingInfo {
+  width: 100%;
+  color: $amber700;
+  background: $amber100;
+  border-radius: 12px;
+
+  &__icon,
+  &__arrow {
+    flex-shrink: 0;
+
+    path {
+      fill: $amber700;
+    }
+  }
+
+  &__icon {
+    width: 21px;
+    height: 21px;
+    margin-right: 8px;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    border: 1px solid $amber300;
+    border-radius: 50%;
+    margin-left: auto;
+    transition: transform 100ms ease-in-out;
+
+    svg {
+      width: 8px;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    cursor: pointer;
+    padding: 16px;
+  }
+
+  &__content {
+    display: none;
+    padding: 16px;
+    border-top: 1px solid $amber300;
+  }
+}
