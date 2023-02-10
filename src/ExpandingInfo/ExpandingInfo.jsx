@@ -1,7 +1,7 @@
 import "./ExpandingInfo.scss";
 
 import cn from "classnames";
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import { Box } from "../Box";

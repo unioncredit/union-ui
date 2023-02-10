@@ -1,4 +1,4 @@
-import ExpandingInfo from "./ExpandingInfo";
+import { ExpandingInfo } from "./ExpandingInfo";
 import { Text } from "../Text";
 import { Box } from "../Box";
 import { WarningIcon } from "../Icons";
