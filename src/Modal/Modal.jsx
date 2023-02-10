@@ -15,11 +15,13 @@ function ModalHeader({ className, onClose, title, subTitle, onBack }) {
       <Box align="center" justify="space-between" className="modalHeader">
         {onBack && (
           <Button
-            className="backButton"
-            variant="pill"
+            size="pill"
+            color="secondary"
+            variant="light"
             icon={ArrowLeftIcon}
-            label="Previous"
+            label="Back"
             onClick={onBack}
+            className="backButton"
           />
         )}
         {title && (
@@ -42,9 +44,11 @@ function ModalHeader({ className, onClose, title, subTitle, onBack }) {
           </div>
         )}
         {onClose && (
-          <Box className="closeWrapper" onClick={onClose} align="center" justify="center">
-            <CloseIcon width="10px" height="10px" />
-          </Box>
+          <div className="closeWrapper">
+            <Box className="closeButton" onClick={onClose} align="center" justify="center">
+              <CloseIcon width="10px" height="10px" />
+            </Box>
+          </div>
         )}
       </Box>
     </div>

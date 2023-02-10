@@ -57,8 +57,6 @@
   .card-body {
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-left: 3px;
-    padding-right: 3px;
     padding: 24px;
 
     &::-webkit-scrollbar {
@@ -78,25 +76,33 @@
     }
   }
 
-  .closeWrapper {
+  .closeButton {
     margin-left: auto;
     cursor: pointer;
-    background: $grey100;
+    background: white;
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    border: 1px solid $grey200;
 
-    & > svg > path {
-      fill: $grey100;
+    path {
+      color: $grey500;
     }
 
-    &:hover,
+    &:hover {
+      background: $grey100;
+
+      path {
+        color: $grey700
+      }
+    }
+
     &:active {
-      border: 1px solid $grey200;
-    }
+      background: $grey200;
 
-    & > svg > path:nth-of-type(2) {
-      fill: $grey500;
+      path {
+        color: $grey800;
+      }
     }
   }
 
@@ -105,17 +111,22 @@
     padding: 24px;
   }
 
-  .closeWrapper,
+  .closeWrapper {
+    width: 69px;
+  }
+
+  .closeButton,
   .backButton {
     position: relative;
     z-index: 1;
+    flex-shrink: 0;
   }
 
   .backButton {
     padding: 4px 8px 4px 2px;
 
     svg {
-      transform: rotate(180deg);
+      width: 10px;
       margin: 0;
     }
   }
