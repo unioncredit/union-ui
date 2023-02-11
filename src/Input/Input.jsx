@@ -70,7 +70,7 @@ export const Input = forwardRef(
             {suffix && <div className="input__suffix">{suffix}</div>}
           </div>
         </div>
-        <Box align="center" mt="8px">
+        <Box align="center" mt="4px">
           {(caption || error) && (
             <Text size="small" m={0} className="input-caption">
               {(!disabled && error) || caption}
