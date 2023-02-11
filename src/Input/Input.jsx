@@ -41,7 +41,7 @@ export const Input = forwardRef(
         })}
       >
         {label && (
-          <Text as="label" className="input-label" htmlFor={name}>
+          <Text as="label" className="input-label" htmlFor={name} size="medium">
             {label}
           </Text>
         )}

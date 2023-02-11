@@ -83,7 +83,7 @@ $gutter: 8px;
     width: 100%;
     font-size: $fontSize;
     padding: 0 12px;
-    border: 1px solid $grey100;
+    border: 1px solid #eae9e8;
     border-radius: 12px;
     outline: none;
     height: 48px;
@@ -124,7 +124,7 @@ $gutter: 8px;
     }
 
     .input-wrapper--error & {
-      border: 2px solid $red600;
+      border: 1px solid $red600;
       background-color: $red50;
 
       &:focus {
@@ -136,7 +136,7 @@ $gutter: 8px;
 
 .input-label,
 .input-caption {
-  padding-left: $gutter;
+  color: $grey800;
   display: block;
 }
 
@@ -145,6 +145,8 @@ $gutter: 8px;
 }
 
 .input-caption {
+  padding-left: $gutter;
+
   .input-wrapper--error & {
     color: $red600;
   }
