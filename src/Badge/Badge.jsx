@@ -4,7 +4,7 @@ import cn from "classnames";
 
 import { propsToStyles } from "../spacing";
 
-import "./badge.scss";
+import "./Badge.scss";
 
 export function Badge({ onClick, color, label, className, ...props }) {
   return (
