@@ -1,4 +1,4 @@
-import "./input.scss";
+import "./Input.scss";
 import React, { forwardRef, useState } from "react";
 import cn from "classnames";
 

@@ -99,7 +99,7 @@ $gutter: 8px;
     }
 
     &:hover {
-      border: 2px solid $grey300;
+      border: 1px solid $grey300;
     }
 
     &:focus ~ .input__suffix {
@@ -107,7 +107,7 @@ $gutter: 8px;
     }
 
     &:focus {
-      border: 2px solid $blue500;
+      border: 1px solid $blue600;
       box-shadow: 0 0 0 2px $blue200;
     }
 
