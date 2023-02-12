@@ -29,6 +29,7 @@ export { default as DollarIcon } from "./icons/dollar.svg";
 export { default as DotsIcon } from "./icons/dots.svg";
 export { default as DropdownArrowIcon } from "./icons/dropdownArrow.svg";
 export { default as EnsIcon } from "./icons/ens.svg";
+export { default as EnsOutlinedIcon } from "./icons/ens-outlined.svg";
 export { default as ErrorIcon } from "./icons/error.svg";
 export { default as EthereumIcon } from "./icons/ethereum.svg";
 export { default as ExternalIcon } from "./icons/external.svg";
