@@ -7,12 +7,22 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import { Text } from "../Text";
 import { DropdownArrowIcon } from "../Icons";
+import { propsToStyles } from "../spacing";
 
-export function ExpandingInfo({ icon: Icon, title, children, className }) {
+export function ExpandingInfo({
+  icon: Icon,
+  title,
+  children,
+  className,
+  ...props
+}) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Box direction="vertical" className={cn("ExpandingInfo", className, {
+    <Box
+      direction="vertical"
+      style={propsToStyles(props)}
+      className={cn("ExpandingInfo", className, {
       "open": open,
     })}>
       <Box as="header" align="center" className="ExpandingInfo__header" onClick={() => setOpen(!open)}>

@@ -1,6 +1,6 @@
 import "./ButtonReveal.scss";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
@@ -8,7 +8,7 @@ import { Button } from "../Button";
 import { Box } from "../Box";
 import { Text } from "../Text";
 
-export default function ButtonReveal({
+export function ButtonReveal({
   title,
   closeLabel,
   buttonProps,

@@ -7,13 +7,15 @@ import { Box } from "../Box";
 import { Text } from "../Text";
 import { Tooltip } from "../Tooltip";
 import { WireInfoIcon } from "../Icons";
+import { propsToStyles } from "../spacing";
 
-export default function DataLineItems({ items }) {
+export function DataLineItems({ items, ...props }) {
   return (
     <Box
       fluid
       direction="vertical"
       className="DataLineItems"
+      style={propsToStyles(props)}
     >
       {items.map(({ label, value, tooltip, error }) => (
         <Box

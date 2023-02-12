@@ -22,6 +22,7 @@ export const Box = forwardRef(
       fluid,
       fullWidth,
       wrap = "nowrap",
+      style,
       ...props
     },
     ref
@@ -40,6 +41,7 @@ export const Box = forwardRef(
           justifyContent: justify,
           flexDirection: directionMap[direction],
           flexWrap: wrap,
+          ...style,
           ...propsToStyles(props),
         },
         ref,

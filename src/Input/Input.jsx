@@ -5,6 +5,7 @@ import cn from "classnames";
 import { Box } from "../Box";
 import { Text } from "../Text";
 import { Button } from "../Button";
+import { propsToStyles } from "../spacing";
 
 export const Input = forwardRef(
   (
@@ -24,6 +25,7 @@ export const Input = forwardRef(
       defaultValue,
       onCaptionButtonClick,
       captionButtonLabel = "Max",
+      ...props
     },
     ref
   ) => {
@@ -36,6 +38,7 @@ export const Input = forwardRef(
 
     return (
       <div
+        style={propsToStyles(props)}
         className={cn("input-wrapper", className, {
           "input-wrapper--error": !disabled && error,
         })}
@@ -70,24 +73,26 @@ export const Input = forwardRef(
             {suffix && <div className="input__suffix">{suffix}</div>}
           </div>
         </div>
-        <Box align="center" mt="4px">
-          {(caption || error) && (
+
+        {(caption || error) && (
+          <Box align="center" mt="4px">
             <Text size="small" m={0} className="input-caption">
               {(!disabled && error) || caption}
             </Text>
-          )}
-          {captionButtonLabel && onCaptionButtonClick && (
-            <Button
-              label={captionButtonLabel}
-              color="primary"
-              size="pill"
-              variant="light"
-              ml="6px"
-              onClick={onCaptionButtonClick}
-              className="input__maxButton"
-            />
-          )}
-        </Box>
+
+            {captionButtonLabel && onCaptionButtonClick && (
+              <Button
+                label={captionButtonLabel}
+                color="primary"
+                size="pill"
+                variant="light"
+                ml="6px"
+                onClick={onCaptionButtonClick}
+                className="input__maxButton"
+              />
+            )}
+          </Box>
+        )}
       </div>
     );
   }
