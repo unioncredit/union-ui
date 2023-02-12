@@ -1,4 +1,4 @@
-import DataLineItems from "./DataLineItems";
+import { DataLineItems } from "./DataLineItems";
 import { Box } from "../Box";
 
 export default {

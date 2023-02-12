@@ -1,4 +1,4 @@
-import ButtonReveal from "./ButtonReveal";
+import { ButtonReveal } from "./ButtonReveal";
 import { PlusIcon } from "../Icons";
 import { Button } from "../Button";
 
