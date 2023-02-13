@@ -1,0 +1,111 @@
+@import "../variables";
+
+.toggle-menu {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  background: $grey100;
+  padding: 4px;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid $grey200;
+
+  &--variant {
+    &-squared {
+      border-radius: 12px;
+
+      .toggle-menu__item,
+      .toggle-menu__item--slider {
+        border-radius: 8px;
+      }
+    }
+
+    &-rounded {
+      border-radius: 36px;
+
+      .toggle-menu__item,
+      .toggle-menu__item--slider {
+        border-radius: 28px;
+      }
+    }
+  }
+
+  &--size {
+    &-regular {
+      .toggle-menu__item {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 9px 21px;
+
+        svg {
+          margin-right: 6px;
+          max-width: 16px;
+          max-height: 16px;
+        }
+
+        &--slider {
+          height: 40px;
+        }
+      }
+    }
+    &-large {
+      .toggle-menu__item {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 13px 48px;
+
+        svg {
+          margin-right: 9px;
+          max-width: 20px;
+          max-height: 20px;
+        }
+
+        &--slider {
+          height: 56px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 2px;
+    background: transparent;
+    transition: left 200ms cubic-bezier(.47,1.64,.41,.8);;
+    font-weight: 500;
+    font-family: inherit;
+    color: $grey600;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 100%;
+    }
+
+    &--active {
+      color: $grey800;
+    }
+
+    &--slider {
+      margin: 0;
+      position: absolute;
+      top: 4px;
+      background: #ffffff;
+      box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &:not(.toggle-menu__item--disabled):not(.toggle-menu__item--active):hover {
+      background: $grey200;
+    }
+
+    &[disabled],
+    &[disabled="true"] {
+      color: $grey400;
+    }
+  }
+}

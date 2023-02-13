@@ -1,22 +1,23 @@
+import "./ToggleMenu.scss";
+
 import React, { useEffect, useState } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Box } from "../Box";
 import { ToggleMenuItem } from "./ToggleMenuItem";
-
-import "./toggle-menu.scss";
+import { propsToStyles } from "../spacing";
 
 export function ToggleMenu({
   value,
   items,
+  size,
   variant,
   onChange,
   initialActive,
   className,
-  fluid,
-  packed,
+  ...props
 }) {
+  const [width, setWidth] = useState(100 / items.length);
   const [activeIndex, setActiveIndex] = useState(initialActive);
 
   const handleClick = (index) => () => {
@@ -24,9 +25,11 @@ export function ToggleMenu({
     onChange && onChange(items[index], index);
   };
 
-  // if the toggle menu is controlled when the value changes we
-  // update the state
   useEffect(() => {
+    setWidth(100 / items.length);
+
+    // if the toggle menu is controlled when the value changes we
+    // update the state
     if (!value) return;
 
     const index = items.findIndex((item) => item.id === value);
@@ -36,34 +39,45 @@ export function ToggleMenu({
   }, [value, items.length]);
 
   return (
-    <Box
-      direction="horizontal"
+    <div
+      style={propsToStyles(props)}
       className={cn("toggle-menu", className, {
-        [`toggle-menu--${variant}`]: variant,
-        "toggle-menu--packed": packed,
-        "toggle-menu--fluid": fluid,
+        [`toggle-menu--size-${size}`]: size,
+        [`toggle-menu--variant-${variant}`]: variant,
       })}
     >
-      {items.map((item, i) => (
+      <div
+        style={{
+          left: `calc(${width * activeIndex}% + ${items.length - activeIndex}px)`,
+          width: `calc(${width}% - 6px)`
+        }}
+        className="toggle-menu__item toggle-menu__item--slider"
+      />
+
+      {items.map(({ id, label, icon: Icon, ...item }, i) => (
         <ToggleMenuItem
-          key={item.id || i}
+          key={id || i}
           {...item}
           onClick={handleClick(i)}
           active={i === activeIndex}
         >
-          {item.label}
+          {Icon && <Icon />}
+          {label}
         </ToggleMenuItem>
       ))}
-    </Box>
+    </div>
   );
 }
 
 ToggleMenu.defaultProps = {
   initialActive: 0,
+  variant: "squared",
+  size: "regular",
 };
 
 ToggleMenu.propTypes = {
   initialActive: PropTypes.number,
   items: PropTypes.array,
-  variant: PropTypes.oneOf(["primary", "secondary"]),
+  size: PropTypes.oneOf(["regular", "large"]),
+  variant: PropTypes.oneOf(["squared", "rounded"]),
 };

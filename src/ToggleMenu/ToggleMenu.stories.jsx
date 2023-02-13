@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { ToggleMenu } from "./ToggleMenu";
 import { Box } from "../Box";
+import { DepositIcon } from "../Icons";
 
 export default {
   component: ToggleMenu,
@@ -9,29 +10,39 @@ export default {
 };
 
 const items = [
-  { id: "0", label: "Deposit" },
-  { id: "1", label: "Withdraw" },
-  { id: "2", label: "Deposit" },
+  { id: "0", label: "Deposit", icon: DepositIcon },
   { id: "3", label: "Disabled", disabled: true },
+  { id: "2", label: "Tx" },
+  { id: "1", label: "Withdraw" },
 ];
 
-const linkItems = items.map((item) => ({ ...item, as: "a", href: "#" }));
+const sizes = [
+  "regular",
+  "large",
+];
 
-export const Default = () => (
+export const All = () => (
   <>
-    <Box direction="vertical" mb="20px">
-      <ToggleMenu items={items} />
-    </Box>
-    <Box direction="vertical" mb="20px">
-      <ToggleMenu items={items} variant="secondary" />
-    </Box>
-    <Box direction="vertical" mb="20px">
-      <ToggleMenu packed items={items} />
-    </Box>
+    <Squared />
+    <Rounded />
   </>
 );
 
-export const AsLink = () => <ToggleMenu items={linkItems} />;
+export const Squared = () => (
+  sizes.map((size) => (
+    <Box direction="vertical" mb="20px">
+      <ToggleMenu size={size} items={items} />
+    </Box>
+  ))
+);
+
+export const Rounded = () => (
+  sizes.map((size) => (
+    <Box direction="vertical" mb="20px">
+      <ToggleMenu size={size} items={items} variant="rounded" />
+    </Box>
+  ))
+);
 
 export const Controlled = () => {
   const [state, setState] = useState(items[0].id);
