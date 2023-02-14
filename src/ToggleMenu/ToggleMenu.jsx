@@ -46,25 +46,27 @@ export function ToggleMenu({
         [`toggle-menu--variant-${variant}`]: variant,
       })}
     >
-      <div
-        style={{
-          left: `calc(${width * activeIndex}% + ${items.length - activeIndex}px)`,
-          width: `calc(${width}% - 6px)`
-        }}
-        className="toggle-menu__item toggle-menu__item--slider"
-      />
+      <div className="toggle-menu__wrap">
+        <div
+          style={{
+            left: `calc(${width * activeIndex}%)`,
+            width: `calc(${width}% - 4px)`
+          }}
+          className="toggle-menu__item toggle-menu__item--slider"
+        />
 
-      {items.map(({ id, label, icon: Icon, ...item }, i) => (
-        <ToggleMenuItem
-          key={id || i}
-          {...item}
-          onClick={handleClick(i)}
-          active={i === activeIndex}
-        >
-          {Icon && <Icon />}
-          {label}
-        </ToggleMenuItem>
-      ))}
+        {items.map(({ id, label, icon: Icon, ...item }, i) => (
+          <ToggleMenuItem
+            key={id || i}
+            {...item}
+            onClick={handleClick(i)}
+            active={i === activeIndex}
+          >
+            {Icon && <Icon />}
+            {label}
+          </ToggleMenuItem>
+        ))}
+      </div>
     </div>
   );
 }

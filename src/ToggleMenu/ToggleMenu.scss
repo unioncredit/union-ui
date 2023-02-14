@@ -1,11 +1,8 @@
 @import "../variables";
 
 .toggle-menu {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
   background: $grey100;
-  padding: 4px;
+  padding: 4px 0 4px 4px;
   box-sizing: border-box;
   position: relative;
   border: 1px solid $grey200;
@@ -67,8 +64,17 @@
     }
   }
 
+  &__wrap {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    margin-right: -4px;
+  }
+
   &__item {
-    margin: 0 2px;
+    margin: 0 4px 0 0;
     background: transparent;
     transition: left 200ms cubic-bezier(.47,1.64,.41,.8);;
     font-weight: 500;
@@ -94,7 +100,7 @@
     &--slider {
       margin: 0;
       position: absolute;
-      top: 4px;
+      top: 0;
       background: #ffffff;
       box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
     }
