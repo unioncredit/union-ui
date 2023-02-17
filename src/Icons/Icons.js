@@ -70,6 +70,8 @@ export { default as TooltipIcon } from "./icons/tooltip.svg";
 export { default as TwitterIcon } from "./icons/twitter.svg";
 export { default as TwitterFilledIcon } from "./icons/twitter-filled.svg";
 export { default as UnionIcon } from "./icons/union.svg";
+export { default as UnionSwirlIcon } from "./icons/unionswirl-black.svg";
+export { default as UnionSwirlWhiteIcon } from "./icons/unionswirl-white.svg";
 export { default as UnionWhiteIcon } from "./icons/unionwhite.svg";
 export { default as VouchIcon } from "./icons/vouch.svg";
 export { default as WalletIcon } from "./icons/wallet.svg";
