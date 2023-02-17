@@ -24,6 +24,7 @@ export * from "./ExpandingInfo";
 export * from "./Grid";
 export * from "./Heading";
 export * from "./IconBadge";
+export * from "./IconBadgeRow";
 export * from "./Icons";
 export * from "./Input";
 export * from "./Layout";

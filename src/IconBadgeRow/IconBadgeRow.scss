@@ -1,0 +1,12 @@
+.IconRow {
+  display: inline-flex;
+  white-space: nowrap;
+  position: relative;
+  flex-direction: row-reverse !important;
+
+  .IconBadge {
+    &:not(:last-child) {
+      margin-left: -5px;
+    }
+  }
+}
