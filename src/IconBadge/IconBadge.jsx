@@ -6,10 +6,12 @@ import { propsToStyles } from "../spacing";
 
 export const IconBadge = ({
   icon: Icon,
+  iconSize,
   size,
   variant,
   color,
   background,
+  borderColor,
   className,
   ...props
 }) => {
@@ -19,13 +21,17 @@ export const IconBadge = ({
     <div
       style={{
         color: color,
-        borderColor: color,
+        borderColor: borderColor,
+        borderWidth: borderColor ? "1px" : null,
+        borderStyle: borderColor ? "solid" : null,
         backgroundColor: background,
         ...styles
       }}
-      className={cn(className, "icon-badge", {
-        [`icon-badge--size-${size}`]: size,
-        [`icon-badge--variant-${variant}`]: variant,
+      className={cn(className, "IconBadge", {
+        [`IconBadge--icon-size-${iconSize}`]: iconSize,
+        [`IconBadge--size-${size}`]: size,
+        [`IconBadge--variant-${variant}`]: variant,
+        ["IconBadge--no-color"]: color === null,
       })}
     >
       <Icon />
@@ -35,16 +41,20 @@ export const IconBadge = ({
 
 IconBadge.propTypes = {
   icon: PropTypes.any,
+  iconSize: PropTypes.oneOf(["small", "regular", "large"]),
   size: PropTypes.oneOf(["small", "regular", "large"]),
   variant: PropTypes.oneOf(["filled", "outlined"]),
   color: PropTypes.string,
   background: PropTypes.string,
+  borderColor: PropTypes.string,
   className: PropTypes.string,
 };
 
 IconBadge.defaultProps = {
+  iconSize: "regular",
   size: "regular",
   variant: "filled",
-  color: "#ffffff",
-  background: "#000000",
+  color: null,
+  background: null,
+  borderColor: null,
 };

@@ -4,7 +4,7 @@ import {
   CheckIcon,
   CogIcon,
   CrossIcon,
-  FilterIcon,
+  FilterIcon, OptimismIcon,
   WalletIcon,
 } from "../Icons";
 import { IconBadge } from "./IconBadge";
@@ -103,4 +103,24 @@ export const Colors = () => {
       ))}
     </>
   )
+};
+
+export const IconSizes = () => {
+  const sizes = [
+    "small",
+    "regular",
+    "large",
+  ];
+
+  const props = {
+    size: "large",
+    icon: OptimismIcon,
+    variant: "filled",
+    color: "#000000",
+    borderColor: "#292524",
+  };
+
+  return sizes.map((size) => (
+    <IconBadge iconSize={size} mb="5px" {...props} />
+  ));
 };
