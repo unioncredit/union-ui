@@ -33,6 +33,7 @@
     position: relative;
     flex-direction: column;
     padding: 0;
+    max-height: 95vh;
 
     &--small {
       max-width: 280px;
@@ -50,7 +51,6 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       max-width: 100% !important;
-      max-height: 80vh;
     }
   }
 
