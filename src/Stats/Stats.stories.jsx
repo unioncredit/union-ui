@@ -10,92 +10,66 @@ export default {
   title: "Components/Stats",
 };
 
-export const All = () => (
-  <>
-    <Box>
-      <Stat
-        mt="120px"
-        label="Total Stakes"
-        tooltip="This is what a tooltip looks like"
-        value={
-          <>
-            3200
-            <Dai />
-          </>
-        }
-        after="$100.00 frozen"
-      />
-    </Box>
-    <Box mt="40px">
-      <Stat
-        label="Total Stakes"
-        size="large"
-        value={
-          <>
-            3200
-            <Dai />
-          </>
-        }
-        after="$100.00 frozen"
-      />
-    </Box>
-    <Box mt="40px">
-      <Stat
-        align="center"
-        label="Total Stakes"
-        value={
-          <>
-            3200
-            <Dai />
-          </>
-        }
-        after="$100.00 frozen"
-      />
-    </Box>
-    <Box mt="40px">
-      <Stat
-        size="extra-small"
-        align="center"
-        label="Total Stakes"
-        value={
-          <>
-            3200
-            <Dai />
-          </>
-        }
-        after="$100.00 frozen"
-      />
-    </Box>
-  </>
-);
+export const Sizes = () => {
+  const sizes = ["large", "regular", "small", "x-small"];
 
-export const CaptionAsNode = () => (
-  <>
-    <Stat
-      label="Total Stakes"
-      value="$3200"
-      caption={<div style={{ color: "red" }}>Caption</div>}
-      cta={
-        <Button
-          variant="pill"
-          icon="chevron"
-          iconPosition="end"
-          label="Request Extra"
-        />
+  return sizes.map(size => (
+    <Box mt="65px">
+      <Stat
+        size={size}
+        title="Balance Owed"
+        value="100.59"
+        token="dai"
+        subtitle="Due in 24d 6h"
+        subtitleTooltip={{
+          content: "This is your owed balance"
+        }}
+      />
+    </Box>
+  ));
+};
+
+export const Tokens = () => {
+  const tokens = ["", "dai", "union"];
+
+  return tokens.map(token => (
+    <Box mt="65px">
+      <Stat
+        title="Balance Owed"
+        value="100.59"
+        token={token}
+        subtitle="Due in 24d 6h"
+        subtitleTooltip={{
+          content: "This is your owed balance"
+        }}
+      />
+    </Box>
+  ));
+};
+
+export const Tooltips = () => {
+  const tooltips = [
+    {},
+    {
+      titleTooltip: {
+        content: "This is a titleTooltip prop"
       }
-    />
-    <Stat
-      label={<div style={{ color: "red" }}>Label</div>}
-      value="$3200"
-      caption={<div style={{ color: "red" }}>Caption</div>}
-      cta={
-        <Button
-          variant="pill"
-          icon="chevron"
-          iconPosition="end"
-          label="Request Extra"
-        />
+    },
+    {
+      subtitleTooltip: {
+        content: "This is a subtitleTooltip prop"
       }
-    />
-  </>
-);
+    }
+  ];
+
+  return tooltips.map(tooltipProps => (
+    <Box mt="65px">
+      <Stat
+        title="Balance Owed"
+        value="100.59"
+        subtitle="Due in 24d 6h"
+        {...tooltipProps}
+      />
+    </Box>
+  ));
+};

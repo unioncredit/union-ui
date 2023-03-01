@@ -1,3 +1,5 @@
+import "./Stat.scss";
+
 import React from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
@@ -6,75 +8,76 @@ import { Box } from "../Box";
 import { Text } from "../Text";
 import { Heading } from "../Heading";
 import { Tooltip } from "../Tooltip";
-import Info from "../Icons/icons/wireInfo.svg";
-
-import "./stat.scss";
+import { DaiIcon, UnionIcon, WireInfoIcon } from "../Icons";
 
 export function Stat({
-  label,
-  value,
-  after,
   size,
-  align,
-  tooltip,
-  tooltipProps,
+  title,
+  value,
+  token,
+  subtitle,
+  titleTooltip,
+  subtitleTooltip,
+  progressPercent,
   className,
   ...props
 }) {
   return (
     <Box
-      className={cn("stat", className, {
-        [`stat--${size}`]: size,
-        [`stat--${align}`]: align,
+      className={cn("Stat", className, {
+        [`Stat__size-${size}`]: size,
       })}
       direction="vertical"
       {...props}
     >
-      <div className="stat__label">
-        {typeof label === "string" ? (
-          <>
-            <Text m={0} weight="medium" size="small">
-              {label}
-              {tooltip && (
-                <Tooltip content={tooltip} {...tooltipProps}>
-                  <Info width="13px" />
-                </Tooltip>
-              )}
-            </Text>
-          </>
-        ) : (
-          label
-        )}
-      </div>
-      <Heading className="stat__value" weight="medium" mb="3px">
-        {value}
-      </Heading>
-      {after && (
-        <div className="stat__after">
-          {typeof after === "string" ? (
-            <Text weight="medium" size="small" m={0}>
-              {after}
-            </Text>
-          ) : (
-            after
+      <div className="Stat__title">
+        <Heading level={3} grey={500} mb="4px" weight="medium" size="small">
+          {title}
+          {titleTooltip && (
+            <Tooltip {...titleTooltip}>
+              <WireInfoIcon width="13px" />
+            </Tooltip>
           )}
-        </div>
+        </Heading>
+      </div>
+      <Text className="Stat__value" grey={800} weight="medium" mb="3px">
+        {value}
+        {token === "dai" && <DaiIcon className="Stat__token" />}
+        {token === "union" && <UnionIcon className="Stat__token" />}
+      </Text>
+
+      {/*{progressPercent && (*/}
+
+      {/*)}*/}
+
+      {subtitle && (
+        <Text m={0} className="Stat__subtitle">
+          {subtitle}
+          {subtitleTooltip && (
+            <Tooltip {...subtitleTooltip}>
+              <WireInfoIcon width="13px" />
+            </Tooltip>
+          )}
+        </Text>
       )}
     </Box>
   );
 }
 
 Stat.defaultProps = {
-  size: "small",
+  size: "large",
 };
 
 Stat.propTypes = {
-  label: PropTypes.node.isRequired,
+  size: PropTypes.oneOf(["x-small", "small", "regular", "large"]),
+  title: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.node,
   ]),
-  after: PropTypes.node,
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  token: PropTypes.oneOf(["dai", "union"]),
+  subtitle: PropTypes.node,
+  titleTooltip: PropTypes.object,
+  subtitleTooltip: PropTypes.object,
+  progressPercent: PropTypes.number,
 };

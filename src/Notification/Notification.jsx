@@ -1,9 +1,10 @@
+import "./Notification.scss";
+
 import React from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
 import { Text } from "../Text";
-
 import success from "../Icons/icons/success.svg";
 import error from "../Icons/icons/failed.svg";
 import info from "../Icons/icons/info.svg";
@@ -11,9 +12,7 @@ import pending from "../Icons/icons/pending.svg";
 import External from "../Icons/icons/external.svg";
 import Close from "../Icons/icons/close.svg";
 
-import "./notification.scss";
-
-export function Notification({ variant, title, children, onClose, link }) {
+export function Notification({ variant, title, content, onClose, link }) {
   const Icon = {
     error,
     success,
@@ -23,23 +22,23 @@ export function Notification({ variant, title, children, onClose, link }) {
 
   return (
     <div
-      className={cn("notification", {
-        [`notification--${variant}`]: variant,
+      className={cn("Notification", {
+        [`Notification--${variant}`]: variant,
       })}
     >
-      <div className="notification__icon">
+      <div className="Notification__icon">
         <Icon />
       </div>
-      <div className="notification__content">
-        <Text grey={700} mb="6px">
+      <div className="Notification__content">
+        <Text size="medium" grey={800} weight="medium" mb="4px">
           {title}
         </Text>
-        {children}
+        <Text grey={500} weight="medium">{content}</Text>
       </div>
-      <div className="notification__actions">
-        <Close onClick={onClose} />
+      <div className="Notification__actions">
+        <Close className="Notification__close" onClick={onClose} />
         {link && (
-          <a href={link} target="_blank">
+          <a href={link} target="_blank" className="Notification__link">
             <External />
           </a>
         )}

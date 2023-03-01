@@ -6,6 +6,7 @@ import { Box } from "../Box";
 import { Text } from "../Text";
 import { Button } from "../Button";
 import { propsToStyles } from "../spacing";
+import { WarningIcon } from "../Icons";
 
 export const Input = forwardRef(
   (
@@ -70,7 +71,10 @@ export const Input = forwardRef(
               {...(type === "number" ? { step: "any" } : {})}
             />
             {prefix && <div className="input__prefix">{prefix}</div>}
-            {suffix && <div className="input__suffix">{suffix}</div>}
+            <div className="input__suffix">
+              {suffix && suffix}
+              {error && <WarningIcon className="input__warning" />}
+            </div>
           </div>
         </div>
 

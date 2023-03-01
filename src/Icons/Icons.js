@@ -21,6 +21,7 @@ export { default as CogIcon } from "./icons/cog.svg";
 export { default as CoinbaseIcon } from "./icons/coinbase.svg";
 export { default as CopyIcon } from "./icons/copy.svg";
 export { default as CrossIcon } from "./icons/cross.svg";
+export { default as DaiIcon } from "./icons/dai.svg";
 export { default as DelegateIcon } from "./icons/delegate.svg";
 export { default as DepositIcon } from "./icons/deposit.svg";
 export { default as DisconnectWalletIcon } from "./icons/disconnectWallet.svg";

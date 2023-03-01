@@ -8,6 +8,7 @@ import { Button } from "../Button";
 import { Dai } from "../Dai";
 
 import Search from "../Icons/icons/search.svg";
+import { SearchIcon } from "../Icons";
 
 export default {
   component: Input,
@@ -72,6 +73,23 @@ export const Inputs = () => (
         caption="382.91 DAI Available"
         placeholder="Placeholder"
         suffix={<Dai />}
+      />
+    </Box>
+
+    <Box mb="20px">
+      <Input
+        label="Search"
+        placeholder="Placeholder"
+        prefix={<SearchIcon />}
+      />
+    </Box>
+
+    <Box mb="20px">
+      <Input
+        label="Input label"
+        error="input error"
+        caption="382.91 DAI Available"
+        placeholder="Placeholder"
       />
     </Box>
 

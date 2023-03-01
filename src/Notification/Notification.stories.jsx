@@ -11,40 +11,65 @@ export default {
 
 export const All = () => (
   <>
-    <Notification variant="pending" title="Waiting for confirmation">
-      <Text size="small">
-        Confirm transaction with your connected wallet
-      </Text>
-    </Notification>
-    <Notification variant="success" title="Transaction successful">
-      <Text size="small">
-        View transaction
-      </Text>
-    </Notification>
-    <Notification variant="error" title="Transaction error" link="#">
-      <Text size="small">
-        Internal transaction error
-      </Text>
-    </Notification>
+    <Notification
+      variant="pending"
+      title="Borrow 542.12 DAI"
+      content="Transaction Pending"
+    />
+    <Notification
+      variant="success"
+      title="Borrow 542.12 DAI"
+      content="Transaction Succeeded"
+    />
+    <Notification
+      variant="error"
+      title="Borrow 542.12 DAI"
+      content="Transaction Failed"
+    />
   </>
 );
 
+export const Links = () => (
+  <>
+    <Notification
+      variant="pending"
+      title="Borrow 542.12 DAI"
+      content="Transaction Pending"
+      link="#"
+    />
+    <Notification
+      variant="success"
+      title="Borrow 542.12 DAI"
+      content="Transaction Succeeded"
+      link="#"
+    />
+    <Notification
+      variant="error"
+      title="Borrow 542.12 DAI"
+      content="Transaction Failed"
+      link="#"
+    />
+  </>
+)
+
 export const Stack = () => (
   <NotificationStack>
-    <Notification variant="pending" title="Waiting for confirmation">
-      <Text size="small">
-        Confirm transaction with your connected wallet
-      </Text>
-    </Notification>
-    <Notification variant="success" title="Transaction successful">
-      <Text size="small">
-        View transaction
-      </Text>
-    </Notification>
-    <Notification variant="error" title="Transaction error">
-      <Text size="small">
-        Internal transaction error
-      </Text>
-    </Notification>
+    <Notification
+      variant="pending"
+      title="Borrow 542.12 DAI"
+      content="Transaction Pending"
+    />
+    <Notification
+      variant="success"
+      title="Borrow 542.12 DAI"
+      content="Transaction Succeeded"
+      link="#"
+    />
+    <Notification
+      variant="error"
+      title="Borrow 542.12 DAI"
+      content="Transaction Failed"
+      link="#"
+    />
   </NotificationStack>
 );
