@@ -1,13 +1,13 @@
-import "./ToggleMenu.scss";
+import "./SegmentedControl.scss";
 
 import React, { useEffect, useState } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { ToggleMenuItem } from "./ToggleMenuItem";
+import { SegmentedControlItem } from "./SegmentedControlItem";
 import { propsToStyles } from "../spacing";
 
-export function ToggleMenu({
+export function SegmentedControl({
   value,
   items,
   size,
@@ -41,22 +41,22 @@ export function ToggleMenu({
   return (
     <div
       style={propsToStyles(props)}
-      className={cn("toggle-menu", className, {
-        [`toggle-menu--size-${size}`]: size,
-        [`toggle-menu--variant-${variant}`]: variant,
+      className={cn("SegmentedControl", className, {
+        [`SegmentedControl--size-${size}`]: size,
+        [`SegmentedControl--variant-${variant}`]: variant,
       })}
     >
-      <div className="toggle-menu__wrap">
+      <div className="SegmentedControl__wrap">
         <div
           style={{
             left: `calc(${width * activeIndex}%)`,
             width: `calc(${width}% - 4px)`
           }}
-          className="toggle-menu__item toggle-menu__item--slider"
+          className="SegmentedControl__item SegmentedControl__item--slider"
         />
 
         {items.map(({ id, label, icon: Icon, ...item }, i) => (
-          <ToggleMenuItem
+          <SegmentedControlItem
             key={id || i}
             {...item}
             onClick={handleClick(i)}
@@ -64,20 +64,20 @@ export function ToggleMenu({
           >
             {Icon && <Icon />}
             {label}
-          </ToggleMenuItem>
+          </SegmentedControlItem>
         ))}
       </div>
     </div>
   );
 }
 
-ToggleMenu.defaultProps = {
+SegmentedControl.defaultProps = {
   initialActive: 0,
   variant: "squared",
   size: "regular",
 };
 
-ToggleMenu.propTypes = {
+SegmentedControl.propTypes = {
   initialActive: PropTypes.number,
   items: PropTypes.array,
   size: PropTypes.oneOf(["regular", "large"]),

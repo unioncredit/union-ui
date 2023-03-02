@@ -3,7 +3,7 @@ import React from "react";
 import { Card } from "./Card";
 import { Grid, Row, Col } from "../Grid";
 import { Box } from "../Box";
-import { ToggleMenu } from "../ToggleMenu";
+import { SegmentedControl } from "../SegmentedControl";
 import { Heading } from "../Heading";
 import { Text } from "../Text";
 import { Input, InputRow } from "../Input";
@@ -31,7 +31,7 @@ export const Default = () => (
                   18.2 UNION per day
                 </Text>
               </div>
-              <ToggleMenu
+              <SegmentedControl
                 items={[{ label: "Deposit" }, { label: "Withdraw" }]}
               />
             </Box>

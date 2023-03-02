@@ -2,7 +2,7 @@ import { createElement } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-export function ToggleMenuItem({
+export function SegmentedControlItem({
   disabled,
   as,
   children,
@@ -13,9 +13,9 @@ export function ToggleMenuItem({
   return createElement(
     as || "button",
     {
-      className: cn("toggle-menu__item", className, {
-        "toggle-menu__item--active": active,
-        "toggle-menu__item--disabled": disabled,
+      className: cn("SegmentedControl__item", className, {
+        "SegmentedControl__item--active": active,
+        "SegmentedControl__item--disabled": disabled,
       }),
       disabled,
       ...props,
@@ -24,7 +24,7 @@ export function ToggleMenuItem({
   );
 }
 
-ToggleMenuItem.propTypes = {
+SegmentedControlItem.propTypes = {
   as: PropTypes.any,
   className: PropTypes.string,
   active: PropTypes.bool,

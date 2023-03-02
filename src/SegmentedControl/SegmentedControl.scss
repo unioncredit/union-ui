@@ -1,6 +1,6 @@
 @import "../variables";
 
-.toggle-menu {
+.SegmentedControl {
   background: $grey100;
   padding: 4px 0 4px 4px;
   box-sizing: border-box;
@@ -11,8 +11,8 @@
     &-squared {
       border-radius: 12px;
 
-      .toggle-menu__item,
-      .toggle-menu__item--slider {
+      .SegmentedControl__item,
+      .SegmentedControl__item--slider {
         border-radius: 8px;
       }
     }
@@ -20,8 +20,8 @@
     &-rounded {
       border-radius: 36px;
 
-      .toggle-menu__item,
-      .toggle-menu__item--slider {
+      .SegmentedControl__item,
+      .SegmentedControl__item--slider {
         border-radius: 28px;
       }
     }
@@ -29,7 +29,7 @@
 
   &--size {
     &-regular {
-      .toggle-menu__item {
+      .SegmentedControl__item {
         font-size: 14px;
         line-height: 20px;
         padding: 9px 21px;
@@ -46,7 +46,7 @@
       }
     }
     &-large {
-      .toggle-menu__item {
+      .SegmentedControl__item {
         font-size: 18px;
         line-height: 28px;
         padding: 13px 48px;
@@ -106,7 +106,7 @@
       box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
     }
 
-    &:not(.toggle-menu__item--disabled):not(.toggle-menu__item--active):hover {
+    &:not(.SegmentedControl__item--disabled):not(.SegmentedControl__item--active):hover {
       background: $grey200;
     }
 

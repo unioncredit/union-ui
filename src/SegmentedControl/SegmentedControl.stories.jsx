@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import { ToggleMenu } from "./ToggleMenu";
+import { SegmentedControl } from "./SegmentedControl";
 import { Box } from "../Box";
 import { DepositIcon } from "../Icons";
 
 export default {
-  component: ToggleMenu,
-  title: "Components/ToggleMenu",
+  component: SegmentedControl,
+  title: "Components/SegmentedControl",
 };
 
 const items = [
@@ -31,7 +31,7 @@ export const All = () => (
 export const Squared = () => (
   sizes.map((size) => (
     <Box direction="vertical" mb="20px">
-      <ToggleMenu size={size} items={items} />
+      <SegmentedControl size={size} items={items} />
     </Box>
   ))
 );
@@ -39,7 +39,7 @@ export const Squared = () => (
 export const Rounded = () => (
   sizes.map((size) => (
     <Box direction="vertical" mb="20px">
-      <ToggleMenu size={size} items={items} variant="rounded" />
+      <SegmentedControl size={size} items={items} variant="rounded" />
     </Box>
   ))
 );
@@ -59,7 +59,7 @@ export const Controlled = () => {
       <div style={{ marginBottom: "10px" }}>
         <button onClick={toggle}>Toggle</button>
       </div>
-      <ToggleMenu items={items.slice(0, 2)} value={state} />
+      <SegmentedControl items={items.slice(0, 2)} value={state} />
     </>
   );
 };
