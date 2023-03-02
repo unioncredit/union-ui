@@ -1,4 +1,4 @@
-import "./Stat.scss";
+import "./NumericalBlock.scss";
 
 import React from "react";
 import PropTypes from "prop-types";
@@ -10,7 +10,7 @@ import { Heading } from "../Heading";
 import { Tooltip } from "../Tooltip";
 import { DaiIcon, UnionIcon, WireInfoIcon } from "../Icons";
 
-export function Stat({
+export function NumericalBlock({
   size,
   title,
   value,
@@ -64,11 +64,11 @@ export function Stat({
   );
 }
 
-Stat.defaultProps = {
+NumericalBlock.defaultProps = {
   size: "large",
 };
 
-Stat.propTypes = {
+NumericalBlock.propTypes = {
   size: PropTypes.oneOf(["x-small", "small", "regular", "large"]),
   title: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([

@@ -1,13 +1,11 @@
 import React from "react";
 
-import { Stat } from "./Stat";
-import { Button } from "../Button";
-import { Dai } from "../Dai";
+import { NumericalBlock } from "./NumericalBlock";
 import { Box } from "../Box";
 
 export default {
-  component: Stat,
-  title: "Components/Stats",
+  component: NumericalBlock,
+  title: "Components/NumericalBlock",
 };
 
 export const Sizes = () => {
@@ -15,7 +13,7 @@ export const Sizes = () => {
 
   return sizes.map(size => (
     <Box mt="65px">
-      <Stat
+      <NumericalBlock
         size={size}
         title="Balance Owed"
         value="100.59"
@@ -34,7 +32,7 @@ export const Tokens = () => {
 
   return tokens.map(token => (
     <Box mt="65px">
-      <Stat
+      <NumericalBlock
         title="Balance Owed"
         value="100.59"
         token={token}
@@ -64,7 +62,7 @@ export const Tooltips = () => {
 
   return tooltips.map(tooltipProps => (
     <Box mt="65px">
-      <Stat
+      <NumericalBlock
         title="Balance Owed"
         value="100.59"
         subtitle="Due in 24d 6h"
