@@ -24,13 +24,13 @@ export function NumericalBlock({
 }) {
   return (
     <Box
-      className={cn("Stat", className, {
-        [`Stat__size-${size}`]: size,
+      className={cn("NumericalBlock", className, {
+        [`NumericalBlock__size-${size}`]: size,
       })}
       direction="vertical"
       {...props}
     >
-      <div className="Stat__title">
+      <div className="NumericalBlock__title">
         <Heading level={3} grey={500} mb="4px" weight="medium" size="small">
           {title}
           {titleTooltip && (
@@ -40,10 +40,10 @@ export function NumericalBlock({
           )}
         </Heading>
       </div>
-      <Text className="Stat__value" grey={800} weight="medium" mb="3px">
+      <Text className="NumericalBlock__value" grey={800} weight="medium" mb="3px">
         {value}
-        {token === "dai" && <DaiIcon className="Stat__token" />}
-        {token === "union" && <UnionIcon className="Stat__token" />}
+        {token === "dai" && <DaiIcon className="NumericalBlock__token" />}
+        {token === "union" && <UnionIcon className="NumericalBlock__token" />}
       </Text>
 
       {/*{progressPercent && (*/}
@@ -51,7 +51,7 @@ export function NumericalBlock({
       {/*)}*/}
 
       {subtitle && (
-        <Text m={0} className="Stat__subtitle">
+        <Text m={0} className="NumericalBlock__subtitle">
           {subtitle}
           {subtitleTooltip && (
             <Tooltip {...subtitleTooltip}>

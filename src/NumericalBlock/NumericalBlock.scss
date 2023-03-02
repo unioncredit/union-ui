@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.Stat {
+.NumericalBlock {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
@@ -38,36 +38,36 @@
     &-large,
     &-regular,
     &-small {
-      .Stat__title {
+      .NumericalBlock__title {
         font-size: 16px;
         line-height: 24px;
       }
-      .Stat__subtitle {
+      .NumericalBlock__subtitle {
         font-size: 14px;
         line-height: 20px;
       }
     }
 
     &-large {
-      .Stat__value {
+      .NumericalBlock__value {
         font-size: 36px;
         line-height: 40px;
       }
     }
 
     &-regular {
-      .Stat__value {
+      .NumericalBlock__value {
         font-size: 30px;
         line-height: 36px;
       }
     }
 
     &-small {
-      .Stat__title {
+      .NumericalBlock__title {
         font-size: 14px;
         line-height: 20px;
       }
-      .Stat__value {
+      .NumericalBlock__value {
         font-size: 20px;
         line-height: 28px;
       }
@@ -76,16 +76,16 @@
     &-x-small {
       text-align: left;
 
-      .Stat__title {
+      .NumericalBlock__title {
         font-size: 16px;
         line-height: 24px;
       }
-      .Stat__value {
+      .NumericalBlock__value {
         font-size: 18px;
         line-height: 28px;
         justify-content: flex-start;
       }
-      .Stat__subtitle {
+      .NumericalBlock__subtitle {
         display: none;
       }
     }
