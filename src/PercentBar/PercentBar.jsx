@@ -1,3 +1,5 @@
+import "./PercentBar.scss";
+
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
@@ -5,13 +7,9 @@ import PropTypes from "prop-types";
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
 
-import "./Bar.scss";
-
-export function Bar({
+export function PercentBar({
   percentage,
   label,
-  size,
-  secondaryBar,
   marker,
   color,
   markerLabel,
@@ -20,41 +18,34 @@ export function Bar({
 }) {
   return (
     <div
-      className={cn("bar", className, {
-        [`bar--${size}`]: size,
-        "bar--hasMarkerLabel": !!markerLabel,
+      className={cn("PercentBar", className, {
+        "PercentBar--max": percentage >= 100,
+        "PercentBar--hasMarkerLabel": !!markerLabel,
       })}
       style={propsToStyles(props)}
     >
       {label && (
-        <Text size="small" className="bar-label">
+        <Text size="small" className="PercentBar__label">
           {label}
         </Text>
       )}
-      <div
-        className={cn("bar__indicator", {
-          [`bar__indicator--${color}`]: color,
-        })}
-      >
+      <div className="PercentBar__indicator">
         <div
-          className="bar__indicator__progress"
+          className="PercentBar__indicator__progress"
           style={{ width: `${percentage}%` }}
         />
-        {secondaryBar && (
-          <div className="bar__indicator__progress bar__indicator__progress--secondaryBar" />
-        )}
         {marker && (
           <>
             <Text
               size="small"
-              className="bar__indicator__markerLabel"
+              className="PercentBar__indicator__markerLabel"
               style={{ left: `${marker}%` }}
               mb={0}
             >
               {markerLabel}
             </Text>
             <div
-              className="bar__indicator__marker"
+              className="PercentBar__indicator__marker"
               style={{ left: `${marker}%` }}
             />
           </>
@@ -64,15 +55,9 @@ export function Bar({
   );
 }
 
-Bar.propTypes = {
+PercentBar.propTypes = {
   percentage: PropTypes.number,
   label: PropTypes.string,
-  size: PropTypes.oneOf(["large", "primary"]),
   secondaryBar: PropTypes.bool,
   marker: PropTypes.number,
-  color: PropTypes.string,
-};
-
-Bar.defaultProps = {
-  size: "primary",
 };

@@ -7,7 +7,7 @@ import { TableHead } from "./TableHead";
 import { Avatar } from "../Avatar";
 import { Text } from "../Text";
 import { Badge } from "../Badge";
-import { Bar } from "../Bar";
+import { PercentBar } from "../PercentBar";
 import { Skeleton } from "../Skeleton";
 import { Card } from "../Card";
 import { Pagination } from "../Pagination";
@@ -47,7 +47,7 @@ export const Default = () => (
               </Text>
             </TableCell>
             <TableCell align="center">
-              <Bar size="small" percentage={60} label="62% No" secondaryBar />
+              <PercentBar size="small" percentage={60} label="62% No" secondaryBar />
             </TableCell>
             <TableCell align="right">
               {i === 2 ? (

@@ -1,60 +1,48 @@
 @import "../variables.scss";
 
-.bar {
+.PercentBar {
   display: inline-flex;
   align-items: center;
-  width: 65px;
-  height: 16px;
+  width: 100%;
+  padding: 2px;
   box-sizing: border-box;
+
+  &--max .PercentBar__indicator__progress {
+    border-radius: 4px;
+  }
 
   &--hasMarkerLabel {
     padding-top: 20px;
   }
 
-  &--large {
-    width: 100%;
-    height: 16px;
-    padding: 2px;
+  &__label {
+    margin: 0 5px 0 0;
+    color: $grey600;
   }
 
   &__indicator {
-    height: 100%;
-    border: 1px solid $grey200;
-    border-radius: 5px;
-    padding: 1px;
+    height: 8px;
     box-sizing: border-box;
     display: flex;
     flex-grow: 1;
+    border-radius: 4px;
     position: relative;
+    background: $grey300;
 
     &__progress {
-      background: $grey400;
-      border-radius: 3px;
+      background: $grey600;
       height: 100%;
-
-      &--secondaryBar {
-        background: $grey600;
-        flex-grow: 1;
-        margin-left: 2px;
-      }
-    }
-
-    &--green &__progress {
-      background: $green500;
-    }
-
-    &--purple &__progress {
-      background: $purple600;
+      border-radius: 4px 0 0 4px;
     }
 
     &__marker {
       position: absolute;
-      top: 1px;
+      top: -25%;
       right: 0;
       width: 2px;
       border-radius: 1px;
       background: $grey500;
-      height: 85%;
+      height: 150%;
     }
 
     &__markerLabel {
@@ -66,7 +54,6 @@
   }
 }
 
-.text.bar-label {
-  margin: 0 5px 0 0;
-  color: $grey600;
+.text.PercentBar-label {
+
 }
