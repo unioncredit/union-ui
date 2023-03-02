@@ -1,29 +1,41 @@
+import "./ProgressBar.scss";
+
 import React from "react";
 import cn from "classnames";
+import PropTypes from "prop-types";
 
-import "./progress-bar.scss";
-
-export function ProgressBar({ percentage, completeText, completeIcon: Icon }) {
+export function ProgressBar({ percentage, label, icon: Icon, paused }) {
   const isComplete = percentage >= 100;
 
   return (
     <div
-      className={cn("progressBar", {
-        "progressBar--complete": isComplete,
-        "progressBar--noProgress": percentage <= 0,
+      className={cn("ProgressBar", {
+        "ProgressBar--paused": paused,
+        "ProgressBar--complete": isComplete,
+        "ProgressBar--noProgress": percentage <= 0,
       })}
     >
-      <div className="progressBar__inner">
+      <div className="ProgressBar__inner">
         <div
-          className="progressBar__progress"
+          className="ProgressBar__progress"
           style={{ width: `${percentage}%` }}
         ></div>
-        {isComplete && (
-          <div className="progressBar__completeLabel">
-            {Icon && <Icon width="20px" />} {completeText}
-          </div>
-        )}
+        <div className="ProgressBar__label">
+          {Icon && <Icon width="20px" />} {label}
+        </div>
       </div>
     </div>
   );
 }
+
+ProgressBar.defaultProps = {
+  percentage: 0,
+  paused: false,
+};
+
+ProgressBar.propTypes = {
+  percentage: PropTypes.number,
+  label: PropTypes.string,
+  icon: PropTypes.node,
+  paused: PropTypes.bool,
+};
