@@ -8,7 +8,7 @@ import { Box } from "../Box";
 import { Text } from "../Text";
 import DropdownArrowIcon from "../icons/dropdownArrow.svg";
 
-export default function ExpandingInfo({ icon: Icon, title, children, className }) {
+export function ExpandingInfo({ icon: Icon, title, children, className }) {
   const [open, setOpen] = useState(false);
 
   return (
