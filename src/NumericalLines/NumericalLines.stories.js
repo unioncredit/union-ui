@@ -1,9 +1,9 @@
-import { DataLineItems } from "./DataLineItems";
+import { NumericalLines } from "./NumericalLines";
 import { Box } from "../Box";
 
 export default {
-  component: DataLineItems,
-  title: "Components/DataLineItems",
+  component: NumericalLines,
+  title: "Components/NumericalLines",
 }
 
 export const All = () => {
@@ -33,7 +33,7 @@ export const All = () => {
 
   return (
     <Box w="400px">
-      <DataLineItems items={items} />
+      <NumericalLines items={items} />
     </Box>
   )
 }

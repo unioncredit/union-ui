@@ -1,4 +1,4 @@
-import "./DataLineItems.scss";
+import "./NumericalLines.scss";
 
 import React from "react";
 import cn from "classnames";
@@ -9,12 +9,12 @@ import { Tooltip } from "../Tooltip";
 import { WireInfoIcon } from "../Icons";
 import { propsToStyles } from "../spacing";
 
-export function DataLineItems({ items, ...props }) {
+export function NumericalLines({ items, ...props }) {
   return (
     <Box
       fluid
       direction="vertical"
-      className="DataLineItems"
+      className="NumericalLines"
       style={propsToStyles(props)}
     >
       {items.map(({ label, value, tooltip, error }) => (
@@ -22,8 +22,8 @@ export function DataLineItems({ items, ...props }) {
           mb="8px"
           align="center"
           justify="space-between"
-          className={cn("DataLineItems__item", {
-            "DataLineItems__item--error": error,
+          className={cn("NumericalLines__item", {
+            "NumericalLines__item--error": error,
           })}
         >
           <Box align="center" mr="5px">
