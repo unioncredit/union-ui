@@ -6,32 +6,37 @@ import "./Tooltip.scss";
 
 export function Tooltip({
   position,
-  children,
+  title,
   content,
   alwaysShow,
+  children,
   className,
 }) {
   return (
-    <span
-      className={cn("tooltip", className, {
-        [`tooltip--${position}`]: position,
-        "tooltip--alwaysShow": alwaysShow,
+    <div
+      className={cn("Tooltip", className, {
+        [`Tooltip--${position}`]: position,
+        "Tooltip--alwaysShow": alwaysShow,
       })}
     >
-      <span className="tooltip__content">
+      <div className="Tooltip__content">
+        {title && (
+          <p className="Tooltip__title">{title}</p>
+        )}
         {content}
         <span className="down">
           <span />
         </span>
-      </span>
+      </div>
       {children}
-    </span>
+    </div>
   );
 }
 
 Tooltip.propTypes = {
   position: PropTypes.oneOf(["top", "right", "bottom", "left"]),
-  content: PropTypes.string,
+  title: PropTypes.string,
+  content: PropTypes.string.isRequired,
   alwaysShow: PropTypes.bool,
   className: PropTypes.string,
 };

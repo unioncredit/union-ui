@@ -1,45 +1,49 @@
-import React from "react";
+import "./Control.scss";
+
+import React, { useState } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import Intermediate from "../Icons/icons/intermediate.svg";
-import Check from "../Icons/icons/check.svg";
-
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
-
-import "./control.scss";
+import { CheckAlternativeIcon } from "../Icons";
 
 export function Control({
-  label,
   type,
+  label,
+  content,
   disabled,
   checked,
-  indeterminate,
   onClick,
   ...props
 }) {
-  const Icon = checked ? Check : indeterminate ? Intermediate : null;
+  const [hovered, setHovered] = useState(false);
 
   return (
     <div
-      className="control-wrapper"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="Control__wrapper"
       style={propsToStyles(props)}
       onClick={onClick}
     >
       <div
-        className={cn("control", {
-          [`control--${type}`]: type,
-          "control--checked": checked,
-          "control--disabled": disabled,
-          "control--indeterminate": indeterminate,
+        className={cn("Control", {
+          [`Control--${type}`]: type,
+          "Control--hovered": hovered,
+          "Control--checked": checked,
+          "Control--disabled": disabled,
         })}
       >
-        {(checked || indeterminate) && type === "checkbox" && <Icon />}
+        {type === "checkbox" && (checked || hovered) && <CheckAlternativeIcon />}
       </div>
-      {label && (
-        <Text className="control-label" my={0} ml="6px">
+      {label ? (
+        <Text className="Control__label" my={0} ml="6px">
           {label}
+        </Text>
+      ) : content && (
+        <Text className="Control__content" my={0} ml="6px">
+          {content}
         </Text>
       )}
     </div>
@@ -54,6 +58,5 @@ Control.propTypes = {
   type: PropTypes.oneOf(["checkbox", "radio"]),
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
-  indeterminate: PropTypes.bool,
   label: PropTypes.string,
 };

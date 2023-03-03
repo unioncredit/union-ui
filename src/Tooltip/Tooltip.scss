@@ -1,20 +1,14 @@
 @import "../variables.scss";
 
-.tooltip {
+.Tooltip {
   position: relative;
   z-index: 99;
   display: inline-block;
   white-space: normal;
   vertical-align: middle;
 
-  &__content {
-    line-height: normal;
-    font-size: 11.2px;
-    text-transform: none;
-  }
-
   &--top {
-    .tooltip__content {
+    .Tooltip__content {
       bottom: 100%;
       left: 50%;
       transform: translateX(-50%) translateY(-12px);
@@ -28,7 +22,7 @@
   }
 
   &--right {
-    .tooltip__content {
+    .Tooltip__content {
       left: 100%;
       top: 50%;
       transform: translateY(-50%) translateX(12px);
@@ -42,7 +36,7 @@
   }
 
   &--bottom {
-    .tooltip__content {
+    .Tooltip__content {
       top: 100%;
       left: 50%;
       transform: translateX(-50%) translateY(12px);
@@ -56,7 +50,7 @@
   }
 
   &--left {
-    .tooltip__content {
+    .Tooltip__content {
       right: 100%;
       top: 50%;
       transform: translateY(-50%) translateX(-12px);
@@ -69,16 +63,23 @@
     }
   }
 
+  &__title {
+    color: white;
+    font-weight: 500;
+  }
+
   &__content {
     display: none;
     position: absolute;
-    color: white;
-    background-color: $grey700;
-    width: 180px;
+    background-color: #555351;
+    width: 184px;
     box-sizing: border-box;
-    padding: 12px 16px 15px 16px;
+    padding: 12px;
     border-radius: 12px;
-    text-align: center;
+    color: $grey400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
 
     .down {
       position: absolute;
@@ -86,7 +87,7 @@
       align-items: center;
 
       & > span {
-        background-color: $grey700;
+        background-color: #555351;
         display: block;
         margin: 0 auto;
         width: 20px;

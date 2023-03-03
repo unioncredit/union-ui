@@ -13,6 +13,7 @@ export { default as CancelVouchIcon } from "./icons/cancelVouch.svg";
 export { default as CelebrationIcon } from "./icons/celebration.svg";
 export { default as ChartIcon } from "./icons/chart.svg";
 export { default as CheckIcon } from "./icons/check.svg";
+export { default as CheckAlternativeIcon } from "./icons/check-alternative.svg";
 export { default as CheckFilledIcon } from "./icons/check-filled.svg";
 export { default as ChevronIcon } from "./icons/chevron.svg";
 export { default as ClaimIcon } from "./icons/claim.svg";

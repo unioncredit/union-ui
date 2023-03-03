@@ -11,15 +11,17 @@ export default {
   title: "Components/Tooltip",
 };
 
-const content =
-  "These are funds which are currently tied up elsewhere and as a result, not available to borrow at this time";
+const tooltipProps = {
+  title: "Optional title",
+  content: "Further details regarding the specific tooltip details",
+};
 
 export const Default = () => (
   <>
-    <Box mt="100px">
+    <Box mt="150px">
       <Text>
         The quick brown fox jumps over the lazy dog (top){" "}
-        <Tooltip content={content}>
+        <Tooltip {...tooltipProps}>
           <Icon width="16px" />
         </Tooltip>
       </Text>
@@ -27,7 +29,7 @@ export const Default = () => (
     <Box mt="100px">
       <Text>
         The quick brown fox jumps over the lazy dog (right){" "}
-        <Tooltip position="right" content={content}>
+        <Tooltip position="right" {...tooltipProps}>
           <Icon width="16px" />
         </Tooltip>
       </Text>
@@ -35,7 +37,7 @@ export const Default = () => (
     <Box mt="100px">
       <Text>
         The quick brown fox jumps over the lazy dog (bottom){" "}
-        <Tooltip position="bottom" content={content}>
+        <Tooltip position="bottom" {...tooltipProps}>
           <Icon width="16px" />
         </Tooltip>
       </Text>
@@ -43,7 +45,7 @@ export const Default = () => (
     <Box mt="100px">
       <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
-        <Tooltip position="left" content={content}>
+        <Tooltip position="left" {...tooltipProps}>
           <Icon width="16px" />
         </Tooltip>
       </Text>
@@ -51,7 +53,7 @@ export const Default = () => (
     <Box mt="100px">
       <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
-        <Tooltip position="bottom" content={content} alwaysShow>
+        <Tooltip position="bottom" {...tooltipProps} alwaysShow>
           <Button label="Open" />
         </Tooltip>
       </Text>
