@@ -15,7 +15,7 @@
     border-radius: 6px;
     margin: 0 4px;
     background: transparent;
-    color: $grey400;
+    color: $grey600;
 
     &:not(.pagination__number--ellipsis) {
       cursor: pointer;
@@ -24,12 +24,11 @@
     &--active {
       color: $grey800;
       background: $grey100;
-      border: 1px solid $grey300;
+      border: 1px solid $grey200;
     }
 
     &:hover:not(.pagination__number--active, .pagination__number--ellipsis) {
       border: 1px solid $grey300;
-      background: $grey100;
     }
 
     &:active:not(.pagination__number--active, .pagination__number--ellipsis) {
@@ -48,11 +47,12 @@
   }
 
   &__arrow {
-    background: $grey50;
+    background: white !important;
     padding: 4px;
+    border: 1px solid $grey200;
 
     svg {
-      width: 8px;
+      width: 12px;
 
       polygon {
         fill: $grey600;
