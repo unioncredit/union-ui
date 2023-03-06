@@ -71,3 +71,48 @@ export const Tooltips = () => {
     </Box>
   ));
 };
+
+export const ProgressBars = () => {
+  const bars = [
+    { barProps: { percentage: 25 } },
+    { barProps: { percentage: 50 } },
+    { barProps: { percentage: 75 }, subtitle: "With a subtitle" },
+    { barProps: { percentage: 100 }, subtitle: "With a subtitle", subtitleTooltip: {
+        content: "And a tooltip!",
+      }
+    },
+  ];
+
+  return bars.map(props => (
+    <Box mb="50px">
+      <NumericalBlock
+        title="Statistic"
+        value="420.69"
+        {...props}
+      />
+    </Box>
+  ));
+}
+
+export const TitleProps = () => {
+  const titleProps = [
+    {
+      subtitleProps: {
+        style: {
+          color: "#2563eb",
+        },
+      }
+    }
+  ];
+
+  return titleProps.map(props => (
+    <Box mt="65px">
+      <NumericalBlock
+        title="Balance Owed"
+        value="100.59"
+        subtitle="Due in 24d 6h"
+        {...props}
+      />
+    </Box>
+  ));
+}

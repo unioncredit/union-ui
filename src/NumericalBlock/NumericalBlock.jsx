@@ -9,6 +9,7 @@ import { Text } from "../Text";
 import { Heading } from "../Heading";
 import { Tooltip } from "../Tooltip";
 import { DaiIcon, UnionIcon, WireInfoIcon } from "../Icons";
+import { PercentBar } from "../PercentBar";
 
 export function NumericalBlock({
   size,
@@ -18,7 +19,8 @@ export function NumericalBlock({
   subtitle,
   titleTooltip,
   subtitleTooltip,
-  progressPercent,
+  subtitleProps,
+  barProps,
   className,
   ...props
 }) {
@@ -40,18 +42,21 @@ export function NumericalBlock({
           )}
         </Heading>
       </div>
-      <Text className="NumericalBlock__value" grey={800} weight="medium" mb="3px">
-        {value}
-        {token === "dai" && <DaiIcon className="NumericalBlock__token" />}
-        {token === "union" && <UnionIcon className="NumericalBlock__token" />}
-      </Text>
 
-      {/*{progressPercent && (*/}
+      {value && (
+        <Text className="NumericalBlock__value" grey={800} weight="medium" mb="3px">
+          {value}
+          {token === "dai" && <DaiIcon className="NumericalBlock__token" />}
+          {token === "union" && <UnionIcon className="NumericalBlock__token" />}
+        </Text>
+      )}
 
-      {/*)}*/}
+      {barProps && (
+        <PercentBar {...barProps} />
+      )}
 
       {subtitle && (
-        <Text m={0} className="NumericalBlock__subtitle">
+        <Text m={0} className="NumericalBlock__subtitle" {...subtitleProps}>
           {subtitle}
           {subtitleTooltip && (
             <Tooltip {...subtitleTooltip}>
@@ -79,5 +84,6 @@ NumericalBlock.propTypes = {
   subtitle: PropTypes.node,
   titleTooltip: PropTypes.object,
   subtitleTooltip: PropTypes.object,
-  progressPercent: PropTypes.number,
+  subtitleProps: PropTypes.object,
+  barProps: PropTypes.object,
 };
