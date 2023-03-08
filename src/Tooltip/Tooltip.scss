@@ -7,6 +7,12 @@
   white-space: normal;
   vertical-align: middle;
 
+  &--shrink {
+    .Tooltip__content {
+      width: auto;
+    }
+  }
+
   &--top {
     .Tooltip__content {
       bottom: 100%;

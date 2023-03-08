@@ -9,6 +9,7 @@ export function Tooltip({
   title,
   content,
   alwaysShow,
+  shrink,
   children,
   className,
 }) {
@@ -17,6 +18,7 @@ export function Tooltip({
       className={cn("Tooltip", className, {
         [`Tooltip--${position}`]: position,
         "Tooltip--alwaysShow": alwaysShow,
+        "Tooltip--shrink": shrink,
       })}
     >
       <div className="Tooltip__content">
@@ -38,6 +40,7 @@ Tooltip.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string.isRequired,
   alwaysShow: PropTypes.bool,
+  shrink: PropTypes.bool,
   className: PropTypes.string,
 };
 

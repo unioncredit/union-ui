@@ -53,6 +53,14 @@ export const Default = () => (
     <Box mt="100px">
       <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
+        <Tooltip position="right" content="TODO" shrink alwaysShow>
+          <Icon width="16px" />
+        </Tooltip>
+      </Text>
+    </Box>
+    <Box mt="100px">
+      <Text>
+        The quick brown fox jumps over the lazy dog (left){" "}
         <Tooltip position="bottom" {...tooltipProps} alwaysShow>
           <Button label="Open" />
         </Tooltip>
