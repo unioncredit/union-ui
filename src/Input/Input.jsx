@@ -13,9 +13,11 @@ export const Input = forwardRef(
     {
       name,
       label,
+      rightLabel,
       caption,
       placeholder,
       disabled,
+      readonly,
       value,
       suffix,
       prefix,
@@ -33,6 +35,7 @@ export const Input = forwardRef(
     const [hasValue, setHasValue] = useState(false);
 
     const handleChange = (event) => {
+      if (readonly) return;
       setHasValue(event.target.value !== "");
       onChange && onChange(event);
     };
@@ -44,15 +47,26 @@ export const Input = forwardRef(
           "input-wrapper--error": !disabled && error,
         })}
       >
-        {label && (
-          <Text as="label" className="input-label" htmlFor={name} size="medium">
-            {label}
-          </Text>
+        {(label || rightLabel) && (
+          <Box justify="space-between">
+            {label && (
+              <Text as="label" className="input-label" htmlFor={name} size="medium">
+                {label}
+              </Text>
+            )}
+
+            {rightLabel && (
+              <Text as="label" className="input-label--right" htmlFor={name} size="medium">
+                {rightLabel}
+              </Text>
+            )}
+          </Box>
         )}
         <div className="input-wrapper__inner">
           <div
             className={cn("input", {
               "input--disabled": disabled,
+              "input--readonly": readonly,
               "input--has-value": hasValue,
               "input--has-prefix": prefix,
             })}
@@ -80,7 +94,7 @@ export const Input = forwardRef(
 
         {(caption || error) && (
           <Box align="center" mt="4px">
-            <Text size="small" m={0} className="input-caption">
+            <Text size="regular" m={0} className="input-caption">
               {(!disabled && error) || caption}
             </Text>
 

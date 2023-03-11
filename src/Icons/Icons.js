@@ -71,6 +71,7 @@ export { default as SuccessIcon } from "./icons/success.svg";
 export { default as SwitchIcon } from "./icons/switch.svg";
 export { default as TableSortIcon } from "./icons/tableSorting.svg";
 export { default as TelegramIcon } from "./icons/telegram.svg";
+export { default as TelegramFilledIcon } from "./icons/telegram-filled.svg";
 export { default as TooltipIcon } from "./icons/tooltip.svg";
 export { default as TwitterIcon } from "./icons/twitter.svg";
 export { default as TwitterFilledIcon } from "./icons/twitter-filled.svg";

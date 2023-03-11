@@ -24,6 +24,9 @@ export const Inputs = () => (
       <Input type="number" placeholder="Placeholder" />
     </Box>
     <Box mb="20px">
+      <Input value="This is readonly" onMaxClick={() => {}} readonly />
+    </Box>
+    <Box mb="20px">
       <Input placeholder="Placeholder" onMaxClick={() => {}} disabled />
     </Box>
     <Box mb="20px">
@@ -32,6 +35,7 @@ export const Inputs = () => (
     <Box mb="20px">
       <Input
         label="Input label"
+        rightLabel="Right label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
       />

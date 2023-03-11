@@ -88,6 +88,7 @@ $gutter: 8px;
   }
 
   input {
+    color: $grey800;
     width: 100%;
     font-size: $fontSize;
     padding: 0 12px;
@@ -146,6 +147,10 @@ $gutter: 8px;
 .input-caption {
   color: $grey800;
   display: block;
+
+  &--right {
+    color: $grey600;
+  }
 }
 
 .input-label {
@@ -153,8 +158,6 @@ $gutter: 8px;
 }
 
 .input-caption {
-  padding-left: $gutter;
-
   .input-wrapper--error & {
     color: $red600;
   }

@@ -19,7 +19,6 @@ export function NumericalLines({ items, ...props }) {
     >
       {items.map(({ label, value, tooltip, error }) => (
         <Box
-          mb="8px"
           align="center"
           justify="space-between"
           className={cn("NumericalLines__item", {
