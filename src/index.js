@@ -37,6 +37,8 @@ export * from "./NetworkSwitcher";
 export * from "./Notification";
 export * from "./NumericalBlock";
 export * from "./NumericalLines";
+export * from "./OptionCard";
+export * from "./OptionSelect";
 export * from "./Pagination";
 export * from "./PercentBar";
 export * from "./ProgressBar";

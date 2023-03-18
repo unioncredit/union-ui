@@ -37,11 +37,12 @@ export function Control({
       >
         {type === "checkbox" && (checked || hovered) && <CheckAlternativeIcon />}
       </div>
-      {label ? (
+      {label && (
         <Text className="Control__label" my={0} ml="6px">
           {label}
         </Text>
-      ) : content && (
+      )}
+      {content && (
         <Text className="Control__content" my={0} ml="6px">
           {content}
         </Text>
