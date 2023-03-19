@@ -3,8 +3,7 @@ import React from "react";
 import { Alert } from "./Alert";
 import { Box } from "../Box";
 
-import WireInfo from "../Icons/icons/wireInfo.svg";
-import WireCheck from "../Icons/icons/wireCheck.svg";
+import { WarningIcon } from "../Icons";
 
 export default {
   component: Alert,
@@ -15,79 +14,23 @@ export const Default = () => (
   <>
     <Box m="10px">
       <Alert
+        align="left"
+        icon={WarningIcon}
         variant="warning"
         label="Overdue payment of 1.82 DAI"
-        action={{ label: "Make payment" }}
       />
     </Box>
     <Box m="10px">
       <Alert
-        variant="info"
-        label="Overdue payment of 1.82 DAI"
-        action={{ label: "Make payment" }}
-      />
-    </Box>
-    <Box m="10px">
-      <Alert
-        variant="success"
-        label="Overdue payment of 1.82 DAI"
-        action={{ label: "Make payment" }}
-      />
-    </Box>
-  </>
-);
-
-export const Small = () => (
-  <>
-    <Box m="10px">
-      <Alert
-        size="small"
-        variant="warning"
-        label="Overdue payment of 1.82 DAI"
-        icon={<WireInfo />}
-      />
-    </Box>
-    <Box m="10px">
-      <Alert
-        size="small"
-        icon={<WireInfo />}
+        align="center"
         variant="info"
         label="Overdue payment of 1.82 DAI"
       />
     </Box>
     <Box m="10px">
       <Alert
-        size="small"
+        align="right"
         variant="success"
-        icon={<WireCheck />}
-        label="Overdue payment of 1.82 DAI"
-      />
-    </Box>
-
-    <Box m="10px">
-      <Alert
-        packed
-        size="small"
-        variant="warning"
-        label="Overdue payment of 1.82 DAI"
-        icon={<WireInfo />}
-      />
-    </Box>
-    <Box m="10px">
-      <Alert
-        packed
-        size="small"
-        icon={<WireInfo />}
-        variant="info"
-        label="Overdue payment of 1.82 DAI"
-      />
-    </Box>
-    <Box m="10px">
-      <Alert
-        packed
-        size="small"
-        variant="success"
-        icon={<WireCheck />}
         label="Overdue payment of 1.82 DAI"
       />
     </Box>

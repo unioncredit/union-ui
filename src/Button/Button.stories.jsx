@@ -22,6 +22,7 @@ const colors = [
   "primary",
   "secondary",
   "red",
+  "blue",
 ];
 
 const variants = [

@@ -4,7 +4,6 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  text-align: center;
 
   .Tooltip {
     margin-left: 4px;
@@ -23,7 +22,6 @@
     color: $grey800;
     display: flex;
     align-items: center;
-    justify-content: center;
   }
   &__token {
     width: 16px;
@@ -32,6 +30,23 @@
   }
   &__subtitle {
     color: $grey500;
+  }
+
+  &__align {
+    &-left {
+      text-align: left;
+
+      .NumericalBlock__value {
+        justify-content: flex-start;
+      }
+    }
+    &-center {
+      text-align: center;
+
+      .NumericalBlock__value {
+        justify-content: center;
+      }
+    }
   }
 
   &__size {

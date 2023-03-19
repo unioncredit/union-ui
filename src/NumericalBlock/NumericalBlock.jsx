@@ -16,6 +16,7 @@ export function NumericalBlock({
   title,
   value,
   token,
+  align,
   subtitle,
   titleTooltip,
   subtitleTooltip,
@@ -28,6 +29,7 @@ export function NumericalBlock({
     <Box
       className={cn("NumericalBlock", className, {
         [`NumericalBlock__size-${size}`]: size,
+        [`NumericalBlock__align-${align}`]: align,
       })}
       direction="vertical"
       {...props}
@@ -44,7 +46,7 @@ export function NumericalBlock({
       </div>
 
       {value && (
-        <Text className="NumericalBlock__value" grey={800} weight="medium" mb="3px">
+        <Text className="NumericalBlock__value" m={0} grey={800} weight="medium">
           {value}
           {token === "dai" && <DaiIcon className="NumericalBlock__token" />}
           {token === "union" && <UnionIcon className="NumericalBlock__token" />}
@@ -52,11 +54,11 @@ export function NumericalBlock({
       )}
 
       {barProps && (
-        <PercentBar {...barProps} />
+        <PercentBar mt="3px" {...barProps} />
       )}
 
       {subtitle && (
-        <Text m={0} className="NumericalBlock__subtitle" {...subtitleProps}>
+        <Text m="3px 0 0" className="NumericalBlock__subtitle" {...subtitleProps}>
           {subtitle}
           {subtitleTooltip && (
             <Tooltip {...subtitleTooltip}>
@@ -71,6 +73,7 @@ export function NumericalBlock({
 
 NumericalBlock.defaultProps = {
   size: "large",
+  align: "center",
 };
 
 NumericalBlock.propTypes = {
@@ -81,6 +84,7 @@ NumericalBlock.propTypes = {
     PropTypes.number,
   ]),
   token: PropTypes.oneOf(["dai", "union"]),
+  align: PropTypes.oneOf(["left", "center"]),
   subtitle: PropTypes.node,
   titleTooltip: PropTypes.object,
   subtitleTooltip: PropTypes.object,

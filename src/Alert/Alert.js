@@ -1,50 +1,41 @@
+import "./Alert.scss";
+
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Text } from "../Text";
-import { Button } from "../Button";
 import { propsToStyles } from "../spacing";
 
-import "./alert.scss";
-
 export function Alert({
-  packed,
   label,
-  action,
-  size,
   variant,
-  icon,
+  icon: Icon,
+  align,
   ...props
 }) {
   return (
     <div
-      className={cn("alert", {
-        [`alert--${variant}`]: variant,
-        [`alert--${size}`]: size,
-        "alert--packed": packed,
+      className={cn("Alert", {
+        [`Alert--${variant}`]: variant,
+        [`Alert--align-${align}`]: align,
       })}
       style={propsToStyles(props)}
     >
-      {icon && <div className="alert__icon">{icon}</div>}
-      <Text mb={0}>{label}</Text>
-      {action && (
-        <div className="alert__action">
-          <Button {...action} variant="secondary" />
-        </div>
-      )}
+      {Icon && <Icon className="Alert__icon" />}
+      <Text mb={0} size="small">{label}</Text>
     </div>
   );
 }
 
 Alert.propTypes = {
-  size: PropTypes.oneOf(["default", "small"]),
   variant: PropTypes.oneOf(["warning", "info", "success"]),
   icon: PropTypes.node,
   packed: PropTypes.bool,
+  align: PropTypes.oneOf(["left", "center", "right"])
 };
 
 Alert.defaultProps = {
-  size: "default",
   variant: "warning",
+  align: "left",
 };

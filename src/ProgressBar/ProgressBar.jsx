@@ -3,12 +3,14 @@ import "./ProgressBar.scss";
 import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
+import { propsToStyles } from "../spacing";
 
-export function ProgressBar({ percentage, label, icon: Icon, paused }) {
+export function ProgressBar({ percentage, label, icon: Icon, paused, ...props }) {
   const isComplete = percentage >= 100;
 
   return (
     <div
+      style={propsToStyles(props)}
       className={cn("ProgressBar", {
         "ProgressBar--paused": paused,
         "ProgressBar--complete": isComplete,

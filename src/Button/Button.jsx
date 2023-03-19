@@ -68,7 +68,7 @@ export const Button = forwardRef(
 
 Button.propTypes = {
   as: PropTypes.node,
-  color: PropTypes.oneOf(["primary", "secondary", "red"]),
+  color: PropTypes.oneOf(["primary", "secondary", "red", "blue"]),
   variant: PropTypes.oneOf(["light", "regular", "dark"]),
   label: PropTypes.node,
   size: PropTypes.oneOf(["pill", "thin", "small", "regular", "large"]),

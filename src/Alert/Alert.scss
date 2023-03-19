@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
-.alert {
-  padding: 4px 4px 4px 12px;
+.Alert {
+  padding: 4px 16px;
   border-radius: 13px;
   display: flex;
   align-items: center;
@@ -10,8 +10,22 @@
   width: 100%;
   box-sizing: border-box;
 
-  &__icon svg {
-    width: 32px;
+  &--align {
+    &-left {
+      justify-content: flex-start;
+    }
+    &-center {
+      justify-content: center;
+    }
+    &-right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
   }
 
   &__action {
@@ -45,7 +59,7 @@
       color: $color800;
     }
 
-    .alert__icon svg path {
+    .Alert__icon path {
       fill: $color800;
     }
 
@@ -65,22 +79,13 @@
 
   &--warning {
     @include variant($amber200, $amber300, $amber400, $amber500, $amber800);
-    &.alert--small {
-      background: $amber100;
-    }
   }
 
   &--info {
     @include variant($blue200, $blue300, $blue400, $blue500, $blue800);
-    &.alert--small {
-      background: $blue50;
-    }
   }
 
   &--success {
     @include variant($green200, $green300, $green400, $green500, $green800);
-    &.alert--small {
-      background: $green50;
-    }
   }
 }

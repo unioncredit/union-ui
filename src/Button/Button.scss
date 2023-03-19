@@ -221,6 +221,49 @@ $disabledOpacity: 0.5;
       background-color: $red400;
     }
   }
+
+  &-blue {
+    color: $blue600;
+    background: $blue200;
+
+    svg path {
+      fill: $blue600;
+    }
+
+    &.button--variant {
+      &-light {
+        background-color: $blue100;
+
+        &:hover:enabled {
+          background-color: $blue50;
+        }
+      }
+      &-dark {
+        background-color: $blue300;
+
+        &:hover:enabled {
+          background-color: $blue200;
+        }
+      }
+    }
+
+    .loading-spinner {
+      path {
+        fill: none;
+        stroke: $blue600;
+      }
+      circle {
+        stroke: $blue300;
+      }
+    }
+
+    &:hover:enabled {
+      background-color: $blue100;
+    }
+    &:active:enabled {
+      background-color: $blue400;
+    }
+  }
 }
 
 .button--size {
