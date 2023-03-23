@@ -68,7 +68,8 @@
     }
   }
 
-  &--goerli {
+  &--goerli,
+  &--optimism-goerli {
     background-color: #f8fafc;
     color: #64748b;
 
