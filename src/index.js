@@ -8,6 +8,7 @@ export * from "./Button";
 export * from "./Card";
 export * from "./Control";
 export * from "./Divider";
+export * from "./ExpandingInfo";
 export * from "./Grid";
 export * from "./Heading";
 export * from "./Input";
