@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.card {
+.Card {
   $border: 0.5px solid $grey200;
   border: $border;
   background: #ffffff;
@@ -19,10 +19,10 @@
 
   &--small {
     max-width: 280px;
-    &.card .card-body {
+    &.Card .Card__body {
       padding: 16px;
     }
-    &.card .card-header {
+    &.Card .Card__header {
       padding: 16px 16px 0 16px;
     }
   }
@@ -44,11 +44,11 @@
 
   &--packed {
     border-radius: 16px;
-    &.card .card-body {
+    &.Card .Card__body {
       padding: 16px;
     }
 
-    &.card .card-header {
+    &.Card .Card__header {
       padding: 16px 16px 0 16px;
     }
   }
@@ -63,7 +63,7 @@
       color: inherit;
     }
 
-    &.card--bordered {
+    &.Card--bordered {
       border-color: $blue500;
       box-shadow: 0 0 0 1px $blue500;
     }
@@ -88,7 +88,7 @@
   }
 }
 
-.card-header {
+.Card__header {
   padding: 24px 24px 0 24px;
   display: flex;
 
@@ -107,7 +107,7 @@
   @include textalign;
 }
 
-.card-body {
+.Card__body {
   padding: 24px;
 
   @media screen and (max-width: $breakpoint-xxs) {

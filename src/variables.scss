@@ -56,10 +56,17 @@ $grey700: #44403c;
 $grey800: #292524;
 $grey900: #1C1917;
 // oranges
+$orange500: #f97316;
 $orange600: #ea580c;
 $orange800: #9a3412;
 // violet
 $violet400: #a78bfa;
+// indigo
+$indigo500: #6366f1;
+$indigo800: #3730a3;
+// teal
+$teal500: #14b8a6;
+$sky500: #0ea5e9;
 
 $shadesOfGrey: (
   "grey50": $grey50,
@@ -131,12 +138,18 @@ $colors: (
   "amber600": $amber600,
   "amber700": $amber700,
   "amber800": $amber800,
+  // misc
+  "orange500": $orange500,
+  "indigo500": $indigo500,
+  "indigo800": $indigo800,
+  "teal500": $teal500,
+  "sky500": $sky500,
 );
 
-@mixin colors {
+@mixin colors($property: color) {
   @each $name, $hex in $colors {
     &--#{$name} {
-      color: $hex !important;
+      #{$property}: $hex !important;
 
       .external-inline path,
       .externalinline_svg__external-inline path {

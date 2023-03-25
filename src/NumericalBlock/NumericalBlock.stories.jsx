@@ -116,3 +116,19 @@ export const TitleProps = () => {
     </Box>
   ));
 }
+
+export const Dots = () => {
+  const colors = ["blue300", "blue600", "amber500"];
+
+  return colors.map(color => (
+    <Box mt="65px">
+      <NumericalBlock
+        dotColor={color}
+        title="Balance Owed"
+        value="100.59"
+        token="dai"
+        align="left"
+      />
+    </Box>
+  ));
+};

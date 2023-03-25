@@ -26,9 +26,9 @@ export function Main({ children, ...props }) {
   );
 }
 
-export function Columned({ children }) {
+export function Columned({ children, ...props }) {
   return (
-    <Box className="Layout__columned">
+    <Box {...props} className="Layout__columned" direction="vertical">
       {children}
     </Box>
   )

@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import { propsToStyles } from "../spacing";
 
-import "./table.scss";
+import "./Table.scss";
 
 export function Table({
   noPadding,

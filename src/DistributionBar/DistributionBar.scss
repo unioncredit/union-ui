@@ -1,3 +1,5 @@
+@import "../variables";
+
 .DistributionBar {
   width: 100%;
   height: 8px;
@@ -8,5 +10,9 @@
   &__item {
     position: absolute;
     height: 100%;
+
+    &-color {
+      @include colors(background);
+    }
   }
 }

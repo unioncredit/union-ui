@@ -1,11 +1,11 @@
+import "./Card.scss";
+
 import React, { forwardRef } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
-
-import "./Card.scss";
 
 export const Card = forwardRef(
   (
@@ -25,12 +25,12 @@ export const Card = forwardRef(
     return (
       <div
         ref={ref}
-        className={cn("card", className, {
-          [`card--${size}`]: size,
-          [`card--${variant}`]: variant,
-          ["card--packed"]: packed,
-          "card--bordered": bordered,
-          "card--overflow": overflow,
+        className={cn("Card", className, {
+          [`Card--${size}`]: size,
+          [`Card--${variant}`]: variant,
+          ["Card--packed"]: packed,
+          "Card--bordered": bordered,
+          "Card--overflow": overflow,
         })}
         style={propsToStyles(props)}
         onClick={onClick}
@@ -44,12 +44,12 @@ export const Card = forwardRef(
 function CardHeader({ title, subTitle, align, action, ...props }) {
   return (
     <div
-      className={cn("card-header", {
-        [`card-header--${align}`]: align,
+      className={cn("Card__header", {
+        [`Card__header--${align}`]: align,
       })}
       style={propsToStyles(props)}
     >
-      <div className="card-header__content">
+      <div className="Card__header__content">
         <Text as="h1" size="large" grey={700} weight="medium" m={0}>
           {title}
         </Text>
@@ -59,14 +59,14 @@ function CardHeader({ title, subTitle, align, action, ...props }) {
           </Text>
         )}
       </div>
-      {action && <div className="card-header__action">{action}</div>}
+      {action && <div className="Card__header__action">{action}</div>}
     </div>
   );
 }
 
 function CardBody({ children, ...props }) {
   return (
-    <div className="card-body" style={propsToStyles(props)}>
+    <div className="Card__body" style={propsToStyles(props)}>
       {children}
     </div>
   );

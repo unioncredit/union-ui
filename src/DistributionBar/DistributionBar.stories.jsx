@@ -20,11 +20,11 @@ export const TwoTone = () => (
       items={[
         {
           value: 1000,
-          color: "#93C5FD"
+          color: "blue200"
         },
         {
           value: 5000,
-          color: "#1E3A8A",
+          color: "blue600",
         }
       ]}
     />
@@ -37,15 +37,15 @@ export const TripleTone = () => (
       items={[
         {
           value: 2000,
-          color: "#93C5FD"
+          color: "blue200"
         },
         {
           value: 2000,
-          color: "#1E3A8A",
+          color: "blue600",
         },
         {
           value: 3000,
-          color: "#F59E0B",
+          color: "amber500",
         }
       ]}
     />
@@ -58,19 +58,19 @@ export const QuadTone = () => (
       items={[
         {
           value: 2000,
-          color: "#93C5FD"
+          color: "blue200"
         },
         {
           value: 2000,
-          color: "#1E3A8A",
+          color: "blue600",
         },
         {
           value: 3000,
-          color: "#F59E0B",
+          color: "amber500",
         },
         {
           value: 1500,
-          color: "#EF4444",
+          color: "red600",
         }
       ]}
     />

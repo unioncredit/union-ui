@@ -22,6 +22,7 @@ export function NumericalBlock({
   subtitleTooltip,
   subtitleProps,
   barProps,
+  dotColor,
   className,
   ...props
 }) {
@@ -34,8 +35,19 @@ export function NumericalBlock({
       direction="vertical"
       {...props}
     >
-      <div className="NumericalBlock__title">
-        <Heading level={3} grey={500} mb="4px" weight="medium" size="small">
+      <Box className="NumericalBlock__title" align="center">
+        {dotColor && (
+          <span
+            className={cn("NumericalBlock__dot", {
+              [`NumericalBlock__dot--${dotColor}`]: dotColor,
+            })}
+            style={{
+              backgroundColor: dotColor,
+            }}
+          />
+        )}
+
+        <Heading level={3} grey={500} m={0} weight="medium" size="small">
           {title}
           {titleTooltip && (
             <Tooltip {...titleTooltip}>
@@ -43,10 +55,10 @@ export function NumericalBlock({
             </Tooltip>
           )}
         </Heading>
-      </div>
+      </Box>
 
       {value && (
-        <Text className="NumericalBlock__value" m={0} grey={800} weight="medium">
+        <Text className="NumericalBlock__value" m="4px 0 0" grey={800} weight="medium">
           {value}
           {token === "dai" && <DaiIcon className="NumericalBlock__token" />}
           {token === "union" && <UnionIcon className="NumericalBlock__token" />}
@@ -90,4 +102,5 @@ NumericalBlock.propTypes = {
   subtitleTooltip: PropTypes.object,
   subtitleProps: PropTypes.object,
   barProps: PropTypes.object,
+  dotColor: PropTypes.string,
 };

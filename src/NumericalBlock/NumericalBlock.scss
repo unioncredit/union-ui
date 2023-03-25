@@ -9,6 +9,16 @@
     margin-left: 4px;
   }
 
+  &__dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-radius: 50%;
+
+    @include colors(background);
+  }
+
   &__title {
     color: $grey400;
     width: 100%;
@@ -43,6 +53,7 @@
     &-center {
       text-align: center;
 
+      .NumericalBlock__title,
       .NumericalBlock__value {
         justify-content: center;
       }
