@@ -17,6 +17,7 @@ export function NumericalBlock({
   value,
   token,
   align,
+  after,
   subtitle,
   titleTooltip,
   subtitleTooltip,
@@ -79,6 +80,8 @@ export function NumericalBlock({
           )}
         </Text>
       )}
+
+      {after && after}
     </Box>
   );
 }
@@ -89,7 +92,7 @@ NumericalBlock.defaultProps = {
 };
 
 NumericalBlock.propTypes = {
-  size: PropTypes.oneOf(["x-small", "small", "regular", "large"]),
+  size: PropTypes.oneOf(["x-small", "small", "medium", "regular", "large"]),
   title: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
     PropTypes.string,
@@ -97,6 +100,7 @@ NumericalBlock.propTypes = {
   ]),
   token: PropTypes.oneOf(["dai", "union"]),
   align: PropTypes.oneOf(["left", "center"]),
+  after: PropTypes.node,
   subtitle: PropTypes.node,
   titleTooltip: PropTypes.object,
   subtitleTooltip: PropTypes.object,

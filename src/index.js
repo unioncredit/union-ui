@@ -3,6 +3,7 @@ import "./global.scss";
 export * from "./Alert";
 export * from "./AlertBanner";
 export * from "./Avatar";
+export * from "./AvatarBadgeRow";
 export * from "./Badge";
 export * from "./BadgeRow";
 export * from "./Box";

@@ -61,11 +61,13 @@ $orange600: #ea580c;
 $orange800: #9a3412;
 // violet
 $violet400: #a78bfa;
+$violet500: #8b5cf6;
 // indigo
 $indigo500: #6366f1;
 $indigo800: #3730a3;
 // teal
 $teal500: #14b8a6;
+// sky
 $sky500: #0ea5e9;
 
 $shadesOfGrey: (
@@ -113,6 +115,8 @@ $colors: (
   "blue500": $blue500,
   "blue600": $blue600,
   "blue700": $blue700,
+  "blue800": $blue800,
+  "blue900": $blue900,
   // green
   "green100": $green100,
   "green200": $green200,
@@ -144,6 +148,7 @@ $colors: (
   "indigo800": $indigo800,
   "teal500": $teal500,
   "sky500": $sky500,
+  "violet500": $violet500,
 );
 
 @mixin colors($property: color) {

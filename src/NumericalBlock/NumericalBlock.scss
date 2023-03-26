@@ -63,6 +63,7 @@
   &__size {
     &-large,
     &-regular,
+    &-medium,
     &-small {
       .NumericalBlock__title {
         font-size: 16px;
@@ -71,6 +72,13 @@
       .NumericalBlock__subtitle {
         font-size: 14px;
         line-height: 20px;
+      }
+    }
+
+    &-medium {
+      .NumericalBlock__value {
+        font-size: 24px;
+        line-height: 32px;
       }
     }
 
