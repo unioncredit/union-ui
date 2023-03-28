@@ -5,6 +5,7 @@ export { default as ArrowRightIcon } from "./icons/arrowRight.svg";
 export { default as ArrowRightFilledIcon } from "./icons/arrowRightFilled.svg";
 export { default as AvatarIcon } from "./icons/avatar.svg";
 export { default as AvatarFilledIcon } from "./icons/avatar-filled.svg";
+export { default as AvatarOutlinedIcon } from "./icons/avatar-outlined.svg";
 export { default as BlogIcon } from "./icons/blog.svg";
 export { default as BookIcon } from "./icons/book.svg";
 export { default as BorrowIcon } from "./icons/borrow.svg";

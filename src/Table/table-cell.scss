@@ -8,6 +8,8 @@
   text-overflow: clip;
   border-bottom: 1px solid $grey200;
 
+  @include weights;
+
   &--fixed-size {
     width: 1px;
   }

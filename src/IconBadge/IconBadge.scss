@@ -6,7 +6,7 @@
   box-sizing: border-box;
 
   &:not(.IconBadge--no-color) {
-    path {
+    path, circle {
       fill: currentColor;
     }
   }

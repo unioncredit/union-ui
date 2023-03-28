@@ -1,4 +1,6 @@
 import "./IconBadge.scss";
+
+import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
@@ -10,8 +12,9 @@ export const IconBadge = ({
   size,
   variant,
   color,
-  background,
+  backgroundColor,
   borderColor,
+  borderSize,
   className,
   ...props
 }) => {
@@ -22,9 +25,9 @@ export const IconBadge = ({
       style={{
         color: color,
         borderColor: borderColor,
-        borderWidth: borderColor ? "1px" : null,
-        borderStyle: borderColor ? "solid" : null,
-        backgroundColor: background,
+        borderWidth: borderSize ? `${borderSize}px` : "1px",
+        borderStyle: borderColor && "solid",
+        backgroundColor: backgroundColor,
         ...styles
       }}
       className={cn(className, "IconBadge", {
@@ -45,8 +48,9 @@ IconBadge.propTypes = {
   size: PropTypes.oneOf(["small", "regular", "large"]),
   variant: PropTypes.oneOf(["filled", "outlined"]),
   color: PropTypes.string,
-  background: PropTypes.string,
+  backgroundColor: PropTypes.string,
   borderColor: PropTypes.string,
+  borderSize: PropTypes.number,
   className: PropTypes.string,
 };
 
@@ -57,4 +61,5 @@ IconBadge.defaultProps = {
   color: null,
   background: null,
   borderColor: null,
+  borderSize: null,
 };

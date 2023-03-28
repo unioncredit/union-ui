@@ -1,12 +1,22 @@
-.IconRow {
+.IconBadgeRow {
   display: inline-flex;
   white-space: nowrap;
   position: relative;
-  flex-direction: row-reverse !important;
 
-  .IconBadge {
-    &:not(:last-child) {
-      margin-left: -5px;
+  &:not(.IconBadgeRow--reverse) {
+    flex-direction: row !important;
+
+    .IconBadge:not(:first-child) {
+      margin-left: -15%;
+    }
+  }
+
+  &.IconBadgeRow--reverse {
+    justify-content: flex-end !important;
+    flex-direction: row-reverse !important;
+
+    .IconBadge:not(:last-child) {
+      margin-left: -15%;
     }
   }
 }

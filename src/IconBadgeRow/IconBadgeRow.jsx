@@ -5,9 +5,11 @@ import cn from "classnames";
 
 import { Box } from "../Box";
 
-export function IconBadgeRow({ children, className, ...props }) {
+export function IconBadgeRow({ reverse, children, className, ...props }) {
   return (
-    <Box {...props} justify="flex-end" className={cn("IconRow", className)}>
+    <Box {...props} className={cn("IconBadgeRow", className, {
+      "IconBadgeRow--reverse": reverse,
+    })}>
       {children}
     </Box>
   );
