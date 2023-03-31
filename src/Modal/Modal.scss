@@ -7,21 +7,10 @@
   overflow: hidden;
   position: relative;
 
-  &__footer {
+  &__container {
     background: $grey50;
-    padding: 24px;
-
-    .button--pill {
-      background-color: $grey100;
-
-      &:hover:enabled {
-        background-color: $grey200;
-      }
-
-      &:active:enabled {
-        background-color: $grey300;
-      }
-    }
+    border-radius: 12px;
+    border: 0.5px solid $grey200;
   }
 
   &__title {
@@ -108,6 +97,10 @@
 
   .modalHeader {
     border-bottom: 1px solid $grey100;
+    padding: 24px;
+  }
+  .modalFooter {
+    border-top: 1px solid $grey100;
     padding: 24px;
   }
 

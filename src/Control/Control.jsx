@@ -15,6 +15,7 @@ export function Control({
   disabled,
   checked,
   onClick,
+  className,
   ...props
 }) {
   const [hovered, setHovered] = useState(false);
@@ -23,7 +24,7 @@ export function Control({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="Control__wrapper"
+      className={cn("Control__wrapper", className)}
       style={propsToStyles(props)}
       onClick={onClick}
     >

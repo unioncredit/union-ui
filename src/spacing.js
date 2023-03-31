@@ -77,6 +77,9 @@ const templates = {
     left: "paddingRight",
     right: VAL_STR,
   },
+  overflow: {
+    overflow: VAL_STR,
+  }
 };
 
 export function propsToStyles(props) {

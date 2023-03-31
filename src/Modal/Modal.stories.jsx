@@ -85,6 +85,23 @@ export const ModalWithOverlay = () => (
   </ModalOverlay>
 );
 
+export const ModalWithContainers = () => (
+  <ModalOverlay onClick={() => alert("close")}>
+    <Modal>
+      <Modal.Header title="Borrow Funds" onClose={() => alert("modal close")} />
+      <Modal.Body>
+        <Modal.Container>
+          <Text m={0}>Staked $1000</Text>
+        </Modal.Container>
+
+        <Modal.Container mt="24px" p="12px">
+          <Text m={0}>Staked $1000</Text>
+        </Modal.Container>
+      </Modal.Body>
+    </Modal>
+  </ModalOverlay>
+);
+
 export const ModalNoHeader = () => (
   <ModalOverlay onClick={() => alert("close")}>
     <Modal>

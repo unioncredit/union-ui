@@ -44,6 +44,7 @@ export * from "./OptionCard";
 export * from "./OptionSelect";
 export * from "./Pagination";
 export * from "./PercentBar";
+export * from "./Popover";
 export * from "./ProgressBar";
 export * from "./ProgressList";
 export * from "./SegmentedControl";
