@@ -36,6 +36,7 @@ $purple500: lighten(#9333ea, 10);
 $purple600: #9333ea;
 $purple700: darken(#9333ea, 10);
 // amber
+$amber50: #FFFBEB;
 $amber100: #fef3c7;
 $amber200: #fde68a;
 $amber300: #fcd34d;
@@ -134,6 +135,7 @@ $colors: (
   "purple100": $purple100,
   "purple600": $purple600,
   // amber
+  "amber50": $amber50,
   "amber100": $amber100,
   "amber200": $amber200,
   "amber300": $amber300,

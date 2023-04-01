@@ -24,3 +24,7 @@ button {
 .flip {
   transform: scaleX(-1);
 }
+
+.capitalizeFirst::first-letter {
+  text-transform: capitalize;
+}

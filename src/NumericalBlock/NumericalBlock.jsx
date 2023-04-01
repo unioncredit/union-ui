@@ -71,14 +71,17 @@ export function NumericalBlock({
       )}
 
       {subtitle && (
-        <Text m="3px 0 0" className="NumericalBlock__subtitle" {...subtitleProps}>
-          {subtitle}
+        <Box align="center">
+          <Text m={0} className="NumericalBlock__subtitle" {...subtitleProps}>
+            {subtitle}
+          </Text>
+
           {subtitleTooltip && (
-            <Tooltip {...subtitleTooltip}>
+            <Tooltip mt="3px" {...subtitleTooltip}>
               <WireInfoIcon width="13px" />
             </Tooltip>
           )}
-        </Text>
+        </Box>
       )}
 
       {after && after}

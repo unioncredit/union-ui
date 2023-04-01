@@ -60,6 +60,7 @@ export function NetworkSwitcher({
       className="networkSwitcher__menu"
       items={options.map((option) => ({
         ...option,
+        key: option.chainId,
         onClick: handleClick(option),
         selected: option.id === selected.id,
       }))}

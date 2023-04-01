@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .Alert {
-  padding: 4px 16px;
+  padding: 16px;
   border-radius: 13px;
   display: flex;
   align-items: center;
@@ -9,6 +9,12 @@
   background-color: $grey100;
   width: 100%;
   box-sizing: border-box;
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &--align {
     &-left {
@@ -23,9 +29,8 @@
   }
 
   &__icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
+    width: 24px;
+    height: 24px;
   }
 
   &__action {
@@ -78,7 +83,7 @@
   }
 
   &--warning {
-    @include variant($amber200, $amber300, $amber400, $amber500, $amber800);
+    @include variant($amber50, $amber300, $amber400, $amber500, $amber600);
   }
 
   &--info {

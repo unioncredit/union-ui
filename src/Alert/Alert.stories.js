@@ -22,6 +22,25 @@ export const Default = () => (
     </Box>
     <Box m="10px">
       <Alert
+        align="left"
+        icon={WarningIcon}
+        iconPosition="right"
+        variant="warning"
+        label="Overdue payment of 1.82 DAI"
+      />
+    </Box>
+    <Box m="10px">
+      <Alert
+        justify="space-between"
+        align="left"
+        icon={WarningIcon}
+        iconPosition="right"
+        variant="warning"
+        label="Overdue payment of 1.82 DAI"
+      />
+    </Box>
+    <Box m="10px">
+      <Alert
         align="center"
         variant="info"
         label="Overdue payment of 1.82 DAI"

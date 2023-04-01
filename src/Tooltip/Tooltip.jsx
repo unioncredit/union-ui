@@ -3,6 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import "./Tooltip.scss";
+import { propsToStyles } from "../spacing";
 
 export function Tooltip({
   position,
@@ -12,9 +13,11 @@ export function Tooltip({
   shrink,
   children,
   className,
+  ...props
 }) {
   return (
     <div
+      style={propsToStyles(props)}
       className={cn("Tooltip", className, {
         [`Tooltip--${position}`]: position,
         "Tooltip--alwaysShow": alwaysShow,

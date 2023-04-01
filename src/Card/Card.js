@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
+import { Box } from "../Box";
 
 export const Card = forwardRef(
   (
@@ -72,8 +73,15 @@ function CardBody({ children, ...props }) {
   );
 }
 
+function CardFooter({ children, ...props }) {
+  return (
+    <Box className="Card__footer" {...props}>{children}</Box>
+  )
+}
+
 Card.Header = CardHeader;
 Card.Body = CardBody;
+Card.Footer = CardFooter;
 
 CardHeader.propTypes = {
   title: PropTypes.string.isRequired,
