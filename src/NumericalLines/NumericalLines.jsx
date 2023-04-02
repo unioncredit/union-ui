@@ -17,8 +17,9 @@ export function NumericalLines({ items, ...props }) {
       className="NumericalLines"
       style={propsToStyles(props)}
     >
-      {items.map(({ label, value, tooltip, error }) => (
+      {items.map(({ label, value, tooltip, error }, index) => (
         <Box
+          key={index}
           align="center"
           justify="space-between"
           className={cn("NumericalLines__item", {

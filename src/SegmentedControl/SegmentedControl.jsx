@@ -8,6 +8,7 @@ import { SegmentedControlItem } from "./SegmentedControlItem";
 import { propsToStyles } from "../spacing";
 
 export function SegmentedControl({
+  fluid,
   value,
   items,
   size,
@@ -42,6 +43,7 @@ export function SegmentedControl({
     <div
       style={propsToStyles(props)}
       className={cn("SegmentedControl", className, {
+        [`SegmentedControl--fluid`]: fluid,
         [`SegmentedControl--size-${size}`]: size,
         [`SegmentedControl--variant-${variant}`]: variant,
       })}
