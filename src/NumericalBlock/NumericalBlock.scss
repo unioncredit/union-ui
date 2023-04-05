@@ -24,7 +24,7 @@
     width: 100%;
     white-space: nowrap;
 
-    @media screen and (max-width: $breakpoint-xs) {
+    @media screen and (max-width: $breakpoint-tablet) {
       white-space: normal;
     }
   }
@@ -32,6 +32,11 @@
     color: $grey800;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 26px !important;
+      line-height: 30px !important;
+    }
   }
   &__token {
     width: 16px;
@@ -68,10 +73,20 @@
       .NumericalBlock__title {
         font-size: 16px;
         line-height: 24px;
+        
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 14px;
+          line-height: 22px;
+        }
       }
       .NumericalBlock__subtitle {
         font-size: 14px;
         line-height: 20px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 12px;
+          line-height: 20px;
+        }
       }
     }
 

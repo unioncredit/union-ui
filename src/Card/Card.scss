@@ -96,7 +96,7 @@
   padding: 24px 24px 0 24px;
   display: flex;
 
-  @media screen and (max-width: $breakpoint-xxs) {
+  @media screen and (max-width: $breakpoint-mobile) {
     padding: 16px 16px 0 16px;
   }
 
@@ -114,7 +114,7 @@
 .Card__body {
   padding: 24px;
 
-  @media screen and (max-width: $breakpoint-xxs) {
+  @media screen and (max-width: $breakpoint-mobile) {
     padding: 16px;
   }
 }

@@ -59,8 +59,18 @@
     line-height: 28px;
     align-items: center;
 
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 16px;
+      left: 16px;
+    }
+
     svg {
-      margin-right: 6px;
+      margin-right: 4px;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: 20px;
+        height: 20px;
+      }
     }
     path {
       fill: $blue900;

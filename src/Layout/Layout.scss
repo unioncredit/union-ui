@@ -3,7 +3,7 @@
 .Layout {
   min-height: 100%;
 
-  @media screen and (max-width: $breakpoint-xxs) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
   }
 
@@ -25,5 +25,9 @@
     width: 95%;
     max-width: 988px;
     margin: 0 auto;
+  }
+
+  &__columned &__columned {
+    width: 100%;
   }
 }

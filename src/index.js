@@ -1,13 +1,11 @@
 import "./global.scss";
 
-export * from "./Alert";
 export * from "./AlertBanner";
 export * from "./Avatar";
 export * from "./AvatarBadgeRow";
 export * from "./Badge";
 export * from "./BadgeRow";
 export * from "./Box";
-export * from "./Burger";
 export * from "./Button";
 export * from "./ButtonReveal";
 export * from "./ButtonRow";
@@ -27,6 +25,7 @@ export * from "./Heading";
 export * from "./IconBadge";
 export * from "./IconBadgeRow";
 export * from "./Icons";
+export * from "./InfoBanner";
 export * from "./Input";
 export * from "./Layout";
 export * from "./LoadingSpinner";

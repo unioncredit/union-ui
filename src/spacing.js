@@ -79,6 +79,10 @@ const templates = {
   },
   overflow: {
     overflow: VAL_STR,
+  },
+  text: {
+    left: "textTransform",
+    right: VAL_STR,
   }
 };
 

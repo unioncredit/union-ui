@@ -1,21 +1,21 @@
+import "./AlertBanner.scss";
+
 import React from "react";
 
-import Cross from "../Icons/icons/cross.svg";
 import { Text } from "../Text";
-
-import "./alert-banner.scss";
+import { CloseIcon } from "../Icons";
 
 export function AlertBanner({ label, onClose }) {
   return (
-    <div className="alertBanner">
-      <div className="alertBanner__inner">
-        <Text m={0} color="black">
+    <div className="AlertBanner">
+      <div className="AlertBanner__inner">
+        <Text m={0} size="medium" color="amber900">
           {label}
         </Text>
       </div>
       {onClose && (
-        <div className="alertBanner__close" onClick={onClose}>
-          <Cross width="24px" />
+        <div className="AlertBanner__close" onClick={onClose}>
+          <CloseIcon width="24px" />
         </div>
       )}
     </div>

@@ -8,8 +8,9 @@ import { Box } from "../Box";
 import { Text } from "../Text";
 import { Heading } from "../Heading";
 import { Tooltip } from "../Tooltip";
-import { DaiIcon, UnionIcon, WireInfoIcon } from "../Icons";
+import { DaiIcon, UnionIcon } from "../Icons";
 import { PercentBar } from "../PercentBar";
+import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
 
 export function NumericalBlock({
   size,
@@ -52,7 +53,7 @@ export function NumericalBlock({
           {title}
           {titleTooltip && (
             <Tooltip {...titleTooltip}>
-              <WireInfoIcon width="13px" />
+              <InfoOutlinedIcon width="13px" />
             </Tooltip>
           )}
         </Heading>
@@ -78,7 +79,7 @@ export function NumericalBlock({
 
           {subtitleTooltip && (
             <Tooltip mt="3px" {...subtitleTooltip}>
-              <WireInfoIcon width="13px" />
+              <InfoOutlinedIcon width="13px" />
             </Tooltip>
           )}
         </Box>

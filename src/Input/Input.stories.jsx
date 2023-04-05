@@ -2,12 +2,10 @@ import React from "react";
 import { Box } from "../Box";
 
 import { Input } from "./Input";
-import { Control } from "../Control";
 import { InputRow } from "./InputRow";
 import { Button } from "../Button";
 import { Dai } from "../Dai";
 
-import Search from "../Icons/icons/search.svg";
 import { SearchIcon } from "../Icons";
 
 export default {
@@ -44,7 +42,7 @@ export const Inputs = () => (
       <Input
         placeholder="Placeholder"
         onMaxClick={() => {}}
-        prefix={<Search />}
+        prefix={<SearchIcon />}
       />
     </Box>
 

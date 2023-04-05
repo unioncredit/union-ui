@@ -4,9 +4,9 @@ import cn from "classnames";
 import { Avatar } from "../Avatar";
 import { Button } from "../Button";
 import { ContextMenu } from "../ContextMenu";
-import WireCheck from "../Icons/icons/wireCheck.svg";
 
 import "./NetworkSwitcher.scss";
+import { CheckIcon } from "../Icons";
 
 export function NetworkButton({
   selected,
@@ -27,7 +27,7 @@ export function NetworkButton({
         <>
           <Avatar src={imageSrc} />
           <span>{children || label}</span>
-          {selected && <WireCheck />}
+          {selected && <CheckIcon />}
         </>
       }
     />

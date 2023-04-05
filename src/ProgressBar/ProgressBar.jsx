@@ -23,7 +23,7 @@ export function ProgressBar({ percentage, label, icon: Icon, paused, ...props })
           style={{ width: `${percentage}%` }}
         ></div>
         <div className="ProgressBar__label">
-          {Icon && <Icon width="20px" />} {label}
+          {Icon && <Icon width="24px" />} {label}
         </div>
       </div>
     </div>

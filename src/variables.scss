@@ -45,6 +45,7 @@ $amber500: #f59e0b;
 $amber600: #d97706;
 $amber700: #b45309;
 $amber800: #92400e;
+$amber900: #78350F;
 // greys
 $grey50: #fafaf9;
 $grey100: #f5f5f4;
@@ -144,6 +145,7 @@ $colors: (
   "amber600": $amber600,
   "amber700": $amber700,
   "amber800": $amber800,
+  "amber900": $amber900,
   // misc
   "orange500": $orange500,
   "indigo500": $indigo500,
@@ -200,6 +202,6 @@ $colors: (
   }
 }
 
-$breakpoint-xxs: 580px;
-$breakpoint-xs: 767px;
-$breakpoint-s: 910px;
+$breakpoint-mobile: 580px;
+$breakpoint-tablet: 767px;
+$breakpoint-small: 980px;

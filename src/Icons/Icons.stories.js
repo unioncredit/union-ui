@@ -1,101 +1,73 @@
 import { Box } from "../Box";
 import {
+  AddIcon,
   AddressBookIcon,
   ArbitrumIcon,
+  ArrowIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
-  ArrowRightFilledIcon,
-  AvatarIcon,
-  AvatarFilledIcon,
-  AvatarOutlinedIcon,
   BlogIcon,
-  BookIcon,
+  BridgeIcon,
   BorrowIcon,
   CalendarIcon,
+  CancelIcon,
   CancelVouchIcon,
-  CelebrationIcon,
   ChartIcon,
   CheckIcon,
-  CheckAlternativeIcon,
-  CheckFilledIcon,
   ChevronIcon,
   ClaimIcon,
   CloseIcon,
-  CloudCheckIcon,
-  CogIcon,
-  CoinbaseIcon,
   ConfettiIcon,
   CopyIcon,
-  CrossIcon,
   DaiIcon,
   DelegateIcon,
   DepositIcon,
   DisconnectWalletIcon,
   DiscordIcon,
-  DollarIcon,
-  DotsIcon,
-  DropdownArrowIcon,
+  DocsIcon,
   EditIcon,
   EnsIcon,
-  EnsOutlinedIcon,
-  ErrorIcon,
   EthereumIcon,
-  ExternalIcon,
-  ExternalInlineIcon,
   FailedIcon,
   FilterIcon,
   GoerliIcon,
-  HamburgerIcon,
+  GovernanceIcon,
   IdentityIcon,
-  IncreaseIcon,
+  IncreaseVouchIcon,
   InfoIcon,
-  IntermediateIcon,
   LeaderboardIcon,
-  LendIcon,
   LinkIcon,
-  LogoIcon,
+  LinkOutIcon,
+  ListIcon,
   ManageIcon,
-  MetamaskIcon,
-  MouseClickIcon,
+  MarketingIcon,
   NewMemberIcon,
-  NewMemberOutlinedIcon,
   NewVouchIcon,
   NewVouchReceivedIcon,
+  OpenWindowIcon,
   OptimismIcon,
-  PauseFilledIcon,
+  PauseIcon,
   PendingIcon,
-  PeopleIcon,
-  PlayFilledIcon,
-  PlusIcon,
-  PresetIcon,
+  PlayIcon,
+  ProfileIcon,
   ProtocolIcon,
+  PseudoIcon,
   RemoveIcon,
-  RepaymentIcon,
+  RepayIcon,
+  RotatingIcon,
   SearchIcon,
-  SheetIcon,
-  SpeakerIcon,
-  SpeechIcon,
+  SetupIcon,
   StakeIcon,
   SuccessIcon,
   SwitchIcon,
-  TableSortIcon,
   TelegramIcon,
-  TelegramFilledIcon,
-  TooltipIcon,
+  TermsIcon,
+  TransferIcon,
   TwitterIcon,
-  TwitterCircledIcon,
-  TwitterFilledIcon,
   UnionIcon,
-  UnionSwirlIcon,
-  UnionSwirlWhiteIcon,
-  UnionWhiteIcon,
-  VotingIcon,
   VouchIcon,
   WalletIcon,
-  WalletConnectIcon,
   WarningIcon,
-  WireCheckIcon,
-  WireInfoIcon,
   WithdrawIcon,
 } from "./Icons";
 
@@ -104,111 +76,147 @@ export default {
 };
 
 const icons = [
+  AddIcon,
   AddressBookIcon,
-  ArbitrumIcon,
+  ArrowIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
-  ArrowRightFilledIcon,
-  AvatarIcon,
-  AvatarFilledIcon,
-  AvatarOutlinedIcon,
   BlogIcon,
-  BookIcon,
+  BridgeIcon,
   BorrowIcon,
   CalendarIcon,
-  CancelVouchIcon,
-  CelebrationIcon,
+  CancelIcon,
   ChartIcon,
   CheckIcon,
-  CheckAlternativeIcon,
-  CheckFilledIcon,
   ChevronIcon,
   ClaimIcon,
   CloseIcon,
-  CloudCheckIcon,
-  CogIcon,
-  CoinbaseIcon,
   ConfettiIcon,
   CopyIcon,
-  CrossIcon,
-  DaiIcon,
   DelegateIcon,
   DepositIcon,
   DisconnectWalletIcon,
   DiscordIcon,
-  DollarIcon,
-  DotsIcon,
-  DropdownArrowIcon,
+  DocsIcon,
   EditIcon,
   EnsIcon,
-  EnsOutlinedIcon,
-  ErrorIcon,
-  EthereumIcon,
-  ExternalIcon,
-  ExternalInlineIcon,
-  FailedIcon,
   FilterIcon,
-  GoerliIcon,
-  HamburgerIcon,
+  GovernanceIcon,
   IdentityIcon,
-  IncreaseIcon,
-  InfoIcon,
-  IntermediateIcon,
+  IncreaseVouchIcon,
   LeaderboardIcon,
-  LendIcon,
   LinkIcon,
-  LogoIcon,
+  LinkOutIcon,
+  ListIcon,
   ManageIcon,
-  MetamaskIcon,
-  MouseClickIcon,
-  NewMemberIcon,
-  NewMemberOutlinedIcon,
-  NewVouchIcon,
-  NewVouchReceivedIcon,
-  OptimismIcon,
-  PauseFilledIcon,
-  PendingIcon,
-  PeopleIcon,
-  PlayFilledIcon,
-  PlusIcon,
-  PresetIcon,
+  MarketingIcon,
+  OpenWindowIcon,
+  PauseIcon,
+  PlayIcon,
+  ProfileIcon,
   ProtocolIcon,
+  PseudoIcon,
   RemoveIcon,
-  RepaymentIcon,
+  RepayIcon,
+  RotatingIcon,
   SearchIcon,
-  SheetIcon,
-  SpeakerIcon,
-  SpeechIcon,
+  SetupIcon,
   StakeIcon,
-  SuccessIcon,
   SwitchIcon,
-  TableSortIcon,
   TelegramIcon,
-  TelegramFilledIcon,
-  TooltipIcon,
+  TermsIcon,
+  TransferIcon,
   TwitterIcon,
-  TwitterCircledIcon,
-  TwitterFilledIcon,
   UnionIcon,
-  UnionSwirlIcon,
-  UnionSwirlWhiteIcon,
-  UnionWhiteIcon,
-  VotingIcon,
   VouchIcon,
   WalletIcon,
-  WalletConnectIcon,
   WarningIcon,
-  WireCheckIcon,
-  WireInfoIcon,
   WithdrawIcon,
 ];
 
-export const All = () => (
+const networks = [
+  ArbitrumIcon,
+  EthereumIcon,
+  GoerliIcon,
+  OptimismIcon,
+];
+
+const status = [
+  PendingIcon,
+  InfoIcon,
+  FailedIcon,
+  SuccessIcon,
+];
+
+const transactions = [
+  CancelVouchIcon,
+  NewMemberIcon,
+  NewVouchIcon,
+  NewVouchReceivedIcon,
+];
+
+const tokens = [
+  DaiIcon,
+];
+
+export const Core = () => (
   <>
-    <style>{`.icons-all svg { width: 32px; }`}</style>
+    <style>{`.icons-all svg, .icons-all .box { max-height: 32px; max-width: 32px; }`}</style>
     <div className="icons-all">
       {icons.map((Icon) => (
-        <Box mb="8px">
+        <Box justify="center" mb="8px">
+          <Icon />
+        </Box>
+      ))}
+    </div>
+  </>
+);
+
+export const Status = () => (
+  <>
+    <style>{`.icons-all svg, .icons-all .box { max-height: 32px; max-width: 32px; }`}</style>
+    <div className="icons-all">
+      {status.map((Icon) => (
+        <Box justify="center" mb="8px">
+          <Icon />
+        </Box>
+      ))}
+    </div>
+  </>
+);
+
+export const Networks = () => (
+  <>
+    <style>{`.icons-all svg, .icons-all .box { max-height: 32px; max-width: 32px; }`}</style>
+    <div className="icons-all">
+      {networks.map((Icon) => (
+        <Box justify="center" mb="8px">
+          <Icon />
+        </Box>
+      ))}
+    </div>
+  </>
+);
+
+export const Transactions = () => (
+  <>
+    <style>{`.icons-all svg, .icons-all .box { max-height: 32px; max-width: 32px; }`}</style>
+    <div className="icons-all">
+      {transactions.map((Icon) => (
+        <Box justify="center" mb="8px">
+          <Icon />
+        </Box>
+      ))}
+    </div>
+  </>
+);
+
+export const Tokens = () => (
+  <>
+    <style>{`.icons-all svg, .icons-all .box { max-height: 32px; max-width: 32px; }`}</style>
+    <div className="icons-all">
+      {tokens.map((Icon) => (
+        <Box justify="center" mb="8px">
           <Icon />
         </Box>
       ))}

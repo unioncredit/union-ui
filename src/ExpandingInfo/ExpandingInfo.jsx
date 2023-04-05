@@ -6,8 +6,8 @@ import PropTypes from "prop-types";
 
 import { Box } from "../Box";
 import { Text } from "../Text";
-import { DropdownArrowIcon } from "../Icons";
 import { propsToStyles } from "../spacing";
+import DropdownArrowIcon from "../Icons/internal/DropdownArrow.svg";
 
 export function ExpandingInfo({
   icon: Icon,

@@ -46,7 +46,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rollup": "^2.52.3",
-    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^2.6.1",
     "rollup-plugin-svg": "^2.0.0",

@@ -5,12 +5,12 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 
 import { Text } from "../Text";
-import success from "../Icons/icons/success.svg";
-import error from "../Icons/icons/failed.svg";
-import info from "../Icons/icons/info.svg";
-import pending from "../Icons/icons/pending.svg";
-import External from "../Icons/icons/external.svg";
-import Close from "../Icons/icons/close.svg";
+import { LinkOutIcon } from "../Icons";
+import CloseIcon from "../Icons/internal/Close.svg";
+import error from "../Icons/icons/Failed.svg";
+import success from "../Icons/icons/Success.svg";
+import info from "../Icons/icons/Info.svg";
+import pending from "../Icons/icons/Pending.svg";
 
 export function Notification({ variant, title, content, onClose, link }) {
   const Icon = {
@@ -36,10 +36,10 @@ export function Notification({ variant, title, content, onClose, link }) {
         <Text grey={500} weight="medium">{content}</Text>
       </div>
       <div className="Notification__actions">
-        <Close className="Notification__close" onClick={onClose} />
+        <CloseIcon className="Notification__close" onClick={onClose} />
         {link && (
           <a href={link} target="_blank" className="Notification__link">
-            <External />
+            <LinkOutIcon />
           </a>
         )}
       </div>

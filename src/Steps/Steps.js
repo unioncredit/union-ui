@@ -1,14 +1,14 @@
+import "./steps.scss";
+
 import React from "react";
 import PropTypes from "prop-types";
 
 import { Text } from "../Text";
-import External from "../Icons/icons/external.svg";
-
-import "./steps.scss";
+import { LinkOutIcon } from "../Icons";
 
 const withHref = (element, href) => (
   <a href={href} target="_blank" rel="norefferrer">
-    {element} <External />
+    {element} <LinkOutIcon />
   </a>
 );
 

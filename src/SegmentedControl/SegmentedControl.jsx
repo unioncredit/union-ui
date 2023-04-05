@@ -43,6 +43,7 @@ export function SegmentedControl({
     <div
       style={propsToStyles(props)}
       className={cn("SegmentedControl", className, {
+        [`SegmentedControl--responsive-${items.length}`]: items,
         [`SegmentedControl--fluid`]: fluid,
         [`SegmentedControl--size-${size}`]: size,
         [`SegmentedControl--variant-${variant}`]: variant,

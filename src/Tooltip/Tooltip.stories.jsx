@@ -4,7 +4,7 @@ import { Tooltip } from "./Tooltip";
 import { Text } from "../Text";
 import { Box } from "../Box";
 import { Button } from "../Button";
-import Icon from "../Icons/icons/tooltip.svg";
+import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
 
 export default {
   component: Tooltip,
@@ -22,7 +22,7 @@ export const Default = () => (
       <Text>
         The quick brown fox jumps over the lazy dog (top){" "}
         <Tooltip {...tooltipProps}>
-          <Icon width="16px" />
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
       </Text>
     </Box>
@@ -30,7 +30,7 @@ export const Default = () => (
       <Text>
         The quick brown fox jumps over the lazy dog (right){" "}
         <Tooltip position="right" {...tooltipProps}>
-          <Icon width="16px" />
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
       </Text>
     </Box>
@@ -38,7 +38,7 @@ export const Default = () => (
       <Text>
         The quick brown fox jumps over the lazy dog (bottom){" "}
         <Tooltip position="bottom" {...tooltipProps}>
-          <Icon width="16px" />
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
       </Text>
     </Box>
@@ -46,7 +46,7 @@ export const Default = () => (
       <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
         <Tooltip position="left" {...tooltipProps}>
-          <Icon width="16px" />
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
       </Text>
     </Box>
@@ -54,7 +54,7 @@ export const Default = () => (
       <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
         <Tooltip position="right" content="TODO" shrink alwaysShow>
-          <Icon width="16px" />
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
       </Text>
     </Box>

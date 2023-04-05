@@ -3,7 +3,7 @@ import React from "react";
 import { ContextMenu } from "./ContextMenu";
 import { Button } from "../Button";
 import { Box } from "../Box";
-import { RepaymentIcon } from "../Icons";
+import { RepayIcon } from "../Icons";
 
 export default {
   component: ContextMenu,
@@ -11,7 +11,7 @@ export default {
 };
 
 const items = [
-  { label: "Repayments", icon: RepaymentIcon },
+  { label: "Repayments", icon: RepayIcon },
   { label: "Blog" },
   { label: "Discord" },
   { label: "Twitter" }

@@ -333,13 +333,27 @@ $disabledOpacity: 0.5;
     height: 64px;
     font-size: 18px;
 
+    @media screen and (max-width: $breakpoint-mobile) {
+      height: 56px;
+      font-size: 16px;
+    }
+
     &.button--noLabel {
       width: 64px;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: 56px;
+      }
     }
 
     svg:not(.loading-spinner) {
       width: 20px;
       height: 20px;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 }

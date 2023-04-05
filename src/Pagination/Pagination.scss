@@ -47,12 +47,12 @@
   }
 
   &__arrow {
+    padding: 0;
     background: white !important;
-    padding: 4px;
     border: 1px solid $grey200;
 
     svg {
-      width: 12px;
+      width: 24px;
 
       polygon {
         fill: $grey600;

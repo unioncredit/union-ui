@@ -3,7 +3,7 @@ import React from "react";
 import { Box } from "../Box";
 import { Button } from "./Button";
 import { ButtonRow } from "../ButtonRow";
-import { RepaymentIcon } from "../Icons";
+import { RepayIcon } from "../Icons";
 
 export default {
   component: Button,
@@ -40,7 +40,7 @@ export const All = () => (
         {colors.map((color) => (
           <ButtonRow mb="20px">
             {variants.map((props) => (
-              <Button size={size} icon={RepaymentIcon} color={color} label={`Button Label`} {...props} />
+              <Button size={size} icon={RepayIcon} color={color} label={`Button Label`} {...props} />
             ))}
           </ButtonRow>
         ))}
@@ -52,7 +52,7 @@ export const All = () => (
 export const Primary = () => (
   <ButtonRow>
     {variants.map((props) => (
-      <Button icon={RepaymentIcon} color="primary" label={`Button Label`} {...props} />
+      <Button icon={RepayIcon} color="primary" label={`Button Label`} {...props} />
     ))}
   </ButtonRow>
 );
@@ -60,7 +60,7 @@ export const Primary = () => (
 export const Secondary = () => (
   <ButtonRow>
     {variants.map((props) => (
-      <Button icon={RepaymentIcon} color="secondary" label={`Button Label`} {...props} />
+      <Button icon={RepayIcon} color="secondary" label={`Button Label`} {...props} />
     ))}
   </ButtonRow>
 );
@@ -68,7 +68,7 @@ export const Secondary = () => (
 export const Red = () => (
   <ButtonRow>
     {variants.map((props) => (
-      <Button icon={RepaymentIcon} color="red" label={`Button Label`} {...props} />
+      <Button icon={RepayIcon} color="red" label={`Button Label`} {...props} />
     ))}
   </ButtonRow>
 );
@@ -76,7 +76,7 @@ export const Red = () => (
 export const Sizes = () => (
   <ButtonRow>
     {sizes.map((size) => (
-      <Button icon={RepaymentIcon} size={size} label={`Button Label`} />
+      <Button icon={RepayIcon} size={size} label={`Button Label`} />
     ))}
   </ButtonRow>
 );
@@ -93,7 +93,7 @@ export const Label = () => {
   return (
     <ButtonRow>
       {words.map((word) => (
-        <Button icon={RepaymentIcon} label={word} />
+        <Button icon={RepayIcon} label={word} />
       ))}
     </ButtonRow>
   )
@@ -102,8 +102,8 @@ export const Label = () => {
 export const Icon = () => {
   const variations = [
     {},
-    { icon: RepaymentIcon, iconPosition: "start" },
-    { icon: RepaymentIcon, iconPosition: "end" },
+    { icon: RepayIcon, iconPosition: "start" },
+    { icon: RepayIcon, iconPosition: "end" },
   ];
 
   return (

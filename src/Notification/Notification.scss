@@ -51,11 +51,20 @@
     }
 
     .Notification__close {
-      width: 14px;
-      height: 14px;
+      width: 24px;
+      height: 24px;
       border: 1px solid #e7e5e4;
       padding: 5px;
       border-radius: 50%;
+      box-sizing: border-box;
+
+      &:hover {
+        background: $grey100;
+      }
+
+      path {
+        fill: $grey500;
+      }
     }
   }
 }

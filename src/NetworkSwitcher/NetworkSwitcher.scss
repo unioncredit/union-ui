@@ -24,7 +24,7 @@
 .networkSwitcher__buttonContainer {
   width: 130px;
 
-  @media screen and (max-width: $breakpoint-xxs) {
+  @media screen and (max-width: $breakpoint-mobile) {
     width: auto;
 
     span {

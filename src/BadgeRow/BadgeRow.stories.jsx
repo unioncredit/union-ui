@@ -14,7 +14,7 @@ export const Colors = () => {
   return (
     <BadgeRow mb="10px">
       {colors.map((color) => (
-        <Badge label={color} color={color} />
+        <Badge label={color} color={color} text="capitalize" />
       ))}
     </BadgeRow>
   )

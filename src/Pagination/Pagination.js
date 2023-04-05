@@ -3,9 +3,9 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Box } from "../Box";
-import ArrowRight from "../Icons/icons/arrowRight.svg";
 
 import "./Pagination.scss";
+import ArrowRightIcon from "../Icons/internal/ArrowRight.svg";
 
 export function Pagination({ onClick, pages, activePage = 1, ...props }) {
   if (pages <= 1) {
@@ -36,7 +36,7 @@ export function Pagination({ onClick, pages, activePage = 1, ...props }) {
           { "pagination__arrow--disabled": leftArrowDisabled }
         )}
       >
-        <ArrowRight />
+        <ArrowRightIcon />
       </button>
       {numbers.map((n, i) => (
         <button
@@ -59,7 +59,7 @@ export function Pagination({ onClick, pages, activePage = 1, ...props }) {
           { "pagination__arrow--disabled": rightArrowDisabled }
         )}
       >
-        <ArrowRight />
+        <ArrowRightIcon />
       </button>
     </Box>
   );

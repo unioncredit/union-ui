@@ -7,7 +7,8 @@ import { Card } from "../Card";
 import { Box } from "../Box";
 import { Button } from "../Button";
 import { Text } from "../Text";
-import { ArrowLeftIcon, CloseIcon } from "../Icons";
+import { ArrowLeftIcon } from "../Icons";
+import CloseIcon from "../Icons/internal/Close.svg";
 
 function ModalContainer({ children, className, ...props }) {
   return (

@@ -2,9 +2,7 @@ import React from "react";
 
 import { ProgressBar } from "./ProgressBar";
 import { Box } from "../Box";
-
-import WireInfo from "../Icons/icons/wireInfo.svg";
-import { CheckFilledIcon, PauseFilledIcon, PlayFilledIcon, WarningIcon } from "../Icons";
+import { CheckIcon, PauseIcon, PlayIcon, WarningIcon } from "../Icons";
 
 export default {
   component: ProgressBar,
@@ -23,14 +21,14 @@ export const Default = () => (
     <Box mb="20px">
       <ProgressBar
         percentage={56.3}
-        icon={PlayFilledIcon}
+        icon={PlayIcon}
         label="56.3% Earned"
       />
     </Box>
     <Box mb="20px">
       <ProgressBar
         percentage={58.4}
-        icon={PauseFilledIcon}
+        icon={PauseIcon}
         label="Paused · 58.4%"
         paused={true}
       />
@@ -38,7 +36,7 @@ export const Default = () => (
     <Box mb="20px">
       <ProgressBar
         percentage={100}
-        icon={CheckFilledIcon}
+        icon={CheckIcon}
         label="Membership fee earned"
       />
     </Box>

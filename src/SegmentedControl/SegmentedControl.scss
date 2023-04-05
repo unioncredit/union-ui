@@ -1,5 +1,28 @@
 @import "../variables";
 
+@media screen and (max-width: $breakpoint-mobile) {
+  .SegmentedControl.SegmentedControl--responsive-3 {
+    .SegmentedControl__item,
+    .SegmentedControl__item--slider {
+      height: 42px;
+      padding: 6px 10px;
+    }
+    .SegmentedControl__item--slider {
+      width: calc(33.3333%) !important;
+    }
+    .SegmentedControl__item {
+      margin: 0;
+      font-size: 13px;
+
+      svg {
+        max-width: 14px;
+        max-height: 14px;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
 .SegmentedControl {
   background: $grey100;
   padding: 4px 0 4px 4px;
@@ -111,7 +134,9 @@
     }
 
     &:not(.SegmentedControl__item--disabled):not(.SegmentedControl__item--active):hover {
-      background: $grey200;
+      @media screen and (min-width: $breakpoint-mobile) {
+        background: $grey200;
+      }
     }
 
     &[disabled],

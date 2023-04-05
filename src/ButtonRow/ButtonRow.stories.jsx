@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button } from "../Button";
 import { ButtonRow } from "./ButtonRow";
-import { RepaymentIcon, RemoveIcon } from "../Icons";
+import { RepayIcon, RemoveIcon } from "../Icons";
 import { Box } from "../Box";
 
 export default {
@@ -23,7 +23,7 @@ const sizes = [
 ];
 
 const buttons = [
-  { color: "primary", icon: RepaymentIcon },
+  { color: "primary", icon: RepayIcon },
   { color: "secondary", variant: "light" },
   { color: "secondary", variant: "light" },
   { color: "secondary", variant: "light" },

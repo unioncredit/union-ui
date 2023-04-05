@@ -6,8 +6,8 @@ import cn from "classnames";
 import { Box } from "../Box";
 import { Text } from "../Text";
 import { Tooltip } from "../Tooltip";
-import { WireInfoIcon } from "../Icons";
 import { propsToStyles } from "../spacing";
+import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
 
 export function NumericalLines({ items, ...props }) {
   return (
@@ -31,7 +31,7 @@ export function NumericalLines({ items, ...props }) {
 
             {tooltip && (
               <Tooltip {...tooltip}>
-                <WireInfoIcon style={{ marginTop: "4px" }} width="14px" />
+                <InfoOutlinedIcon style={{ marginTop: "4px" }} width="14px" />
               </Tooltip>
             )}
           </Box>

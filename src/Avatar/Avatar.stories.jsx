@@ -17,15 +17,13 @@ export default {
 
 const url = "https://pbs.twimg.com/profile_images/1576217831527616512/_iO9HGGE_400x400.jpg";
 
-export const All = () => (
+export const Default = () => (
   <>
     <Sizes />
-    <Custom />
-    <Icons />
   </>
 );
 
-export const Sizes = () => {
+const Sizes = () => {
   const sizes = ["x-small", "small", "medium", "large"];
 
   return sizes.map((size) => (
@@ -33,7 +31,7 @@ export const Sizes = () => {
   ))
 }
 
-export const Custom = () => {
+const Custom = () => {
   const sizes = [16, 24, 40, 64];
 
   return sizes.map((size) => (
@@ -41,7 +39,7 @@ export const Custom = () => {
   ))
 }
 
-export const Icons = () => {
+const Icons = () => {
   const icons = [
     ChartIcon,
     CheckIcon,

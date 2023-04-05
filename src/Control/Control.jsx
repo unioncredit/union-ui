@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
-import { CheckAlternativeIcon } from "../Icons";
+import CheckIcon from "../Icons/internal/Check.svg";
 
 export function Control({
   type,
@@ -36,7 +36,7 @@ export function Control({
           "Control--disabled": disabled,
         })}
       >
-        {type === "checkbox" && (checked || hovered) && <CheckAlternativeIcon />}
+        {type === "checkbox" && (checked || hovered) && <CheckIcon />}
       </div>
       {label && (
         <Text className="Control__label" my={0} ml="6px">
