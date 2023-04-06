@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 
-import { MiniProgressList } from "./MiniProgressList";
+import { MobileProgressList } from "./MobileProgressList";
 import { Box } from "../Box";
 import { Card } from "../Card";
 
 export default {
-  component: MiniProgressList,
-  title: "Components/MiniProgressList",
+  component: MobileProgressList,
+  title: "Components/MobileProgressList",
 };
 
 const items = [
@@ -15,7 +15,7 @@ const items = [
   { number: 3, anchor: "third" },
 ];
 
-export const Default = () => <MiniProgressList items={items} />;
+export const Default = () => <MobileProgressList items={items} />;
 
 export const Scrolling = () => {
   const first = useRef();
@@ -43,7 +43,7 @@ export const Scrolling = () => {
       </Card>
       <Box mt="1200px" />
       <div style={{ position: "fixed", bottom: "24px", left: "24px" }}>
-        <MiniProgressList items={items} />
+        <MobileProgressList items={items} />
       </div>
     </div>
   );

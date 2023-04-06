@@ -1,21 +1,11 @@
 @import "../variables";
 
-.ButtonReveal {
-
-  &__header {
-    padding-bottom: 4px;
-  }
-
-  &__title {
-    margin: 0;
-    align-self: flex-start;
-  }
-
+.HiddenInput {
   &__content {
     width: 100%;
     background: $grey50;
     border: 1px solid $grey200;
     border-radius: 12px;
-    padding: 16px;
+    padding: 12px 16px;
   }
 }

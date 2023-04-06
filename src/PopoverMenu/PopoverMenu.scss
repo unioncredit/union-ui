@@ -1,12 +1,12 @@
 @import "../variables.scss";
 
-.context-menu-wrapper {
+.PopoverMenu__wrapper {
   position: relative;
   display: inline-block;
   z-index: 999;
 }
 
-.context-menu {
+.PopoverMenu {
   position: absolute;
   top: calc(100% + 4px);
   min-width: 160px;
@@ -25,18 +25,23 @@
   }
 
   &__icon {
-    margin: 0 8px 0 -5px;
+    margin: 0 8px 0 -4px;
   }
 
   &__item {
     color: $grey600;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 24px;
     text-align: left;
     cursor: pointer;
     font-weight: 500;
     white-space: nowrap;
+
+    svg path {
+      fill: $grey600;
+    }
 
     &:hover {
       color: $grey800;
@@ -55,7 +60,7 @@
   }
 }
 
-.context-menu-button {
+.PopoverMenu__button {
   width: 20px;
   height: 32px;
   box-sizing: border-box;

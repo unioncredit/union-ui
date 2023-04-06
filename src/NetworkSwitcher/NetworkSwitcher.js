@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import { Avatar } from "../Avatar";
 import { Button } from "../Button";
-import { ContextMenu } from "../ContextMenu";
+import { PopoverMenu } from "../PopoverMenu";
 
 import "./NetworkSwitcher.scss";
 import { CheckIcon } from "../Icons";
@@ -56,7 +56,7 @@ export function NetworkSwitcher({
   }, [selectedOption]);
 
   return (
-    <ContextMenu
+    <PopoverMenu
       className="networkSwitcher__menu"
       items={options.map((option) => ({
         ...option,

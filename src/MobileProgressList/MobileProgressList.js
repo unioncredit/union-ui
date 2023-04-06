@@ -2,19 +2,19 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import "./mini-progress-list.scss";
+import "./MobileProgressList.scss";
 
-export function MiniProgressList({ items }) {
+export function MobileProgressList({ items }) {
   const handleScrollTo = (element) => () => {
     element.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <div className="miniProgressList">
+    <div className="MobileProgressList">
       {items.map(({ number, complete, scrollTo }) => (
         <div
-          className={cn("miniProgressList__number", {
-            "miniProgressList__number--complete": complete,
+          className={cn("MobileProgressList__number", {
+            "MobileProgressList__number--complete": complete,
           })}
           onClick={scrollTo && handleScrollTo(scrollTo)}
         >
@@ -25,7 +25,7 @@ export function MiniProgressList({ items }) {
   );
 }
 
-MiniProgressList.propTypes = {
+MobileProgressList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       complete: PropTypes.bool,

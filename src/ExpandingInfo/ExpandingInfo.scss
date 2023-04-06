@@ -54,6 +54,19 @@
     display: none;
     padding: 16px;
     box-sizing: border-box;
-    border-top: 1px solid $amber300;
+    position: relative;
+    //border-top: 1px solid $amber300;
+
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 16px;
+      right: -16px;
+      width: calc(100% - 32px);
+      height: 1px;
+      background: $amber300;
+    }
   }
 }

@@ -63,6 +63,7 @@ export { default as TermsIcon } from "./icons/Terms.svg";
 export { default as TransferIcon } from "./icons/Transfer.svg";
 export { default as TwitterIcon } from "./icons/Twitter.svg";
 export { default as UnionIcon } from "./icons/Union.svg";
+export { default as UnionLineIcon } from "./icons/UnionLine.svg";
 export { default as VouchIcon } from "./icons/Vouch.svg";
 export { default as WalletIcon } from "./icons/Wallet.svg";
 export { default as WarningIcon } from "./icons/Warning.svg";

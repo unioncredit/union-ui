@@ -10,7 +10,7 @@ import { Avatar } from "../Avatar";
 import AbitrumAvatar from "../assets/arbitrum-avatar.png";
 import EthereumAvatar from "../assets/ethereum-avatar.png";
 import KovanAvatar from "../assets/goerli-avatar.png";
-import { ContextMenu } from "../ContextMenu";
+import { PopoverMenu } from "../PopoverMenu";
 
 export default {
   component: Nav,
@@ -65,7 +65,7 @@ export const Default = () => (
               }
             />
           </Box>
-          <ContextMenu items={[]} position="left" />
+          <PopoverMenu items={[]} position="left" />
         </Box>
       </Box>
     </Nav>

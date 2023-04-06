@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-$iconGutter: 0.4em;
+$iconGutter: 4px;
 $disabledOpacity: 0.5;
 
 .button {
@@ -20,7 +20,7 @@ $disabledOpacity: 0.5;
   padding: 12px 24px;
 
   &--rounded {
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   &--noLabel {
@@ -34,6 +34,10 @@ $disabledOpacity: 0.5;
   &--withIcon:not(.button--noLabel) {
     padding-left: 18px;
 
+    svg:not(.loading-spinner) {
+      width: 24px;
+      height: 24px;
+    }
     &.button--icon-pos-start svg:not(.loading-spinner) {
       margin-right: $iconGutter;
     }
@@ -267,34 +271,14 @@ $disabledOpacity: 0.5;
 }
 
 .button--size {
-  &-small,
-  &-regular {
-    svg:not(.loading-spinner) {
-      width: 18px;
-      height: 18px;
-    }
-  }
-
-  &-thin {
-    height: 32px;
-    font-size: 14px;
-    padding: 0 12px !important;
-
-    &.button--noLabel {
-      width: 32px;
-    }
-
-    .loading-spinner-wrapper,
-    svg:not(.loading-spinner) {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
   &-pill {
     height: 28px;
     padding: 0 12px !important;
     font-size: 14px;
+
+    svg:not(.loading-spinner) {
+      display: none;
+    }
 
     &.button--noLabel {
       width: 28px;
@@ -302,11 +286,6 @@ $disabledOpacity: 0.5;
 
     &.button--rounded {
       border-radius: 16px;
-    }
-
-    svg:not(.loading-spinner) {
-      width: 14px;
-      height: 14px;
     }
 
     .loading-spinner-wrapper {
@@ -318,6 +297,9 @@ $disabledOpacity: 0.5;
     height: 40px;
     font-size: 14px;
 
+    &.button--rounded {
+      border-radius: 10px;
+    }
     &.button--noLabel {
       width: 40px;
     }
@@ -343,16 +325,6 @@ $disabledOpacity: 0.5;
 
       @media screen and (max-width: $breakpoint-mobile) {
         width: 56px;
-      }
-    }
-
-    svg:not(.loading-spinner) {
-      width: 20px;
-      height: 20px;
-
-      @media screen and (max-width: $breakpoint-mobile) {
-        width: 18px;
-        height: 18px;
       }
     }
   }

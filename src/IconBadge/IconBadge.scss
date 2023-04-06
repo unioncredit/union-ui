@@ -32,6 +32,13 @@
         height: 65% !important;
       }
     }
+
+    &-fill {
+      svg {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
   }
 
   &--size {

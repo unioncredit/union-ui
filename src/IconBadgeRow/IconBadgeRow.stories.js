@@ -1,5 +1,5 @@
 import { IconBadgeRow } from "./IconBadgeRow";
-import { ArbitrumIcon, OptimismIcon, UnionSwirlWhiteIcon } from "../Icons";
+import { ArbitrumIcon, OptimismIcon, UnionLineIcon } from "../Icons";
 import { IconBadge } from "../IconBadge";
 import { Box } from "../Box";
 
@@ -14,8 +14,9 @@ export const Default = () => (
       <IconBadgeRow>
         <IconBadge
           size="large"
-          icon={UnionSwirlWhiteIcon}
+          icon={UnionLineIcon}
           variant="filled"
+          color="white"
           backgroundColor="#292524"
         />
 
@@ -34,8 +35,9 @@ export const Default = () => (
       <IconBadgeRow>
         <IconBadge
           size="large"
-          icon={UnionSwirlWhiteIcon}
+          icon={UnionLineIcon}
           variant="filled"
+          color="white"
           backgroundColor="#292524"
         />
 
@@ -67,8 +69,9 @@ export const Reverse = () => (
 
         <IconBadge
           size="large"
-          icon={UnionSwirlWhiteIcon}
+          icon={UnionLineIcon}
           variant="filled"
+          color="white"
           backgroundColor="#292524"
         />
       </IconBadgeRow>
@@ -87,8 +90,9 @@ export const Reverse = () => (
 
         <IconBadge
           size="large"
-          icon={UnionSwirlWhiteIcon}
+          icon={UnionLineIcon}
           variant="filled"
+          color="white"
           backgroundColor="#292524"
         />
       </IconBadgeRow>

@@ -71,7 +71,7 @@ Button.propTypes = {
   color: PropTypes.oneOf(["primary", "secondary", "red", "blue"]),
   variant: PropTypes.oneOf(["light", "regular", "dark"]),
   label: PropTypes.node,
-  size: PropTypes.oneOf(["pill", "thin", "small", "regular", "large"]),
+  size: PropTypes.oneOf(["pill", "small", "regular", "large"]),
   icon: PropTypes.any,
   iconProps: PropTypes.object,
   iconPosition: PropTypes.oneOf(["start", "end"]),

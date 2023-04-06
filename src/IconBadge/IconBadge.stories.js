@@ -2,8 +2,8 @@ import { Box } from "../Box";
 import {
   ChartIcon,
   CheckIcon,
-  CogIcon,
-  CrossIcon,
+  ManageIcon,
+  CloseIcon,
   FilterIcon, OptimismIcon,
   WalletIcon,
 } from "../Icons";
@@ -17,8 +17,8 @@ export default {
 const icons = [
   ChartIcon,
   CheckIcon,
-  CogIcon,
-  CrossIcon,
+  ManageIcon,
+  CloseIcon,
   FilterIcon,
   WalletIcon,
 ];

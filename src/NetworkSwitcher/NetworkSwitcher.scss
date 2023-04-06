@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.networkSwitcher__menu .context-menu {
+.networkSwitcher__menu .PopoverMenu {
   .button.networkSwitcher {
     color: $grey700;
     background: white;
@@ -67,7 +67,7 @@
     }
   }
 
-  .context-menu & {
+  .PopoverMenu & {
     margin: 0 4px 4px 4px;
     width: calc(100% - 8px);
   }

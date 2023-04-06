@@ -45,7 +45,7 @@ export const IconBadge = ({
 IconBadge.propTypes = {
   icon: PropTypes.any,
   iconSize: PropTypes.oneOf(["small", "regular", "large"]),
-  size: PropTypes.oneOf(["small", "regular", "large"]),
+  size: PropTypes.oneOf(["small", "regular", "large", "fill"]),
   variant: PropTypes.oneOf(["filled", "outlined"]),
   color: PropTypes.string,
   backgroundColor: PropTypes.string,

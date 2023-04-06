@@ -1,4 +1,4 @@
-import "./ButtonReveal.scss";
+import "./HiddenInput.scss";
 
 import React, { useState } from "react";
 import cn from "classnames";
@@ -7,8 +7,9 @@ import PropTypes from "prop-types";
 import { Button } from "../Button";
 import { Box } from "../Box";
 import { Text } from "../Text";
+import { Divider } from "../Divider";
 
-export function ButtonReveal({
+export function HiddenInput({
   title,
   closeLabel,
   buttonProps,
@@ -19,17 +20,17 @@ export function ButtonReveal({
   const [open, setOpen] = useState(false);
 
   return (
-    <Box className={cn("ButtonReveal", className)} {...props}>
+    <Box className={cn("HiddenInput", className)} {...props}>
       {open ? (
-        <Box className="ButtonReveal__content" direction="vertical">
+        <Box className="HiddenInput__content" direction="vertical">
           <Box
             fluid
             as="header"
             align="center"
             justify="space-between"
-            className="ButtonReveal__header"
+            className="HiddenInput__header"
           >
-            <Text size="medium" className="ButtonReveal__title">
+            <Text m={0} size="medium" className="HiddenInput__title">
               {title}
             </Text>
 
@@ -38,16 +39,18 @@ export function ButtonReveal({
               color="secondary"
               variant="light"
               label={closeLabel}
-              className="ButtonReveal__cancel"
+              className="HiddenInput__cancel"
               onClick={() => setOpen(false)}
             />
           </Box>
+
+          <Divider m="12px 0" className="HiddenInput__divider" />
 
           {children}
         </Box>
       ) : (
         <Button
-          className="ButtonReveal__button"
+          className="HiddenInput__button"
           {...buttonProps}
           onClick={() => setOpen(true)}
         />
@@ -56,7 +59,7 @@ export function ButtonReveal({
   )
 }
 
-ButtonReveal.propTypes = {
+HiddenInput.propTypes = {
   title: PropTypes.string,
   closeLabel: PropTypes.string,
   buttonProps: PropTypes.object,
@@ -67,6 +70,6 @@ ButtonReveal.propTypes = {
   className: PropTypes.string,
 };
 
-ButtonReveal.defaultProps = {
+HiddenInput.defaultProps = {
   closeLabel: "Cancel",
 };

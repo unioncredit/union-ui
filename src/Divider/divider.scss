@@ -1,4 +1,6 @@
+@import "../variables";
+
 .divider {
   width: 100%;
-  border-bottom: 1px solid #f4f4f6;
+  border-bottom: 0.5px solid $grey300;
 }
