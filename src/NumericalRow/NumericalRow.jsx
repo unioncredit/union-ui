@@ -1,4 +1,4 @@
-import "./NumericalLines.scss";
+import "./NumericalRow.scss";
 
 import React from "react";
 import cn from "classnames";
@@ -9,12 +9,12 @@ import { Tooltip } from "../Tooltip";
 import { propsToStyles } from "../spacing";
 import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
 
-export function NumericalLines({ items, ...props }) {
+export function NumericalRow({ items, ...props }) {
   return (
     <Box
       fluid
       direction="vertical"
-      className="NumericalLines"
+      className="NumericalRows"
       style={propsToStyles(props)}
     >
       {items.map(({ label, value, tooltip, error }, index) => (
@@ -22,8 +22,8 @@ export function NumericalLines({ items, ...props }) {
           key={index}
           align="center"
           justify="space-between"
-          className={cn("NumericalLines__item", {
-            "NumericalLines__item--error": error,
+          className={cn("NumericalRows__item", {
+            "NumericalRows__item--error": error,
           })}
         >
           <Box align="center" mr="5px">

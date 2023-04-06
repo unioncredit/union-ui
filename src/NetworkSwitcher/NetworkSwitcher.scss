@@ -1,20 +1,27 @@
 @import "../variables.scss";
 
+.networkSwitcher__check-icon {
+  margin-left: auto;
+
+  path {
+    fill: $blue500 !important;
+  }
+}
+
 .networkSwitcher__menu .PopoverMenu {
+  padding: 4px;
+
   .button.networkSwitcher {
     color: $grey700;
     background: white;
+    width: 100%;
 
     &.selected {
       color: $blue500;
       background: $blue50;
-
-      &:hover {
-        border: 1px solid $blue500;
-      }
     }
 
-    &:hover {
+    &:not(.selected):hover {
       background: $grey100;
       border: 1px solid $grey300;
     }
@@ -44,7 +51,7 @@
 .button.networkSwitcher {
   height: 40px;
   min-height: 0;
-  padding: 8px 12px 8px 8px;
+  padding: 8px;
   box-sizing: border-box;
   justify-content: flex-start;
   border: 1px solid transparent;
@@ -53,22 +60,13 @@
   border-radius: 8px;
   font-size: 14px;
 
-  &:hover {
-    background-color: $grey200;
-    border: 1px solid $grey300;
-  }
-
-  .wireCheck,
-  .wireCheck_svg__wireCheck {
-    margin-left: auto;
-
-    path {
-      fill: $blue500;
-    }
+  &:not(.selected):hover {
+    background-color: $grey200 !important;
+    border: 1px solid $grey300 !important;
   }
 
   .PopoverMenu & {
-    margin: 0 4px 4px 4px;
+    margin: 0 0 4px;
     width: calc(100% - 8px);
   }
 
@@ -76,9 +74,10 @@
     background-color: $blue100;
     color: $blue500;
 
-    &:hover {
-      background-color: $blue200;
-      border: 1px solid $blue300;
+    &:not(.selected):hover {
+      color: $blue500 !important;
+      background-color: $blue200 !important;
+      border: 1px solid $blue300 !important;
     }
   }
 
@@ -86,9 +85,10 @@
     background-color: $red100;
     color: $red500;
 
-    &:hover {
-      background-color: $red200;
-      border: 1px solid $red300;
+    &:not(.selected):hover {
+      color: $red500 !important;
+      background-color: $red200 !important;
+      border: 1px solid $red300 !important;
     }
   }
 

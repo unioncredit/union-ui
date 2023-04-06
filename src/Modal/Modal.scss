@@ -96,8 +96,9 @@
   }
 
   .modalHeader {
+    height: 80px;
     border-bottom: 1px solid $grey100;
-    padding: 24px;
+    padding: 26px 24px;
   }
   .modalFooter {
     border-top: 1px solid $grey100;
@@ -105,7 +106,8 @@
   }
 
   .closeWrapper {
-    width: 69px;
+    width: 78px;
+    flex-shrink: 0;
   }
 
   .closeButton,
@@ -116,10 +118,11 @@
   }
 
   .backButton {
+    width: 78px;
     padding: 4px 8px 4px 2px;
 
     svg {
-      width: 10px;
+      width: 16px !important;
       margin: 0;
     }
   }

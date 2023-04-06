@@ -1,9 +1,9 @@
-import { NumericalLines } from "./NumericalLines";
+import { NumericalRow } from "./NumericalRow";
 import { Box } from "../Box";
 
 export default {
-  component: NumericalLines,
-  title: "Components/NumericalLines",
+  component: NumericalRow,
+  title: "Components/NumericalRow",
 }
 
 export const All = () => {
@@ -32,8 +32,8 @@ export const All = () => {
   ];
 
   return (
-    <Box w="400px">
-      <NumericalLines items={items} />
+    <Box mt="40px" w="400px">
+      <NumericalRow items={items} />
     </Box>
   )
 }

@@ -9,6 +9,7 @@ import { Button } from "../Button";
 import { Text } from "../Text";
 import { ArrowLeftIcon } from "../Icons";
 import CloseIcon from "../Icons/internal/Close.svg";
+import { Heading } from "../Heading";
 
 function ModalContainer({ children, className, ...props }) {
   return (
@@ -37,16 +38,9 @@ function ModalHeader({ className, onClose, title, subTitle, onBack, children }) 
         )}
         {title && (
           <div className="modal__title">
-            <Text
-              as="h1"
-              size="large"
-              align={onBack ? "center" : "left"}
-              grey={700}
-              weight="medium"
-              m={0}
-            >
+            <Heading m={0} size="small" align={onBack ? "center" : "left"}>
               {title}
-            </Text>
+            </Heading>
             {subTitle && (
               <Text as="label" m={0} grey={600}>
                 {subTitle}

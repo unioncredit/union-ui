@@ -277,7 +277,8 @@ $disabledOpacity: 0.5;
     font-size: 14px;
 
     svg:not(.loading-spinner) {
-      display: none;
+      width: 20px !important;
+      height: 20px !important;
     }
 
     &.button--noLabel {

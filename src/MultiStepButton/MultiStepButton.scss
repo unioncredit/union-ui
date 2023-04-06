@@ -11,6 +11,14 @@
   transition: padding 200ms;
   box-sizing: border-box;
 
+  .toggle {
+    background: $blue200;
+
+    &.toggle--active {
+      background: $blue600;
+    }
+  }
+
   .label {
     padding-right: 4px;
   }

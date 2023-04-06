@@ -2,11 +2,10 @@ import React from "react";
 
 import { Notification } from "./Notification";
 import { NotificationStack } from "./NotificationStack";
-import { Text } from "../Text";
 
 export default {
   component: Notification,
-  title: "Components/Notification",
+  title: "Components/NotificationToast",
 };
 
 export const All = () => (

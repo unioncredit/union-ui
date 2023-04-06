@@ -1,12 +1,12 @@
+import "./NetworkSwitcher.scss";
+
 import React, { useEffect, useRef, useState } from "react";
 import cn from "classnames";
 
 import { Avatar } from "../Avatar";
 import { Button } from "../Button";
 import { PopoverMenu } from "../PopoverMenu";
-
-import "./NetworkSwitcher.scss";
-import { CheckIcon } from "../Icons";
+import NetworkSelectCheckIcon from "../Icons/internal/NetworkSelectCheck.svg";
 
 export function NetworkButton({
   selected,
@@ -27,7 +27,7 @@ export function NetworkButton({
         <>
           <Avatar src={imageSrc} />
           <span>{children || label}</span>
-          {selected && <CheckIcon />}
+          {selected && <NetworkSelectCheckIcon width="24px" className="networkSwitcher__check-icon" />}
         </>
       }
     />

@@ -9,6 +9,7 @@ import "./heading.scss";
 export function Heading({
   level,
   size,
+  align,
   children,
   className,
   grey,
@@ -21,6 +22,7 @@ export function Heading({
     {
       className: cn(className, "heading", {
         [`heading--${size}`]: size,
+        [`heading--align-${align}`]: align,
         [`heading--grey${grey}`]: grey,
         [`heading--weight-${weight}`]: weight,
         [`heading--${color}`]: color,
@@ -37,6 +39,7 @@ Heading.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  align: PropTypes.oneOf(["left", "center", "right"]),
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   weight: PropTypes.oneOf(["regular", "medium", "bold"]),
   size: PropTypes.oneOf(["small", "primary", "large", "xlarge", "xxlarge", "xxxlarge"]),
@@ -45,4 +48,5 @@ Heading.propTypes = {
 Heading.defaultProps = {
   level: 1,
   size: "primary",
+  align: "left",
 };
