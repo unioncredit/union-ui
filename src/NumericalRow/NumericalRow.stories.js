@@ -1,8 +1,8 @@
-import { NumericalRow } from "./NumericalRow";
+import { NumericalRows } from "./NumericalRows";
 import { Box } from "../Box";
 
 export default {
-  component: NumericalRow,
+  component: NumericalRows,
   title: "Components/NumericalRow",
 }
 
@@ -33,7 +33,7 @@ export const All = () => {
 
   return (
     <Box mt="40px" w="400px">
-      <NumericalRow items={items} />
+      <NumericalRows items={items} />
     </Box>
   )
 }

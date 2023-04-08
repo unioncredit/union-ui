@@ -1,1 +1,1 @@
-export * from "./NumericalRow";
+export * from "./NumericalRows";
