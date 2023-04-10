@@ -5,6 +5,36 @@
   position: absolute;
   top: calc(100% + 4px);
 
+  .Card {
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    &--sticky {
+      position: fixed;
+      bottom: 10px;
+      left: 2.5%;
+      width: 95%;
+      top: auto;
+
+      &::before {
+        content: ' ';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        opacity: 0.5;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        pointer-events: none;
+      }
+    }
+  }
+
   &__wrapper {
     position: relative;
     display: inline-block;

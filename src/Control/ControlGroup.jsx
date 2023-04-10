@@ -35,9 +35,9 @@ export function ControlGroup({
           <Box mb="8px">
             <Control
               key={item.id}
-              {...item}
               onClick={onClick(item.id)}
               checked={active}
+              {...item}
             />
           </Box>
         );

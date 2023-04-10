@@ -1,29 +1,40 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import cn from "classnames";
 
 import { useClickOutside } from "../util";
 
 import "./Popover.scss";
 
-export function Popover({ children, position, button, className }) {
+export function Popover({ open, children, position, button, className, stickyMobile, onClose }) {
   const ref = useRef(null);
-  const [open, setOpen] = useState(false);
+  const [popoverOpen, setPopoverOpen] = useState(open);
 
   useClickOutside(ref, () => {
     setOpen(false);
   });
 
-  const toggleOpen = () => setOpen((x) => !x);
+  useEffect(() => {
+    setOpen(open);
+  }, [open]);
+
+  const toggleOpen = () => {
+    setOpen(x => !x);
+  };
+
+  const setOpen = (x) => {
+    setPopoverOpen(x);
+    !x && onClose && onClose();
+  }
 
   return (
-    <div className={cn("Popover__wrapper", className)} ref={ref}>
+    <div ref={ref} className={cn("Popover__wrapper", className)}>
       {button ? (
         button(toggleOpen)
       ) : (
         <div
           onClick={toggleOpen}
           className={cn("Popover__button", {
-            "Popover__button--open": open,
+            "Popover__button--open": popoverOpen,
           })}
         >
           <span />
@@ -31,9 +42,10 @@ export function Popover({ children, position, button, className }) {
           <span />
         </div>
       )}
-      {open && (
+      {popoverOpen && (
         <div
           className={cn("Popover", {
+            "Popover--sticky": stickyMobile,
             [`Popover--${position}`]: position,
           })}
         >
