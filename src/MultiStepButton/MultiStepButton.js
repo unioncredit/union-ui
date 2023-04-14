@@ -35,7 +35,7 @@ export function MultiStepButton({ id, items, action, label, showSteps, toggle: T
           {Toggle && <Toggle />}
         </div>
       </Collapse>
-      {action && <Button className="multiStepButton__action" {...action} />}
+      {action && <Button size="large" className="multiStepButton__action" {...action} />}
     </div>
   );
 }

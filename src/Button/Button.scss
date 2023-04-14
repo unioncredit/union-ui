@@ -32,8 +32,6 @@ $disabledOpacity: 0.5;
   }
 
   &--withIcon:not(.button--noLabel) {
-    padding-left: 18px;
-
     svg:not(.loading-spinner) {
       width: 24px;
       height: 24px;
@@ -42,9 +40,6 @@ $disabledOpacity: 0.5;
       margin-right: $iconGutter;
     }
     &.button--icon-pos-end {
-      padding-left: 24px;
-      padding-right: 18px;
-
       svg:not(.loading-spinner) {
         margin-left: $iconGutter;
       }

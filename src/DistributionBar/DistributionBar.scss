@@ -15,4 +15,16 @@
       @include colors(background);
     }
   }
+  &__item:not(:last-of-type) {
+    &::after {
+      content: ' ';
+      display: block;
+      height: 100%;
+      width: 2px;
+      right: -1px;
+      background: white;
+      position: absolute;
+      z-index: 1;
+    }
+  }
 }
