@@ -21,10 +21,13 @@ function ModalContainer({ children, className, ...props }) {
   );
 }
 
-function ModalHeader({ className, onClose, title, subTitle, onBack, children }) {
+function ModalHeader({ className, onClose, title, subTitle, onBack, children, noHeight }) {
   return (
     <div className={className}>
-      <Box align="center" justify="space-between" className="modalHeader">
+      <Box align="center" justify="space-between" className={cn("modalHeader", {
+        "modalHeader--noHeight": noHeight,
+        "modalHeader--hasBack": onBack,
+      })}>
         {onBack && (
           <Button
             size="pill"

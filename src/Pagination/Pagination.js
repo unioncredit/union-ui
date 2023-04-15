@@ -14,12 +14,11 @@ export function Pagination({ onClick, pages, activePage = 1, ...props }) {
 
   const nPages = Array.from(Array(pages), (_, i) => i + 1);
 
-  const nStart =
-    activePage > pages - 3 ? pages - 2 : activePage <= 1 ? 2 : activePage;
-
   const numbers =
     pages > 4
-      ? [...nPages.slice(nStart - 2, nStart), "...", ...nPages.slice(-2)]
+      ? activePage <= Math.round((pages / 2))
+        ? [...nPages.slice(Math.max(0, activePage - 2), activePage + 1), "...", ...nPages.slice(-2)]
+        : [...nPages.slice(0, 2), "...", ...nPages.slice(activePage - 2, activePage + 1)]
       : nPages;
 
   const leftArrowDisabled = activePage - 1 <= 0;

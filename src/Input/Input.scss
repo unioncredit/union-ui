@@ -150,6 +150,11 @@ $gutter: 8px;
 
   &--right {
     color: $grey600;
+
+    &--has-action:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 }
 

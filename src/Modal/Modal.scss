@@ -96,9 +96,12 @@
   }
 
   .modalHeader {
-    height: 80px;
     border-bottom: 1px solid $grey100;
     padding: 26px 24px;
+
+    &:not(.modalHeader--noHeight) {
+      height: 80px;
+    }
   }
   .modalFooter {
     border-top: 1px solid $grey100;
@@ -107,6 +110,8 @@
 
   .closeWrapper {
     width: 78px;
+  }
+  .modalHeader--hasBack .closeWrapper {
     flex-shrink: 0;
   }
 

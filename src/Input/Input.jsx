@@ -14,6 +14,7 @@ export const Input = forwardRef(
       name,
       label,
       rightLabel,
+      rightLabelAction,
       caption,
       placeholder,
       disabled,
@@ -56,7 +57,9 @@ export const Input = forwardRef(
             )}
 
             {rightLabel && (
-              <Text as="label" className="input-label--right" htmlFor={name} size="medium">
+              <Text as="label" className={cn("input-label--right", {
+                "input-label--right--has-action": rightLabelAction
+              })} htmlFor={name} size="medium" onClick={rightLabelAction && rightLabelAction}>
                 {rightLabel}
               </Text>
             )}
