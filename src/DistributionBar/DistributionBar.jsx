@@ -20,6 +20,7 @@ export function DistributionBar({ items, ...props }) {
           <div
             key={index}
             className={cn("DistributionBar__item", {
+              [`DistributionBar__item--separated`]: percentage > 2,
               [`DistributionBar__item-color--${item.color}`]: item.color
             })}
             style={{

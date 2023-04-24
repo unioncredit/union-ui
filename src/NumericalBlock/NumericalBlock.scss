@@ -43,6 +43,10 @@
     height: 16px;
     margin-left: 4px;
   }
+  &__token-union .NumericalBlock__token {
+    width: 20px;
+    height: 20px;
+  }
   &__subtitle {
     color: $grey500;
   }

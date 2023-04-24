@@ -33,6 +33,7 @@ export function NumericalBlock({
       className={cn("NumericalBlock", className, {
         [`NumericalBlock__size-${size}`]: size,
         [`NumericalBlock__align-${align}`]: align,
+        [`NumericalBlock__token-${token}`]: token,
       })}
       direction="vertical"
       {...props}

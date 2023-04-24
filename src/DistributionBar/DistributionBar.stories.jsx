@@ -11,6 +11,7 @@ export const All = () => (
     <TwoTone />
     <TripleTone />
     <QuadTone />
+    <EmptyValues />
   </>
 );
 
@@ -25,6 +26,27 @@ export const TwoTone = () => (
         {
           value: 5000,
           color: "blue600",
+        }
+      ]}
+    />
+  </Box>
+);
+
+export const EmptyValues= () => (
+  <Box mb="20px">
+    <DistributionBar
+      items={[
+        {
+          value: 0,
+          color: "blue200"
+        },
+        {
+          value: 2000,
+          color: "blue600",
+        },
+        {
+          value: 0,
+          color: "amber500",
         }
       ]}
     />

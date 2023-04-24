@@ -30,13 +30,18 @@ export function Notification({ variant, title, content, onClose, link }) {
         <Icon />
       </div>
       <div className="Notification__content">
-        <Text size="medium" grey={800} weight="medium" mb="4px">
+        <Text m={0} size="medium" grey={800} weight="medium">
           {title}
         </Text>
-        <Text grey={500} weight="medium">{content}</Text>
+        {content && (
+          <Text m="4px 0 0" grey={500} weight="medium">{content}</Text>
+        )}
       </div>
       <div className="Notification__actions">
-        <CloseIcon className="Notification__close" onClick={onClose} />
+        <button className="Notification__close" onClick={onClose}>
+          <CloseIcon  />
+        </button>
+
         {link && (
           <a href={link} target="_blank" className="Notification__link">
             <LinkOutIcon />
