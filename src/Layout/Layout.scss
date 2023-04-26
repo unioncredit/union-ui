@@ -22,12 +22,8 @@
   }
 
   &__columned {
-    width: 95%;
+    width: 100%;
     max-width: 988px;
     margin: 0 auto;
-  }
-
-  &__columned &__columned {
-    width: 100%;
   }
 }

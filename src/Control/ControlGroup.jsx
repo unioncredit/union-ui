@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 
 import { Box } from "../Box";
 import { Control } from "./Control";
+import cn from "classnames";
 
 export function ControlGroup({
   items,
   multiselect,
   onChange,
   initialSelected,
+  className,
 }) {
   const [selected, setSelected] = useState(
     initialSelected || multiselect ? [] : null
@@ -26,7 +28,7 @@ export function ControlGroup({
   };
 
   return (
-    <Box className="control-group" direction="vertical">
+    <Box className={cn("control-group", className)} direction="vertical">
       {items.map((item) => {
         const active = multiselect
           ? selected.includes(item.id)
@@ -58,4 +60,5 @@ ControlGroup.propTypes = {
     })
   ),
   initialSelected: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  className: PropTypes.string,
 };
