@@ -32,11 +32,6 @@
     color: $grey800;
     display: flex;
     align-items: center;
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      font-size: 26px !important;
-      line-height: 30px !important;
-    }
   }
   &__token {
     width: 16px;
@@ -109,6 +104,11 @@
       .NumericalBlock__value {
         font-size: 36px;
         line-height: 40px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 26px !important;
+          line-height: 30px !important;
+        }
       }
     }
 
@@ -116,6 +116,11 @@
       .NumericalBlock__value {
         font-size: 30px;
         line-height: 36px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 26px !important;
+          line-height: 30px !important;
+        }
       }
     }
 
