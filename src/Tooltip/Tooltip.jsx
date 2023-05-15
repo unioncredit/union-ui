@@ -11,11 +11,12 @@ export function Tooltip({
   content,
   alwaysShow,
   shrink,
+  enabled,
   children,
   className,
   ...props
 }) {
-  return (
+  return !enabled ? children : (
     <div
       style={propsToStyles(props)}
       className={cn("Tooltip", className, {
@@ -44,9 +45,11 @@ Tooltip.propTypes = {
   content: PropTypes.string.isRequired,
   alwaysShow: PropTypes.bool,
   shrink: PropTypes.bool,
+  enabled: PropTypes.bool,
   className: PropTypes.string,
 };
 
 Tooltip.defaultProps = {
   position: "top",
+  enabled: true,
 };

@@ -5,8 +5,17 @@ import PropTypes from "prop-types";
 import { Text } from "../Text";
 
 import "./Toggle.scss";
+import { propsToStyles } from "../spacing";
 
-export function Toggle({ active, label, labelPosition, onChange, color, disabled }) {
+export function Toggle({
+  active,
+  label,
+  labelPosition,
+  onChange,
+  color,
+  disabled,
+  ...props
+}) {
   const handleChange = () => {
     if (!disabled) {
       onChange && onChange(!active);
@@ -24,7 +33,10 @@ export function Toggle({ active, label, labelPosition, onChange, color, disabled
   );
 
   return (
-    <div className={cn("toggle-wrapper", { "toggle-wrapper--disabled": disabled })}>
+    <div
+      style={propsToStyles(props)}
+      className={cn("toggle-wrapper", { "toggle-wrapper--disabled": disabled })}
+    >
       {label && labelPosition === "start" && <ToggleLabel />}
       <div
         className={cn("toggle", { "toggle--active": active })}
