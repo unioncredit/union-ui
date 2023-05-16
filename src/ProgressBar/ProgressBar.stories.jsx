@@ -40,5 +40,13 @@ export const Default = () => (
         label="Membership fee earned"
       />
     </Box>
+    <Box mb="20px">
+      <ProgressBar
+        percentage={0}
+        icon={CheckIcon}
+        label="<0.01% Earned"
+        forceActive={true}
+      />
+    </Box>
   </>
 );

@@ -5,7 +5,14 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 import { propsToStyles } from "../spacing";
 
-export function ProgressBar({ percentage, label, icon: Icon, paused, ...props }) {
+export function ProgressBar({
+  percentage,
+  label,
+  paused,
+  forceActive,
+  icon: Icon,
+  ...props
+}) {
   const isComplete = percentage >= 100;
 
   return (
@@ -14,7 +21,7 @@ export function ProgressBar({ percentage, label, icon: Icon, paused, ...props })
       className={cn("ProgressBar", {
         "ProgressBar--paused": paused,
         "ProgressBar--complete": isComplete,
-        "ProgressBar--noProgress": percentage <= 0,
+        "ProgressBar--noProgress": !forceActive && percentage <= 0,
       })}
     >
       <div className="ProgressBar__inner">
@@ -33,6 +40,7 @@ export function ProgressBar({ percentage, label, icon: Icon, paused, ...props })
 ProgressBar.defaultProps = {
   percentage: 0,
   paused: false,
+  forceActive: false,
 };
 
 ProgressBar.propTypes = {
@@ -40,4 +48,5 @@ ProgressBar.propTypes = {
   label: PropTypes.string,
   icon: PropTypes.node,
   paused: PropTypes.bool,
+  forceActive: PropTypes.bool,
 };
