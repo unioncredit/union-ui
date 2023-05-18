@@ -102,7 +102,7 @@
   &__item {
     margin: 0 4px 0 0;
     background: transparent;
-    transition: left 200ms cubic-bezier(.48,1.46,.91,.94);
+    transition: left 200ms cubic-bezier(.17,.84,.44,1);
     font-weight: 500;
     font-family: inherit;
     color: $grey600;
