@@ -10,6 +10,7 @@ import { Text } from "../Text";
 import { ArrowLeftIcon } from "../Icons";
 import CloseIcon from "../Icons/internal/Close.svg";
 import { Heading } from "../Heading";
+import PropTypes from "prop-types";
 
 function ModalContainer({ children, className, ...props }) {
   return (
@@ -72,9 +73,11 @@ function ModalFooter({ children }) {
   )
 }
 
-export function Modal({ className, children, size }) {
+export function Modal({ animated, className, children, size }) {
   return (
-    <Card className={cn("modal", className)} size={size}>
+    <Card size={size} className={cn("modal", className, {
+      "modal--animated": animated
+    })}>
       {children}
     </Card>
   );
@@ -84,3 +87,11 @@ Modal.Container = ModalContainer;
 Modal.Header = ModalHeader;
 Modal.Footer = ModalFooter;
 Modal.Body = Card.Body;
+
+Modal.propTypes = {
+  animated: PropTypes.bool
+};
+
+Modal.defaultProps = {
+  animated: true
+};
