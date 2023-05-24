@@ -22,7 +22,7 @@ function ModalContainer({ children, className, ...props }) {
   );
 }
 
-function ModalHeader({ className, onClose, title, subTitle, onBack, children, noHeight }) {
+function ModalHeader({ className, hideClose, onClose, title, subTitle, onBack, children, noHeight }) {
   return (
     <div className={className}>
       <Box align="center" justify="space-between" className={cn("modalHeader", {
@@ -53,7 +53,7 @@ function ModalHeader({ className, onClose, title, subTitle, onBack, children, no
           </div>
         )}
         {children && children}
-        {onClose && (
+        {onClose && !hideClose && (
           <div className="closeWrapper">
             <Box className="closeButton" onClick={onClose} align="center" justify="center">
               <CloseIcon width="10px" height="10px" />
