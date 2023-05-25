@@ -3,6 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 import "./MobileProgressList.scss";
+import { CheckIcon } from "../Icons";
 
 export function MobileProgressList({ items }) {
   const handleScrollTo = (element) => () => {
@@ -18,7 +19,10 @@ export function MobileProgressList({ items }) {
           })}
           onClick={scrollTo && handleScrollTo(scrollTo)}
         >
-          {number}
+          {complete ? (
+            <CheckIcon className="MobileProgressList__check" />
+          ) : number
+          }
         </div>
       ))}
     </div>
