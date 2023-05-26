@@ -16,6 +16,7 @@ export default {
 const options = [
   {
     label: "Ethereum",
+    labelWithVersion: "Ethereum (v1)",
     type: "ethereum",
     id: "ethereum",
     imageSrc: EthereumAvatar,
@@ -23,6 +24,7 @@ const options = [
   },
   {
     label: "Arbitrum",
+    labelWithVersion: "Arbitrum (v1)",
     type: "arbitrum",
     id: "arbitrum",
     imageSrc: AbitrumAvatar,
@@ -30,6 +32,7 @@ const options = [
   },
   {
     label: "Optimism",
+    labelWithVersion: "Optimism (v2)",
     type: "optimism",
     id: "optimism",
     imageSrc: OptimismAvatar,
@@ -37,6 +40,7 @@ const options = [
   },
   {
     label: "Goerli",
+    labelWithVersion: "Goerli (v1)",
     type: "goerli",
     id: "goerli",
     imageSrc: GoerliAvatar,

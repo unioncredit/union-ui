@@ -4,7 +4,7 @@
   margin-left: auto;
 
   path {
-    fill: $blue500 !important;
+    fill: $grey700 !important;
   }
 }
 
@@ -16,11 +16,7 @@
     background: white;
     width: 100%;
 
-    &.selected {
-      color: $blue500;
-      background: $blue50;
-    }
-
+    &.selected,
     &:not(.selected):hover {
       background: $grey100;
       border: 1px solid $grey300;
@@ -78,10 +74,15 @@
     background-color: $blue100;
     color: $blue500;
 
+    &.selected,
     &:not(.selected):hover {
       color: $blue500 !important;
       background-color: $blue200 !important;
       border: 1px solid $blue300 !important;
+
+      .networkSwitcher__check-icon path {
+        fill: $blue500 !important;
+      }
     }
   }
 
@@ -89,10 +90,16 @@
     background-color: $red100;
     color: $red500;
 
+
+    &.selected,
     &:not(.selected):hover {
       color: $red500 !important;
       background-color: $red200 !important;
       border: 1px solid $red300 !important;
+
+      .networkSwitcher__check-icon path {
+        fill: $red500 !important;
+      }
     }
   }
 
