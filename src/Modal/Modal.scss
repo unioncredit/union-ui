@@ -24,6 +24,9 @@
   overflow: hidden;
   position: relative;
 
+  // 120px factors in space for the contact modal navigation
+  max-height: calc(100vh - 120px);
+
   &--animated {
     animation: slidein 250ms;
   }
