@@ -34,7 +34,7 @@ export function NumericalRow({ label, value, tooltip, error }) {
       })}
     >
       <Box align="center" mr="5px">
-        <Text grey={500} m="0 5px 0 0" size="medium">{label}</Text>
+        <Text grey={500} m="0 5px 0 0" size="medium" weight="medium">{label}</Text>
 
         {tooltip && (
           <Tooltip {...tooltip}>
@@ -43,7 +43,7 @@ export function NumericalRow({ label, value, tooltip, error }) {
         )}
       </Box>
 
-      <Text grey={700} m={0} size="medium">{value}</Text>
+      <Text grey={700} m={0} size="medium" weight="medium">{value}</Text>
     </Box>
   )
 }
