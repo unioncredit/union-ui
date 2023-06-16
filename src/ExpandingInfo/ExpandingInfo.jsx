@@ -49,7 +49,3 @@ ExpandingInfo.propTypes = {
     PropTypes.node,
   ]),
 };
-
-// ExpandingInfo.defaultProps = {
-//
-// };
