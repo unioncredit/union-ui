@@ -29,6 +29,7 @@ export const Input = forwardRef(
       defaultValue,
       onCaptionButtonClick,
       captionButtonLabel = "Max",
+      inputProps,
       ...props
     },
     ref
@@ -84,6 +85,7 @@ export const Input = forwardRef(
               placeholder={placeholder}
               autoComplete="off"
               defaultValue={defaultValue}
+              {...inputProps}
               // allow input of decimal places
               {...(type === "number" ? { step: "any" } : {})}
             />
