@@ -8,7 +8,7 @@ export default {
   title: "Components/Badge",
 };
 
-const colors = ["blue", "purple", "green", "yellow", "red", "grey"];
+const colors = ["blue", "purple", "green", "yellow", "red", "dark-grey", "grey", "white"];
 
 export const Default = () => (
   <>

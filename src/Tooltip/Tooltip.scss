@@ -1,0 +1,112 @@
+@import "../variables.scss";
+
+.Tooltip {
+  position: relative;
+  z-index: 99;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: middle;
+
+  &--shrink {
+    .Tooltip__content {
+      width: auto;
+    }
+  }
+
+  &--top {
+    .Tooltip__content {
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-12px);
+
+      .down {
+        bottom: -7px;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &--right {
+    .Tooltip__content {
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%) translateX(12px);
+
+      .down {
+        top: 0;
+        left: -7px;
+        height: 100%;
+      }
+    }
+  }
+
+  &--bottom {
+    .Tooltip__content {
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(12px);
+
+      .down {
+        top: -7px;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &--left {
+    .Tooltip__content {
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-12px);
+
+      .down {
+        top: 0;
+        right: -7px;
+        height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    color: white;
+    font-weight: 500;
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+    background-color: #555351;
+    width: 184px;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 12px;
+    color: $grey400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
+
+    .down {
+      position: absolute;
+      display: flex;
+      align-items: center;
+
+      & > span {
+        background-color: #555351;
+        display: block;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        transform: rotate(45deg);
+        z-index: -1;
+      }
+    }
+  }
+
+  &--alwaysShow &__content,
+  &:hover &__content {
+    display: block;
+  }
+}

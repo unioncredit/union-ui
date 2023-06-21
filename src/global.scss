@@ -4,6 +4,10 @@
 
 body {
   font-family: "Inter", sans-serif;
+
+  * {
+    -webkit-font-smoothing: antialiased
+  }
 }
 
 button {
@@ -19,4 +23,8 @@ button {
 
 .flip {
   transform: scaleX(-1);
+}
+
+.capitalizeFirst::first-letter {
+  text-transform: capitalize;
 }

@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 
 import "./table-cell.scss";
 
-export function TableCell({ children, span, align, className, fixedSize }) {
+export function TableCell({ children, span, align, weight, className, fixedSize }) {
   return (
     <td
       className={cn("table-cell", className, {
         [`table-cell--align-${align}`]: align,
+        [`table-cell--weight-${weight}`]: weight,
         "table-cell--fixed-size": fixedSize,
       })}
       colSpan={span}

@@ -1,0 +1,16 @@
+@import "../variables";
+
+.NumericalRows__item {
+  width: 100%;
+
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
+
+  &--error {
+    p, path {
+      fill: $red500;
+      color: $red500 !important;
+    }
+  }
+}

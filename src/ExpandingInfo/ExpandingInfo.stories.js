@@ -1,7 +1,7 @@
-import ExpandingInfo from "./ExpandingInfo";
+import { ExpandingInfo } from "./ExpandingInfo";
 import { Text } from "../Text";
 import { Box } from "../Box";
-import WireInfo from "../icons/wireInfo.svg";
+import { WarningIcon } from "../Icons";
 
 export default {
   component: ExpandingInfo,
@@ -12,7 +12,7 @@ export const All = () => {
   return (
     <Box w="432px">
       <ExpandingInfo
-        icon={WireInfo}
+        icon={WarningIcon}
         title="Vouching puts your staked funds at risk"
       >
         <Text m={0}>

@@ -1,3 +1,5 @@
+import "./Modal.scss";
+
 import React from "react";
 import cn from "classnames";
 
@@ -5,62 +7,91 @@ import { Card } from "../Card";
 import { Box } from "../Box";
 import { Button } from "../Button";
 import { Text } from "../Text";
-import { Label } from "../Label";
+import { ArrowLeftIcon } from "../Icons";
+import CloseIcon from "../Icons/internal/Close.svg";
+import { Heading } from "../Heading";
+import PropTypes from "prop-types";
 
-import Close from "../icons/close.svg";
-import LArrow from "../icons/arrowRight.svg";
+function ModalContainer({ children, className, ...props }) {
+  return (
+    <Box {...props} className={cn("modal__container", className)} style={{
+      padding: "24px",
+    }}>
+      {children}
+    </Box>
+  );
+}
 
-import "./modal.scss";
-
-function ModalHeader({ className, onClose, title, subTitle, onBack }) {
+function ModalHeader({ className, hideClose, onClose, title, subTitle, onBack, children, noHeight }) {
   return (
     <div className={className}>
-      <Box align="center" justify="space-between" className="modalHeader">
+      <Box align="center" justify="space-between" className={cn("modalHeader", {
+        "modalHeader--noHeight": noHeight,
+        "modalHeader--hasBack": onBack,
+      })}>
         {onBack && (
           <Button
-            className="backButton"
-            variant="pill"
-            icon={LArrow}
-            label="Previous"
+            size="pill"
+            color="secondary"
+            variant="light"
+            icon={ArrowLeftIcon}
+            label="Back"
             onClick={onBack}
+            className="backButton"
           />
         )}
         {title && (
           <div className="modal__title">
-            <Text
-              as="h1"
-              size="large"
-              align={onBack ? "center" : "left"}
-              grey={700}
-              weight="medium"
-              m={0}
-            >
+            <Heading m={0} size="small" align={onBack ? "center" : "left"}>
               {title}
-            </Text>
+            </Heading>
             {subTitle && (
-              <Label m={0} grey={600}>
+              <Text as="label" m={0} grey={600}>
                 {subTitle}
-              </Label>
+              </Text>
             )}
           </div>
         )}
-        {onClose && (
-          <Box className="closeWrapper">
-            <Close width="24px" height="24px" onClick={onClose} />
-          </Box>
+        {children && children}
+        {onClose && !hideClose && (
+          <div className="closeWrapper">
+            <Box className="closeButton" onClick={onClose} align="center" justify="center">
+              <CloseIcon width="10px" height="10px" />
+            </Box>
+          </div>
         )}
       </Box>
     </div>
   );
 }
 
-export function Modal({ className, children, size }) {
+function ModalFooter({ children }) {
   return (
-    <Card className={cn("modal", className)} size={size}>
+    <Box className="modalFooter">
+      {children}
+    </Box>
+  )
+}
+
+export function Modal({ animated, className, children, size }) {
+  return (
+    <Card size={size} className={cn("modal", className, {
+      "modal--animated": animated
+    })}>
       {children}
     </Card>
   );
 }
 
+Modal.Container = ModalContainer;
 Modal.Header = ModalHeader;
+Modal.Footer = ModalFooter;
 Modal.Body = Card.Body;
+
+Modal.propTypes = {
+  animated: PropTypes.bool
+};
+
+Modal.defaultProps = {
+  animated: true
+};

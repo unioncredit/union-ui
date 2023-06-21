@@ -2,50 +2,73 @@ import React from "react";
 
 import { Notification } from "./Notification";
 import { NotificationStack } from "./NotificationStack";
-import { Text } from "../Text";
-import { Label } from "../Label";
 
 export default {
   component: Notification,
-  title: "Components/Notification",
+  title: "Components/NotificationToast",
 };
 
 export const All = () => (
   <>
-    <Notification variant="pending" title="Waiting for confirmation">
-      <Label as="p" size="small">
-        Confirm transaction with your connected wallet
-      </Label>
-    </Notification>
-    <Notification variant="success" title="Transaction successful">
-      <Label as="p" size="small">
-        View transaction
-      </Label>
-    </Notification>
-    <Notification variant="error" title="Transaction error" link="#">
-      <Label as="p" size="small">
-        Internal transaction error
-      </Label>
-    </Notification>
+    <Notification
+      variant="pending"
+      title="Borrow 542.12 DAI"
+      content="Transaction Pending"
+    />
+    <Notification
+      variant="success"
+      title="Borrow 542.12 DAI"
+      content="Transaction Succeeded"
+    />
+    <Notification
+      variant="error"
+      title="Borrow 542.12 DAI"
+      content="Transaction Failed"
+    />
   </>
 );
 
+export const Links = () => (
+  <>
+    <Notification
+      variant="pending"
+      title="Borrow 542.12 DAI"
+      content="Transaction Pending"
+      link="#"
+    />
+    <Notification
+      variant="success"
+      title="Borrow 542.12 DAI"
+      content="Transaction Succeeded"
+      link="#"
+    />
+    <Notification
+      variant="error"
+      title="Borrow 542.12 DAI"
+      content="Transaction Failed"
+      link="#"
+    />
+  </>
+)
+
 export const Stack = () => (
   <NotificationStack>
-    <Notification variant="pending" title="Waiting for confirmation">
-      <Label as="p" size="small">
-        Confirm transaction with your connected wallet
-      </Label>
-    </Notification>
-    <Notification variant="success" title="Transaction successful">
-      <Label as="p" size="small">
-        View transaction
-      </Label>
-    </Notification>
-    <Notification variant="error" title="Transaction error">
-      <Label as="p" size="small">
-        Internal transaction error
-      </Label>
-    </Notification>
+    <Notification
+      variant="pending"
+      title="Borrow 542.12 DAI"
+      content="Transaction Pending"
+    />
+    <Notification
+      variant="success"
+      title="Borrow 542.12 DAI"
+      content="Transaction Succeeded"
+      link="#"
+    />
+    <Notification
+      variant="error"
+      title="Borrow 542.12 DAI"
+      content="Transaction Failed"
+      link="#"
+    />
   </NotificationStack>
 );

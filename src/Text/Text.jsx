@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { propsToStyles } from "../spacing";
 
-import "./text.scss";
+import "./Text.scss";
 
 export const Text = forwardRef(
   (
@@ -27,7 +27,7 @@ export const Text = forwardRef(
       ...props,
       ref,
       className: cn("text", className, {
-        [`text--${size}`]: size,
+        [`text--size-${size}`]: size,
         [`text--${align}`]: align,
         [`text--grey${grey}`]: grey,
         [`text--${color}`]: color,
@@ -50,12 +50,13 @@ Text.propTypes = {
     PropTypes.node,
   ]).isRequired,
   className: PropTypes.string,
-  size: PropTypes.oneOf(["primary", "large"]),
-  weight: PropTypes.oneOf(["regular", "medium", "bold"]),
+  size: PropTypes.oneOf(["small", "regular", "medium", "large"]),
+  weight: PropTypes.oneOf(["light", "regular", "medium", "bold", "black"]),
   align: PropTypes.oneOf(["center", "left", "right"]),
   as: PropTypes.node,
 };
 
 Text.defaultProps = {
-  size: "primary",
+  size: "regular",
+  weight: "regular",
 };

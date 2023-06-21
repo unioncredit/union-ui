@@ -7,9 +7,16 @@ import { propsToStyles } from "../spacing";
 import "./avatar.scss";
 
 export function Avatar({ src, icon: Icon, size, variant, onError, ...props }) {
+  const sizes = {
+    "x-small": 16,
+    "small": 24,
+    "medium": 40,
+    "large": 64,
+  };
+
   const sizeStyles = {
-    width: size + "px",
-    height: size + "px",
+    width: (sizes[size] ?? size) + "px",
+    height: (sizes[size] ?? size) + "px",
   };
 
   return (
@@ -33,6 +40,9 @@ Avatar.defaultProps = {
 };
 
 Avatar.propTypes = {
-  size: PropTypes.number,
   variant: PropTypes.string,
+  size: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.oneOf(["x-small", "small", "medium", "large"])
+  ]),
 };

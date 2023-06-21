@@ -25,7 +25,8 @@ $green900: #14532d;
 // red
 $red50: #fef2f2;
 $red100: #fee2e2;
-$red200: #fca5a5;
+$red200: #FECACA;
+$red300: #FCA5A5;
 $red400: #f87171;
 $red500: #ef4444;
 $red600: #dc2626;
@@ -35,6 +36,7 @@ $purple500: lighten(#9333ea, 10);
 $purple600: #9333ea;
 $purple700: darken(#9333ea, 10);
 // amber
+$amber50: #FFFBEB;
 $amber100: #fef3c7;
 $amber200: #fde68a;
 $amber300: #fcd34d;
@@ -43,21 +45,32 @@ $amber500: #f59e0b;
 $amber600: #d97706;
 $amber700: #b45309;
 $amber800: #92400e;
+$amber900: #78350F;
 // greys
-$grey50: #fafaf9;
-$grey100: #f5f5f4;
-$grey200: #e7e5e4;
-$grey300: #d6d3d1;
-$grey400: #a8a29e;
-$grey500: #78716c;
-$grey600: #57534e;
-$grey700: #44403c;
-$grey800: #292524;
+$grey50: #fafafa;
+$grey100: #f4f4f5;
+$grey200: #e4e4e7;
+$grey300: #d4d4d8;
+$grey400: #a1a1aa;
+$grey500: #71717a;
+$grey600: #52525b;
+$grey700: #3f3f46;
+$grey800: #27272a;
+$grey900: #18181b;
 // oranges
+$orange500: #f97316;
 $orange600: #ea580c;
 $orange800: #9a3412;
 // violet
 $violet400: #a78bfa;
+$violet500: #8b5cf6;
+// indigo
+$indigo500: #6366f1;
+$indigo800: #3730a3;
+// teal
+$teal500: #14b8a6;
+// sky
+$sky500: #0ea5e9;
 
 $shadesOfGrey: (
   "grey50": $grey50,
@@ -94,6 +107,7 @@ $shadesOfGrey: (
 
 $colors: (
   "white": white,
+  "black": black,
   // blues
   "blue50": $blue50,
   "blue100": $blue100,
@@ -103,6 +117,8 @@ $colors: (
   "blue500": $blue500,
   "blue600": $blue600,
   "blue700": $blue700,
+  "blue800": $blue800,
+  "blue900": $blue900,
   // green
   "green100": $green100,
   "green200": $green200,
@@ -120,6 +136,7 @@ $colors: (
   "purple100": $purple100,
   "purple600": $purple600,
   // amber
+  "amber50": $amber50,
   "amber100": $amber100,
   "amber200": $amber200,
   "amber300": $amber300,
@@ -128,12 +145,20 @@ $colors: (
   "amber600": $amber600,
   "amber700": $amber700,
   "amber800": $amber800,
+  "amber900": $amber900,
+  // misc
+  "orange500": $orange500,
+  "indigo500": $indigo500,
+  "indigo800": $indigo800,
+  "teal500": $teal500,
+  "sky500": $sky500,
+  "violet500": $violet500,
 );
 
-@mixin colors {
+@mixin colors($property: color) {
   @each $name, $hex in $colors {
     &--#{$name} {
-      color: $hex !important;
+      #{$property}: $hex !important;
 
       .external-inline path,
       .externalinline_svg__external-inline path {
@@ -144,15 +169,22 @@ $colors: (
 }
 
 @mixin weights {
-  &--weight-regular {
-    font-weight: 400;
-  }
-
-  &--weight-medium {
-    font-weight: 500;
-  }
-  &--weight-heavy {
-    font-weight: 700;
+  &--weight {
+    &-light {
+      font-weight: 300;
+    }
+    &-regular {
+      font-weight: 400;
+    }
+    &-medium {
+      font-weight: 500;
+    }
+    &-bold {
+      font-weight: 600;
+    }
+    &-black {
+      font-weight: 700;
+    }
   }
 }
 
@@ -170,6 +202,7 @@ $colors: (
   }
 }
 
-$breakpoint-xxs: 580px;
-$breakpoint-xs: 767px;
-$breakpoint-s: 910px;
+$breakpoint-micro: 480px;
+$breakpoint-mobile: 580px;
+$breakpoint-tablet: 767px;
+$breakpoint-small: 980px;

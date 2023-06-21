@@ -1,0 +1,155 @@
+@import "../variables.scss";
+
+.NumericalBlock {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+
+  .Tooltip {
+    margin-left: 4px;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    border-radius: 50%;
+
+    @include colors(background);
+  }
+
+  &__title {
+    color: $grey400;
+    width: 100%;
+    white-space: nowrap;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      white-space: normal;
+    }
+  }
+  &__value {
+    color: $grey800;
+    display: flex;
+    align-items: center;
+  }
+  &__token {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+  &__token-union .NumericalBlock__token {
+    width: 20px;
+    height: 20px;
+  }
+  &__subtitle {
+    color: $grey500;
+  }
+
+  &__align {
+    &-left {
+      text-align: left;
+
+      .NumericalBlock__value {
+        justify-content: flex-start;
+      }
+    }
+    &-center {
+      text-align: center;
+
+      .NumericalBlock__title,
+      .NumericalBlock__value {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__size {
+    &-large,
+    &-regular,
+    &-medium,
+    &-small {
+      .NumericalBlock__title {
+        font-size: 16px;
+        line-height: 24px;
+        
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        .heading {
+          font-size: inherit;
+        }
+      }
+      .NumericalBlock__subtitle {
+        font-size: 14px;
+        line-height: 20px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    &-medium {
+      .NumericalBlock__value {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    &-large {
+      .NumericalBlock__value {
+        font-size: 36px;
+        line-height: 40px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 26px !important;
+          line-height: 30px !important;
+        }
+      }
+    }
+
+    &-regular {
+      .NumericalBlock__value {
+        font-size: 30px;
+        line-height: 36px;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 26px !important;
+          line-height: 30px !important;
+        }
+      }
+    }
+
+    &-small {
+      .NumericalBlock__title {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .NumericalBlock__value {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+
+    &-x-small {
+      text-align: left;
+
+      .NumericalBlock__title {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .NumericalBlock__value {
+        font-size: 18px;
+        line-height: 28px;
+        justify-content: flex-start;
+      }
+      .NumericalBlock__subtitle {
+        display: none;
+      }
+    }
+  }
+}

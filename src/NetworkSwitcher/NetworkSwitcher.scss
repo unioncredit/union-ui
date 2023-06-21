@@ -1,0 +1,117 @@
+@import "../variables.scss";
+
+.networkSwitcher__check-icon {
+  margin-left: auto;
+
+  path {
+    fill: $grey700 !important;
+  }
+}
+
+.networkSwitcher__menu .PopoverMenu {
+  padding: 4px;
+
+  .button.networkSwitcher {
+    color: $grey700;
+    background: white;
+    width: 100%;
+
+    &.selected,
+    &:not(.selected):hover {
+      background: $grey100;
+      border: 1px solid $grey300;
+    }
+  }
+}
+
+.networkSwitcher__buttonContainer {
+  width: 130px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: auto;
+
+    span {
+      display: none;
+    }
+
+    .button.networkSwitcher {
+      padding: 0 6px;
+
+      .avatar {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.button.networkSwitcher {
+  height: 40px;
+  min-height: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  border: 1px solid transparent;
+  background-color: $grey100;
+  color: $grey500;
+  border-radius: 8px;
+  font-size: 14px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 40px;
+  }
+
+  &:not(.selected):hover {
+    background-color: $grey200 !important;
+    border: 1px solid $grey300 !important;
+  }
+
+  .PopoverMenu & {
+    margin: 0 0 4px;
+    width: calc(100% - 8px);
+  }
+
+  &--arbitrum {
+    background-color: $blue100;
+    color: $blue500;
+
+    &.selected,
+    &:not(.selected):hover {
+      color: $blue500 !important;
+      background-color: $blue200 !important;
+      border: 1px solid $blue300 !important;
+
+      .networkSwitcher__check-icon path {
+        fill: $blue500 !important;
+      }
+    }
+  }
+
+  &--optimism {
+    background-color: $red100;
+    color: $red500;
+
+
+    &.selected,
+    &:not(.selected):hover {
+      color: $red500 !important;
+      background-color: $red200 !important;
+      border: 1px solid $red300 !important;
+
+      .networkSwitcher__check-icon path {
+        fill: $red500 !important;
+      }
+    }
+  }
+
+  .avatar {
+    margin-right: 4px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

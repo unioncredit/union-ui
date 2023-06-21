@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import { Box } from "../Box";
 
-import "./badge-row.scss";
+import "./BadgeRow.scss";
 
 export function BadgeRow({ children, className, ...props }) {
   return (

@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
 import { Text } from "../Text";
 
 import "./Toggle.scss";
+import { propsToStyles } from "../spacing";
 
-export function Toggle({ initialState, label, labelPosition, onChange, color, disabled, size }) {
-  const [active, setActive] = useState(initialState);
-
+export function Toggle({
+  active,
+  label,
+  labelPosition,
+  onChange,
+  color,
+  disabled,
+  ...props
+}) {
   const handleChange = () => {
     if (!disabled) {
-      setActive((x) => !x);
       onChange && onChange(!active);
     }
   };
@@ -20,7 +26,6 @@ export function Toggle({ initialState, label, labelPosition, onChange, color, di
     <Text className={cn("toggle-label", {
       [`toggle-label--pos-${labelPosition}`]: true,
       [`toggle-label--color-${color}`]: true,
-      [`toggle-label--size-${size}`]: true,
     })}
     >
       {label}
@@ -28,7 +33,10 @@ export function Toggle({ initialState, label, labelPosition, onChange, color, di
   );
 
   return (
-    <div className={cn("toggle-wrapper", { "toggle-wrapper--disabled": disabled })}>
+    <div
+      style={propsToStyles(props)}
+      className={cn("toggle-wrapper", { "toggle-wrapper--disabled": disabled })}
+    >
       {label && labelPosition === "start" && <ToggleLabel />}
       <div
         className={cn("toggle", { "toggle--active": active })}
@@ -42,13 +50,12 @@ export function Toggle({ initialState, label, labelPosition, onChange, color, di
 }
 
 Toggle.propTypes = {
+  active: PropTypes.bool,
   label: PropTypes.string,
   labelPosition: PropTypes.oneOf(["start", "end"]),
-  initialState: PropTypes.bool,
   onChange: PropTypes.func,
   color: PropTypes.oneOf(["primary", "secondary"]),
   disabled: PropTypes.bool,
-  size: PropTypes.oneOf(["small", "regular", "large"]),
 };
 
 Toggle.defaultProps = {
@@ -56,5 +63,4 @@ Toggle.defaultProps = {
   initialState: false,
   color: "secondary",
   disabled: false,
-  size: "regular",
 };

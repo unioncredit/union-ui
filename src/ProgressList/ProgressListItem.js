@@ -1,16 +1,22 @@
 import React from "react";
 import cn from "classnames";
 
-import "./progress-list-item.scss";
+import "./ProgressListItem.scss";
+import { CheckIcon } from "../Icons";
 
 export function ProgressListItem({ children, number, complete }) {
   return (
     <div
-      className={cn("progressListItem", {
-        "progressListItem--complete": complete,
+      className={cn("ProgressListItem", {
+        "ProgressListItem--complete": complete,
       })}
     >
-      <div className="progressListItem__number">{number}</div>
+      <div className="ProgressListItem__number">
+        {complete ? (
+          <CheckIcon className="ProgressListItem__check" />
+        ) : number
+        }
+      </div>
       {children}
     </div>
   );

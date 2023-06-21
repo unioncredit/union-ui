@@ -2,12 +2,11 @@ import React from "react";
 import { Box } from "../Box";
 
 import { Input } from "./Input";
-import { Control } from "../Control";
 import { InputRow } from "./InputRow";
 import { Button } from "../Button";
 import { Dai } from "../Dai";
 
-import Search from "../icons/search.svg";
+import { SearchIcon } from "../Icons";
 
 export default {
   component: Input,
@@ -23,6 +22,9 @@ export const Inputs = () => (
       <Input type="number" placeholder="Placeholder" />
     </Box>
     <Box mb="20px">
+      <Input value="This is readonly" onMaxClick={() => {}} readonly />
+    </Box>
+    <Box mb="20px">
       <Input placeholder="Placeholder" onMaxClick={() => {}} disabled />
     </Box>
     <Box mb="20px">
@@ -31,6 +33,7 @@ export const Inputs = () => (
     <Box mb="20px">
       <Input
         label="Input label"
+        rightLabel="Right label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
       />
@@ -39,7 +42,7 @@ export const Inputs = () => (
       <Input
         placeholder="Placeholder"
         onMaxClick={() => {}}
-        prefix={<Search />}
+        prefix={<SearchIcon />}
       />
     </Box>
 
@@ -48,7 +51,7 @@ export const Inputs = () => (
         label="Clickable Caption"
         caption={
           <>
-            <Dai valuu={382.91} /> Available
+            <Dai value={382.91} /> Available
           </>
         }
         onCaptionButtonClick={() => alert("clicked")}
@@ -77,32 +80,29 @@ export const Inputs = () => (
 
     <Box mb="20px">
       <Input
+        label="Search"
+        placeholder="Placeholder"
+        prefix={<SearchIcon />}
+      />
+    </Box>
+
+    <Box mb="20px">
+      <Input
+        label="Input label"
+        error="input error"
+        caption="382.91 DAI Available"
+        placeholder="Placeholder"
+      />
+    </Box>
+
+    <Box mb="20px">
+      <Input
         label="Input label"
         error="input error"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
         suffix={<Dai />}
       />
-    </Box>
-  </>
-);
-
-export const Controls = () => (
-  <>
-    <Box mb="20px">
-      <Control type="checkbox" checked mr="8px" />
-      <Control type="checkbox" checked disabled mr="8px" />
-      <Control type="checkbox" indeterminate mr="8px" />
-      <Control type="checkbox" />
-    </Box>
-    <Box mb="20px">
-      <Control type="radio" checked mr="8px" />
-      <Control type="radio" checked disabled mr="8px" />
-      <Control type="radio" indeterminate mr="8px" />
-      <Control type="radio" />
-    </Box>
-    <Box mb="20px">
-      <Control type="checkbox" checked label="Checkbox Label" />
     </Box>
   </>
 );

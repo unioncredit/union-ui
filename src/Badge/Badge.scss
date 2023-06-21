@@ -1,0 +1,56 @@
+@import "../variables.scss";
+
+.badge {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 14px;
+  white-space: nowrap;
+  border: 1px solid white;
+
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &--blue {
+    color: $blue600;
+    background: $blue100;
+  }
+
+  &--purple {
+    color: $purple600;
+    background: $purple100;
+  }
+
+  &--green {
+    color: $green600;
+    background: $green100;
+  }
+
+  &--yellow {
+    color: $amber600;
+    background: $amber100;
+  }
+
+  &--red {
+    color: $red600;
+    background: $red100;
+  }
+
+  &--grey {
+    color: $grey700;
+    background: $grey100;
+  }
+
+  &--dark-grey {
+    color: $grey700;
+    background: $grey200;
+  }
+
+  &--white {
+    color: $grey700;
+    background: white;
+  }
+}

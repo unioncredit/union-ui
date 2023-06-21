@@ -1,60 +1,70 @@
 import React from "react";
 
 import { Tooltip } from "./Tooltip";
-import { Label } from "../Label";
+import { Text } from "../Text";
 import { Box } from "../Box";
 import { Button } from "../Button";
-import Icon from "../icons/tooltip.svg";
+import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
 
 export default {
   component: Tooltip,
   title: "Components/Tooltip",
 };
 
-const content =
-  "These are funds which are currently tied up elsewhere and as a result, not available to borrow at this time";
+const tooltipProps = {
+  title: "Optional title",
+  content: "Further details regarding the specific tooltip details",
+};
 
 export const Default = () => (
   <>
-    <Box mt="100px">
-      <Label as="p">
+    <Box mt="150px">
+      <Text>
         The quick brown fox jumps over the lazy dog (top){" "}
-        <Tooltip content={content}>
-          <Icon width="16px" />
+        <Tooltip {...tooltipProps}>
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (right){" "}
-        <Tooltip position="right" content={content}>
-          <Icon width="16px" />
+        <Tooltip position="right" {...tooltipProps}>
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (bottom){" "}
-        <Tooltip position="bottom" content={content}>
-          <Icon width="16px" />
+        <Tooltip position="bottom" {...tooltipProps}>
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
-        <Tooltip position="left" content={content}>
-          <Icon width="16px" />
+        <Tooltip position="left" {...tooltipProps}>
+          <InfoOutlinedIcon width="16px" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
     <Box mt="100px">
-      <Label as="p">
+      <Text>
         The quick brown fox jumps over the lazy dog (left){" "}
-        <Tooltip position="bottom" content={content} alwaysShow>
+        <Tooltip position="right" content="TODO" shrink alwaysShow>
+          <InfoOutlinedIcon width="16px" />
+        </Tooltip>
+      </Text>
+    </Box>
+    <Box mt="100px">
+      <Text>
+        The quick brown fox jumps over the lazy dog (left){" "}
+        <Tooltip position="bottom" {...tooltipProps} alwaysShow>
           <Button label="Open" />
         </Tooltip>
-      </Label>
+      </Text>
     </Box>
   </>
 );

@@ -1,12 +1,12 @@
+import "./Card.scss";
+
 import React, { forwardRef } from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import { Label } from "../Label";
 import { Text } from "../Text";
 import { propsToStyles } from "../spacing";
-
-import "./card.scss";
+import { Box } from "../Box";
 
 export const Card = forwardRef(
   (
@@ -26,12 +26,12 @@ export const Card = forwardRef(
     return (
       <div
         ref={ref}
-        className={cn("card", className, {
-          [`card--${size}`]: size,
-          [`card--${variant}`]: variant,
-          ["card--packed"]: packed,
-          "card--bordered": bordered,
-          "card--overflow": overflow,
+        className={cn("Card", className, {
+          [`Card--${size}`]: size,
+          [`Card--${variant}`]: variant,
+          ["Card--packed"]: packed,
+          "Card--bordered": bordered,
+          "Card--overflow": overflow,
         })}
         style={propsToStyles(props)}
         onClick={onClick}
@@ -45,36 +45,43 @@ export const Card = forwardRef(
 function CardHeader({ title, subTitle, align, action, ...props }) {
   return (
     <div
-      className={cn("card-header", {
-        [`card-header--${align}`]: align,
+      className={cn("Card__header", {
+        [`Card__header--${align}`]: align,
       })}
       style={propsToStyles(props)}
     >
-      <div className="card-header__content">
+      <div className="Card__header__content">
         <Text as="h1" size="large" grey={700} weight="medium" m={0}>
           {title}
         </Text>
         {subTitle && (
-          <Label as="h2" mb="0px">
+          <Text as="h2" mb="0px" color="grey500">
             {subTitle}
-          </Label>
+          </Text>
         )}
       </div>
-      {action && <div className="card-header__action">{action}</div>}
+      {action && <div className="Card__header__action">{action}</div>}
     </div>
   );
 }
 
 function CardBody({ children, ...props }) {
   return (
-    <div className="card-body" style={propsToStyles(props)}>
+    <div className="Card__body" style={propsToStyles(props)}>
       {children}
     </div>
   );
 }
 
+function CardFooter({ children, ...props }) {
+  return (
+    <Box className="Card__footer" {...props}>{children}</Box>
+  )
+}
+
 Card.Header = CardHeader;
 Card.Body = CardBody;
+Card.Footer = CardFooter;
 
 CardHeader.propTypes = {
   title: PropTypes.string.isRequired,

@@ -1,0 +1,88 @@
+@import "../variables.scss";
+
+.Control {
+  $size: 16px;
+  width: $size;
+  height: $size;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $grey300;
+  background: white;
+  border-radius: 4px;
+  position: relative;
+  margin-top: 2px;
+
+  &__wrapper {
+    display: flex;
+    cursor: default;
+  }
+
+  &__label,
+  &__content {
+    margin: 0 0 0 6px;
+  }
+  &__content {
+    color: $grey600;
+  }
+
+  &--checkbox.Control--checked {
+    background: $blue500;
+    border: 1px solid $blue500 !important;
+  }
+  &--radio {
+    border-radius: 100%;
+
+    &.Control--checked {
+      border: 1px solid $blue500;
+
+      &:after {
+        background: $blue500;
+      }
+    }
+    &:after {
+      $size: $size * 0.7;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: $size;
+      height: $size;
+      border-radius: 100%;
+      background: transparent;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.45;
+  }
+  &:not(&--disabled) {
+    cursor: pointer;
+  }
+
+  &--hovered:not(&--disabled):not(&--checked) {
+    border: 1px solid $grey400;
+
+    &.Control--radio:after {
+      width: 4px;
+      height: 4px;
+      background: $grey400;
+    }
+
+    svg path {
+      fill: $grey200 !important;
+    }
+  }
+
+  svg {
+    width: 65%;
+
+    path {
+      fill: white;
+    }
+  }
+}

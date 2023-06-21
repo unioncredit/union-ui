@@ -22,6 +22,7 @@ export const Box = forwardRef(
       fluid,
       fullWidth,
       wrap = "nowrap",
+      style,
       ...props
     },
     ref
@@ -40,6 +41,7 @@ export const Box = forwardRef(
           justifyContent: justify,
           flexDirection: directionMap[direction],
           flexWrap: wrap,
+          ...style,
           ...propsToStyles(props),
         },
         ref,
@@ -54,11 +56,13 @@ Box.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  align: PropTypes.oneOf(["start", "end", "center", "baseline"]),
+  align: PropTypes.oneOf(["start", "end", "center", "baseline", "flex-end", "flex-start"]),
   justify: PropTypes.oneOf([
     "start",
     "end",
     "center",
+    "flex-end",
+    "flex-start",
     "space-between",
     "space-around",
   ]),

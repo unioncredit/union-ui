@@ -5,7 +5,8 @@ import { NetworkSwitcher, NetworkButton } from "./NetworkSwitcher";
 
 import AbitrumAvatar from "../assets/arbitrum-avatar.png";
 import EthereumAvatar from "../assets/ethereum-avatar.png";
-import KovanAvatar from "../assets/kovan-avatar.png";
+import OptimismAvatar from "../assets/optimism-avatar.png";
+import GoerliAvatar from "../assets/goerli-avatar.png";
 
 export default {
   component: NetworkSwitcher,
@@ -15,6 +16,7 @@ export default {
 const options = [
   {
     label: "Ethereum",
+    labelWithVersion: "Ethereum (v1)",
     type: "ethereum",
     id: "ethereum",
     imageSrc: EthereumAvatar,
@@ -22,16 +24,26 @@ const options = [
   },
   {
     label: "Arbitrum",
+    labelWithVersion: "Arbitrum (v1)",
     type: "arbitrum",
     id: "arbitrum",
     imageSrc: AbitrumAvatar,
     as: NetworkButton,
   },
   {
-    label: "Kovan",
-    type: "kovan",
-    id: "kovan",
-    imageSrc: KovanAvatar,
+    label: "Optimism",
+    labelWithVersion: "Optimism (v2)",
+    type: "optimism",
+    id: "optimism",
+    imageSrc: OptimismAvatar,
+    as: NetworkButton,
+  },
+  {
+    label: "Goerli",
+    labelWithVersion: "Goerli (v1)",
+    type: "goerli",
+    id: "goerli",
+    imageSrc: GoerliAvatar,
     as: NetworkButton,
   },
 ];

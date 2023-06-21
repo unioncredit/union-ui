@@ -1,0 +1,11 @@
+@import "../variables";
+
+.HiddenInput {
+  &__content {
+    width: 100%;
+    background: $grey50;
+    border: 1px solid $grey200;
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+}

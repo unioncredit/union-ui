@@ -1,0 +1,31 @@
+@import "../variables.scss";
+
+.NavItem {
+  cursor: pointer;
+  padding: 8px 25px;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  border-radius: 8px;
+  border: 0.5px solid transparent;
+  color: $grey500;
+  background-color: $grey50;
+  height: 40px;
+  box-sizing: border-box;
+
+  &--active,
+  &:active {
+    color: $grey900;
+    border: 0.5px solid $grey300 !important;
+  }
+
+  &:hover {
+    color: $grey700;
+    border: 0.5px solid $grey200;
+  }
+
+  &--active,
+  &:active,
+  &:hover {
+    background: $grey100;
+  }
+}

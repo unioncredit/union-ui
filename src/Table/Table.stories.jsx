@@ -6,13 +6,11 @@ import { TableCell } from "./TableCell";
 import { TableHead } from "./TableHead";
 import { Avatar } from "../Avatar";
 import { Text } from "../Text";
-import { Label } from "../Label";
 import { Badge } from "../Badge";
-import { Bar } from "../Bar";
+import { PercentBar } from "../PercentBar";
 import { Skeleton } from "../Skeleton";
 import { Card } from "../Card";
-import { Box } from "../Box";
-import { Pagination } from "../Pagination/Pagination";
+import { Pagination } from "../Pagination";
 
 export default {
   component: Table,
@@ -44,12 +42,12 @@ export const Default = () => (
               <Text>Primary Label</Text>
             </TableCell>
             <TableCell>
-              <Label as="p" size="small">
+              <Text size="small">
                 Small single label
-              </Label>
+              </Text>
             </TableCell>
             <TableCell align="center">
-              <Bar size="small" percentage={60} label="62% No" secondaryBar />
+              <PercentBar size="small" percentage={60} label="62% No" secondaryBar />
             </TableCell>
             <TableCell align="right">
               {i === 2 ? (

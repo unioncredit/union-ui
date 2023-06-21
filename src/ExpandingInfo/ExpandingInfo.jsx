@@ -6,13 +6,23 @@ import PropTypes from "prop-types";
 
 import { Box } from "../Box";
 import { Text } from "../Text";
-import DropdownArrowIcon from "../icons/dropdownArrow.svg";
+import { propsToStyles } from "../spacing";
+import DropdownArrowIcon from "../Icons/internal/DropdownArrow.svg";
 
-export function ExpandingInfo({ icon: Icon, title, children, className }) {
+export function ExpandingInfo({
+  icon: Icon,
+  title,
+  children,
+  className,
+  ...props
+}) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Box direction="vertical" className={cn("ExpandingInfo", className, {
+    <Box
+      direction="vertical"
+      style={propsToStyles(props)}
+      className={cn("ExpandingInfo", className, {
       "open": open,
     })}>
       <Box as="header" align="center" className="ExpandingInfo__header" onClick={() => setOpen(!open)}>
@@ -20,7 +30,7 @@ export function ExpandingInfo({ icon: Icon, title, children, className }) {
         <Text m={0} size="medium" weight="medium">{title}</Text>
 
         <Box className="ExpandingInfo__arrow" justify="center" align="center">
-          <DropdownArrowIcon style={{width: 24}} />
+          <DropdownArrowIcon  />
         </Box>
       </Box>
 

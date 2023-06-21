@@ -1,0 +1,68 @@
+.IconBadge {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  &:not(.IconBadge--no-color) {
+    path, circle {
+      fill: currentColor;
+    }
+  }
+
+  &--icon-size {
+    &-small {
+      svg {
+        width: 45% !important;
+        height: 45% !important;
+      }
+    }
+
+    &-regular {
+      svg {
+        width: 55% !important;
+        height: 55% !important;
+      }
+    }
+
+    &-large {
+      svg {
+        width: 65% !important;
+        height: 65% !important;
+      }
+    }
+
+    &-fill {
+      svg {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+
+  &--size {
+    &-small {
+      width: 16px;
+      height: 16px;
+    }
+    &-regular {
+      width: 20px;
+      height: 20px;
+    }
+    &-large {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--variant {
+    &-filled {
+
+    }
+    &-outlined {
+      background-color: transparent !important;
+      border: 2px solid;
+    }
+  }
+}

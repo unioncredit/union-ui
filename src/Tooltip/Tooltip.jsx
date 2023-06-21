@@ -2,40 +2,54 @@ import React from "react";
 import cn from "classnames";
 import PropTypes from "prop-types";
 
-import "./tooltip.scss";
+import "./Tooltip.scss";
+import { propsToStyles } from "../spacing";
 
 export function Tooltip({
   position,
-  children,
+  title,
   content,
   alwaysShow,
+  shrink,
+  enabled,
+  children,
   className,
+  ...props
 }) {
-  return (
-    <span
-      className={cn("tooltip", className, {
-        [`tooltip--${position}`]: position,
-        "tooltip--alwaysShow": alwaysShow,
+  return !enabled ? children : (
+    <div
+      style={propsToStyles(props)}
+      className={cn("Tooltip", className, {
+        [`Tooltip--${position}`]: position,
+        "Tooltip--alwaysShow": alwaysShow,
+        "Tooltip--shrink": shrink,
       })}
     >
-      <span className="tooltip__content">
+      <div className="Tooltip__content">
+        {title && (
+          <p className="Tooltip__title">{title}</p>
+        )}
         {content}
         <span className="down">
           <span />
         </span>
-      </span>
+      </div>
       {children}
-    </span>
+    </div>
   );
 }
 
 Tooltip.propTypes = {
   position: PropTypes.oneOf(["top", "right", "bottom", "left"]),
-  content: PropTypes.string,
+  title: PropTypes.string,
+  content: PropTypes.string.isRequired,
   alwaysShow: PropTypes.bool,
+  shrink: PropTypes.bool,
+  enabled: PropTypes.bool,
   className: PropTypes.string,
 };
 
 Tooltip.defaultProps = {
   position: "top",
+  enabled: true,
 };

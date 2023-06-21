@@ -1,0 +1,79 @@
+@import "../variables.scss";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid $grey200;
+  padding: 16px 0;
+
+  &__number {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin: 0 4px;
+    background: transparent;
+    color: $grey600;
+
+    &:not(.pagination__number--ellipsis) {
+      cursor: pointer;
+    }
+
+    &--active {
+      color: $grey800;
+      background: $grey100;
+      border: 1px solid $grey200;
+    }
+
+    &:hover:not(.pagination__number--active, .pagination__number--ellipsis) {
+      border: 1px solid $grey300;
+    }
+
+    &:active:not(.pagination__number--active, .pagination__number--ellipsis) {
+      border: 1px solid $grey400;
+      color: $grey800;
+    }
+  }
+
+  &__ellipsis {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+  }
+
+  &__arrow {
+    padding: 0;
+    background: white !important;
+    border: 1px solid $grey200;
+
+    svg {
+      width: 24px;
+
+      polygon {
+        fill: $grey600;
+      }
+    }
+
+    &--disabled {
+      cursor: default !important;
+
+      svg polygon {
+        fill: $grey200;
+      }
+
+      &:hover {
+        border: unset !important;
+        background: $grey50 !important;
+      }
+    }
+
+    &--left {
+      transform: rotate(180deg);
+    }
+  }
+}

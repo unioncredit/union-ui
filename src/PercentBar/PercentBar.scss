@@ -1,0 +1,59 @@
+@import "../variables.scss";
+
+.PercentBar {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: 2px;
+  box-sizing: border-box;
+
+  &--max .PercentBar__indicator__progress {
+    border-radius: 4px;
+  }
+
+  &--hasMarkerLabel {
+    padding-top: 20px;
+  }
+
+  &__label {
+    margin: 0 5px 0 0;
+    color: $grey600;
+  }
+
+  &__indicator {
+    height: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    border-radius: 4px;
+    position: relative;
+    background: $grey300;
+
+    &__progress {
+      background: $grey600;
+      height: 100%;
+      border-radius: 4px 0 0 4px;
+    }
+
+    &__marker {
+      position: absolute;
+      top: -25%;
+      right: 0;
+      width: 2px;
+      border-radius: 1px;
+      background: $grey500;
+      height: 150%;
+    }
+
+    &__markerLabel {
+      position: absolute;
+      bottom: calc(100% + 4px);
+      transform: translateX(-50%);
+      margin: 0;
+    }
+  }
+}
+
+.text.PercentBar-label {
+
+}

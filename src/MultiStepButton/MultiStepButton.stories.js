@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { MultiStepButton } from "./MultiStepButton";
 import { Box } from "../Box";
 
-import CloudCheck from "../icons/cloudCheck.svg";
 import { Toggle } from "../Toggle";
 
 export default {
@@ -31,7 +30,6 @@ export const Default = () => {
   const GaslessToggle = () => {
     return (
       <Toggle
-        size="small"
         color="primary"
         label="Gasless approval"
         labelPosition="start"
@@ -69,7 +67,6 @@ export const Default = () => {
           action={{
             variant: "primary",
             label: "Pay Membership Fee",
-            icon: CloudCheck,
           }}
           label="Membership Fee: 1.00 UNION"
         />

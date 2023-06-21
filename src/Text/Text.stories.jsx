@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Text } from "./Text";
-import { Label } from "../Label";
+import { Box } from "../Box";
 
 export default {
   component: Text,
@@ -10,21 +10,21 @@ export default {
 
 export const All = () => (
   <>
-    <Text>The quick brown fox jumps over a lazy dog.</Text>
-    <Text size="large">The quick brown fox jumps over a lazy dog.</Text>
+    <Box mb="30px" direction="vertical">{Weights()}</Box>
+    <Box mb="30px" direction="vertical">{Greys()}</Box>
+    <Box mb="30px" direction="vertical">{Colors()}</Box>
   </>
 );
 
-export const Weights = () => (
-  <>
-    <Text weight="regular" grey={700}>
+export const Weights = () => {
+  const weights = ["light", "regular", "medium", "bold", "black"];
+
+  return weights.map((weight) => (
+    <Text weight={weight} grey={700}>
       The quick brown fox jumps over a lazy dog.
     </Text>
-    <Text weight="medium" grey={700}>
-      The quick brown fox jumps over a lazy dog.
-    </Text>
-  </>
-);
+  ));
+};
 
 export const Greys = () => (
   <>

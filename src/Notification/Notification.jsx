@@ -1,19 +1,18 @@
+import "./Notification.scss";
+
 import React from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
 
 import { Text } from "../Text";
+import { LinkOutIcon } from "../Icons";
+import CloseIcon from "../Icons/internal/Close.svg";
+import error from "../Icons/icons/Failed.svg";
+import success from "../Icons/icons/Success.svg";
+import info from "../Icons/icons/Info.svg";
+import pending from "../Icons/icons/Pending.svg";
 
-import success from "../icons/success.svg";
-import error from "../icons/failed.svg";
-import info from "../icons/info.svg";
-import pending from "../icons/pending.svg";
-import External from "../icons/external.svg";
-import Close from "../icons/close.svg";
-
-import "./notification.scss";
-
-export function Notification({ variant, title, children, onClose, link }) {
+export function Notification({ variant, title, content, onClose, link }) {
   const Icon = {
     error,
     success,
@@ -23,24 +22,29 @@ export function Notification({ variant, title, children, onClose, link }) {
 
   return (
     <div
-      className={cn("notification", {
-        [`notification--${variant}`]: variant,
+      className={cn("Notification", {
+        [`Notification--${variant}`]: variant,
       })}
     >
-      <div className="notification__icon">
+      <div className="Notification__icon">
         <Icon />
       </div>
-      <div className="notification__content">
-        <Text grey={700} mb="6px">
+      <div className="Notification__content">
+        <Text m={0} size="medium" grey={800} weight="medium">
           {title}
         </Text>
-        {children}
+        {content && (
+          <Text m="4px 0 0" grey={500} weight="medium">{content}</Text>
+        )}
       </div>
-      <div className="notification__actions">
-        <Close onClick={onClose} />
+      <div className="Notification__actions">
+        <button className="Notification__close" onClick={onClose}>
+          <CloseIcon  />
+        </button>
+
         {link && (
-          <a href={link} target="_blank">
-            <External />
+          <a href={link} target="_blank" className="Notification__link">
+            <LinkOutIcon />
           </a>
         )}
       </div>

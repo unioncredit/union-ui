@@ -1,0 +1,90 @@
+@import "../variables.scss";
+
+.ProgressListItem {
+  $size: 44px;
+  $bp: 600px;
+
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  &__check {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+
+    path {
+      fill: white;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -$size - 24px;
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    z-index: 2;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #292524;
+
+    @media screen and (max-width: $bp) {
+      display: none;
+    }
+
+    .ProgressListItem--complete & {
+      background-color: $green400;
+      color: white;
+    }
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    @media screen and (max-width: $bp) {
+      display: none;
+    }
+  }
+
+  &:before {
+    width: 1px;
+    top: $size + 8px;
+    bottom: 6px;
+    left: -$size/2 - 24px;
+    background: $grey300;
+    z-index: 1;
+  }
+
+  &:after {
+    top: 0;
+    bottom: 0;
+    left: -72px;
+    background: $grey100;
+    width: 52px;
+  }
+
+  &:first-of-type:after {
+    top: -3px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+  }
+  &:last-of-type:after {
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    bottom: calc(100% + -50px);
+  }
+  &:last-of-type:before {
+    display: none;
+  }
+}

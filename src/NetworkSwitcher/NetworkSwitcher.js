@@ -1,12 +1,12 @@
+import "./NetworkSwitcher.scss";
+
 import React, { useEffect, useRef, useState } from "react";
 import cn from "classnames";
 
 import { Avatar } from "../Avatar";
 import { Button } from "../Button";
-import { ContextMenu } from "../ContextMenu";
-import WireCheck from "../icons/wireCheck.svg";
-
-import "./network-switcher.scss";
+import { PopoverMenu } from "../PopoverMenu";
+import NetworkSelectCheckIcon from "../Icons/internal/NetworkSelectCheck.svg";
 
 export function NetworkButton({
   selected,
@@ -18,16 +18,16 @@ export function NetworkButton({
 }) {
   return (
     <Button
-      variant="lite"
       onClick={onClick}
       className={cn("networkSwitcher", {
         [`networkSwitcher--${type}`]: type,
+        "selected": selected,
       })}
       label={
         <>
           <Avatar src={imageSrc} />
           <span>{children || label}</span>
-          {selected && <WireCheck />}
+          {selected && <NetworkSelectCheckIcon width="24px" className="networkSwitcher__check-icon" />}
         </>
       }
     />
@@ -49,16 +49,19 @@ export function NetworkSwitcher({
   };
 
   useEffect(() => {
-    if (selectedOption.id != prevSelectedOption.current.id) {
+    if (selectedOption.id !== prevSelectedOption.current.id) {
       prevSelectedOption.current = selectedOption;
       setSelected(selectedOption);
     }
   }, [selectedOption]);
 
   return (
-    <ContextMenu
+    <PopoverMenu
+      className="networkSwitcher__menu"
       items={options.map((option) => ({
         ...option,
+        label: option.labelWithVersion || option.label,
+        key: option.chainId,
         onClick: handleClick(option),
         selected: option.id === selected.id,
       }))}
