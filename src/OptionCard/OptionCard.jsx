@@ -8,6 +8,8 @@ import { Box } from "../Box";
 import { Control } from "../Control";
 import { Text } from "../Text";
 import { DaiIcon, UnionIcon } from "../Icons";
+import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
+import { Tooltip } from "../Tooltip";
 
 export function OptionCard({
   title,
@@ -15,6 +17,7 @@ export function OptionCard({
   checked,
   value,
   token,
+  tooltip,
   ...props
 }) {
   return (
@@ -28,11 +31,19 @@ export function OptionCard({
         />
 
         <Box p="0 12px" direction="vertical">
-          {title && (
-            <Text grey={800} size="medium" weight="medium" className="OptionCard__title">
-              {title}
-            </Text>
-          )}
+          <Box>
+            {title && (
+              <Text grey={800} size="medium" weight="medium" className="OptionCard__title">
+                {title}
+              </Text>
+            )}
+
+            {tooltip && (
+              <Tooltip ml="4px" mt="5px" {...tooltip}>
+                <InfoOutlinedIcon width="13px" />
+              </Tooltip>
+            )}
+          </Box>
 
           {content && (
             <Text grey={600} className="OptionCard__content">
