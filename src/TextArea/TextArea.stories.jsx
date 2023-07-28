@@ -1,37 +1,34 @@
 import React from "react";
+
 import { Box } from "../Box";
-
-import { Input } from "./Input";
-import { InputRow } from "./InputRow";
-import { Button } from "../Button";
+import { TextArea } from "./TextArea";
 import { Dai } from "../Dai";
-
 import { SearchIcon } from "../Icons";
 
 export default {
-  component: Input,
-  title: "Components/Input",
+  component: TextArea,
+  title: "Components/TextArea",
 };
 
 export const Inputs = () => (
   <>
     <Box mb="20px">
-      <Input placeholder="Placeholder" onMaxClick={() => {}} />
+      <TextArea placeholder="Placeholder" onMaxClick={() => {}} />
     </Box>
     <Box mb="20px">
-      <Input type="number" placeholder="Placeholder" />
+      <TextArea placeholder="Placeholder" />
     </Box>
     <Box mb="20px">
-      <Input value="This is readonly" onMaxClick={() => {}} readonly />
+      <TextArea value="This is readonly" onMaxClick={() => {}} readonly />
     </Box>
     <Box mb="20px">
-      <Input placeholder="Placeholder" onMaxClick={() => {}} disabled />
+      <TextArea placeholder="Placeholder" onMaxClick={() => {}} disabled />
     </Box>
     <Box mb="20px">
-      <Input label="TextArea label" placeholder="Placeholder" />
+      <TextArea label="TextArea label" placeholder="Placeholder" />
     </Box>
     <Box mb="20px">
-      <Input
+      <TextArea
         label="TextArea label"
         rightLabel="Right label"
         caption="382.91 DAI Available"
@@ -39,7 +36,7 @@ export const Inputs = () => (
       />
     </Box>
     <Box mb="20px">
-      <Input
+      <TextArea
         placeholder="Placeholder"
         onMaxClick={() => {}}
         prefix={<SearchIcon />}
@@ -47,7 +44,7 @@ export const Inputs = () => (
     </Box>
 
     <Box mb="20px">
-      <Input
+      <TextArea
         label="Clickable Caption"
         caption={
           <>
@@ -59,18 +56,8 @@ export const Inputs = () => (
       />
     </Box>
 
-    <InputRow align="center" mb="20px">
-      <Input
-        label="TextArea label"
-        caption="382.91 DAI Available"
-        placeholder="Placeholder"
-        onMaxClick={() => {}}
-        cta={<Button label="Withdraw" />}
-      />
-    </InputRow>
-
     <Box mb="20px">
-      <Input
+      <TextArea
         label="TextArea label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
@@ -79,7 +66,7 @@ export const Inputs = () => (
     </Box>
 
     <Box mb="20px">
-      <Input
+      <TextArea
         label="Search"
         placeholder="Placeholder"
         prefix={<SearchIcon />}
@@ -87,7 +74,7 @@ export const Inputs = () => (
     </Box>
 
     <Box mb="20px">
-      <Input
+      <TextArea
         label="TextArea label"
         error="input error"
         caption="382.91 DAI Available"
@@ -96,7 +83,7 @@ export const Inputs = () => (
     </Box>
 
     <Box mb="20px">
-      <Input
+      <TextArea
         label="TextArea label"
         error="input error"
         caption="382.91 DAI Available"
@@ -110,12 +97,11 @@ export const Inputs = () => (
 export const Disabled = () => (
   <>
     <Box mb="20px">
-      <Input disabled placeholder="Placeholder" onMaxClick={() => {}} />
+      <TextArea disabled placeholder="Placeholder" onMaxClick={() => {}} />
     </Box>
     <Box mb="20px">
-      <Input
+      <TextArea
         disabled
-        type="number"
         caption="Something here"
         placeholder="Placeholder"
         error="Something broke"
