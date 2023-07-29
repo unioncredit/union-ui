@@ -1,0 +1,86 @@
+@import "src/variables";
+
+.SteppedSection {
+  width: 100%;
+  counter-increment: count;
+}
+
+.SteppedSection__header {
+  width: 100%;
+  padding: 16px;
+
+  &__body {
+    min-height: 28px;
+  }
+  &__edit {
+    display: none;
+  }
+  &__icon {
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    background: $grey100;
+    color: $grey800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    svg {
+      display: none;
+      width: 8px;
+      height: 8px;
+
+      path {
+        fill: $grey400;
+      }
+    }
+
+    &::before {
+      font-size: 14px;
+      font-weight: 500;
+      content: counter(count);
+    }
+  }
+}
+
+.SteppedSection__body {
+  width: 100%;
+  padding: 0 16px 16px;
+}
+
+.SteppedSection {
+  &.active {
+    .SteppedSection__header__icon {
+      color: white;
+      background: $blue500;
+    }
+
+    .SteppedSection__header.SteppedSection__header--collapsed {
+      display: none;
+    }
+  }
+  &:not(.active) {
+    &.complete {
+      .SteppedSection__header__edit {
+        display: block;
+      }
+      .SteppedSection__header__icon {
+        &::before {
+          display: none;
+        }
+
+        svg {
+          display: block !important;
+        }
+      }
+    }
+
+    .SteppedSection__header:not(.SteppedSection__header--collapsed),
+    .SteppedSection__body, {
+      display: none;
+    }
+  }
+}
