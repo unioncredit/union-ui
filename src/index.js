@@ -13,6 +13,7 @@ export * from "./Card";
 export * from "./CircleProgress";
 export * from "./Collapse";
 export * from "./Control";
+export * from "./ControlRows";
 export * from "./Dai";
 export * from "./DistributionBar";
 export * from "./Divider";
