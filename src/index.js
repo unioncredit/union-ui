@@ -4,6 +4,7 @@ export * from "./AlertBanner";
 export * from "./Avatar";
 export * from "./AvatarBadgeRow";
 export * from "./Badge";
+export * from "./BadgeIndicator";
 export * from "./BadgeRow";
 export * from "./Box";
 export * from "./Button";

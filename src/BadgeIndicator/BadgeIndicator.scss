@@ -1,0 +1,35 @@
+@import "../variables.scss";
+
+.BadgeIndicator {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 14px;
+  white-space: nowrap;
+  background: $grey50;
+  border: 1px solid $grey200;
+  color: $grey700;
+  display: inline-flex !important;
+
+  &--textColor {
+    @include colors(color);
+  }
+
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &__indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    display: block;
+    margin-right: 4px;
+    margin-top: 1px;
+
+    &-color {
+      @include colors(background);
+    }
+  }
+}
