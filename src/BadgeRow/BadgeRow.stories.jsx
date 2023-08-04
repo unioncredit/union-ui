@@ -2,6 +2,7 @@ import React from "react";
 
 import { BadgeRow } from "./BadgeRow";
 import { Badge } from "../Badge";
+import { BadgeIndicator } from "../BadgeIndicator";
 
 export default {
   component: BadgeRow,
@@ -36,9 +37,19 @@ export const Monotone = () => {
   )
 }
 
+export const Indicators = () => {
+  return (
+    <BadgeRow mb="10px">
+      <Badge color="grey" label="0x1234...5678" />
+      <BadgeIndicator color="red500" label="Write-Off" />
+    </BadgeRow>
+  )
+};
+
 export const All = () => (
   <>
     <Colors />
     <Monotone />
+    <Indicators />
   </>
 );

@@ -1,18 +1,23 @@
 .badgeRow {
   flex-direction: row-reverse !important;
 
-  .badge {
+  .badge,
+  .BadgeIndicator {
     padding-left: 24px !important;
     margin-left: -18px;
-    border: 1px solid white;
     box-sizing: border-box;
     z-index: 1;
   }
-  .badge:last-child {
+  .badge {
+    border: 1px solid white;
+  }
+  .badge:last-child,
+  .BadgeIndicator:last-child {
     padding-left: 8px !important;
     margin-left: 0 !important;
   }
-  .badge:not(:last-child) {
+  .badge:not(:last-child),
+  .BadgeIndicator:not(:last-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
