@@ -38,6 +38,7 @@ export { default as LeaderboardIcon } from "./icons/Leaderboard.svg";
 export { default as LinkIcon } from "./icons/Link.svg";
 export { default as LinkOutIcon } from "./icons/LinkOut.svg";
 export { default as ListIcon } from "./icons/List.svg";
+export { default as LockIcon } from "./icons/Lock.svg";
 export { default as ManageIcon } from "./icons/Manage.svg";
 export { default as MarketingIcon } from "./icons/Marketing.svg";
 export { default as NewMemberIcon } from "./icons/NewMember.svg";
