@@ -1,9 +1,9 @@
+import "./Popover.scss";
+
 import React, { useState, useRef, useEffect } from "react";
 import cn from "classnames";
 
 import { useClickOutside } from "../util";
-
-import "./Popover.scss";
 
 export function Popover({ open, children, position, button, className, stickyMobile, onClose }) {
   const ref = useRef(null);
@@ -27,7 +27,9 @@ export function Popover({ open, children, position, button, className, stickyMob
   }
 
   return (
-    <div ref={ref} className={cn("Popover__wrapper", className)}>
+    <div ref={ref} className={cn("Popover__wrapper", className, {
+      "open": popoverOpen,
+    })}>
       {button ? (
         button(toggleOpen)
       ) : (

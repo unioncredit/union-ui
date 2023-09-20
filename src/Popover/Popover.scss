@@ -38,7 +38,10 @@
   &__wrapper {
     position: relative;
     display: inline-block;
-    z-index: 999;
+
+    &.open {
+      z-index: 999;
+    }
   }
 
   &--right {
