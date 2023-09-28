@@ -17,21 +17,25 @@
       left: 2.5%;
       width: 95%;
       top: auto;
+      z-index: 2;
+    }
+  }
 
-      &::before {
-        content: ' ';
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: white;
-        opacity: 0.5;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        pointer-events: none;
-      }
+  &__overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    opacity: 0.5;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+
+    @media screen and (min-width: $breakpoint-mobile) {
+      display: none;
     }
   }
 

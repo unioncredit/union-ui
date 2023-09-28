@@ -45,14 +45,17 @@ export function Popover({ open, children, position, button, className, stickyMob
         </div>
       )}
       {popoverOpen && (
-        <div
-          className={cn("Popover", {
-            "Popover--sticky": stickyMobile,
-            [`Popover--${position}`]: position,
-          })}
-        >
-          {children}
-        </div>
+        <>
+          <div className="Popover__overlay" onClick={() => setOpen(false)} />
+          <div
+            className={cn("Popover", {
+              "Popover--sticky": stickyMobile,
+              [`Popover--${position}`]: position,
+            })}
+          >
+            {children}
+          </div>
+        </>
       )}
     </div>
   );
