@@ -38,7 +38,7 @@ export function NumericalRow({ label, value, tooltip, error }) {
 
         {tooltip && (
           <Tooltip {...tooltip}>
-            <InfoOutlinedIcon style={{ marginTop: "4px" }} width="14px" />
+            <InfoOutlinedIcon width="14px" />
           </Tooltip>
         )}
       </Box>
