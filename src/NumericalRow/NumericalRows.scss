@@ -7,6 +7,10 @@
     margin-bottom: 8px;
   }
 
+  .Tooltip {
+    display: flex;
+  }
+
   &--error {
     p, path {
       fill: $red500;
