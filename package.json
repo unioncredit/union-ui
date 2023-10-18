@@ -1,6 +1,6 @@
 {
   "name": "@unioncredit/ui",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
