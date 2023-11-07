@@ -9,7 +9,7 @@ import { Tooltip } from "../Tooltip";
 import { propsToStyles } from "../spacing";
 import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
 
-export function NumericalRows({ items, ...props }) {
+export function NumericalRows({ items, weight = "medium", ...props }) {
   return (
     <Box
       fluid
@@ -24,7 +24,7 @@ export function NumericalRows({ items, ...props }) {
   )
 }
 
-export function NumericalRow({ label, value, tooltip, error }) {
+export function NumericalRow({ label, value, weight, tooltip, error }) {
   return (
     <Box
       align="center"
@@ -34,7 +34,7 @@ export function NumericalRow({ label, value, tooltip, error }) {
       })}
     >
       <Box align="center" mr="5px">
-        <Text grey={500} m="0 5px 0 0" size="medium" weight="medium">{label}</Text>
+        <Text grey={500} m="0 5px 0 0" size="medium" weight={weight}>{label}</Text>
 
         {tooltip && (
           <Tooltip {...tooltip}>
@@ -43,7 +43,7 @@ export function NumericalRow({ label, value, tooltip, error }) {
         )}
       </Box>
 
-      <Text grey={700} m={0} size="medium" weight="medium">{value}</Text>
+      <Text grey={700} m={0} size="medium" weight={weight}>{value}</Text>
     </Box>
   )
 }
