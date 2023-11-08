@@ -18,7 +18,7 @@ export function NumericalRows({ items, weight = "medium", ...props }) {
       style={propsToStyles(props)}
     >
       {items.map((props, index) => (
-        <NumericalRow key={index} {...props} />
+        <NumericalRow key={index} weight={weight} {...props} />
       ))}
     </Box>
   )
