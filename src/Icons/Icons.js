@@ -34,6 +34,7 @@ export { default as HamburgerIcon } from "./icons/Hamburger.svg";
 export { default as IdentityIcon } from "./icons/Identity.svg";
 export { default as IncreaseVouchIcon } from "./icons/IncreaseVouch.svg";
 export { default as InfoIcon } from "./icons/Info.svg";
+export { default as InfoOutlinedIcon } from "./icons/InfoOutlined.svg";
 export { default as LeaderboardIcon } from "./icons/Leaderboard.svg";
 export { default as LinkIcon } from "./icons/Link.svg";
 export { default as LinkOutIcon } from "./icons/LinkOut.svg";

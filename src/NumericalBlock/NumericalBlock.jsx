@@ -23,11 +23,14 @@ export function NumericalBlock({
   titleTooltip,
   subtitleTooltip,
   subtitleProps,
+  smallDecimals,
   barProps,
   dotColor,
   className,
   ...props
 }) {
+  const values = value.split(".");
+
   return (
     <Box
       className={cn("NumericalBlock", className, {
@@ -61,11 +64,20 @@ export function NumericalBlock({
       </Box>
 
       {value && (
-        <Text className="NumericalBlock__value" m="4px 0 0" grey={800} weight="medium">
-          {value}
+        <Box m="4px 0 0" align="center" className="NumericalBlock__value">
+          <Text m={0} grey={800} weight="medium">
+            {smallDecimals && values.length === 2 ? (
+              <>
+                {values[0]}.
+
+                <span>{values[1]}</span>
+              </>
+            ) : value}
+          </Text>
+
           {token === "dai" && <DaiIcon className="NumericalBlock__token" />}
           {token === "union" && <UnionIcon className="NumericalBlock__token" />}
-        </Text>
+        </Box>
       )}
 
       {barProps && (

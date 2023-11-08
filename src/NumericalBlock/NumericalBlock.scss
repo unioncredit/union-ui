@@ -30,8 +30,11 @@
   }
   &__value {
     color: $grey800;
-    display: flex;
-    align-items: center;
+
+    span {
+      display: inline-block;
+      font-size: 70%;
+    }
   }
   &__token {
     width: 16px;
@@ -94,14 +97,14 @@
     }
 
     &-medium {
-      .NumericalBlock__value {
+      .NumericalBlock__value p {
         font-size: 24px;
         line-height: 32px;
       }
     }
 
     &-large {
-      .NumericalBlock__value {
+      .NumericalBlock__value p {
         font-size: 36px;
         line-height: 40px;
 
@@ -113,7 +116,7 @@
     }
 
     &-regular {
-      .NumericalBlock__value {
+      .NumericalBlock__value p {
         font-size: 30px;
         line-height: 36px;
 
@@ -129,7 +132,7 @@
         font-size: 14px;
         line-height: 20px;
       }
-      .NumericalBlock__value {
+      .NumericalBlock__value p {
         font-size: 20px;
         line-height: 28px;
       }
@@ -142,7 +145,7 @@
         font-size: 16px;
         line-height: 24px;
       }
-      .NumericalBlock__value {
+      .NumericalBlock__value p {
         font-size: 18px;
         line-height: 28px;
         justify-content: flex-start;
