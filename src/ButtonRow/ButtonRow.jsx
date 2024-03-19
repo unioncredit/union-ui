@@ -5,25 +5,18 @@ import PropTypes from "prop-types";
 
 import { Box } from "../Box";
 
-export const ButtonRow = ({
-  joined,
-  children,
-  className,
-  ...props
-}) => {
+export const ButtonRow = ({ joined, children, className, ...props }) => {
   return (
     <Box
       {...props}
-      className={
-        cn(className, "button-row", {
-          "button-row--joined": joined
-        }
-      )}
+      className={cn(className, "button-row", {
+        "button-row--joined": joined,
+      })}
     >
       {children}
     </Box>
   );
-}
+};
 
 ButtonRow.propTypes = {
   joined: PropTypes.bool,

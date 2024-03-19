@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import { Control } from "../Control";
 import { Text } from "../Text";
-import { DaiIcon, UnionIcon } from "../Icons";
+import { DaiIcon, UsdcIcon, UnionIcon } from "../Icons";
 
 export function OptionCard({
   title,
@@ -18,18 +18,25 @@ export function OptionCard({
   ...props
 }) {
   return (
-    <Box {...props} align="center" justify="space-between" className={cn("OptionCard", {
-      "OptionCard--checked": checked,
-    })}>
+    <Box
+      {...props}
+      align="center"
+      justify="space-between"
+      className={cn("OptionCard", {
+        "OptionCard--checked": checked,
+      })}
+    >
       <Box align="center" className="OptionCard__left">
-        <Control
-          type="radio"
-          checked={checked}
-        />
+        <Control type="radio" checked={checked} />
 
         <Box p="0 12px" direction="vertical">
           {title && (
-            <Text grey={800} size="medium" weight="medium" className="OptionCard__title">
+            <Text
+              grey={800}
+              size="medium"
+              weight="medium"
+              className="OptionCard__title"
+            >
               {title}
             </Text>
           )}
@@ -49,11 +56,12 @@ export function OptionCard({
           </Text>
 
           {token === "dai" && <DaiIcon className="OptionCard__token" />}
+          {token === "usdc" && <UsdcIcon className="OptionCard__token" />}
           {token === "union" && <UnionIcon className="OptionCard__token" />}
         </Box>
       )}
     </Box>
-  )
+  );
 }
 
 OptionCard.propTypes = {
@@ -61,5 +69,5 @@ OptionCard.propTypes = {
   content: PropTypes.string,
   checked: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  token: PropTypes.oneOf(["dai", "union"])
+  token: PropTypes.oneOf(["dai", "union", "usdc"]),
 };

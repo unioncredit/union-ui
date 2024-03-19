@@ -2,7 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { IconBadge } from "../IconBadge";
-import { ArbitrumIcon, DaiIcon, EthereumIcon, GoerliIcon, OptimismIcon, UnionLineIcon } from "../Icons";
+import {
+  ArbitrumIcon,
+  DaiIcon,
+  EthereumIcon,
+  GoerliIcon,
+  OptimismIcon,
+  UnionLineIcon,
+  UsdcIcon,
+} from "../Icons";
 
 export const TokenBadge = ({ token, ...props }) => {
   const tokenProps = {
@@ -51,11 +59,24 @@ export const TokenBadge = ({ token, ...props }) => {
       iconSize: "fill",
       icon: DaiIcon,
     },
+    usdc: {
+      size: "large",
+      iconSize: "fill",
+      icon: UsdcIcon,
+    },
   }[token];
 
-  return <IconBadge {...tokenProps} {...props} />
+  return <IconBadge {...tokenProps} {...props} />;
 };
 
 TokenBadge.propTypes = {
-  token: PropTypes.oneOf(["arbitrum", "goerli", "mainnet", "optimism", "union", "dai"]),
+  token: PropTypes.oneOf([
+    "arbitrum",
+    "goerli",
+    "mainnet",
+    "optimism",
+    "union",
+    "dai",
+    "usdc",
+  ]),
 };

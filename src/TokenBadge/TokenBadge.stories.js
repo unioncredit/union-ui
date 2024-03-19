@@ -6,11 +6,19 @@ export default {
   title: "Components/TokenBadge",
 };
 
-const tokens = ["arbitrum", "goerli", "mainnet", "optimism", "union", "dai"];
+const tokens = [
+  "arbitrum",
+  "goerli",
+  "mainnet",
+  "optimism",
+  "union",
+  "dai",
+  "usdc",
+];
 
 export const Default = () => (
   <Box>
-    {tokens.map(token => (
+    {tokens.map((token) => (
       <TokenBadge mr="4px" token={token} />
     ))}
   </Box>
