@@ -1,0 +1,15 @@
+@import "src/variables";
+
+.ControlRows {
+  border-radius: 12px;
+  background: $grey50;
+  border: 1px solid $grey200;
+
+  &__row {
+    padding: 12px;
+
+    + .ControlRows__row {
+      border-top: 1px solid $grey200;
+    }
+  }
+}

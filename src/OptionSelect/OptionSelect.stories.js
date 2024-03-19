@@ -18,8 +18,18 @@ export const Default = () => (
       {
         title: "Pay-off entire loan",
         content: "Make a payment equal to the outstanding balance",
-        token: "usdc",
+        token: "dai",
         value: "1.00",
+      },
+      {
+        title: "Pay-off entire loan",
+        content: "Make a payment equal to the outstanding balance",
+        token: "dai",
+        value: "1.00",
+        tooltip: {
+          content: "TODO",
+          shrink: true,
+        },
       },
     ]}
   />

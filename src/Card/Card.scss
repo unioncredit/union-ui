@@ -15,6 +15,10 @@
   &__footer {
     padding: 24px;
     background: $grey100;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 16px;
+    }
   }
 
   &--overflow {

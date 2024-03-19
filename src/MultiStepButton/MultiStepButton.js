@@ -6,10 +6,12 @@ import { Collapse } from "../Collapse";
 import { Text } from "../Text";
 
 import "./MultiStepButton.scss";
+import { propsToStyles } from "../spacing";
 
-export function MultiStepButton({ id, items, action, label, showSteps, toggle: Toggle }) {
+export function MultiStepButton({ id, items, action, label, showSteps, toggle: Toggle, ...props }) {
   return (
     <div
+      style={propsToStyles(props)}
       className={cn("multiStepButton", {
         "multiStepButton--showSteps": showSteps,
       })}

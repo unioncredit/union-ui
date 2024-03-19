@@ -29,11 +29,11 @@ export const Inputs = () => (
       <Input placeholder="Placeholder" onMaxClick={() => {}} disabled />
     </Box>
     <Box mb="20px">
-      <Input label="Input label" placeholder="Placeholder" />
+      <Input label="TextArea label" placeholder="Placeholder" />
     </Box>
     <Box mb="20px">
       <Input
-        label="Input label"
+        label="TextArea label"
         rightLabel="Right label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
@@ -75,7 +75,7 @@ export const Inputs = () => (
 
     <InputRow align="center" mb="20px">
       <Input
-        label="Input label"
+        label="TextArea label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
         onMaxClick={() => {}}
@@ -95,7 +95,7 @@ export const Inputs = () => (
 
     <Box mb="20px">
       <Input
-        label="Input label"
+        label="TextArea label"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
         suffix={<Dai />}
@@ -117,7 +117,7 @@ export const Inputs = () => (
 
     <Box mb="20px">
       <Input
-        label="Input label"
+        label="TextArea label"
         error="input error"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
@@ -126,7 +126,7 @@ export const Inputs = () => (
 
     <Box mb="20px">
       <Input
-        label="Input label"
+        label="TextArea label"
         error="input error"
         caption="382.91 USDC Available"
         placeholder="Placeholder"

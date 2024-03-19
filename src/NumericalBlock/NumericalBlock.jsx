@@ -8,7 +8,7 @@ import { Box } from "../Box";
 import { Text } from "../Text";
 import { Heading } from "../Heading";
 import { Tooltip } from "../Tooltip";
-import { DaiIcon, UnionIcon, UsdcIcon } from "../Icons";
+import { DaiIcon, UnionIcon } from "../Icons";
 import { PercentBar } from "../PercentBar";
 import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
 
@@ -23,11 +23,14 @@ export function NumericalBlock({
   titleTooltip,
   subtitleTooltip,
   subtitleProps,
+  smallDecimals,
   barProps,
   dotColor,
   className,
   ...props
 }) {
+  const values = value.split(".");
+
   return (
     <Box
       className={cn("NumericalBlock", className, {
@@ -61,20 +64,25 @@ export function NumericalBlock({
       </Box>
 
       {value && (
-        <Text
-          className="NumericalBlock__value"
-          m="4px 0 0"
-          grey={800}
-          weight="medium"
-        >
-          {value}
+        <Box m="4px 0 0" align="center" className="NumericalBlock__value">
+          <Text m={0} grey={800} weight="medium">
+            {smallDecimals && values.length === 2 ? (
+              <>
+                {values[0]}.
+
+                <span>{values[1]}</span>
+              </>
+            ) : value}
+          </Text>
+
           {token === "dai" && <DaiIcon className="NumericalBlock__token" />}
-          {token === "usdc" && <UsdcIcon className="NumericalBlock__token" />}
           {token === "union" && <UnionIcon className="NumericalBlock__token" />}
-        </Text>
+        </Box>
       )}
 
-      {barProps && <PercentBar mt="3px" {...barProps} />}
+      {barProps && (
+        <PercentBar mt="3px" {...barProps} />
+      )}
 
       {subtitle && (
         <Box align="center">
@@ -103,8 +111,11 @@ NumericalBlock.defaultProps = {
 NumericalBlock.propTypes = {
   size: PropTypes.oneOf(["x-small", "small", "medium", "regular", "large"]),
   title: PropTypes.string.isRequired,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  token: PropTypes.oneOf(["dai", "union", "usdc"]),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  token: PropTypes.oneOf(["dai", "union"]),
   align: PropTypes.oneOf(["left", "center"]),
   after: PropTypes.node,
   subtitle: PropTypes.node,
