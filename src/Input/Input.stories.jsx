@@ -5,6 +5,7 @@ import { Input } from "./Input";
 import { InputRow } from "./InputRow";
 import { Button } from "../Button";
 import { Dai } from "../Dai";
+import { Usdc } from "../Usdc";
 
 import { SearchIcon } from "../Icons";
 
@@ -59,10 +60,33 @@ export const Inputs = () => (
       />
     </Box>
 
+    <Box mb="20px">
+      <Input
+        label="Clickable Caption"
+        caption={
+          <>
+            <Usdc value={382.91} /> Available
+          </>
+        }
+        onCaptionButtonClick={() => alert("clicked")}
+        placeholder="Placeholder"
+      />
+    </Box>
+
     <InputRow align="center" mb="20px">
       <Input
         label="TextArea label"
         caption="382.91 DAI Available"
+        placeholder="Placeholder"
+        onMaxClick={() => {}}
+        cta={<Button label="Withdraw" />}
+      />
+    </InputRow>
+
+    <InputRow align="center" mb="20px">
+      <Input
+        label="Input label"
+        caption="382.91 USDC Available"
         placeholder="Placeholder"
         onMaxClick={() => {}}
         cta={<Button label="Withdraw" />}
@@ -80,10 +104,15 @@ export const Inputs = () => (
 
     <Box mb="20px">
       <Input
-        label="Search"
+        label="Input label"
+        caption="382.91 USDC Available"
         placeholder="Placeholder"
-        prefix={<SearchIcon />}
+        suffix={<Usdc />}
       />
+    </Box>
+
+    <Box mb="20px">
+      <Input label="Search" placeholder="Placeholder" prefix={<SearchIcon />} />
     </Box>
 
     <Box mb="20px">
@@ -98,10 +127,29 @@ export const Inputs = () => (
     <Box mb="20px">
       <Input
         label="TextArea label"
+        error="input error"
+        caption="382.91 USDC Available"
+        placeholder="Placeholder"
+      />
+    </Box>
+
+    <Box mb="20px">
+      <Input
+        label="Input label"
         error="input error"
         caption="382.91 DAI Available"
         placeholder="Placeholder"
         suffix={<Dai />}
+      />
+    </Box>
+
+    <Box mb="20px">
+      <Input
+        label="Input label"
+        error="input error"
+        caption="382.91 USDC Available"
+        placeholder="Placeholder"
+        suffix={<Usdc />}
       />
     </Box>
   </>

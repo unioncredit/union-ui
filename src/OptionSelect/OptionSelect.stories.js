@@ -29,8 +29,8 @@ export const Default = () => (
         tooltip: {
           content: "TODO",
           shrink: true,
-        }
-      }
+        },
+      },
     ]}
   />
 );
