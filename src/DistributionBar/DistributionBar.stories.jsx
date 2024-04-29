@@ -8,11 +8,29 @@ export default {
 
 export const All = () => (
   <>
+    <EmptyBar />
     <TwoTone />
     <TripleTone />
     <QuadTone />
     <EmptyValues />
   </>
+);
+
+export const EmptyBar = () => (
+  <Box mb="20px">
+    <DistributionBar
+      items={[
+        {
+          value: 0,
+          color: "blue200"
+        },
+        {
+          value: 0,
+          color: "blue600",
+        }
+      ]}
+    />
+  </Box>
 );
 
 export const TwoTone = () => (
