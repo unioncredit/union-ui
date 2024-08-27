@@ -14,13 +14,6 @@ export function ModalOverlay({ children, onClick }) {
     <div
       className="modal-overlay"
       onClick={handleClick}
-      onTouchStart={(e) => { e.stopPropagation(); e.preventDefault(); }}
-      onTouchMove={(e) => { e.stopPropagation(); e.preventDefault(); }}
-      onTouchEnd={(e) => { e.stopPropagation(); e.preventDefault(); }}
-      onTouchCancel={(e) => { e.stopPropagation(); e.preventDefault(); }}
-      onKeyDown={(e) => { e.stopPropagation(); e.preventDefault(); }}
-      onScroll={(e) => { e.stopPropagation(); e.preventDefault(); }}
-      onWheel={(e) => { e.stopPropagation(); e.preventDefault(); }}
     >
       {children}
     </div>
