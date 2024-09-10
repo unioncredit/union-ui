@@ -11,14 +11,18 @@
     z-index: 1;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 1px 0.5px rgba(0, 0, 0, 0.1);
-
     .OptionCard__value {
       background: $grey100;
     }
   }
 
-  &:not(&--checked):hover {
-    border: 0.5px solid $grey200;
+  &:not(&--checked) {
+    .input-wrapper {
+      pointer-events: none;
+    }
+    &:hover {
+      border: 0.5px solid $grey200;
+    }
   }
 
   &__title,

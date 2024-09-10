@@ -10,6 +10,7 @@ import { Text } from "../Text";
 import { DaiIcon, UnionIcon } from "../Icons";
 import InfoOutlinedIcon from "../Icons/internal/InfoOutlined.svg";
 import { Tooltip } from "../Tooltip";
+import { Input } from "../Input";
 
 export function OptionCard({
   title,
@@ -17,7 +18,8 @@ export function OptionCard({
   checked,
   value,
   token,
-  tooltip,
+  tooltipProps,
+  inputProps,
   ...props
 }) {
   return (
@@ -38,30 +40,45 @@ export function OptionCard({
               </Text>
             )}
 
-            {tooltip && (
-              <Tooltip ml="4px" mt="5px" {...tooltip}>
-                <InfoOutlinedIcon width="13px" />
+            {tooltipProps && (
+              <Tooltip ml="4px" mt="5px" {...tooltipProps}>
+                <InfoOutlinedIcon width="13px"/>
               </Tooltip>
             )}
           </Box>
 
           {content && (
-            <Text grey={600} className="OptionCard__content">
+            <Text grey={600} align="left" className="OptionCard__content">
               {content}
             </Text>
           )}
         </Box>
       </Box>
 
-      {value && (
-        <Box className="OptionCard__value" align="center">
-          <Text m={0} size="large" weight="medium" grey={700}>
-            {value}
-          </Text>
+      {(value || inputProps) && (
+        <>
+          {inputProps ? (
+            <Input
+              disabled={!checked}
+              {...inputProps}
+              suffix={
+                <>
+                  {token === "dai" && <DaiIcon className="OptionInput__token"/>}
+                  {token === "union" && <UnionIcon className="OptionInput__token"/>}
+                </>
+              }
+            />
+          ) : (
+            <Box className="OptionCard__value" align="center">
+              <Text m={0} size="large" weight="medium" grey={700}>
+                {value}
+              </Text>
 
-          {token === "dai" && <DaiIcon className="OptionCard__token" />}
-          {token === "union" && <UnionIcon className="OptionCard__token" />}
-        </Box>
+              {token === "dai" && <DaiIcon className="OptionCard__token"/>}
+              {token === "union" && <UnionIcon className="OptionCard__token"/>}
+            </Box>
+          )}
+        </>
       )}
     </Box>
   )
