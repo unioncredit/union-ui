@@ -59,8 +59,9 @@ export function OptionCard({
         <>
           {inputProps ? (
             <Input
-              disabled={!checked}
               {...inputProps}
+              disabled={!checked}
+              value={checked ? inputProps.value : value}
               suffix={
                 <>
                   {token === "dai" && <DaiIcon className="OptionInput__token"/>}
