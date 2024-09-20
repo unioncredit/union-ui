@@ -66,16 +66,6 @@
 
   &--hovered:not(&--disabled):not(&--checked) {
     border: 1px solid $grey400;
-
-    &.Control--radio:after {
-      width: 4px;
-      height: 4px;
-      background: $grey400;
-    }
-
-    svg path {
-      fill: $grey200 !important;
-    }
   }
 
   svg {

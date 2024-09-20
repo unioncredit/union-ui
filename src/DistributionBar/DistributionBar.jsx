@@ -11,7 +11,7 @@ export function DistributionBar({ items, ...props }) {
   let offset = 0;
 
   return (
-    <div className="DistributionBar" style={propsToStyles(props)}>
+    <div className={cn("DistributionBar", { "empty": total === 0 })} style={propsToStyles(props)}>
       {items.map((item, index) => {
         const percentage = (item.value / total) * 100;
         offset += percentage;

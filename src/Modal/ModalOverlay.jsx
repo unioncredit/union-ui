@@ -11,7 +11,10 @@ export function ModalOverlay({ children, onClick }) {
   };
 
   return (
-    <div className="modal-overlay" onClick={handleClick}>
+    <div
+      className="modal-overlay"
+      onClick={handleClick}
+    >
       {children}
     </div>
   );

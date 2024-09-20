@@ -33,5 +33,16 @@ export const Default = () => (
       title="Pay-off entire loan"
       content="Make a payment equal to the outstanding balance"
     />
+
+    <OptionCard
+      mb="8px"
+      token="dai"
+      title="Custom amount"
+      value=""
+      content="Enter a custom amount that you wish to pay"
+      inputProps={{
+        w: "150px"
+      }}
+    />
   </>
 );
