@@ -63,4 +63,5 @@ export * from "./TokenBadge";
 export * from "./Tooltip";
 export * from "./Union";
 export * from "./UsageChart";
+export * from "./Usdc";
 export * from "./Wallet";

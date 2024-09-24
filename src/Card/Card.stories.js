@@ -7,7 +7,8 @@ import { SegmentedControl } from "../SegmentedControl";
 import { Heading } from "../Heading";
 import { Text } from "../Text";
 import { Input, InputRow } from "../Input";
-import { Button, ButtonRow } from "../Button";
+import { Button } from "../Button";
+import { ButtonRow } from "../ButtonRow";
 
 export default {
   component: Card,
@@ -23,13 +24,9 @@ export const Default = () => (
           <Card.Body>
             <Box align="center" justify="space-between">
               <div>
-                <Text size="small">
-                  Currently Staked
-                </Text>
+                <Text size="small">Currently Staked</Text>
                 <Heading>3200 DAI</Heading>
-                <Text size="small">
-                  18.2 UNION per day
-                </Text>
+                <Text size="small">18.2 UNION per day</Text>
               </div>
               <SegmentedControl
                 items={[{ label: "Deposit" }, { label: "Withdraw" }]}
@@ -41,6 +38,40 @@ export const Default = () => (
                 caption="382.91 DAI Available"
                 placeholder="0"
                 suffix="DAI"
+                cta={<Button label="Deposit" />}
+              />
+            </InputRow>
+          </Card.Body>
+        </Card>
+        <Card mt="24px">
+          <Card.Header
+            title="Stake"
+            subTitle="Lorem ipsum dolor iniut"
+            action={<Button variant="secondary" label="Button" />}
+          />
+          <Card.Body>body</Card.Body>
+        </Card>
+      </Col>
+      <Col xs={6}>
+        <Card>
+          <Card.Header title="Stake" subTitle="Lorem ipsum dolor iniut" />
+          <Card.Body>
+            <Box align="center" justify="space-between">
+              <div>
+                <Text size="small">Currently Staked</Text>
+                <Heading>3200 USDC</Heading>
+                <Text size="small">18.2 UNION per day</Text>
+              </div>
+              <SegmentedControl
+                items={[{ label: "Deposit" }, { label: "Withdraw" }]}
+              />
+            </Box>
+            <InputRow mt="20px">
+              <Input
+                label="Amout to deposit"
+                caption="382.91 USDC Available"
+                placeholder="0"
+                suffix="USDC"
                 cta={<Button label="Deposit" />}
               />
             </InputRow>

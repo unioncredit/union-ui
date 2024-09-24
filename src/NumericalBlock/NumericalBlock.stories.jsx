@@ -11,7 +11,7 @@ export default {
 export const Sizes = () => {
   const sizes = ["large", "regular", "small", "x-small"];
 
-  return sizes.map(size => (
+  return sizes.map((size) => (
     <Box mt="65px">
       <NumericalBlock
         size={size}
@@ -20,7 +20,7 @@ export const Sizes = () => {
         token="dai"
         subtitle="Due in 24d 6h"
         subtitleTooltip={{
-          content: "This is your owed balance"
+          content: "This is your owed balance",
         }}
       />
     </Box>
@@ -28,9 +28,9 @@ export const Sizes = () => {
 };
 
 export const Tokens = () => {
-  const tokens = ["", "dai", "union"];
+  const tokens = ["", "dai", "union", "usdc"];
 
-  return tokens.map(token => (
+  return tokens.map((token) => (
     <Box mt="65px">
       <NumericalBlock
         title="Balance Owed"
@@ -38,7 +38,7 @@ export const Tokens = () => {
         token={token}
         subtitle="Due in 24d 6h"
         subtitleTooltip={{
-          content: "This is your owed balance"
+          content: "This is your owed balance",
         }}
       />
     </Box>
@@ -50,17 +50,17 @@ export const Tooltips = () => {
     {},
     {
       titleTooltip: {
-        content: "This is a titleTooltip prop"
-      }
+        content: "This is a titleTooltip prop",
+      },
     },
     {
       subtitleTooltip: {
-        content: "This is a subtitleTooltip prop"
-      }
-    }
+        content: "This is a subtitleTooltip prop",
+      },
+    },
   ];
 
-  return tooltips.map(tooltipProps => (
+  return tooltips.map((tooltipProps) => (
     <Box mt="65px">
       <NumericalBlock
         title="Balance Owed"
@@ -77,22 +77,21 @@ export const ProgressBars = () => {
     { barProps: { percentage: 25 } },
     { barProps: { percentage: 50 } },
     { barProps: { percentage: 75 }, subtitle: "With a subtitle" },
-    { barProps: { percentage: 100 }, subtitle: "With a subtitle", subtitleTooltip: {
+    {
+      barProps: { percentage: 100 },
+      subtitle: "With a subtitle",
+      subtitleTooltip: {
         content: "And a tooltip!",
-      }
+      },
     },
   ];
 
-  return bars.map(props => (
+  return bars.map((props) => (
     <Box mb="50px">
-      <NumericalBlock
-        title="Statistic"
-        value="420.69"
-        {...props}
-      />
+      <NumericalBlock title="Statistic" value="420.69" {...props} />
     </Box>
   ));
-}
+};
 
 export const TitleProps = () => {
   const titleProps = [
@@ -101,11 +100,11 @@ export const TitleProps = () => {
         style: {
           color: "#2563eb",
         },
-      }
-    }
+      },
+    },
   ];
 
-  return titleProps.map(props => (
+  return titleProps.map((props) => (
     <Box mt="65px">
       <NumericalBlock
         title="Balance Owed"
@@ -115,12 +114,12 @@ export const TitleProps = () => {
       />
     </Box>
   ));
-}
+};
 
 export const Dots = () => {
   const colors = ["blue300", "blue600", "amber500"];
 
-  return colors.map(color => (
+  return colors.map((color) => (
     <Box mt="65px">
       <NumericalBlock
         dotColor={color}

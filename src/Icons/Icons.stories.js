@@ -68,6 +68,7 @@ import {
   TransferIcon,
   TwitterIcon,
   UnionIcon,
+  UsdcIcon,
   VouchIcon,
   WalletIcon,
   WarningIcon,
@@ -140,19 +141,9 @@ const icons = [
   WithdrawIcon,
 ];
 
-const networks = [
-  ArbitrumIcon,
-  EthereumIcon,
-  GoerliIcon,
-  OptimismIcon,
-];
+const networks = [ArbitrumIcon, EthereumIcon, GoerliIcon, OptimismIcon];
 
-const status = [
-  PendingIcon,
-  InfoIcon,
-  FailedIcon,
-  SuccessIcon,
-];
+const status = [PendingIcon, InfoIcon, FailedIcon, SuccessIcon];
 
 const transactions = [
   CancelVouchIcon,
@@ -161,9 +152,7 @@ const transactions = [
   NewVouchReceivedIcon,
 ];
 
-const tokens = [
-  DaiIcon,
-];
+const tokens = [DaiIcon, UsdcIcon];
 
 export const Core = () => (
   <>
