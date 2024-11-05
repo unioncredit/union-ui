@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg class="Icon" width="24" height="24" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<svg class="Icon" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <path d="m15.571 9.1429h1.7857a1.7857 1.7857 0 0 1 1.7857 1.7857v8.5714a1.7857 1.7857 0 0 1-1.7857 1.7857h-10.714a1.7857 1.7857 0 0 1-1.7857-1.7857v-8.5714a1.7857 1.7857 0 0 1 1.7857-1.7857h1.7857m7.1429-2.8571-3.5714-3.5714-3.5714 3.5714m3.5714 8.6161v-12.187" fill="transparent" stroke="#44403C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4286"/>
 </svg>
