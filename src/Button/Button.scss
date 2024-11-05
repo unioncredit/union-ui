@@ -95,8 +95,11 @@ $disabledOpacity: 0.5;
     color: white;
     background-color: $blue600;
 
-    svg path {
+    svg:not(.Share_svg__Icon) path {
       fill: white;
+    }
+    svg.Share_svg__Icon path {
+      stroke: white;
     }
 
     &.button--variant {
@@ -167,8 +170,11 @@ $disabledOpacity: 0.5;
     &[disabled]:hover,
     &[disabled="true"]:hover {
       color: $grey300;
-      svg path {
+      svg:not(.Share_svg__Icon) path {
         fill: $grey300;
+      }
+      svg.Share_svg__Icon path {
+        stroke: $grey300;
       }
 
       &.button--loading {
@@ -182,8 +188,11 @@ $disabledOpacity: 0.5;
     color: $red600;
     background-color: $red200;
 
-    svg path {
+    svg:not(.Share_svg__Icon) path {
       fill: $red600;
+    }
+    svg.Share_svg__Icon path {
+      stroke: $red600;
     }
 
     &.button--variant {
@@ -225,8 +234,11 @@ $disabledOpacity: 0.5;
     color: $blue600;
     background: $blue200;
 
-    svg path {
+    svg:not(.Share_svg__Icon) path {
       fill: $blue600;
+    }
+    svg.Share_svg__Icon path {
+      stroke: $blue600;
     }
 
     &.button--variant {

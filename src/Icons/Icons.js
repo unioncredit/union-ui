@@ -62,6 +62,7 @@ export { default as RepayIcon } from "./icons/Repay.svg";
 export { default as RotatingIcon } from "./icons/Rotating.svg";
 export { default as SearchIcon } from "./icons/Search.svg";
 export { default as SetupIcon } from "./icons/Setup.svg";
+export { default as ShareIcon } from "./icons/Share.svg";
 export { default as Sort } from "./icons/Sort.svg";
 export { default as SortAscending } from "./icons/SortAscending.svg";
 export { default as SortDescending } from "./icons/SortDescending.svg";

@@ -3,7 +3,7 @@ import React from "react";
 import { Box } from "../Box";
 import { Button } from "./Button";
 import { ButtonRow } from "../ButtonRow";
-import { RepayIcon } from "../Icons";
+import { RepayIcon, ShareIcon } from "../Icons";
 
 export default {
   component: Button,
@@ -40,7 +40,7 @@ export const All = () => (
         {colors.map((color) => (
           <ButtonRow mb="20px">
             {variants.map((props) => (
-              <Button size={size} icon={RepayIcon} color={color} label={`Button Label`} {...props} />
+              <Button size={size} icon={ShareIcon} color={color} label={`Button Label`} {...props} />
             ))}
           </ButtonRow>
         ))}
