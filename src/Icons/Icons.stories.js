@@ -73,7 +73,7 @@ import {
   VouchIcon,
   WalletIcon,
   WarningIcon,
-  WithdrawIcon,
+  WithdrawIcon, BaseIcon,
 } from "./Icons";
 
 export default {
@@ -143,7 +143,7 @@ const icons = [
   WithdrawIcon,
 ];
 
-const networks = [ArbitrumIcon, EthereumIcon, GoerliIcon, OptimismIcon];
+const networks = [BaseIcon, ArbitrumIcon, EthereumIcon, GoerliIcon, OptimismIcon];
 
 const status = [PendingIcon, InfoIcon, FailedIcon, SuccessIcon];
 

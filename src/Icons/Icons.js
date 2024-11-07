@@ -5,6 +5,7 @@ export { default as ArrowIcon } from "./icons/Arrow.svg";
 export { default as ArrowLeftIcon } from "./icons/ArrowLeft.svg";
 export { default as ArrowRightIcon } from "./icons/ArrowRight.svg";
 export { default as ArrowRightThickIcon } from "./icons/ArrowRightThick.svg";
+export { default as BaseIcon } from "./icons/Base.svg";
 export { default as BlogIcon } from "./icons/Blog.svg";
 export { default as BorrowIcon } from "./icons/Borrow.svg";
 export { default as BridgeIcon } from "./icons/Bridge.svg";
