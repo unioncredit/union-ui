@@ -10,7 +10,7 @@ export function Collapse({ id, active, children, className }) {
       id={id}
       duration={300}
       height={active ? "auto" : 0}
-      className={cn("collapse", className)}
+      className={cn("Collapse", className)}
     >
       {children}
     </AnimateHeight>
